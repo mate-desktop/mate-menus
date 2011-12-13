@@ -2102,6 +2102,11 @@ resolve_default_directory_dirs (MateMenuTree      *tree,
   i = 0;
   while (system_data_dirs[i] != NULL)
     {
+		/* Parche para tomar las carpetas /mate/ */
+		char* path = g_build_filename(system_data_dirs[i], "mate", NULL);
+		before = add_directory_dir(tree, before, path);
+		g_free(path);
+		/* /fin parche */
       before = add_directory_dir (tree, before, system_data_dirs[i]);
 
       ++i;
