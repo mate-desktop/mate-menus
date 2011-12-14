@@ -2,7 +2,7 @@
 
 # fill it
 pkgname=mate-menus
-pkgver=1.1.0
+pkgver=1.1.1
 pkgrel=1
 pkgdesc="MATE menu specifications"
 #depends="glib2, python2"
