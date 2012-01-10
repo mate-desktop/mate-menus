@@ -1,7 +1,7 @@
 # ja.po for mate-menus.
 # Copyright (C) 2004-2007,2009-2010 THE mate-menus' COPYRIGHT HOLDER
 # This file is distributed under the same license as the mate-menus package.
-# Satoru SATOH <ss@mate.gr.jp>, 2004.
+# Satoru SATOH <ss@gnome.gr.jp>, 2004.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2005-2007.
 # Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009-2010.
 #
@@ -13,7 +13,7 @@ msgstr ""
 "POT-Creation-Date: 2010-09-18 18:45+0000\n"
 "PO-Revision-Date: 2009-09-08 22:13+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
-"Language-Team: Japanese <mate-translation@mate.gr.jp>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
