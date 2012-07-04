@@ -1,0 +1,1138 @@
+========== af.po ==========
+# Afrikaans translation of mate-menus
+# This file is distributed under the same license as the mate-menus package.
+# F Wolff <friedel@translate.org.za>, 2008
+
+
+
+
+========== an.po ==========
+# Aragonese translations mate-menus.
+# Copyright (C) 2010 Mate Foundation
+# This file is distributed under the same license as the PACKAGE package.
+# Daniel Martinez <entaltoaragon@gmail.com>, 2010.
+#
+
+
+
+
+========== ar.po ==========
+# translation of mate-menus.HEAD.po to Arabic
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER, 2005.
+# Djihed Afifi <djihed@gmail.com>, 2006.
+# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007, 2008, 2009.
+# Anas Husseini <linux.anas@gmail.com>, 2007.
+
+
+
+
+========== as.po ==========
+# translation of as.po to Assamese
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Amitakhya Phukan <amitakhya@svn.gnome.org>, 2007, 2009.
+
+
+
+
+========== ast.po ==========
+# translation of mate-menus.po to Asturian
+# Asturian translation for mate-menus
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the mate-menus package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+# Xose S. Puente <xspuente@gmail.com>, 2007.
+
+
+
+
+========== be.po ==========
+# Беларускі пераклад mate-menus.
+# Copyright (C) 2005 THE mate-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+# Ales Nyakhaychyk <nab@mail.by>, 2005, 2007
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
+#
+
+
+
+
+========== be@latin.po ==========
+# Biełaruski pierakład mate-menus.
+# Copyright (C) 2005 THE mate-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+# Alaksandar Navicki <zolak@lacinka.org>, 2006.
+#
+
+
+
+
+========== bg.po ==========
+# Bulgarian translation of mate-menus po-file.
+# Copyright (C) 2004, 2005, 2007, 2008, 2009 Free Software Foundation
+# This file is distributed under the same license as the mate-menus package.
+# Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2004, 2005, 2007.
+# Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2005.
+# Alexander Shopov <ash@contact.bg>, 2008, 2009.
+#
+
+
+
+
+========== bn.po ==========
+# Bengali translation of mate-menus
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Mahay Alam Khan <makl10n@yahoo.com>, 2005.
+# Samia Niamatullah <mailsamia2001@yahoo.com>, 2005.
+# Sadia Afroz <sadia@ankur.org.bd>, 2010.
+#
+
+
+
+
+========== bn_IN.po ==========
+# translation of bn_IN.po to Bengali INDIA
+# Bengali India  translation of mate-menus
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Mahay Alam Khan <makl10n@yahoo.com>, 2005.
+# Samia Niamatullah <mailsamia2001@yahoo.com>, 2005.
+# Runa Bhattacharjee <runab@redhat.com>, 2009.
+
+
+
+
+========== br.po ==========
+# Breton translation of mate-menus.
+# Copyright (C) 2004-2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menu package.
+#
+# Jérémy Ar Floc'h <jeremy.lefloch@gmail.com>, 2006.
+#
+
+
+
+
+========== ca.po ==========
+# Catalan translation of MATE Menus.
+# Copyright © 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006, 2007.
+# Gil Forcada <gilforcada@guifi.net>, 2008, 2009.
+#
+
+
+
+
+========== ca@valencia.po ==========
+# Catalan translation of MATE Menus.
+# Copyright © 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006, 2007.
+# Gil Forcada <gilforcada@guifi.net>, 2008, 2009.
+#
+
+
+
+
+========== crh.po ==========
+# translation of mate-menus to Qırımtatarca
+# This file is distributed under the same license as the mate-menus package.
+#
+# Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010.
+
+
+
+
+========== cs.po ==========
+# Czech translation of mate-menus.
+# Copyright (C) 2004, 2005, 2007, 2008, 2009 the author(s) of mate-menus.
+# Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
+# This file is distributed under the same license as the mate-menus package.
+# Miloslav Trmac <mitr@volny.cz>, 2004, 2005.
+# Petr Tomeš <ptomes@gmail.com>, 2006.
+# Jakub Friedl <jfriedl@suse.cz>, 2007.
+# Petr Kovar <pknbe@volny.cz>, 2007, 2009.
+
+
+
+
+========== cy.po ==========
+# MATE Menus in Welsh.
+#
+# This file is distributed under the same license as the mate-menus package.
+# Dafydd Harries <daf@muse.19inch.net>, 2005.
+#
+
+
+
+
+========== da.po ==========
+# Danish translation of mate-menus.
+# Copyright (C) 2007 Mark McLoughlin
+# This file is distributed under the same license as the mate-menus package.
+# David Nielsen <dnielsen@breakmygentoo.net>, 2004.
+# Martin Willemoes Hansen <mwh@sysrq.dk>, 2005.
+# Ole Laursen <olau@hardworking.dk>, 2006.
+# Peter Bach <bach.peter@gmail.com>, 2007.
+#
+
+
+
+
+========== de.po ==========
+# German translation of mate-menus.
+# Copyright (C) 2004 THE mate-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+# Hendrik Brandt <heb@mate-de.org>, 2004-2005.
+# Hendrik Richter <hendrikr@gnome.org>, 2006, 2007.
+# Mario Blättermann <mariobl@gnome.org>, 2009.
+# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2010.
+
+
+
+
+========== dv.po ==========
+# Divehi translation for mate-menus
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the mate-menus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+
+
+
+
+========== dz.po ==========
+# Dzongkha translation of mate-menus
+# Copyright @ 2006 Free Software Foundation, Inc.
+# Mindu Dorji
+#
+
+
+
+
+========== el.po ==========
+# Translation of mate-menus to Greek
+# This file is distributed under the same license as the mate-menus package.
+# Copyright (C) Free Software Foundation.
+#
+# Simos Xenitellis <simos@gnome.org>, 2004.
+# Nikos Charonitakis <charosn@her.forthnet.gr>, 2005.
+# Kostas Papadimas <pkst@gnome.org>, 2006.
+
+
+
+
+========== en@shaw.po ==========
+# mate-menus Shavian translation.
+# Copyright (C) 2009
+# This file is distributed under the same license as the mate-menus package.
+# Thomas Thurman <tthurman@gnome.org>, 2009
+#
+
+
+
+
+========== en_CA.po ==========
+# Canadian English translation for mate-menus
+# Copyright (C) 2004-2005 Adam Weinberger and the MATE Foundation
+# This file is distributed under the same licence as the mate-menus package.
+# Adam Weinberger <adamw@gnome.org>, 2004, 2005.
+#
+#
+
+
+
+
+========== en_GB.po ==========
+# English (British) translation for mate-menus
+# Copyright (C) 2005 The Mate Foundation
+# This file is distributed under the same license as the mate-menus package.
+# David Lodge <dave@cirt.net>, 2005.
+# Philip Withnall <philip@tecnocode.co.uk>, 2009.
+
+
+
+
+========== eo.po ==========
+# Esperanto translation for mate-menus
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the mate-menus package.
+#
+# Joop EGGEN <joop_eggen@yahoo.de>, 2006
+# Guillaume SAVATON <llumeao@tuxfamily.org>, 2006
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010.
+#
+
+
+
+
+========== es.po ==========
+# translation of mate-menus to spanish
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2005 Mate Foundation, 2005.
+#
+# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005, 2006.
+# Claudio Saavedra <csaavedra@alumnos.utalca.cl>, 2007.
+# Jorge González <jorgegonz@svn.gnome.org>, 200, 2009.
+
+
+
+
+========== et.po ==========
+# MATE menüüde eesti keele tõlge
+# Estonian translation of Mate-menus
+#
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# Copyright (C) 2007 The MATE Project
+# This file is distributed under the same license as the Mate-menus package.
+#
+# Priit Laes <amd@store20.com>, 2005.
+# Ivar Smolin <okul@linux.ee>, 2005, 2007.
+#
+
+
+
+
+========== eu.po ==========
+# translation of eu.po to Basque
+# This file is distributed under the same license as the mate-menus package.
+#
+# Mikel Olasagasti <hey_neken@mundurat.net>, 2004, 2005.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2005, 2007, 2008, 2009, 2010.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
+
+
+
+
+========== fa.po ==========
+# Persian translation of mate-menus.
+# Copyright (C) 2005 Sharif FarsiWeb, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2005.
+# Meelad Zakaria <meelad@farsiweb.info>, 2005.
+# Roozbeh Pournader <roozbeh@gmail.com>, 2005, 2008.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2008.
+# Elnaz Sarbar <elnaz.s@gmail.com>, 2008.
+#
+
+
+
+
+========== fi.po ==========
+# Finnish messages for mate-menus
+# Copyright (C) 2004-2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gail package.
+# Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2004-2005.
+# Ilkka Tuohela <hile@iki.fi>, 2005.
+#
+
+
+
+
+========== fr.po ==========
+# French translation of mate-menus.
+# Copyright (C) 2004-2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menu package.
+#
+# Baptiste Mille-Mathias <bmm80@free.fr>, 2004-2005.
+# Vincent Untz <vuntz@gnome.org>, 2005.
+# Christophe Merlet <redfox@redfoxcenter.org>, 2005.
+# Robert-André Mauchin <zebob.m@gmail.com>, 2007.
+# Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
+#
+
+
+
+
+========== fur.po ==========
+# Friulian translation of mate-menus.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# Massimo Furlani <massimo.furlani@libero.it>, 2007.
+#
+
+
+
+
+========== fy.po ==========
+# Frisian translation for mate-menus
+#
+# This file is distributed under the same license as the mate-menus package.
+# Dooitze de Jong <dooitzedejong@gmail.com>, 2009-2010.
+# Jaap Haitsma <jaap@haitsma.org>, 2007.
+# Peter Hoogsteen <p.hoogsteen@chello.nl >, 2008.
+# Sietse <>, 2009.
+# berend <berendy@gmail.com>, 2009.
+#
+
+
+
+
+========== ga.po ==========
+# Irish translations for mate-menus package.
+# Copyright (C) 2007-2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Seán de Búrca <leftmostcat@gmail.com>, 2007-2009.
+#
+
+
+
+
+========== gl.po ==========
+# translation of gl.po to Galego
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2010 Fran Diéguez.
+#
+# Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005.
+# Ignacio Casal Quinteiro <icq@cvs.gnome.org>, 2007,2009.
+# Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun.org>, 2009.
+# Suso Baleato <suso.baleato@xunta.es>,2009.
+# Fran Dieguez <fran.dieguez@glug.es>, 2009.
+# Anton Meixome <meixome@mancomun.org>, 2009.
+# Fran Diéguez <frandieguez@ubuntu.com>, 2010.
+#
+
+
+
+
+========== gn.po ==========
+# Brazilian Guarani translation of mate-menus.
+# Copyright (C) 2006 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+#
+
+
+
+
+========== gu.po ==========
+# translation of mate-menus.master.gu.po to Gujarati
+# Ankit Patel <ankit644@yahoo.com>, 2007.
+# Ankit Patel <ankit@redhat.com>, 2007.
+# Sweta Kothari <swkothar@redhat.com>, 2009.
+
+
+
+
+========== gv.po ==========
+# Manx translation for mate-menus
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the mate-menus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+
+
+
+
+========== ha.po ==========
+
+
+
+
+========== he.po ==========
+# translation of mate-menus.mate-2-10.po to Hebrew
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Yuval Tanny <tanai@int.gov.il>, 2005.
+#
+
+
+
+
+========== hi.po ==========
+# translation of mate-menus.master.po to Hindi
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+# Rajesh Ranjan <rranjan@redhat.com>, 2005, 2006, 2008, 2009.
+# Rajesh Ranjan <rajesh672@gmail.com>, 2009.
+
+
+
+
+========== hr.po ==========
+# Croatian translation for mate-menus
+# Copyright (c) (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
+# This file is distributed under the same license as the mate-menus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2005.
+# Translators: Krešo Kunjas <kkunjas@gmail.com>
+#
+
+
+
+
+========== hu.po ==========
+# Hungarian translation of mate-menus.
+# Copyright (C) 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+#
+# Gabor Kelemen <kelemeng at mate dot hu>, 2004, 2005, 2006, 2007, 2008, 2009.
+# Laszlo Dvornik <dvornik at mate dot hu>, 2005.
+
+
+
+
+========== hy.po ==========
+# translation of mate-menus.HEAD.po to armenian
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
+# Ruzanna Khachatryan <ruzannak@hotmail.com>
+# Norayr Chilingaryan <norik@freenet.am>
+
+
+
+
+========== id.po ==========
+# translation of mate-menus.master.id.po to MATE Indonesian Translation Team
+# Indonesian translation of mate-menus.
+# Copyright (C) 2005 THE mate-menus's COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+#
+#
+# ahmad riza h nst <ari@160c.afraid.org>, 2005.
+# Dirgita <dirgitadevina@gmail.com>, 2010.
+# Dirgita <dirgitadevina@yahoo.co.id>, 2010.
+
+
+
+
+========== ig.po ==========
+
+
+
+
+========== io.po ==========
+# Ido translation of mate-menus.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Michael Terry <mike@mterry.name>, 2007.
+#
+
+
+
+
+========== is.po ==========
+# Icelandic translation of Mate.
+# Icelandic translation of mate-menus.
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# Anna Jonna Ármannsdóttir <annajonna@gmail.com>, 2008.
+# Sveinn í Felli <sveinki@nett.is>, 2009.
+#
+
+
+
+
+========== it.po ==========
+# Italian translation of mate-menus.
+# Copyright (C) 2005, 2006, 2007, 2008, 2009 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Francesco Marletta <francesco.marletta @ tiscali.it>, 2005, 206, 2007, 2008, 2009.
+# Luca Ferretti <elle.uca@libero.it>, 2009
+
+
+
+
+========== ja.po ==========
+# ja.po for mate-menus.
+# Copyright (C) 2004-2007,2009-2010 THE mate-menus' COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+# Satoru SATOH <ss@mate.gr.jp>, 2004.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2005-2007.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009-2010.
+#
+
+
+
+
+========== ka.po ==========
+# Georgian translation for mate-menus
+# Copyright (c) (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
+# This file is distributed under the same license as the mate-menus package.
+# <>, 2005.
+# , fuzzy
+#  <>, 2006.
+# 
+# 
+
+
+
+
+========== kk.po ==========
+# translation of mate-menus to Kazakh
+# Copyright (C) 2008 Free Software Foundation, Inc.
+#
+# Moldabekov Margulan <moldabekov@gmail.com>, 2008
+# Erzhan Shaniev <erzhan.jktl@gmail.com>, 2008
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010
+
+
+
+
+========== kn.po ==========
+# translation of mate-menus.master.kn.po to Kannada
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010.
+
+
+
+
+========== ko.po ==========
+# mate-menus Korean message translation
+# This file is distributed under the same license as the mate-menus package.
+#
+# Sung-Hyun Nam <namsh@kldp.org>, 2000.
+# Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2003, 2007.
+# Eunju Kim <eukim@redhat.com>, 2007.
+# Changwoo Ryu <cwryu@debian.org>, 1998, 2002, 2003, 2008, 2009, 2010.
+#
+
+
+
+
+========== ku.po ==========
+# translation of ku.po to Kurdish
+# translation of mate-menus.HEAD.po to Kurdish
+# Kurdish translation for mate-menus
+# Copyright (c) (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
+# This file is distributed under the same license as the mate-menus package.
+# Erdal Ronahi <erdal.ronahi@gmail.com>, 2005.
+# Erdal Ronahi <erdal.ronahi@gmail.com>, 2005.
+# Erdal Ronahi <erdal.ronahi@gmail.com, pckurd@hotmail.com>, 2005, 2006.
+#
+
+
+
+
+========== ky.po ==========
+# Translation of mate-menus to Kirghiz
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2003,2004, 2005 Free Software Foundation, Inc.
+# Timur Jamakeev <ztimur@gmail.com>, 2005.
+#
+
+
+
+
+========== lt.po ==========
+# translation of lt.po to Lithuanian
+# Lithuanian translation of mate-menus.
+# Copyright (C) 2004-2007, 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+#
+# I'm a rolling thunder, a pouring rain
+# I'm comin' on like a hurricane
+#
+# Justina Klingaitė <justina.klingaite@gmail.com>, 2005.
+# Žygimantas Beručka <zygis@gnome.org>, 2004-2007.
+# Gintautas Miliauskas <gintas@akl.lt>, 2007, 2008.
+
+
+
+
+========== lv.po ==========
+# translation of lv.po to Latvian
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Raivis Dejus <orvils@gmail.com>, 2006, 2007, 2009.
+# Peteris Krisjanis <pecisk@gmail.com>, 2010.
+
+
+
+
+========== mai.po ==========
+# translation of mate-menus.master.mai.po to Hindi
+# translation of mate-menus.HEAD.po to
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sangeeta Kumari <sangeeta09@gmail.com>, 2008.
+# Rajesh Ranjan <rajesh672@gmail.com>, 2009.
+
+
+
+
+========== mg.po ==========
+# Malagasy translation of mate-menus.
+# Copyright (C) 2006 THE mate-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+# Fano Rajaonarisoa <dikatenyfano@gmail.com>, 2006.
+# Thierry Randrianiriana <randrianiriana@gmail.com, 2006.
+#
+#
+
+
+
+
+========== mk.po ==========
+# translation of mate-menus.HEAD.po to Macedonian
+# translation of mate-menus.
+# Copyright (C) 2005 THE mate-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+#
+# <>, 2005.
+# Арангел Ангов <ufo@linux.net.mk>, 2005.
+# Arangel Angov <ufo@linux.net.mk>, 2006.
+# Jovan Naumovski <jovan@lugola.net>, 2006, 2007.
+# Arangel Angov <arangel@linux.net.mk>, 2007.
+
+
+
+
+========== ml.po ==========
+# translation of mate-menus.master.ml.po to
+# This file is distributed under the same license as the mate-menus package.
+# Copyright (C) 2007-2008 mate-menus' COPYRIGHT HOLDER.
+# Ani Peter <peter.ani@gmail.com>, 2006.
+# Praveen|പ്രവീണ്‍ A|എ <pravi.a@gmail.com>, 2007,2008.
+# Ani Peter <apeter@redhat.com>, 2007.
+# Reviewed by  Santhosh Thottingal <santhosh00@gmail.com>
+
+
+
+
+========== mn.po ==========
+# translation of mn.po to Mongolian
+# translation of PACKAGE.
+# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# <>, 2006.
+# Badral <badral@openmn.org>, 2006.
+#
+
+
+
+
+========== mr.po ==========
+# translation of mr.po to Marathi
+# Marathi Translation of mate-menus
+# Copyright (C) 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+#
+# FIRST AUTHOR: Gayatri Deshpande <gafinde@gmail.com>, 2005.
+# Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006.
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008, 2009.
+# Sandeep Shedmake <sshedmak@redhat.com>, 2009.
+
+
+
+
+========== ms.po ==========
+# mate-menu Bahasa Melayu (ms)
+#
+# Hasbullah Bin Pit (sebol) <sebol@my-penguin.org>, 2004
+#
+
+
+
+
+========== nb.po ==========
+# Norwegian bokmål translation of mate-menus.
+# Copyright (C) 2004, 2005 Red Hat, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Kjartan Maraas <kmaraas@gnome.org>, 2004-2008.
+# Terance Edward Sola <terance@lyse.net>, 2005.
+#
+
+
+
+
+========== nds.po ==========
+# German, Low translation for mate-menus
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the mate-menus package.
+# Nils-Christoph Fiedler <linux@medienkompanie.de>, 2009.
+#
+
+
+
+
+========== ne.po ==========
+# translation of mate-menus.HEAD.ne.po to Nepali
+# Nepali Translation Project.
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2005.
+# Ganesh Ghimire <gghimire@gmail.com>, 2005.
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+
+
+
+
+========== nl.po ==========
+# Dutch translation of mate-menus
+#
+# This file is distributed under the same license as the mate-menus package.
+#
+# Daniel van Eeden <daniel_e@dds.nl>, 2004
+# Tino Meinen <a.t.meinen@chello.nl>, 2005
+# Wouter Bolsterlee <wbolster@gnome.org>, 2007–2010
+#
+
+
+
+
+========== nn.po ==========
+# translation of nn.po to Norwegian Nynorsk
+# Norwegian (nynorsk) translation of mate-menus.
+# Copyright (C) Roy-Magne Mo <rmo@sunnmore.net>, 2001.
+# Roy-Magne Mo <rmo@sunnmore.net>, 2001.
+# Åsmund Skjæveland <aasmunds@fys.uio.no>, 2003, 2004.
+# Kjartan Maraas <kmaraas@gnome.org>, 2005.
+# Eskild Hustvedt <eskildh@gnome.org>, 2008.
+# Torstein Adolf Winterseth <kvikende@yahoo.no>, 2010.
+# Torstein Winterseth <kvikende@fsfe.org>, 2010.
+
+
+
+
+========== oc.po ==========
+# Translation of oc.po to Occitan
+# Occitan translation of mate-menus.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+#
+# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007.
+
+
+
+
+========== or.po ==========
+# translation of mate-menus.master.or.po to Oriya
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Subhransu Behera <arya_subhransu@yahoo.co.in>, 2006.
+# Manoj Kumar Giri <giri.manojkr@gmail.com>, 2008.
+# Manoj Kumar Giri <mgiri@redhat.com>, 2009.
+
+
+
+
+========== pa.po ==========
+# translation of mate-menus.HEAD.po to Punjabi
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# A S Alam <aalam@users.sf.net>, 2005,2006,2007,2008,2009.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2009.
+
+
+
+
+========== pl.po ==========
+# Copyright (C) 2001-2009 Free Software Foundation, Inc.
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aviary.pl
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
+# matepl@aviary.pl
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+
+========== ps.po ==========
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+
+
+
+========== pt.po ==========
+# mate-menus' Portuguese translation.
+# Copyright © 2004, 2005, 2006, 2007, 2009 mate-menus
+# This file is distributed under the same license as the mate-menus package.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007, 2009.
+#
+
+
+
+
+========== pt_BR.po ==========
+# Brazilian Portuguese translation of MATE Menus.
+# Copyright (C) 2004-2008 the MATE Menu authors.
+# This file is distributed under the same license as the mate-menus package.
+# Raphael Higino <In Memoriam>, 2004-2005.
+# Afonso Celso Medina <afmedina@uol.com.br>, 2005.
+# Og Maciel <ogmaciel@ubuntu.com>, 2006-2007.
+# Leonardo Ferreira Fontenelle <leonardof@gnome.org>, 2007, 2008.
+# Fabrício Godoy <skarllot@gmail.com>, 2008
+# Krix Apolinário <krixapolinario@gmail.com>, 2009.
+#
+
+
+
+
+========== ro.po ==========
+# Romanian translation of mate-menus.
+# Copyright (C) 2005-2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Dan Damian <dand@mate.ro>, 2005.
+# Alexandru Szasz <alexxed@gmail.com>, 2007.
+# Adi Roiban <adi@roiban.ro>, 2008.
+#
+
+
+
+
+========== ru.po ==========
+# translation of mate-menus to Russian
+# Copyright (C) 1998-2003, 2005, 2006, 2007 Free Software Foundation, Inc.
+#
+# Dmitry G. Mastrukov <dmitry@taurussoft.org>, 2004.
+# Leonid Kanter <leon@asplinux.ru>, 2005, 2007.
+
+
+
+
+========== rw.po ==========
+# translation of mate-menus to Kinyarwanda.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Steve Murphy <murf@e-tools.com>, 2005
+# Steve performed initial rough translation from compendium built from translations provided by the following translators:
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
+# Carole Karema <karemacarole@hotmail.com>, 2005.
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
+# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
+#
+
+
+
+
+========== si.po ==========
+# translation of mate-menus.po to Sinhala
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Danishka Navin <snavin@redhat.com>, 2007.
+
+
+
+
+========== sk.po ==========
+# Slovak translation for mate-menus.
+# Copyright (C) 2004, 2005, 2007, 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Marcel Telka <marcel@telka.sk>, 2004, 2005.
+# Peter Tuharsky <tuharsky@misbb.sk>, 2007.
+# Pavol Klačanský <pavol@klacansky.com>, 2010.
+#
+
+
+
+
+========== sl.po ==========
+# Slovenian translation for mate-menues.
+# Copyright (C) 2005-2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the program package.
+#
+# Matic Žgur <mr.zgur@gmail.com>, 2006.
+# Matej Urbančič <mateju@svn.gnome.org>, 2005 - 2010.
+#
+
+
+
+
+========== sq.po ==========
+# Përkthimi i mesazheve të mate-menus në shqip
+# Copyright (C) 2005 THE mate-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mate-menus package.
+# Elian Myftiu <elian@alblinux.net>, 2005-2007.
+# Laurent Dhima <laurenti@alblinux.net>, 2008.
+
+
+
+
+========== sr.po ==========
+# Serbian translation of mate-menus
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2004 - 2009.
+#
+# This file is distributed under the same license as the mate-menus package.
+#
+# Maintainer: Данило Шеган <dsegan@gmx.net>
+# Reviewed on 2005-09-03 by: Данило Шеган <danilo@gnome.org>"
+# Transalted on 2006-01-31 by: Слободан Д. Средојевић <slobo@akrep.be>
+#
+
+
+
+
+========== sr@latin.po ==========
+# Serbian translation of mate-menus
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2004 - 2009.
+#
+# This file is distributed under the same license as the mate-menus package.
+#
+# Maintainer: Danilo Šegan <dsegan@gmx.net>
+# Reviewed on 2005-09-03 by: Danilo Šegan <danilo@gnome.org>"
+# Transalted on 2006-01-31 by: Slobodan D. Sredojević <slobo@akrep.be>
+#
+
+
+
+
+========== sv.po ==========
+# Swedish messages for mate-menus.
+# Copyright (C) 2004, 2005, 2006, 2007, 2009 Free Software Foundation, Inc.
+# Christian Rose <menthos@menthos.com>, 2004, 2005, 2006.
+# Daniel Nylander <po@danielnylander.se>, 2007, 2009.
+#
+# $Id: sv.po,v 1.7 2006/01/08 20:42:48 menthos Exp $
+#
+
+
+
+
+========== ta.po ==========
+# translation of mate-menus.HEAD.po to TAMIL
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Shakthi Kannan <shaks@shakthimaan.com>, 2006.
+# Jayaradha N <jayaradhaa@gmail.com>, 2006.
+# Dr.T.Vasudevan <agnihot3@gmail.com>, 2007, 2009.
+
+
+
+
+========== te.po ==========
+# translation of mate-menus.master.te.po to Telugu
+# Telugu translation of mate-menus
+# Copyright (C) 2005,2007 Free Software Foundation, Andhra Pradesh
+# This file is distributed under the same license as the mate-menus package.
+#
+# Y.Kiran Chandra <kiran@gnu.org.in>, 2005.
+# Bharat Kumar <jonnalagaddabharat@gmail.com>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+
+
+
+
+========== th.po ==========
+# Thai translation of mate-menus.
+# Copyright (C) 2004-2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-menus package.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004-2007.
+#
+#
+
+
+
+
+========== tr.po ==========
+# translation of tr.po to Turkish
+# translation of Mate-menus.
+# Copyright (C) 2004 THE Mate-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Mate-menus package.
+#
+#
+# Onur Can Çakmak <onur.cakmak@gmail.com>, 2006.
+# Baris Cicek <baris@teamforce.name.tr>, 2005, 2008, 2009.
+
+
+
+
+========== ug.po ==========
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Gheyret T.Kenji <gheyret@yahoo.com>
+# Sahran <sahran@live.com>
+#
+
+
+
+
+========== uk.po ==========
+# Ukrainian translation of mate-menus.
+# Copyright (C) Free Software Foundation Inc., 2005
+# This file is distributed under the same license as the mate-menus package.
+# Maxim Dziumanenko <dziumanenko@gmail.com>, 2005-2007.
+#
+
+
+
+
+========== uz@cyrillic.po ==========
+# translation of uz@cyrillic.po to Uzbek
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Nurali Abdurahmonov <mavnur@gmail.com>, 2007.
+
+
+
+
+========== vi.po ==========
+# Vietnamese Translation for Mate Menus.
+# Copyright © 2007 Mate i18n Project for Vietnamese.
+# This file is distributed under the same license as the mate-menus package.
+# Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2007.
+# 
+
+
+
+
+========== xh.po ==========
+# Xhosa translation of mate-menus
+# Copyright (C) 2005 Canonical Ltd.
+# This file is distributed under the same license as the mate-menus package.
+# Translation by Canonical Ltd <translations@canonical.com> with thanks to
+# Translation World CC in South Africa, 2005.
+#
+
+
+
+
+========== yo.po ==========
+
+
+
+
+========== zh_CN.po ==========
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Funda Wang <fundawang@linux.net.cn>, 2004.
+#
+
+
+
+
+========== zh_HK.po ==========
+# Chinese (Hong Kong) translation of mate-menu.
+# Copyright (C) 2005, 06, 07 Free Software Foundation, Inc.
+# Woodman Tuen <wmtuen@gmail.com>, 2005-07.
+#
+#
+
+
+
+
+========== zh_TW.po ==========
+# Chinese (Taiwan) translation of mate-menu.
+# Copyright (C) 2005, 06, 07 Free Software Foundation, Inc.
+# Woodman Tuen <wmtuen@gmail.com>, 2005-07.
+#
+#
+
+
+
+
