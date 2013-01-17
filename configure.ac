@@ -6,7 +6,7 @@ AC_CONFIG_SRCDIR(libmenu/matemenu-tree.h)
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-bzip2])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AC_CONFIG_MACRO_DIR([m4])
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_HEADERS(config.h)
 
 AM_MAINTAINER_MODE
 MATE_MAINTAINER_MODE_DEFINES
