@@ -33,6 +33,7 @@
         </Not>
       </And>
     </Include>
+    <MergeFile>mate-preferences-categories.menu</MergeFile>
   </Menu>
 
   <!-- System Settings -->
