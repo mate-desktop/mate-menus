@@ -6,11 +6,7 @@ endif
 
 ACLOCAL_AMFLAGS = -I m4
 
-DISTCHECK_CONFIGURE_FLAGS = --enable-introspection --enable-python
-
-EXTRA_DIST = \
-	HACKING \
-	MAINTAINERS
+DISTCHECK_CONFIGURE_FLAGS = --disable-introspection --disable-python
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
