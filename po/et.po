@@ -1,219 +1,170 @@
-# MATE menüüde eesti keele tõlge
-# Estonian translation of Mate-menus
-#
-# Copyright (C) 2005 Free Software Foundation, Inc.
-# Copyright (C) 2007 The MATE Project
-# This file is distributed under the same license as the Mate-menus package.
-#
-# Priit Laes <amd@store20.com>, 2005.
-# Ivar Smolin <okul@linux.ee>, 2005, 2007.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Ivar Smolin <okul@linux.ee>, 2005, 2007
+# Priit Laes <amd@store20.com>, 2005
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=mate-"
-"menus&component=general\n"
-"POT-Creation-Date: 2009-06-21 17:35+0000\n"
-"PO-Revision-Date: 2009-06-25 01:27+0300\n"
-"Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
-"Language-Team: Estonian <mate-et@linux.ee>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-07-04 15:45+0200\n"
+"PO-Revision-Date: 2012-07-04 13:49+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Estonian (http://www.transifex.com/projects/p/MATE/language/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Multimedia menu"
-msgstr "Multimeediamenüü"
-
+#: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
 msgstr "Audio ja video"
 
+#: ../desktop-directories/mate-audio-video.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Multimeediamenüü"
+
+#: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
 msgstr "Programmeerimine"
 
+#: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "Tarkvaraarenduse tööriistad"
 
+#: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
 msgstr "Õppeprogrammid"
 
+#: ../desktop-directories/mate-game.directory.in.h:1
 msgid "Games"
 msgstr "Mängud"
 
+#: ../desktop-directories/mate-game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Mängud ja meelelahutus"
 
+#: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "Graafika"
 
+#: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "Graafikatöötlusprogrammid"
 
+#: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
 msgstr "Riistvara"
 
+#: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
 msgstr "Mõnede riistvaraliste seadmete sätted"
 
+#: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
 msgstr "Internet ja võrk"
 
+#: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
 msgstr "Võrguga seotud sätted"
 
+#: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
 msgstr "Välimus ja tunnetus"
 
+#: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Töölaua välimuse ja käitumise juhtimine"
 
+#: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
 
+#: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Internetprogrammid - näiteks veebi ja e-posti jaoks"
 
+#: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
 msgstr "Kontor"
 
+#: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Kontoritarkvara"
 
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
 msgstr "Isiklik"
 
+#: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "Isiklikud sätted"
 
+#: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
 msgstr "Haldamine"
 
+#: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
 msgstr "Ülesüsteemiliste sätete muutmine (mõjutab kõiki kasutajaid)"
 
-msgid "Personal preferences"
-msgstr "Isiklikud eelistused"
-
+#: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
 msgstr "Eelistused"
 
+#: ../desktop-directories/mate-settings.directory.in.h:2
+msgid "Personal preferences"
+msgstr "Isiklikud eelistused"
+
+#: ../desktop-directories/mate-system.directory.in.h:1
+#: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
 msgstr "Süsteem"
 
+#: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
 msgstr "Süsteemi sätted"
 
+#: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Süsteemi tööriistad"
 
+#: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Süsteemi seadistamine ja jälgimine"
 
+#: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
 msgstr "Universaalne ligipääs"
 
+#: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
 msgstr "Universaalse ligipääsu sätted"
 
+#: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"
 msgstr "Tarvikud"
 
+#: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
 msgstr "Töölaua tarvikud"
 
+#: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
 msgstr "Rakendused"
 
+#: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Isiklikud eelistused ja haldussätted"
 
-msgid "Applications that did not fit in other categories"
-msgstr "Rakendused, mis ei sobinud teistesse kategooriatesse"
-
+#: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
 msgstr "Muu"
 
-msgid "Menu Editor"
-msgstr "Menüüredaktor"
-
-msgid "Edit Menus"
-msgstr "Menüüde redigeermine"
-
-msgid "_Applications:"
-msgstr "_Rakendused:"
-
-msgid "_Defaults"
-msgstr "_Vaikimisi"
-
-msgid "_Menus:"
-msgstr "_Menüüd:"
-
-#. Translators: %s is the version number
-#, python-format
-#| msgid "Menu Editor"
-msgid "Simple Menu Editor %s"
-msgstr "Lihtne menüüredaktor %s"
-
-msgid "Name"
-msgstr "Nimi"
-
-msgid "Show"
-msgstr "Vaade"
-
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Kodukausta pole võimalik leida: seda pole määratud ei /etc/passwd failis ega "
-"$HOME keskkonnamuutujas"
-
-msgid "Menu file"
-msgstr "Menüüfail"
-
-msgid "MENU_FILE"
-msgstr "MENU_FILE"
-
-msgid "Monitor for menu changes"
-msgstr "Jälgi muudatusi menüüs"
-
-msgid "Include <Exclude>d entries"
-msgstr "Kaasa ka <välistatud> kirjed"
-
-msgid "Include NoDisplay=true entries"
-msgstr "Kaasa ka <NoDisplay=true> kirjed"
-
-msgid "Invalid desktop file ID"
-msgstr "Vigane töölauafaili ID"
-
-msgid "[Invalid Filename]"
-msgstr "[Vigane failinimi]"
-
-msgid " <excluded>"
-msgstr "<välistatud>"
-
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== Menüü muudetud, laaditakse uuesti ====\n"
-"\n"
-"\n"
-
-msgid "Menu tree is empty"
-msgstr "Menüüpuu on tühi"
-
-msgid "- test MATE's implementation of the Desktop Menu Specification"
-msgstr "- testi MATE'ipoolset teostust Töölauamenüü spetsifikatsioonist"
-
-#~ msgid "Universal access related preferences"
-#~ msgstr "Universaalse ligipääsuga seotud eelistused"
-
-#~ msgid "Personal preferences and settings"
-#~ msgstr "Isiklikud eelistused ja sätted"
+#: ../desktop-directories/mate-other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr "Rakendused, mis ei sobinud teistesse kategooriatesse"

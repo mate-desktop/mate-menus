@@ -1,150 +1,175 @@
-# translation of mate-menus to Kinyarwanda.
-# Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-menus package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005
+# Carole Karema <karemacarole@hotmail.com>, 2005
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005
 # Steve Murphy <murf@e-tools.com>, 2005
-# Steve performed initial rough translation from compendium built from translations provided by the following translators:
-# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
-# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
-# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
-# Carole Karema <karemacarole@hotmail.com>, 2005.
-# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
-# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
-# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
-#
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 2.12\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-31 17:36-0700\n"
-"PO-Revision-Date: 2005-03-28 19:35-0700\n"
-"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
-"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-07-04 15:45+0200\n"
+"PO-Revision-Date: 2012-07-04 13:51+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Kinyarwanda (http://www.transifex.com/projects/p/MATE/language/rw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: rw\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# offmgr/source\offapp\dialog\treeopt.src:RID_OFADLG_OPTIONS_TREE_PAGES.SID_GENERAL_OPTIONS.13.text
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Ubushobozi bwo gukoreshwa"
-
-#: desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr ""
-
-#: desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr ""
-
-#: desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr ""
-
-#: desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Porogaramu"
-
-#: desktop-directories/Development.directory.in.h:1
-msgid "Programming"
-msgstr ""
-
-#: desktop-directories/Development.directory.in.h:2
-#, fuzzy
-msgid "Tools for software development"
-msgstr "kugirango"
-
-#: desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr ""
-
-#: desktop-directories/Games.directory.in.h:1
-msgid "Games"
-msgstr ""
-
-#: desktop-directories/Games.directory.in.h:2
-#, fuzzy
-msgid "Games and amusements"
-msgstr "Na"
-
-#: desktop-directories/Graphics.directory.in.h:1
-msgid "Graphics"
-msgstr "Ibishushanyo"
-
-#: desktop-directories/Graphics.directory.in.h:2
-#, fuzzy
-msgid "Graphics applications"
-msgstr "Porogaramu"
-
-# officecfg/registry\schema\org\openoffice\Office\Common.xcs:....Save.URL.Internet.text
-#: desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Interineti"
-
-#: desktop-directories/Internet.directory.in.h:2
-#, fuzzy
-msgid "Programs for Internet access such as web and email"
-msgstr "kugirango Nka Urubuga Na imeli"
-
-#: desktop-directories/Multimedia.directory.in.h:1
-#, fuzzy
-msgid "Multimedia menu"
-msgstr "Ibikubiyemo"
-
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
 msgstr ""
 
-# svx/source\gallery2\galtheme.src:RID_GALLERYSTR_THEME_OFFICE.text
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/mate-audio-video.directory.in.h:2
+msgid "Multimedia menu"
+msgstr ""
+
+#: ../desktop-directories/mate-development.directory.in.h:1
+msgid "Programming"
+msgstr ""
+
+#: ../desktop-directories/mate-development.directory.in.h:2
+msgid "Tools for software development"
+msgstr ""
+
+#: ../desktop-directories/mate-education.directory.in.h:1
+msgid "Education"
+msgstr ""
+
+#: ../desktop-directories/mate-game.directory.in.h:1
+msgid "Games"
+msgstr ""
+
+#: ../desktop-directories/mate-game.directory.in.h:2
+msgid "Games and amusements"
+msgstr ""
+
+#: ../desktop-directories/mate-graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Ibishushanyo"
+
+#: ../desktop-directories/mate-graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr ""
+
+#: ../desktop-directories/mate-hardware.directory.in.h:1
+msgid "Hardware"
+msgstr ""
+
+#: ../desktop-directories/mate-hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr ""
+
+#: ../desktop-directories/mate-internet-and-network.directory.in.h:1
+msgid "Internet and Network"
+msgstr ""
+
+#: ../desktop-directories/mate-internet-and-network.directory.in.h:2
+msgid "Network-related settings"
+msgstr ""
+
+#: ../desktop-directories/mate-look-and-feel.directory.in.h:1
+msgid "Look and Feel"
+msgstr ""
+
+#: ../desktop-directories/mate-look-and-feel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr ""
+
+#: ../desktop-directories/mate-network.directory.in.h:1
+msgid "Internet"
+msgstr "Interineti"
+
+#: ../desktop-directories/mate-network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr ""
+
+#: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
 msgstr "Ofise"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
 msgstr ""
 
-#: desktop-directories/Other.directory.in.h:1
-#, fuzzy
-msgid "Applications that did not fit in other categories"
-msgstr "OYA in Ikindi Ibyiciro"
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/mate-personal.directory.in.h:2
+msgid "Personal"
+msgstr ""
 
-# framework/source\classes\fltdlg.src:STR_FILTER_OTHERS.text
-#: desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Ikindi"
+#: ../desktop-directories/mate-personal.directory.in.h:3
+msgid "Personal settings"
+msgstr ""
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
-#, fuzzy
-msgid "Accessibility related preferences"
-msgstr "Ibyahiswemo"
-
-#: desktop-directories/Settings.directory.in.h:1
-#, fuzzy
-msgid "Personal preferences and settings"
-msgstr "Ibyahiswemo Na Amagenamiterere"
-
-# extracted from content/PrefsWindow.xul
-# LOCALIZATION NOTE : FILE UI for the outer parts of the Prefs dialog
-#: desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Ibyahisemo"
-
-# 89
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
 msgstr "ubuyobozi"
 
-#: desktop-directories/System-Settings.directory.in.h:2
-#, fuzzy
-msgid "Change systemwide settings (affects all users)"
-msgstr "Amagenamiterere Byose"
+#: ../desktop-directories/mate-settings-system.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr ""
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/mate-settings.directory.in.h:1
+msgid "Preferences"
+msgstr "Ibyahisemo"
+
+#: ../desktop-directories/mate-settings.directory.in.h:2
+msgid "Personal preferences"
+msgstr ""
+
+#: ../desktop-directories/mate-system.directory.in.h:1
+#: ../desktop-directories/mate-menu-system.directory.in.h:1
+msgid "System"
+msgstr ""
+
+#: ../desktop-directories/mate-system.directory.in.h:2
+msgid "System settings"
+msgstr ""
+
+#: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
 msgstr ""
 
-#: desktop-directories/System-Tools.directory.in.h:2
-#, fuzzy
+#: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Iboneza Na"
+msgstr ""
+
+#: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr ""
+
+#: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr ""
+
+#: ../desktop-directories/mate-utility.directory.in.h:1
+msgid "Accessories"
+msgstr ""
+
+#: ../desktop-directories/mate-utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr ""
+
+#: ../desktop-directories/mate-menu-applications.directory.in.h:1
+msgid "Applications"
+msgstr "Porogaramu"
+
+#: ../desktop-directories/mate-menu-system.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr ""
+
+#: ../desktop-directories/mate-other.directory.in.h:1
+msgid "Other"
+msgstr "Ikindi"
+
+#: ../desktop-directories/mate-other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr ""
