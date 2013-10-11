@@ -1,9 +1,9 @@
 AC_PREREQ(2.62)
 
-AC_INIT([mate-menus], [1.6.0], [http://www.mate-desktop.org])
+AC_INIT([mate-menus], [1.7.0], [http://www.mate-desktop.org])
 AC_CONFIG_SRCDIR(libmenu/matemenu-tree.h)
 
-AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-bzip2])
+AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS(config.h)
