@@ -186,10 +186,13 @@ static gboolean monitor_callback (GFileMonitor* monitor, GFile* child, GFile* ot
 
 static MenuMonitor* register_monitor(const char* path, gboolean is_directory)
 {
+#if !GLIB_CHECK_VERSION (2, 36, 0)
   static gboolean  initted = FALSE;
+#endif
   MenuMonitor     *retval;
   GFile           *file;
 
+#if !GLIB_CHECK_VERSION (2, 36, 0)
   if (!initted)
     {
       /* This is the only place where we're using GObject and the app can't
@@ -197,6 +200,7 @@ static MenuMonitor* register_monitor(const char* path, gboolean is_directory)
       g_type_init ();
       initted = TRUE;
     }
+#endif
 
   retval = g_new0 (MenuMonitor, 1);
 
