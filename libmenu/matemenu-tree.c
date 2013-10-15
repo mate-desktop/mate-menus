@@ -1895,17 +1895,26 @@ static gboolean load_parent_merge_file(MateMenuTree* tree, GHashTable* loaded_me
 	found = FALSE;
 	menu_file = g_strconcat(menu_name, ".menu", NULL);
 
+  	// When merging, the directories called applications are taken instead of mate-applications
+
 	if (strcmp(menu_file, "mate-applications.menu") == 0 && g_getenv("XDG_MENU_PREFIX"))
 	{
 		char* prefixed_basename;
-		prefixed_basename = g_strdup_printf("%s%s", g_getenv("XDG_MENU_PREFIX"), menu_file);
+		prefixed_basename = g_strdup_printf("%s%s", g_getenv("XDG_MENU_PREFIX"), "applications.menu");
 		found = load_parent_merge_file_from_basename(tree, loaded_menu_files, layout, prefixed_basename, canonical_basedir);
 		g_free(prefixed_basename);
 	}
 
 	if (!found)
 	{
-		found = load_parent_merge_file_from_basename(tree, loaded_menu_files, layout, menu_file, canonical_basedir);
+		if(strcmp(menu_file, "mate-applications.menu") == 0)
+		{
+			found = load_parent_merge_file_from_basename(tree, loaded_menu_files, layout, "applications.menu", canonical_basedir);
+		}
+		else
+		{
+			found = load_parent_merge_file_from_basename(tree, loaded_menu_files, layout, menu_file, canonical_basedir);
+		}
 	}
 
 	g_free(menu_file);
