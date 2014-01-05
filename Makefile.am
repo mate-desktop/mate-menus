@@ -4,7 +4,7 @@ if HAVE_PYTHON
 SUBDIRS += python
 endif
 
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = --disable-introspection --disable-python
 
