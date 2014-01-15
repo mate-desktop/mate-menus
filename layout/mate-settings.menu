@@ -12,6 +12,7 @@
 
   <!-- Read in overrides and child menus from applications-merged/ -->
   <DefaultMergeDirs/>
+  <MergeDir>preferences-merged</MergeDir>
 
   <!-- Add a link to the control center -->
   <Include>
