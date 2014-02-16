@@ -7,13 +7,14 @@
 # Fabrício Godoy <skarllot@gmail.com>, 2008
 # Krix Apolinário <krixapolinario@gmail.com>, 2009
 # leonardof <leonardof@gnome.org>, 2007, 2008
+# Pygmalion, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2012-07-04 13:50+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-01-14 01:16+0000\n"
+"Last-Translator: Pygmalion\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/MATE/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "Multimídia"
+msgstr "Som e Vídeo"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"

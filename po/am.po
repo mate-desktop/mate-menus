@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# samson <sambelet@yahoo.com>, 2013.
+# samson <sambelet@yahoo.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2013-03-21 17:24+0000\n"
+"PO-Revision-Date: 2013-04-02 01:21+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/projects/p/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "ብዙሀን መገናኛ ዝርዝር "
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr ""
+msgstr "Programming"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
@@ -36,7 +36,7 @@ msgstr "የሶፍትዌር ማሳደጊያ መሳሪያዎች "
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
-msgstr "ትምሕርት"
+msgstr "ትምህርት"
 
 #: ../desktop-directories/mate-game.directory.in.h:1
 msgid "Games"
