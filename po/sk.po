@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2014
 # Marcel Telka <marcel@telka.sk>, 2004, 2005
 # pavolzetor <pavol@klacansky.com>, 2010
 # Peter Tuharsky <tuharsky@misbb.sk>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2012-07-04 13:51+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-02-20 23:34+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +55,7 @@ msgstr "Grafika"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Grafické aplikácie"
+msgstr "Grafické programy"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
@@ -94,7 +95,7 @@ msgstr "Kancelária"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Kancelárske aplikácie"
+msgstr "Kancelárske programy"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
@@ -156,7 +157,7 @@ msgstr "Príslušenstvo pracovnej plochy"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "Aplikácie"
+msgstr "Programy"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
@@ -168,4 +169,4 @@ msgstr "Ostatné"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Aplikácie, ktoré nezapadajú do ostatných kategórií"
+msgstr "Programy, ktoré nezapadajú do ostatných kategórií"
