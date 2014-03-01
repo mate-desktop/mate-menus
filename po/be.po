@@ -3,15 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ales Nyakhaychyk <nab@mail.by>, 2005, 2007
+# Alex Nehaichik <nab@mail.by>, 2005,2007
+# Alex Nehaichik <nab@mail.by>, 2005,2007
+# booxter <ihar.hrachyshka@gmail.com>, 2006,2014
 # booxter <ihar.hrachyshka@gmail.com>, 2006
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2012-07-04 13:48+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-02-28 08:06+0000\n"
+"Last-Translator: meequz <meequz@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/projects/p/MATE/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,15 +27,15 @@ msgstr "Аўдыё і відэа"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "Мультымэдыя"
+msgstr "Мультымедыя"
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr "Праграмаваньне"
+msgstr "Праграмаванне"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Інструмэнты для распрацоўкі праграм"
+msgstr "Сродкі распрацоўкі праграм"
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
@@ -53,7 +55,7 @@ msgstr "Графіка"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Графічныя дастасаваньні"
+msgstr "Графічныя праграмы"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
@@ -61,7 +63,7 @@ msgstr "Апаратура"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Настаўленьні для апаратуры"
+msgstr "Настáўленні некаторай апаратуры"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
@@ -69,15 +71,15 @@ msgstr "Інтэрнэт і сетка"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Настаўленьні сеткі"
+msgstr "Настáўленні, што датычаць сеткі"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Вонкавы выгляд"
+msgstr "Выгляд і паводзіны"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Настаўленьні, якія кантралююць вонавы выгляд і паводзіны асяродзьдзя"
+msgstr "Настáўленні, якія кантралююць вонкавы выгляд і паводзіны асяродздзя"
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
@@ -85,7 +87,7 @@ msgstr "Інтэрнэт"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Праграмы для доступу ў Інтэрнэт (Сеціва, пошта і інш.)"
+msgstr "Праграмы для доступу да інтэрнэту (Сеціва, пошта і інш.)"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
@@ -93,73 +95,73 @@ msgstr "Офіс"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Офісныя дастасаваньні"
+msgstr "Офісныя праграмы"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
-msgstr "Пэрсанальныя"
+msgstr "Персанальныя"
 
 #: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
-msgstr "Пэрсанальныя настаўленьні"
+msgstr "Персанальныя настáўленні"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
-msgstr "Адміністраваньне"
+msgstr "Адміністраванне"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Зьмены сыстэмных настаўленьняў (датычацца ўсіх карыстальнікаў"
+msgstr "Змены сістэмных настáўленняў (датычаць ўсіх карыстальнікаў)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "Перавагі"
+msgstr "Настáўленні"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr "Асабістыя перавагі"
+msgstr "Персанальныя настáўленні"
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr "Сыстэма"
+msgstr "Сістэма"
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
-msgstr "Сыстэмныя настаўленьні"
+msgstr "Сістэмныя настáўленні"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Сыстэмныя інструмэнты"
+msgstr "Сістэмныя сродкі"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Наладка сыстэмы і маніторынг"
+msgstr "Настáўленне і назіранне за сістэмай"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Унівэрсальны доступ"
+msgstr "Універсальны доступ"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Настаўленьні унівэрсальнага доступу"
+msgstr "Настáўленні ўніверсальнага доступу"
 
 #: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"
-msgstr "Інструмэнты"
+msgstr "Інструменты"
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Настольныя інструмэнты"
+msgstr "Настольныя інструменты"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "Дастасаваньні"
+msgstr "Праграмы"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Прыватныя перавагі і адміністрацыйныя настаўленьні"
+msgstr "Персанальныя перавагі і адміністрацыйныя настáўленні"
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
@@ -167,4 +169,4 @@ msgstr "Іншыя"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Дастасаваньні, якія ня трапілі ў іншыя катэгорыі"
+msgstr "Праграмы, якія не трапілі ў іншыя катэгорыі"
