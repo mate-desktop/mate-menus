@@ -33,6 +33,10 @@
 #include <errno.h>
 #include <stddef.h>
 
+#ifndef MAXSYMLINKS
+#define MAXSYMLINKS sysconf(_SC_SYMLOOP_MAX)
+#endif
+
 /* Return the canonical absolute name of file NAME.  A canonical name
    does not contain any `.', `..' components nor any repeated path
    separators ('/') or symlinks.  All path components must exist.  If
