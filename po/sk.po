@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2014-02-20 23:34+0000\n"
+"PO-Revision-Date: 2014-05-14 18:10+0000\n"
 "Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -116,11 +116,11 @@ msgstr "Zmeniť nastavenia pre celý systém (ovplyvní všetkých používateľ
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "Predvoľby"
+msgstr "Nastavenia"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr "Osobné predvoľby"
+msgstr "Osobné nastavenia"
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
@@ -161,7 +161,7 @@ msgstr "Programy"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Osobné predvoľby a správcovské nastavenia"
+msgstr "Osobné a správcovské nastavenia"
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"

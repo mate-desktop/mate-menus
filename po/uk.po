@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Copyright (C) Free Software Foundation Inc., 2005
-# Koljan1970 <Stuartlittle1970@gmail.com>, 2013
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2013-06-19 18:54+0000\n"
-"Last-Translator: Koljan1970 <Stuartlittle1970@gmail.com>\n"
+"PO-Revision-Date: 2014-09-20 07:33+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "Звук та відео"
+msgstr "Звук та видиво"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "Мультимедіа"
+msgstr "Мультимедія"
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
@@ -85,7 +85,7 @@ msgstr "Інтернет"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Програми для роботи з Інтернет (пошта, веб-переглядач, тощо)"
+msgstr "Програми для роботи з Інтернет (пошта, переглядач тенет, тощо)"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
