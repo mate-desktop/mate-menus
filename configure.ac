@@ -40,7 +40,7 @@ AM_PROG_LIBTOOL
 dnl make sure we keep ACLOCAL_FLAGS around for maintainer builds to work
 AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS")
 
-PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.6.0 gio-2.0 >= 2.15.2)
+PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.36.0 gio-2.0 >= 2.15.2)
 AC_SUBST(GLIB_CFLAGS)
 AC_SUBST(GLIB_LIBS)
 
