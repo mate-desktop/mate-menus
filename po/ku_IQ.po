@@ -3,168 +3,167 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ciaran, 2014
-# Dafydd Harries <daf@muse.19inch.net>, 2005
+# Haval Abdulkarim <haval.abdulkarim@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2014-12-20 17:26+0000\n"
-"Last-Translator: ciaran\n"
-"Language-Team: Welsh (http://www.transifex.com/projects/p/MATE/language/cy/)\n"
+"PO-Revision-Date: 2014-10-29 18:08+0000\n"
+"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
+"Language-Team: Kurdish (Iraq) (http://www.transifex.com/projects/p/MATE/language/ku_IQ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cy\n"
-"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != 11) ? 2 : 3;\n"
+"Language: ku_IQ\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "Sain a Fideo"
+msgstr "دەنگ و ڤیدیۆ"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "Dewislen amlgyfrwng"
+msgstr ""
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr "Rhaglennu"
+msgstr ""
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Offer datblygu meddalwedd"
+msgstr ""
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
-msgstr "Addysg"
+msgstr ""
 
 #: ../desktop-directories/mate-game.directory.in.h:1
 msgid "Games"
-msgstr "Gemau"
+msgstr "یارییەکان"
 
 #: ../desktop-directories/mate-game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Gemau a difyrrwch"
+msgstr ""
 
 #: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "Graffeg"
+msgstr ""
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Rhaglenni graffeg"
+msgstr ""
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "Caledwedd"
+msgstr ""
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Gosodiadau dyfeisiau caledwedd"
+msgstr ""
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Y We a Rhwydweithiau"
+msgstr ""
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Gosodiadau rhwydweithiau"
+msgstr ""
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Golwg a Naws"
+msgstr ""
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Gosodiadau i reoli golwg ac ymddygiad y bwrdd gwaith"
+msgstr ""
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
-msgstr "Rhyngrwyd"
+msgstr "ئینتەرنێت"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Rhaglenni ar gyfer mynediad Rhyngrwyd megis y we ac e-bost"
+msgstr ""
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
-msgstr "Swyddfa"
+msgstr "نووسینگە"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Rhaglenni'r Swyddfa"
+msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
-msgstr "Personol"
+msgstr ""
 
 #: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
-msgstr "Gosodiadau personol"
+msgstr ""
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
-msgstr "Gweinyddiaeth"
+msgstr ""
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Newid gosodiadau'r system gyfan (yn effeithio ar bob defnyddiwr)"
+msgstr ""
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "Hoffterau"
+msgstr ""
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr "Hoffterau personol"
+msgstr ""
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr "System"
+msgstr "سیستەم"
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
-msgstr "Gosodiadau'r system"
+msgstr "ڕێکخستنەکانی سیستەم"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Offer System"
+msgstr "ئامرازەکانی سیستەم"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Ffurfweddu a monitro'r system"
+msgstr ""
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Hygyrchedd"
+msgstr ""
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Gosodiadau Hygyrchedd"
+msgstr ""
 
 #: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"
-msgstr "Ategolion"
+msgstr ""
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Ategolion i'r bwrdd gwaith"
+msgstr ""
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "Rhaglenni"
+msgstr ""
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Hoffterau personol a gosodiadau gweinyddol"
+msgstr ""
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
-msgstr "Eraill"
+msgstr ""
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Rhaglenni sydd ddim yn perthyn i'r categorïau eraill"
+msgstr ""
