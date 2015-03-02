@@ -3,18 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# linostar <linux.anas@gmail.com>, 2007
+# Anas El Husseini <linux.anas@gmail.com>, 2007
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER, 2005
 # Djihed Afifi <djihed@gmail.com>, 2006
 # Khaled Hosny <khaledhosny@eglug.org>, 2006-2009
-# moceap <moceap@hotmail.com>, 2013
+# Mosaab Alzoubi <moceap@hotmail.com>, 2013
+# مهدي السطيفي <chinoune.mehdi@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2013-10-05 15:11+0000\n"
-"Last-Translator: mauron\n"
+"PO-Revision-Date: 2015-02-13 06:39+0000\n"
+"Last-Translator: مهدي السطيفي <chinoune.mehdi@gmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/MATE/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,7 +77,7 @@ msgstr "الإعدادات المتعلّقة بالشبكة"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "المظهر"
+msgstr "الشكل و المظهر"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -84,7 +85,7 @@ msgstr "إعدادات تتحكّم في مظهر وسلوك سطح المكتب
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
-msgstr "الشّابكة"
+msgstr "أنترنت"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
