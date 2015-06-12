@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Copyright (C) Free Software Foundation Inc., 2005
-# Микола Ткач <Stuartlittle1970@gmail.com>, 2013-2014
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2014-09-20 07:33+0000\n"
+"PO-Revision-Date: 2015-05-08 16:11+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -29,11 +29,11 @@ msgstr "Мультимедія"
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr "Програмування"
+msgstr "Проґрамування"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Засоби розробки програм"
+msgstr "Засоби розробки проґрам"
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
@@ -53,7 +53,7 @@ msgstr "Графіка"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Графічні програми"
+msgstr "Графічні проґрами"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
@@ -85,7 +85,7 @@ msgstr "Інтернет"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Програми для роботи з Інтернет (пошта, переглядач тенет, тощо)"
+msgstr "Проґрами для роботи з Інтернет (пошта, оглядач тенет, тощо)"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
@@ -93,7 +93,7 @@ msgstr "Офіс"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Офісні програми"
+msgstr "Офісні проґрами"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
@@ -123,7 +123,7 @@ msgstr "Особисті уподобання"
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr "Системна"
+msgstr "Система"
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
@@ -151,11 +151,11 @@ msgstr "Стандартні"
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Стандартні програми"
+msgstr "Стандартні проґрами"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "Програми"
+msgstr "Проґрами"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
@@ -167,4 +167,4 @@ msgstr "Інші"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Програми, що не належать до жодної категорії"
+msgstr "Проґрами, що не належать до жодної категорії"
