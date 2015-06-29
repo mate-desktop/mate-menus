@@ -76,57 +76,22 @@ AC_SUBST(DEBUG_CFLAGS)
 
 AC_ARG_ENABLE(python,
               [AC_HELP_STRING([--enable-python],
-                              [build python bindings @<:@default=auto@:>@])],
-              [enable_deprecations=$enableval],
-              [enable_deprecations=auto])
+                              [build python bindings])],
+              [enable_python=$enableval],
+              [enable_python=yes])
 
 # Detect if we can build Python bindings (need python and python headers)
-if test "x$enable_python" = "xno" ; then
-  have_python=no
+if test "x$enable_python" = "xyes" ; then
+	AM_PATH_PYTHON(2.7)
+	PKG_CHECK_MODULES([PYTHON], [python-${PYTHON_VERSION}], [have_python=yes], [have_python=no])
 else
-  AC_MSG_NOTICE([Checking to see if we can build Python bindings])
-  have_python=no
-  AM_PATH_PYTHON(2.3)
-
-  if test "x$PYTHON" = "x" ; then
-    AC_MSG_WARN([Python not found])
-  else
-    AM_CHECK_PYTHON_HEADERS(have_python_headers=yes, have_python_headers=no)
-    if test "x$have_python_headers" = "xyes" ; then
-      have_python=yes
-    fi
-  fi
-
-  if test "x$have_python" = "xno" ; then
-    if test "x$enable_python" = "xyes" ; then
-      AC_MSG_ERROR([Building python explicitly requested, but can't build python bindings])
-    else
-      AC_MSG_WARN([Couldn't find the Python headers, not building Python bindings])
-    fi
-  fi
+	have_python=no
 fi
+AC_SUBST(PYTHON_LIBS)
+AC_SUBST(PYTHON_CFLAGS)
 
 AM_CONDITIONAL(HAVE_PYTHON, test x$have_python = xyes)
 
-# Because of the way Python implements polymorphism, we get the following warning:
-# "warning: dereferencing type-punned pointer will break strict-aliasing rules"
-# -fno-strict-aliasing (as used in Python build) switches warnings off
-NO_STRICT_ALIASING_CFLAGS=""
-if test "x$GCC" = "xyes" ; then
-  AC_MSG_CHECKING(whether $CC accepts -fno-strict-aliasing)
-  ac_save_cc="$CC"
-  CC="$CC -fno-strict-aliasing"
-  AC_TRY_RUN([int main() { return 0; }],
-             ac_cv_no_strict_aliasing_ok=yes,
-             ac_cv_no_strict_aliasing_ok=no,
-             ac_cv_no_strict_aliasing_ok=no)
-  CC="$ac_save_cc"
-  AC_MSG_RESULT($ac_cv_no_strict_aliasing_ok)
-  if test "x$ac_cv_no_strict_aliasing_ok" = "xyes" ; then
-    NO_STRICT_ALIASING_CFLAGS="-fno-strict-aliasing"
-  fi
-fi
-AC_SUBST(NO_STRICT_ALIASING_CFLAGS)
 
 GOBJECT_INTROSPECTION_CHECK([0.6.7])
 
