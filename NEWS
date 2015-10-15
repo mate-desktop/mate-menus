@@ -1,5 +1,9 @@
 mate-menus 1.11.0
 
+  - Use pkg-config to check for python (requires python 2.7)
+  - Some fixes and cleanups
+  - Translations update
+
 mate-menus 1.10.0
 
   - Translations update
