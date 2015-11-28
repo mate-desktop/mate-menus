@@ -1,3 +1,7 @@
+mate-menus 1.10.1
+
+  - Fix bash-izm of '==' operator usage for test
+
 mate-menus 1.10.0
 
   - Translations update
