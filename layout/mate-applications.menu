@@ -6,11 +6,6 @@
   <Name>Applications</Name>
   <Directory>mate-menu-applications.directory</Directory>
 
-  <!-- Scan legacy dirs first, as later items take priority -->
-  <KDELegacyDirs/>
-  <LegacyDir>/etc/X11/applnk</LegacyDir>
-  <LegacyDir>/usr/share/mate/apps</LegacyDir>
-
   <!-- Read standard .directory and .desktop file locations -->
   <DefaultAppDirs/>
   <DefaultDirectoryDirs/>
