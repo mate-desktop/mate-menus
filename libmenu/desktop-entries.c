@@ -623,42 +623,6 @@ gboolean desktop_entry_has_category(DesktopEntry* entry, const char* category)
   return FALSE;
 }
 
-void desktop_entry_add_legacy_category(DesktopEntry* entry)
-{
-  GQuark *categories;
-  gsize   i;
-  DesktopEntryDesktop *desktop_entry;
-
-  g_return_if_fail (entry->type == DESKTOP_ENTRY_DESKTOP);
-
-  desktop_entry = (DesktopEntryDesktop*) entry;
-
-  menu_verbose ("Adding Legacy category to \"%s\"\n",
-                entry->basename);
-
-  if (desktop_entry->categories != NULL)
-    {
-      i = 0;
-      for (; desktop_entry->categories[i]; i++);
-
-      categories = g_new0 (GQuark, i + 2);
-
-      i = 0;
-      for (; desktop_entry->categories[i]; i++)
-        categories[i] = desktop_entry->categories[i];
-    }
-  else
-    {
-      categories = g_new0 (GQuark, 2);
-      i = 0;
-    }
-
-  categories[i] = g_quark_from_string ("Legacy");
-
-  g_free (desktop_entry->categories);
-  desktop_entry->categories = categories;
-}
-
 /*
  * Entry sets
  */
