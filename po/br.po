@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Alan Monfort <alan.monfort@free.fr>, 2015
 # Jérémy Ar Floc'h <jeremy.lefloch@gmail.com>, 2006
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2012-07-04 13:51+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: Breton (http://www.transifex.com/projects/p/MATE/language/br/)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-09 13:05+0200\n"
+"PO-Revision-Date: 2016-01-17 20:14+0000\n"
+"Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
+"Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,7 +65,7 @@ msgstr "Arventennoù evit meur a drobarzhell"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Kenrouedad ha Rouedad"
+msgstr "Internet ha Rouedad"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
@@ -80,7 +81,7 @@ msgstr "Arventennoù a reol neuz ar burev hag e emzalc'h"
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
-msgstr "Kenrouedad"
+msgstr "Internet"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
@@ -92,7 +93,7 @@ msgstr "Bureveg"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Arloadoù burev all"
+msgstr "Arloadoù burev"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
@@ -105,7 +106,7 @@ msgstr "Arventennoù personel"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
-msgstr "Merañ"
+msgstr "Ardeiñ"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
@@ -130,11 +131,11 @@ msgstr "Arventennoù ar reizhiad"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Binvioù reizhiad"
+msgstr "Binvioù ar reizhiad"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Neuziadur hag eveshaerezh ar reizhiad"
+msgstr "Kefluniadur ha gouarnerezh ar reizhiad"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -142,7 +143,7 @@ msgstr "Haezhiñ hollvedel"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Dibarzhioù haezhiñ hollvedel"
+msgstr "Arventennoù haezhiñ hollvedel"
 
 #: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"
@@ -158,7 +159,7 @@ msgstr "Arloadoù"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Dibarzhioù hiniennel ha arventennoù merañ"
+msgstr "Gwellvezioù personel hag arventennoù ardeiñ"
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
@@ -166,4 +167,4 @@ msgstr "Arloadoù all"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Arloadoù n'int ket stag ouzh ur rummad all ebet"
+msgstr "Arloadoù n'int ket stag ouzh rummad all ebet"

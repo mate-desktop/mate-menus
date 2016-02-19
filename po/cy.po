@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ciaran, 2014
+# ciaran, 2014-2016
 # Dafydd Harries <daf@muse.19inch.net>, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2014-12-20 17:26+0000\n"
+"POT-Creation-Date: 2015-09-09 13:05+0200\n"
+"PO-Revision-Date: 2016-02-19 12:04+0000\n"
 "Last-Translator: ciaran\n"
-"Language-Team: Welsh (http://www.transifex.com/projects/p/MATE/language/cy/)\n"
+"Language-Team: Welsh (http://www.transifex.com/mate/MATE/language/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "Sain a Fideo"
+msgstr "Sain a fideo"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
@@ -65,7 +65,7 @@ msgstr "Gosodiadau dyfeisiau caledwedd"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Y We a Rhwydweithiau"
+msgstr "Y we a rhwydweithiau"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
@@ -73,7 +73,7 @@ msgstr "Gosodiadau rhwydweithiau"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Golwg a Naws"
+msgstr "Golwg a naws"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -85,7 +85,7 @@ msgstr "Rhyngrwyd"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Rhaglenni ar gyfer mynediad Rhyngrwyd megis y we ac e-bost"
+msgstr "Rhaglenni ar gyfer mynediad i'r rhyngrwyd megis y we ac e-bost"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
@@ -93,7 +93,7 @@ msgstr "Swyddfa"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Rhaglenni'r Swyddfa"
+msgstr "Rhaglenni'r swyddfa"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
@@ -131,7 +131,7 @@ msgstr "Gosodiadau'r system"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Offer System"
+msgstr "Offer system"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
@@ -143,7 +143,7 @@ msgstr "Hygyrchedd"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Gosodiadau Hygyrchedd"
+msgstr "Gosodiadau hygyrchedd"
 
 #: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"

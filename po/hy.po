@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Aram Palyan <ararat.info@gmail.com>, 2014
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-07-04 15:45+0200\n"
-"PO-Revision-Date: 2012-07-04 13:48+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: Armenian (http://www.transifex.com/projects/p/MATE/language/hy/)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-09 13:05+0200\n"
+"PO-Revision-Date: 2016-01-18 14:01+0000\n"
+"Last-Translator: Aram Palyan <ararat.info@gmail.com>\n"
+"Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -109,7 +110,7 @@ msgstr "Կառավարում"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr ""
+msgstr "Փոխել համակարգի կարգավորումները (կազդի բոլոր օգտատերերի վրա)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
