@@ -1,4 +1,4 @@
-mate-menus 1.13.0
+mate-menus 1.14.0
 
   - Move mate-preferences-categories.menu from mate-control-center.
     That file can be packaged separately in distros to let users
