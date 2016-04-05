@@ -3,167 +3,167 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# 趙惟倫 <bluebat@member.fsf.org>, 2012-2013
+# Alexandre Raymond, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:05+0200\n"
-"PO-Revision-Date: 2013-12-20 15:52+0000\n"
-"Last-Translator: 趙惟倫 <bluebat@member.fsf.org>\n"
-"Language-Team: Chinese (Mandarin) (http://www.transifex.com/mate/MATE/language/cmn/)\n"
+"PO-Revision-Date: 2016-03-31 16:01+0000\n"
+"Last-Translator: Alexandre Raymond\n"
+"Language-Team: Franco-Provençal (Arpitan) (http://www.transifex.com/mate/MATE/language/frp/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cmn\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: frp\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "影音"
+msgstr "Son et vidèô"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "多媒體選單"
+msgstr ""
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr "軟體開發"
+msgstr ""
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "軟體開發工具"
+msgstr ""
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
-msgstr "教育"
+msgstr "Èducacion"
 
 #: ../desktop-directories/mate-game.directory.in.h:1
 msgid "Games"
-msgstr "遊戲"
+msgstr "Juè"
 
 #: ../desktop-directories/mate-game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "遊戲及娛樂"
+msgstr ""
 
 #: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "美工繪圖"
+msgstr "Graficos"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "繪圖工具"
+msgstr ""
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "硬體"
+msgstr "Quincalye"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "多種硬體的設定"
+msgstr ""
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr "網際網路及網路"
+msgstr "Malyâjo et têla"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
-msgstr "網路相關設定"
+msgstr ""
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "外觀與感覺"
+msgstr ""
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "控制桌面顯示方式及行為的設定"
+msgstr ""
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
-msgstr "網際網路"
+msgstr "Malyâjo"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "如瀏覽網頁及收發電郵等網路軟體"
+msgstr ""
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
-msgstr "辦公"
+msgstr ""
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "辦公室軟體"
+msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
-msgstr "個人"
+msgstr ""
 
 #: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
-msgstr "個人設定"
+msgstr ""
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
-msgstr "管理"
+msgstr ""
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "更改全系統設定值（影響所有用戶）"
+msgstr ""
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "偏好設定"
+msgstr ""
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr "個人偏好設定"
+msgstr ""
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr "系統"
+msgstr ""
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
-msgstr "系統設定"
+msgstr ""
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
-msgstr "系統工具"
+msgstr ""
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "系統配置及監察"
+msgstr ""
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "無障礙功能"
+msgstr ""
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "無障礙功能設定值"
+msgstr ""
 
 #: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"
-msgstr "附屬應用程式"
+msgstr ""
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "桌面附屬應用程式"
+msgstr ""
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "應用程式"
+msgstr ""
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "個人偏好及管理設定"
+msgstr ""
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
-msgstr "其他"
+msgstr ""
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "不符合其他分類的軟體"
+msgstr ""
