@@ -1,4 +1,8 @@
-mate-menus 1.14.0
+1.15.0
+
+  - Translations update
+
+1.14.0
 
   - Move mate-preferences-categories.menu from mate-control-center.
     That file can be packaged separately in distros to let users
@@ -6,18 +10,18 @@ mate-menus 1.14.0
   - Translations update
   - Add Changelog generation
 
-mate-menus 1.12.0
+1.12.0
 
   - Use pkg-config to check for python (requires python 2.7)
   - Some fixes and cleanups
   - Translations update
 
-mate-menus 1.10.0
+1.10.0
 
   - Translations update
   - Bugfixes
 
-mate-menus 1.8.0
+1.8.0
 
   - Add a possibility to enable old gnome-2 preferences menu style with
     categories
