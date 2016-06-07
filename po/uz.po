@@ -5,7 +5,7 @@
 # Translators:
 # muzaffar habibullayev <muzaffarlearner@gmail.com>, 2016
 # muzaffar habibullayev <muzaffarlearner@gmail.com>, 2016
-# Umid Almasov <u.almasov@gmail.com>, 2013
+# Umidjon Almasov <u.almasov@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"

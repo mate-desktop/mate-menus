@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:05+0200\n"
-"PO-Revision-Date: 2016-03-31 16:01+0000\n"
+"PO-Revision-Date: 2016-05-09 15:14+0000\n"
 "Last-Translator: Alexandre Raymond\n"
 "Language-Team: Franco-Provençal (Arpitan) (http://www.transifex.com/mate/MATE/language/frp/)\n"
 "MIME-Version: 1.0\n"
@@ -24,15 +24,15 @@ msgstr "Son et vidèô"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
-msgstr ""
+msgstr "Menu son et vidèô"
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr ""
+msgstr "Programacion"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr ""
+msgstr "Otils de programacion"
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
@@ -44,7 +44,7 @@ msgstr "Juè"
 
 #: ../desktop-directories/mate-game.directory.in.h:2
 msgid "Games and amusements"
-msgstr ""
+msgstr "Juès et divèrtissement"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
@@ -52,7 +52,7 @@ msgstr "Graficos"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr ""
+msgstr "Aplicacions grafiques"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
@@ -60,23 +60,23 @@ msgstr "Quincalye"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr ""
+msgstr "Règllâjos de la quincalye de l’aparèly"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Malyâjo et têla"
+msgstr "Malyâjo et baranye"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
-msgstr ""
+msgstr "Règllâjos de baranye"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
-msgstr ""
+msgstr "Vêr et sentir"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr ""
+msgstr "Règllâjos de controlo d’aparence et de comportement"
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
@@ -84,86 +84,86 @@ msgstr "Malyâjo"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr ""
+msgstr "Programos de malyâjo et de navìgacion sur la têla"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
-msgstr ""
+msgstr "Ofiço"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr ""
+msgstr "Aplicacions d’ofiço"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
-msgstr ""
+msgstr "Pèrsonèl"
 
 #: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
-msgstr ""
+msgstr "Configuracion pèrsonèla"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "Regence"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr ""
+msgstr "Changér lo sistèmo g·ènèrâl (a tuis los usancérs)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr ""
+msgstr "Prèfèrences"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr ""
+msgstr "Prèfèrences pèrsonèles"
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr ""
+msgstr "Sistèmo"
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
-msgstr ""
+msgstr "Règllâjo du sistèmo"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
-msgstr ""
+msgstr "Otils de sistèmo"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr ""
+msgstr "Configuracion et diagnostico de sistèmo"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr ""
+msgstr "Accès univèrsèl"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr ""
+msgstr "Règllâjos d’accès univèrsèl"
 
 #: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"
-msgstr ""
+msgstr "Otilyâjo"
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr ""
+msgstr "Otilyâjo d’ordinator"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr ""
+msgstr "Aplicacions"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr ""
+msgstr "Règllâjos de prèfèrence et d’administracion"
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
-msgstr ""
+msgstr "Âtros"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr ""
+msgstr "Aplicacions qu’entront pas diens d’âtres catègories"
