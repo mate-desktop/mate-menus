@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Haval Abdulkarim <haval.abdulkarim@gmail.com>, 2014
+# Rasti K5 <rasti.khdhr@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 13:05+0200\n"
-"PO-Revision-Date: 2014-10-29 18:08+0000\n"
-"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
+"POT-Creation-Date: 2016-07-01 16:24+0300\n"
+"PO-Revision-Date: 2016-09-11 16:00+0000\n"
+"Last-Translator: Rasti K5 <rasti.khdhr@gmail.com>\n"
 "Language-Team: Kurdish (Iraq) (http://www.transifex.com/mate/MATE/language/ku_IQ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,15 +29,15 @@ msgstr ""
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr ""
+msgstr "بەرنامەسازی"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr ""
+msgstr "ئامرازەکانی گەشەپێدانی نەرمەکاڵا"
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
-msgstr ""
+msgstr "فێرکردن"
 
 #: ../desktop-directories/mate-game.directory.in.h:1
 msgid "Games"
@@ -48,15 +49,15 @@ msgstr ""
 
 #: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
-msgstr ""
+msgstr "گرافیکی"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr ""
+msgstr "نەرمەواڵەی گرافیکی"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
-msgstr ""
+msgstr "ڕەقەواڵە"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
@@ -64,7 +65,7 @@ msgstr ""
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr ""
+msgstr "ئینتەرنێت و ڕایەڵە"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
@@ -92,16 +93,16 @@ msgstr "نووسینگە"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr ""
+msgstr "نەرمەواڵەکانی نووسینگە"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
-msgstr ""
+msgstr "کەسی"
 
 #: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
-msgstr ""
+msgstr "ڕێکخستنە کەسییەکان"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
@@ -113,11 +114,11 @@ msgstr ""
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr ""
+msgstr "هەڵبژاردەکان"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr ""
+msgstr "هەڵبژاردە کەسییەکان"
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
@@ -154,7 +155,7 @@ msgstr ""
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr ""
+msgstr "نەرمەواڵەکان"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
@@ -162,7 +163,7 @@ msgstr ""
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
-msgstr ""
+msgstr "هی تر"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 13:05+0200\n"
-"PO-Revision-Date: 2016-03-26 21:59+0000\n"
+"POT-Creation-Date: 2016-07-01 16:24+0300\n"
+"PO-Revision-Date: 2016-06-24 11:31+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -86,7 +86,7 @@ msgstr "Internetas"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programos interneto prieigai (žiniatinklis, el. paštas)"
+msgstr "Programos interneto prieigai (saitynas, el. paštas)"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
