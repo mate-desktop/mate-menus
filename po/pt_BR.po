@@ -7,15 +7,15 @@
 # Fabrício Godoy <skarllot@gmail.com>, 2008
 # Krix Apolinário <krixapolinario@gmail.com>, 2009
 # leonardof <leonardof@gnome.org>, 2007, 2008
-# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2014
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2014,2016
 # Marcus Vinícius Marques, 2014
 # Marcus Vinícius Marques, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 13:05+0200\n"
-"PO-Revision-Date: 2015-12-03 11:57+0000\n"
+"POT-Creation-Date: 2016-07-01 16:24+0300\n"
+"PO-Revision-Date: 2016-10-12 02:12+0000\n"
 "Last-Translator: Marcelo Ghelman <marcelo.ghelman@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/mate/MATE/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgstr "Jogos"
 
 #: ../desktop-directories/mate-game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Jogos e diversões"
+msgstr "Jogos e diversão"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
