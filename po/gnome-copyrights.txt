@@ -829,13 +829,15 @@
 
 
 ========== pl.po ==========
-# Copyright (C) 2001-2009 Free Software Foundation, Inc.
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aviary.pl
-# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
-# matepl@aviary.pl
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Polish translation for gnome-menus.
+# Copyright © 2005-2009 the gnome-menus authors.
+# This file is distributed under the same license as the gnome-menus package.
+# Artur Flinta <aflinta@at.kernel.pl>, 2005-2006.
+# Wadim Dziedzic <wdziedzic@aviary.pl>, 2007.
+# Tomasz Dominikowski <dominikowski@gmail.com>, 2007-2009.
+# Piotr Zaryk <pzaryk@aviary.pl>, 2008.
+# Aviary.pl <gnomepl@aviary.pl>, 2007-2009.
+#
 
 
 
