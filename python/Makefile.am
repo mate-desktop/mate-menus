@@ -14,7 +14,7 @@ matemenudir = $(pyexecdir)
 matemenu_LTLIBRARIES = matemenu.la
 
 matemenu_la_SOURCES = matemenu.c
-matemenu_la_LDFLAGS = -module -avoid-version -fPIC -export-symbols-regex initmatemenu
+matemenu_la_LDFLAGS = -module -avoid-version -fPIC -export-symbols-regex '(PyInit_|init)matemenu'
 matemenu_la_LIBADD = $(GLIB_LIBS) $(PYTHON_LIBS) $(top_builddir)/libmenu/libmate-menu.la
 
 -include $(top_srcdir)/git.mk
