@@ -77,7 +77,7 @@ AC_ARG_ENABLE(python,
 
 # Detect if we can build Python bindings (need python and python headers)
 if test "x$enable_python" = "xyes" ; then
-	AM_PATH_PYTHON(3.5)
+	AM_PATH_PYTHON(3.6)
 	PKG_CHECK_MODULES([PYTHON], [python-${PYTHON_VERSION}], [have_python=yes], [have_python=no])
 else
 	have_python=no
