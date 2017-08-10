@@ -29,7 +29,7 @@ scriptversion=2009-04-28.21; # UTC
 # <automake-patches@gnu.org>.
 
 if [ -z "$PYTHON" ]; then
-  PYTHON=python3
+  PYTHON=python
 fi
 
 basedir=
