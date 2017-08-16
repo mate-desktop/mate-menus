@@ -2100,7 +2100,9 @@ setup_merge_dir_symlink(void)
     gchar *sym_path;
     GFile *sym_file;
 
-    g_file_make_directory_with_parents (merge_file, NULL, NULL);
+    if (!g_file_query_exists (merge_file, NULL)) {
+	    g_file_make_directory_with_parents (merge_file, NULL, NULL);
+	}
 
     sym_path = g_build_filename (user_config, "menus", "mate-applications-merged", NULL);
     sym_file = g_file_new_for_path (sym_path);
