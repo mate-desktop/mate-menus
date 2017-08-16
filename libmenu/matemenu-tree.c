@@ -21,6 +21,7 @@
 
 #include "matemenu-tree.h"
 
+#include <gio/gio.h>
 #include <string.h>
 #include <errno.h>
 
@@ -2085,6 +2086,36 @@ static MenuLayoutNode* add_directory_dir(MateMenuTree* tree, MenuLayoutNode* bef
 	return tmp;
 }
 
+/* According to desktop spec, since our menu file is called 'mate-applications', our
+ * merged menu folders need to be called 'mate-applications-merged'.  We'll setup the folder
+ * 'applications-merged' if it doesn't exist yet, and a symlink pointing to it in the
+ * ~/.config/menus directory
+ */
+static void
+setup_merge_dir_symlink(void)
+{
+    gchar *user_config = (gchar *) g_get_user_config_dir();
+    gchar *merge_path = g_build_filename (user_config, "menus", "applications-merged", NULL);
+    GFile *merge_file = g_file_new_for_path (merge_path);
+    gchar *sym_path;
+    GFile *sym_file;
+
+    if (!g_file_query_exists (merge_file, NULL)) {
+	    g_file_make_directory_with_parents (merge_file, NULL, NULL);
+	}
+
+    sym_path = g_build_filename (user_config, "menus", "mate-applications-merged", NULL);
+    sym_file = g_file_new_for_path (sym_path);
+    if (!g_file_query_exists (sym_file, NULL)) {
+        g_file_make_symbolic_link (sym_file, merge_path, NULL, NULL);
+    }
+
+    g_free (merge_path);
+    g_free (sym_path);
+    g_object_unref (merge_file);
+    g_object_unref (sym_file);
+}
+
 static void
 resolve_default_directory_dirs (MateMenuTree      *tree,
                                 MenuLayoutNode *layout)
@@ -2128,6 +2159,8 @@ resolve_default_merge_dirs (MateMenuTree      *tree,
   char               *merge_name;
   const char * const *system_config_dirs;
   int                 i;
+
+  setup_merge_dir_symlink();
 
   root = menu_layout_node_get_root (layout);
   menu_name = menu_layout_node_root_get_name (root);
