@@ -77,8 +77,6 @@ AC_ARG_ENABLE(python,
 
 # Detect if we can build Python bindings (need python and python headers)
 if test "x$enable_python" = "xyes" ; then
-	# Allow Python >= 2.7, but prefer Python >= 3 by checking for it first
-	m4_define_default([_AM_PYTHON_INTERPRETER_LIST], [python3 python python2])
 	AM_PATH_PYTHON(2.7)
 	PKG_CHECK_MODULES([PYTHON], [python-${PYTHON_VERSION}], [have_python=yes], [have_python=no])
 else
