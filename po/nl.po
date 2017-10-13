@@ -5,14 +5,15 @@
 # Translators:
 # Daniel van Eeden <daniel_e@dds.nl>, 2004
 # Michael Steenbeek <m.o.steenbeek@gmail.com>, 2012
+# Pjotr <pjotrvertaalt@gmail.com>, 2017
 # Tino Meinen <a.t.meinen@chello.nl>, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2015-11-10 18:26+0000\n"
-"Last-Translator: Michael Steenbeek <m.o.steenbeek@gmail.com>\n"
+"PO-Revision-Date: 2017-09-23 18:17+0000\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/mate/MATE/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,23 +23,23 @@ msgstr ""
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "Audio en video"
+msgstr "Geluid en video"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "Multimedia"
+msgstr "Multimedia-menu"
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr "Ontwikkeling"
+msgstr "Programmeren"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Gereedschap voor software-ontwikkeling"
+msgstr "Gereedschap voor programmatuurontwikkeling"
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
-msgstr "Educatie"
+msgstr "Onderwijs"
 
 #: ../desktop-directories/mate-game.directory.in.h:1
 msgid "Games"
@@ -46,7 +47,7 @@ msgstr "Spellen"
 
 #: ../desktop-directories/mate-game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Spelletjes en amusement"
+msgstr "Spellen en amusement"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
@@ -58,11 +59,11 @@ msgstr "Grafische toepassingen"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "Hardware"
+msgstr "Apparatuur"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Hardware-instellingen"
+msgstr "Instellingen voor verschillende apparaten"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
@@ -78,7 +79,7 @@ msgstr "Uiterlijk en gedrag"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Instellingen voor het uiterlijk en gedrag van de werkomgeving"
+msgstr "Instellingen voor het uiterlijk en het gedrag van de werkomgeving"
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
@@ -111,7 +112,7 @@ msgstr "Beheer"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Systeembrede instellingen (op alle gebruikers van toepassing)"
+msgstr "Verander systeembrede instellingen (van toepassing op alle gebruikers)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
@@ -136,7 +137,7 @@ msgstr "Systeemgereedschap"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Systeemconfiguratie en -controle"
+msgstr "Systeeminstellingen en -bewaking"
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -160,7 +161,7 @@ msgstr "Toepassingen"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Persoonlijke voorkeuren en instellingen"
+msgstr "Persoonlijke voorkeuren en beheerinstellingen"
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
@@ -168,4 +169,4 @@ msgstr "Overig"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Toepassingen die niet in een andere categorie ondergebracht kunnen worden"
+msgstr "Toepassingen die niet in enige andere categorie passen"
