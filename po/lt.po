@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2017
 # Gintautas Miliauskas <gintas@akl.lt>, 2007, 2008
 # Justina Klingaitė <justina.klingaite@gmail.com>, 2005
-# Moo, 2015-2016
+# Moo, 2015-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2016-06-24 11:31+0000\n"
+"PO-Revision-Date: 2017-09-23 18:17+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +100,7 @@ msgstr "Raštinės programos"
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
-msgstr "Asmeninės"
+msgstr "Asmeniniai"
 
 #: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
@@ -115,11 +116,11 @@ msgstr "Keisti sisteminio masto nustatymus (paveikia visus naudotojus)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "Nuostatos"
+msgstr "Nustatymai"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr "Asmeninės nuostatos"
+msgstr "Asmeniniai nustatymai"
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
@@ -160,7 +161,7 @@ msgstr "Programos"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Asmeninės ir administravimo nuostatos"
+msgstr "Asmeniniai ir administravimo nustatymai"
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
