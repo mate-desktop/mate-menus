@@ -1,5 +1,9 @@
 ### mate-menus 1.19.0
 
+  * Translations update
+  * make mate-applications-merged symlink
+  * Restore Polish translation credits from GNOME
+
 ### mate-menus 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
