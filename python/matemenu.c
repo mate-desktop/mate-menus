@@ -53,9 +53,15 @@ static PyMateMenuTreeHeader* pymatemenu_tree_header_wrap(MateMenuTreeHeader* hea
 static PyMateMenuTreeAlias* pymatemenu_tree_alias_wrap(MateMenuTreeAlias* alias);
 
 #if PY_MAJOR_VERSION < 3
+	#ifndef PyUnicode_FromString
 	#define PyUnicode_FromString PyString_FromString
+	#endif
+	#ifndef PyUnicode_Check
 	#define PyUnicode_Check PyString_Check
+	#endif
+	#ifndef PyUnicode_AsUTF8
 	#define PyUnicode_AsUTF8 PyString_AsString
+	#endif
 #endif
 
 static inline PyObject* lookup_item_type_str(const char* item_type_str)
@@ -1758,8 +1764,12 @@ static PyObject* pymatemenu_tree_getattro(PyMateMenuTree* self, PyObject* py_att
 }
 
 #if PY_MAJOR_VERSION < 3
+	#ifndef PyLong_Check
 	#define PyLong_Check PyInt_Check
+	#endif
+	#ifndef PyLong_AsLong
 	#define PyLong_AsLong PyInt_AsLong
+	#endif
 #endif
 
 static int pymatemenu_tree_setattro(PyMateMenuTree* self, PyObject* py_attr, PyObject* py_value)
@@ -1994,6 +2004,7 @@ PyMODINIT_FUNC PyInit_matemenu(void)
 
 #if PY_MAJOR_VERSION < 3
   mod = NULL;
-#endif
+#else
   return mod;
+#endif
 }
