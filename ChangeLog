@@ -1,2 +1,1689 @@
-The ChangeLog is auto-generated when releasing. If you are seeing this, use
-'git log' for a detailed list of changes.
+commit e6a66f3be9cef78fb8809f7a69c5576436ec07ae
+Author: monsta <monsta@inbox.ru>
+Date:   Sat Jan 27 23:00:39 2018 +0300
+
+    require GLib 2.50.0
+    
+    bump version like in other packages for 1.20 release
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fbcfe37b673056f71323a1ff1d90a44fe1323195
+Author: raveit65 <mate@raveit.de>
+Date:   Thu Nov 9 16:06:00 2017 +0100
+
+    pre-bump version
+
+ NEWS         | 2 ++
+ configure.ac | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit 5debae44d2c4e2e5744439a1f88135c93592b17e
+Author: raveit65 <mate@raveit.de>
+Date:   Wed Nov 8 08:43:37 2017 +0100
+
+    sync with transifex
+
+ po/ca@valencia.po | 2 +-
+ po/sr@latin.po    | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 80f0680877363051e527835032b4749fe022000d
+Author: raveit65 <mate@raveit.de>
+Date:   Fri Oct 13 08:50:51 2017 +0200
+
+    update to 1.19.0
+
+ NEWS | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit b0e8faf0a9b664380c06633b26c90eff31f076c2
+Author: raveit65 <mate@raveit.de>
+Date:   Fri Oct 13 08:28:30 2017 +0200
+
+    sync with transifex
+
+ po/af.po          |  2 +-
+ po/am.po          |  2 +-
+ po/an.po          |  2 +-
+ po/ar.po          |  2 +-
+ po/as.po          |  2 +-
+ po/ast.po         |  2 +-
+ po/be.po          |  2 +-
+ po/bg.po          |  2 +-
+ po/bn.po          |  2 +-
+ po/bn_IN.po       |  2 +-
+ po/br.po          |  2 +-
+ po/bs.po          | 12 +++++-----
+ po/ca.po          |  2 +-
+ po/ca@valencia.po |  2 +-
+ po/cmn.po         |  2 +-
+ po/crh.po         |  2 +-
+ po/cs.po          |  2 +-
+ po/cy.po          |  2 +-
+ po/da.po          |  2 +-
+ po/de.po          |  2 +-
+ po/dz.po          |  2 +-
+ po/el.po          |  2 +-
+ po/en_AU.po       |  2 +-
+ po/en_CA.po       |  2 +-
+ po/en_GB.po       |  2 +-
+ po/eo.po          |  2 +-
+ po/es.po          |  2 +-
+ po/es_CL.po       |  2 +-
+ po/es_CO.po       | 67 ++++++++++++++++++++++++++++---------------------------
+ po/es_MX.po       |  2 +-
+ po/et.po          |  2 +-
+ po/eu.po          |  2 +-
+ po/fa.po          |  2 +-
+ po/fi.po          |  2 +-
+ po/fr.po          |  2 +-
+ po/fr_CA.po       |  2 +-
+ po/frp.po         |  2 +-
+ po/fur.po         |  2 +-
+ po/fy.po          |  2 +-
+ po/ga.po          |  2 +-
+ po/gl.po          |  2 +-
+ po/gu.po          |  2 +-
+ po/ha.po          |  2 +-
+ po/he.po          |  2 +-
+ po/hi.po          |  2 +-
+ po/hr.po          |  2 +-
+ po/hu.po          |  2 +-
+ po/hy.po          |  2 +-
+ po/id.po          |  2 +-
+ po/ig.po          |  2 +-
+ po/is.po          |  2 +-
+ po/it.po          |  2 +-
+ po/ja.po          |  2 +-
+ po/jv.po          |  2 +-
+ po/ka.po          |  2 +-
+ po/kk.po          |  2 +-
+ po/kn.po          |  2 +-
+ po/ko.po          |  2 +-
+ po/ku.po          |  2 +-
+ po/ku_IQ.po       |  2 +-
+ po/ky.po          |  2 +-
+ po/lt.po          | 13 ++++++-----
+ po/lv.po          |  2 +-
+ po/mai.po         |  2 +-
+ po/mg.po          |  2 +-
+ po/mk.po          |  2 +-
+ po/ml.po          |  2 +-
+ po/mn.po          |  2 +-
+ po/mr.po          |  2 +-
+ po/ms.po          |  2 +-
+ po/nb.po          |  2 +-
+ po/nds.po         |  2 +-
+ po/ne.po          |  2 +-
+ po/nl.po          | 31 ++++++++++++-------------
+ po/nn.po          |  2 +-
+ po/oc.po          |  2 +-
+ po/or.po          |  2 +-
+ po/pa.po          |  2 +-
+ po/pl.po          |  4 ++--
+ po/ps.po          |  2 +-
+ po/pt.po          |  6 ++---
+ po/pt_BR.po       |  2 +-
+ po/ro.po          |  2 +-
+ po/ru.po          |  2 +-
+ po/rw.po          |  2 +-
+ po/sc.po          |  2 +-
+ po/si.po          |  2 +-
+ po/sk.po          |  2 +-
+ po/sl.po          |  2 +-
+ po/sq.po          |  2 +-
+ po/sr.po          |  2 +-
+ po/sr@latin.po    |  2 +-
+ po/sv.po          |  2 +-
+ po/ta.po          |  2 +-
+ po/te.po          |  2 +-
+ po/th.po          |  2 +-
+ po/tr.po          |  2 +-
+ po/ug.po          |  2 +-
+ po/uk.po          |  2 +-
+ po/ur.po          |  2 +-
+ po/uz.po          |  2 +-
+ po/vi.po          |  2 +-
+ po/xh.po          |  2 +-
+ po/yo.po          |  2 +-
+ po/zh_CN.po       |  2 +-
+ po/zh_HK.po       |  2 +-
+ po/zh_TW.po       |  2 +-
+ 107 files changed, 169 insertions(+), 166 deletions(-)
+
+commit 923a0d96b4de690e48e1ebd2efe9ff544cc7b254
+Author: rezso <rezso@rezso.net>
+Date:   Tue Aug 15 23:58:52 2017 +0200
+
+    make mate-applications-merged symlink
+    
+    in ~/.config/menus if not exists
+
+ libmenu/matemenu-tree.c | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+commit 91778df1025aefd86dd1074b6f483657a65f83b2
+Author: raveit65 <mate@raveit.de>
+Date:   Tue Jul 18 15:16:55 2017 +0200
+
+    update issue_template
+
+ .github/issue_template.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 19a9b4ce354a440032095ac047be9006d0b1d781
+Author: raveit65 <mate@raveit.de>
+Date:   Thu Jun 8 19:06:13 2017 +0200
+
+    create issue_template.md
+
+ .github/issue_template.md | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+commit b85a730182e74a366795f1d8cabf7eb05bc99b45
+Author: Piotr Drąg <piotrdrag@gmail.com>
+Date:   Sat May 20 17:45:22 2017 +0200
+
+    Restore Polish translation credits from GNOME
+
+ po/gnome-copyrights.txt | 16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+
+commit b77d95301c18e2979943b2a62113bb164b266d54
+Author: raveit65 <mate@raveit.de>
+Date:   Thu Mar 30 17:55:40 2017 +0200
+
+    pre-bump version
+
+ NEWS         | 2 ++
+ configure.ac | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit afed6035af51c699c4416f1109fa6cd99bb3b897
+Author: monsta <monsta@inbox.ru>
+Date:   Sun Mar 12 20:31:02 2017 +0300
+
+    update/fix NEWS for 1.18
+
+ NEWS | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+commit 75e41b11d79580bcf4f4d8252cd010f760bb8be9
+Author: raveit65 <mate@raveit.de>
+Date:   Sun Mar 12 17:57:37 2017 +0100
+
+    update NEWS to 1.18
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d62f4752c45987439c4c4535eecc2a041377ba53
+Author: raveit65 <mate@raveit.de>
+Date:   Sun Mar 12 17:49:01 2017 +0100
+
+    sync with transifex
+
+ po/af.po          | 2 +-
+ po/an.po          | 2 +-
+ po/ar.po          | 2 +-
+ po/as.po          | 2 +-
+ po/ast.po         | 2 +-
+ po/be.po          | 2 +-
+ po/bg.po          | 2 +-
+ po/bn.po          | 2 +-
+ po/bn_IN.po       | 2 +-
+ po/br.po          | 2 +-
+ po/ca@valencia.po | 2 +-
+ po/cmn.po         | 2 +-
+ po/crh.po         | 2 +-
+ po/cs.po          | 2 +-
+ po/cy.po          | 2 +-
+ po/da.po          | 2 +-
+ po/de.po          | 2 +-
+ po/dz.po          | 2 +-
+ po/el.po          | 6 +++---
+ po/en_AU.po       | 2 +-
+ po/en_CA.po       | 2 +-
+ po/en_GB.po       | 2 +-
+ po/eo.po          | 2 +-
+ po/es.po          | 2 +-
+ po/es_CL.po       | 2 +-
+ po/es_MX.po       | 2 +-
+ po/et.po          | 2 +-
+ po/eu.po          | 2 +-
+ po/fa.po          | 2 +-
+ po/fi.po          | 2 +-
+ po/fr.po          | 2 +-
+ po/fr_CA.po       | 2 +-
+ po/frp.po         | 2 +-
+ po/fur.po         | 2 +-
+ po/fy.po          | 2 +-
+ po/ga.po          | 2 +-
+ po/gl.po          | 2 +-
+ po/gu.po          | 2 +-
+ po/ha.po          | 2 +-
+ po/he.po          | 2 +-
+ po/hi.po          | 2 +-
+ po/hu.po          | 2 +-
+ po/hy.po          | 2 +-
+ po/id.po          | 2 +-
+ po/ig.po          | 2 +-
+ po/is.po          | 2 +-
+ po/it.po          | 2 +-
+ po/ja.po          | 2 +-
+ po/jv.po          | 2 +-
+ po/ka.po          | 2 +-
+ po/kk.po          | 2 +-
+ po/kn.po          | 2 +-
+ po/ko.po          | 2 +-
+ po/ku.po          | 2 +-
+ po/ky.po          | 2 +-
+ po/lv.po          | 2 +-
+ po/mai.po         | 2 +-
+ po/mg.po          | 2 +-
+ po/mk.po          | 2 +-
+ po/ml.po          | 2 +-
+ po/mn.po          | 2 +-
+ po/mr.po          | 2 +-
+ po/ms.po          | 2 +-
+ po/nds.po         | 2 +-
+ po/ne.po          | 2 +-
+ po/nl.po          | 2 +-
+ po/nn.po          | 2 +-
+ po/oc.po          | 2 +-
+ po/or.po          | 2 +-
+ po/pa.po          | 2 +-
+ po/pl.po          | 4 ++--
+ po/ps.po          | 2 +-
+ po/pt.po          | 2 +-
+ po/ru.po          | 2 +-
+ po/rw.po          | 2 +-
+ po/sc.po          | 2 +-
+ po/si.po          | 2 +-
+ po/sk.po          | 2 +-
+ po/sl.po          | 2 +-
+ po/sq.po          | 2 +-
+ po/sr.po          | 2 +-
+ po/sr@latin.po    | 2 +-
+ po/sv.po          | 2 +-
+ po/ta.po          | 2 +-
+ po/te.po          | 2 +-
+ po/th.po          | 2 +-
+ po/tr.po          | 2 +-
+ po/ug.po          | 2 +-
+ po/uk.po          | 4 ++--
+ po/ur.po          | 2 +-
+ po/uz.po          | 2 +-
+ po/vi.po          | 2 +-
+ po/xh.po          | 2 +-
+ po/yo.po          | 2 +-
+ po/zh_CN.po       | 2 +-
+ po/zh_HK.po       | 2 +-
+ po/zh_TW.po       | 2 +-
+ 97 files changed, 101 insertions(+), 101 deletions(-)
+
+commit 9169874dffe6abcd59d9efebcf58c45e7c98889c
+Author: raveit65 <mate@raveit.de>
+Date:   Sun Mar 12 17:47:58 2017 +0100
+
+    update NEWS to 1.18
+
+ NEWS | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit ddc11582286861b8d405eb7681ccebf7aae103b3
+Author: monsta <monsta@inbox.ru>
+Date:   Thu Jan 19 17:52:08 2017 +0300
+
+    sync with Transifex and drop empty translations
+
+ po/LINGUAS    |   1 +
+ po/am.po      |  10 ++--
+ po/ca.po      |   6 +--
+ po/cv.po      | 168 ----------------------------------------------------------
+ po/de_CH.po   | 168 ----------------------------------------------------------
+ po/es_419.po  | 168 ----------------------------------------------------------
+ po/es_ES.po   | 168 ----------------------------------------------------------
+ po/es_PR.po   | 168 ----------------------------------------------------------
+ po/es_US.po   | 168 ----------------------------------------------------------
+ po/fil.po     | 168 ----------------------------------------------------------
+ po/fo.po      | 168 ----------------------------------------------------------
+ po/gd.po      | 168 ----------------------------------------------------------
+ po/hr.po      |   8 +--
+ po/ia.po      | 168 ----------------------------------------------------------
+ po/la.po      | 168 ----------------------------------------------------------
+ po/nah.po     | 168 ----------------------------------------------------------
+ po/nqo.po     | 168 ----------------------------------------------------------
+ po/om.po      | 168 ----------------------------------------------------------
+ po/pms.po     | 168 ----------------------------------------------------------
+ po/ro.po      |   6 +--
+ po/sco.po     | 168 ----------------------------------------------------------
+ po/so.po      | 168 ----------------------------------------------------------
+ po/sw.po      | 168 ----------------------------------------------------------
+ po/tg.po      | 168 ----------------------------------------------------------
+ po/tl.po      | 168 ----------------------------------------------------------
+ po/ts.po      | 168 ----------------------------------------------------------
+ po/uk.po      |   6 +--
+ po/zh-Hans.po | 168 ----------------------------------------------------------
+ 28 files changed, 19 insertions(+), 3714 deletions(-)
+
+commit 3c2af606062966466748b9387d771533908324e7
+Author: Martin Wimpress <martin@mate-desktop.org>
+Date:   Fri Jan 13 16:13:03 2017 +0000
+
+    Update mate-menus NEWS to use consistent, project wide, markdown-like formatting. This will make generating release announcements easier.
+
+ NEWS | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+commit a81480299e492fce787852688fc00f7b7e651bfa
+Author: Martin Wimpress <martin@mate-desktop.org>
+Date:   Thu Jan 12 14:10:38 2017 +0000
+
+    Bump version to 1.17.0
+
+ NEWS         | 4 ++++
+ configure.ac | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+commit 3caee70eebf754aab080522f36bc1a0775ba4118
+Author: Martin Wimpress <martin@mate-desktop.org>
+Date:   Thu Jan 12 14:09:40 2017 +0000
+
+    Sync translations.
+
+ po/bs.po      | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/cv.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/de_CH.po   | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/es_419.po  | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/es_ES.po   | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/es_PR.po   | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/es_US.po   | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/fil.po     | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/fo.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/gd.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/ia.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/la.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/nah.po     | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/nb.po      |   9 ++--
+ po/nqo.po     | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/om.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/pms.po     | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/pt_BR.po   |   8 +--
+ po/sco.po     | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/so.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/sw.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/tg.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/tl.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/ts.po      | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/zh-Hans.po | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 25 files changed, 3874 insertions(+), 8 deletions(-)
+
+commit f6862353c8da31d3ade76ac8aa75e94c90331bfa
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Sun Sep 18 12:53:08 2016 +0200
+
+    release 1.16.0
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b5ecfcb1a50297493183820336c2a17023ff28d4
+Author: monsta <monsta@inbox.ru>
+Date:   Sun Sep 18 00:12:43 2016 +0300
+
+    update NEWS for 1.16
+
+ NEWS | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 65c67a1cd8daead950f13d813ec1c0fbdfa997d9
+Author: monsta <monsta@inbox.ru>
+Date:   Sun Sep 18 00:11:14 2016 +0300
+
+    sync with Transifex
+
+ po/es_CO.po | 17 +++++++++--------
+ po/ku_IQ.po | 35 ++++++++++++++++++-----------------
+ po/lt.po    |  6 +++---
+ 3 files changed, 30 insertions(+), 28 deletions(-)
+
+commit ede0c2dabaa582dd677b79e7e2693af2361266c7
+Author: monsta <monsta@inbox.ru>
+Date:   Fri Jul 1 16:23:37 2016 +0300
+
+    po: drop languages not present on Transifex
+
+ po/LINGUAS        |   7 --
+ po/be@latin.po    | 275 -----------------------------------------------------
+ po/dv.po          | 260 --------------------------------------------------
+ po/en@shaw.po     | 211 -----------------------------------------
+ po/gn.po          | 218 ------------------------------------------
+ po/gv.po          | 279 ------------------------------------------------------
+ po/io.po          | 267 ---------------------------------------------------
+ po/uz@cyrillic.po | 270 ----------------------------------------------------
+ 8 files changed, 1787 deletions(-)
+
+commit 82e92355480eb1ddc38225fe16ef8d77a6a58489
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Tue Jun 7 15:04:06 2016 +0200
+
+    release 1.15.0
+
+ NEWS         | 12 ++++++++----
+ configure.ac |  2 +-
+ 2 files changed, 9 insertions(+), 5 deletions(-)
+
+commit 6572a2aaa24c0dd270502df667ee9f5b8708e51a
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Tue Jun 7 15:00:42 2016 +0200
+
+    sync with Transiflex
+
+ po/frp.po | 64 +++++++++++++++++++++++++++++++--------------------------------
+ po/hi.po  |  2 +-
+ po/ko.po  |  9 +++++----
+ po/sc.po  |  4 ++--
+ po/uz.po  |  2 +-
+ 5 files changed, 41 insertions(+), 40 deletions(-)
+
+commit 6fbae854cda7deeca803dbd576436667418b0f9d
+Author: monsta <monsta@inbox.ru>
+Date:   Thu Apr 7 15:37:54 2016 +0300
+
+     po: add missing languages to LINGUAS
+
+ po/LINGUAS | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit a5a90206b3ec01c407c231e47a421cc3766e096e
+Author: monsta <monsta@inbox.ru>
+Date:   Thu Apr 7 11:10:10 2016 +0300
+
+    update NEWS to mention Changelog generation
+
+ NEWS | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 82e930b7b366c4d80c7ca0be6b98878d45d9ab6c
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Tue Apr 5 15:38:05 2016 +0200
+
+    release 1.14.0
+
+ NEWS         | 2 +-
+ configure.ac | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 3de3b5923481488a032ddb89a7570a8ac1996874
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Tue Apr 5 15:32:32 2016 +0200
+
+    Add Changelog generation
+
+ Makefile.am | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 12913d123538dcd32d3d4dfbba168f1b81ffdcff
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Tue Apr 5 15:29:13 2016 +0200
+
+    add new languages and sync with transiflex
+
+ po/LINGUAS        |   2 +
+ po/af.po          |   6 +-
+ po/am.po          |   4 +-
+ po/an.po          |   6 +-
+ po/ar.po          |   4 +-
+ po/as.po          |   6 +-
+ po/ast.po         |   4 +-
+ po/be.po          |  17 +++---
+ po/bg.po          |   8 +--
+ po/bn.po          |   6 +-
+ po/bn_IN.po       |   6 +-
+ po/ca.po          |  33 +++++------
+ po/ca@valencia.po |   6 +-
+ po/cmn.po         |   8 +--
+ po/crh.po         |   6 +-
+ po/cs.po          |   8 +--
+ po/da.po          |   8 +--
+ po/de.po          |  10 ++--
+ po/dz.po          |   6 +-
+ po/el.po          |   6 +-
+ po/en_AU.po       |  12 ++--
+ po/en_CA.po       |   6 +-
+ po/en_GB.po       |   6 +-
+ po/eo.po          |   6 +-
+ po/es.po          |   8 +--
+ po/es_CO.po       | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/es_MX.po       |   8 +--
+ po/et.po          |   6 +-
+ po/eu.po          |   6 +-
+ po/fa.po          |   8 +--
+ po/fi.po          |   8 +--
+ po/frp.po         | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/fur.po         |   6 +-
+ po/fy.po          |   6 +-
+ po/ga.po          |   6 +-
+ po/gl.po          |  22 +++----
+ po/gu.po          |   6 +-
+ po/ha.po          |   6 +-
+ po/hi.po          |   6 +-
+ po/hr.po          |   6 +-
+ po/hu.po          |   8 +--
+ po/id.po          |   8 +--
+ po/ig.po          |   6 +-
+ po/is.po          |  12 ++--
+ po/it.po          |   8 +--
+ po/ja.po          |   8 +--
+ po/ka.po          |   6 +-
+ po/kk.po          |   8 +--
+ po/kn.po          |   8 +--
+ po/ko.po          |   8 +--
+ po/ku.po          |   6 +-
+ po/ku_IQ.po       |   4 +-
+ po/ky.po          |   4 +-
+ po/lt.po          |  21 +++----
+ po/lv.po          |   6 +-
+ po/mai.po         |   6 +-
+ po/mg.po          |   6 +-
+ po/mk.po          |   6 +-
+ po/ml.po          |   8 +--
+ po/mn.po          |   6 +-
+ po/mr.po          |   6 +-
+ po/ms.po          |   8 +--
+ po/nb.po          |   2 +-
+ po/nds.po         |   6 +-
+ po/nl.po          |   8 +--
+ po/nn.po          |   6 +-
+ po/oc.po          |  17 +++---
+ po/or.po          |   8 +--
+ po/pa.po          |   6 +-
+ po/pl.po          |   8 +--
+ po/ps.po          |   6 +-
+ po/pt.po          |   8 +--
+ po/pt_BR.po       |   6 +-
+ po/ro.po          |   2 +-
+ po/ru.po          |   6 +-
+ po/rw.po          |   6 +-
+ po/si.po          |   6 +-
+ po/sl.po          |   8 +--
+ po/sq.po          |   6 +-
+ po/sr.po          |   6 +-
+ po/sr@latin.po    |   6 +-
+ po/sv.po          |   8 +--
+ po/ta.po          |   6 +-
+ po/te.po          |   4 +-
+ po/th.po          |   8 +--
+ po/tr.po          |   8 +--
+ po/ug.po          |   6 +-
+ po/uk.po          |  31 +++++-----
+ po/ur.po          |   4 +-
+ po/uz.po          |  36 ++++++------
+ po/vi.po          |   6 +-
+ po/xh.po          |   6 +-
+ po/yo.po          |   6 +-
+ po/zh_CN.po       |   8 +--
+ po/zh_HK.po       |   8 +--
+ po/zh_TW.po       |  10 ++--
+ 96 files changed, 715 insertions(+), 369 deletions(-)
+
+commit 632b7aed295d3d0cc094cd2792d39c247ab0cb35
+Author: monsta <monsta@inbox.ru>
+Date:   Mon Apr 4 18:16:14 2016 +0300
+
+    update NEWS
+
+ NEWS | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit 0466546c99c8fe44645fcffe5b0af7cedc63f720
+Author: Martin Wimpress <code@flexion.org>
+Date:   Fri Feb 19 14:20:08 2016 +0000
+
+    Sync with Transifex
+
+ po/br.po | 29 +++++++++++++++--------------
+ po/cy.po | 22 +++++++++++-----------
+ po/fr.po |  6 +++---
+ po/he.po | 13 +++++++------
+ po/hy.po | 13 +++++++------
+ po/nb.po |  8 ++++----
+ po/ne.po |  8 ++++----
+ po/sk.po |  9 +++++----
+ 8 files changed, 56 insertions(+), 52 deletions(-)
+
+commit 6cf832aad47c1c1e19ec76e0770f66c80ec87f9b
+Author: Wolfgang Ulbrich <chat-to-me@raveit.de>
+Date:   Sun Jan 24 18:25:21 2016 +0100
+
+    release 1.13.0
+
+ NEWS | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 564fba3a40a43c70cb427118111a5db13181b48e
+Author: Wolfgang Ulbrich <chat-to-me@raveit.de>
+Date:   Tue Jan 5 02:30:07 2016 +0100
+
+    pre-bump version to 1.13.0
+
+ NEWS         | 2 ++
+ configure.ac | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit 89c9254d78764a2e21d4fbe3d7f5775d69b0113d
+Author: Wolfgang Ulbrich <chat-to-me@raveit.de>
+Date:   Sun Dec 27 15:32:19 2015 +0100
+
+    add preferences-categories.menu from m-c-c
+
+ layout/Makefile.am                      |   3 +-
+ layout/mate-preferences-categories.menu | 114 ++++++++++++++++++++++++++++++++
+ 2 files changed, 116 insertions(+), 1 deletion(-)
+
+commit 13cf5b9dd43eed006f8021b61aef31b3d59c9a0b
+Author: Clement Lefebvre <clement.lefebvre@linuxmint.com>
+Date:   Tue Nov 3 14:13:42 2015 +0000
+
+    1.12.0
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c3864724dce7948b53665c49a1bb0b75cfa37969
+Author: Clement Lefebvre <clement.lefebvre@linuxmint.com>
+Date:   Tue Nov 3 14:13:16 2015 +0000
+
+    Sync translations with transifex
+
+ po/es_CL.po | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/fr_CA.po | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/jv.po    | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/ro.po    |  13 ++---
+ po/sc.po    | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 681 insertions(+), 6 deletions(-)
+
+commit 2e7cdf776b7e3cca933cd52f4987cac4f63f1ad3
+Author: monsta <monsta@inbox.ru>
+Date:   Fri Oct 30 15:37:27 2015 +0300
+
+    update NEWS for 1.12
+
+ NEWS | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7fd9b1ccb14258e1a25738ca0b8519067ee3aadd
+Author: monsta <monsta@inbox.ru>
+Date:   Thu Oct 15 11:18:40 2015 +0300
+
+    Add NEWS for 1.11.0
+
+ NEWS | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 464e57550f2fb56c9ae6cb08ec5c147efb6af842
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Tue Oct 6 19:05:24 2015 +0200
+
+    pre-bump version to 1.11.0
+
+ NEWS         | 2 ++
+ configure.ac | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit 4cf15f426ba80284d7cf6aa3d566895d00f24865
+Merge: 6d02881 4f57c3f
+Author: Martin Wimpress <code@flexion.org>
+Date:   Tue Sep 8 12:34:24 2015 +0100
+
+    Merge pull request #32 from monsta/patch-1
+    
+    configure.ac: drop obsolete macro
+
+commit 6d0288120c14e419d7cc13e141dc1c82167b3504
+Merge: fe42f8d f24517e
+Author: Martin Wimpress <code@flexion.org>
+Date:   Tue Aug 25 16:44:44 2015 +0100
+
+    Merge pull request #33 from monsta/patch-2
+    
+    configure.ac: removed suspicious reference to win32
+
+commit f24517ebaf54005964e510e9ffee44807b9db2b6
+Author: monsta <monsta@inbox.ru>
+Date:   Tue Aug 25 16:10:52 2015 +0300
+
+    configure.ac: removed suspicious reference to win32
+
+ configure.ac | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 4f57c3f9f6592cecc2bc0164bf1d9341eb8e28a0
+Author: monsta <monsta@inbox.ru>
+Date:   Wed Aug 19 10:45:59 2015 +0300
+
+    configure.ac: drop obsolete macro
+    
+    It's been a no-op for a long time.
+    See https://mail.gnome.org/archives/commits-list/2011-December/msg00681.html for example.
+
+ configure.ac | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit fe42f8d57947d3e00ac98770abef879bd5a45f8b
+Author: infirit <infirit@gmail.com>
+Date:   Mon Jun 29 19:33:48 2015 +0200
+
+    Remove some aclocal magic already in Makefile.am
+
+ configure.ac | 3 ---
+ 1 file changed, 3 deletions(-)
+
+commit 46fd6ad2075870ae63e36d362bf8d6deef277c53
+Author: infirit <infirit@gmail.com>
+Date:   Mon Jun 29 19:27:07 2015 +0200
+
+    python: use pkgconfig for compiler and linker flags
+    
+    We need python to bump to 2.7 for the pkgconfig file.
+
+ configure.ac       | 53 ++++++---------------------------
+ m4/python.m4       | 86 ------------------------------------------------------
+ python/Makefile.am |  2 +-
+ 3 files changed, 10 insertions(+), 131 deletions(-)
+
+commit f286e7683b4ed8103938c6c725f6755c9b8c912b
+Merge: e37194f e6a6225
+Author: Martin Wimpress <code@flexion.org>
+Date:   Sat Jun 27 08:12:56 2015 +0100
+
+    Merge pull request #30 from obache/neatsrc
+    
+    Fix bash-izm of '==' operator usage for test(1)
+
+commit e6a6225b882c4c58a0ba7e333bda5cd6abf0c19a
+Author: OBATA Akio <obache@users.noreply.github.com>
+Date:   Sat Jun 27 14:23:48 2015 +0900
+
+    Fix bash-izm of '==' operator usage for test(1)
+
+ m4/python.m4 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e37194f78e109894f546ab996abc6309b8de3a92
+Author: mate-i18n <mate-i18n@ml.mate-desktop.org>
+Date:   Fri Jun 12 09:55:24 2015 +0200
+
+    Sync translations with transifex
+
+ po/ru.po | 12 ++++++------
+ po/uk.po | 22 +++++++++++-----------
+ 2 files changed, 17 insertions(+), 17 deletions(-)
+
+commit cad5db7611c29c913056ab482f562cf12bbe14a2
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Apr 9 20:17:45 2015 +0200
+
+    Bump version to 1.10.0
+
+ NEWS         | 2 +-
+ configure.ac | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit e65d0d98de408fec12252083e8f24a37cb040e12
+Author: mate-i18n <mate-i18n@ml.mate-desktop.org>
+Date:   Thu Apr 9 20:17:13 2015 +0200
+
+    Sync translations with transifex
+
+ po/sk.po | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit bb77c8164578eb6c7c4482ba3f8fff43965edfce
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Mar 2 20:59:21 2015 +0100
+
+    Bump version to 1.9.90
+
+ NEWS         | 5 +++--
+ configure.ac | 2 +-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+commit 8e37a4a1d0e04c08bffa08b74b1ea875157574bb
+Author: mate-i18n <mate-i18n@ml.mate-desktop.org>
+Date:   Mon Mar 2 20:58:50 2015 +0100
+
+    Sync translations with transifex
+
+ po/ar.po | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+commit 1f0ae985d8f1aff4b8093f9d20fe1d693c684ff0
+Author: mate-i18n <mate-i18n@ml.mate-desktop.org>
+Date:   Tue Jan 20 19:36:49 2015 +0100
+
+    Sync translations with transifex
+
+ po/LINGUAS  |   1 +
+ po/cy.po    |  16 +++---
+ po/en_GB.po |   6 +--
+ po/ku_IQ.po | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/sr.po    |  17 +++---
+ 5 files changed, 190 insertions(+), 19 deletions(-)
+
+commit 6607a7fed10d0309957063cd97b389e0c4818d26
+Author: Monsta <monsta@inbox.ru>
+Date:   Mon Jan 12 17:12:16 2015 +0300
+
+    drop support for GLib < 2.36
+    
+    Closes https://github.com/mate-desktop/mate-menus/pull/27
+
+ configure.ac           |  2 +-
+ libmenu/menu-monitor.c | 13 -------------
+ 2 files changed, 1 insertion(+), 14 deletions(-)
+
+commit 7a5e667a3c9f5bef8e3516d045e319ccc3b23811
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Nov 10 09:49:41 2014 +0100
+
+    Bump version to 1.9.1
+
+ NEWS         | 2 +-
+ configure.ac | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 45bf7ee1f6265d48fc8218c7390a7439a889810d
+Author: mate-i18n <mate-i18n@ml.mate-desktop.org>
+Date:   Thu Oct 23 11:16:12 2014 +0200
+
+    Sync translations with transifex
+
+ po/ast.po   | 11 ++++++-----
+ po/cy.po    | 31 ++++++++++++++++---------------
+ po/de.po    | 14 +++++++-------
+ po/en_AU.po | 10 +++++-----
+ po/et.po    | 10 +++++-----
+ po/hr.po    | 13 +++++++------
+ po/pt_BR.po | 11 ++++++-----
+ po/sk.po    |  8 ++++----
+ po/uk.po    | 14 +++++++-------
+ 9 files changed, 63 insertions(+), 59 deletions(-)
+
+commit f94dfd44be0761239a2e5874cea9017236b73e17
+Author: Svante Signell <svante.signell@gmail.com>
+Date:   Tue Sep 23 13:18:16 2014 +0200
+
+    Fix FTBFS on Debian/Hurd
+    
+    Closes https://github.com/mate-desktop/mate-menus/issues/20
+
+ libmenu/canonicalize.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 186ac96e71cee7ff757c10a25df0bf4e3da48d2b
+Author: mate-i18n <mate-i18n@ml.mate-desktop.org>
+Date:   Sun Apr 27 14:24:56 2014 +0200
+
+    Sync translations with transifex
+
+ po/de.po | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+commit a2a2470796d608a0d1adfb8488bc00496dfad99e
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Mar 22 17:12:56 2014 +0100
+
+    Bump version to 1.9.0
+
+ NEWS         | 4 ++++
+ configure.ac | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+commit f14c896780936f006c527242ab2fffc467aeb2d0
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Mar 22 17:11:32 2014 +0100
+
+    Sync translations with transifex
+
+ po/pt.po | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+commit dc2d538bb72390493db567d017958cfb0e38f7ee
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Mar 1 11:37:52 2014 +0100
+
+    Bump version to 1.8.0
+
+ NEWS         | 2 +-
+ configure.ac | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 7daad2547a9d9111cdda63fb47840564bb26384b
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Mar 1 11:37:28 2014 +0100
+
+    Sync translations with transifex
+
+ po/be.po | 64 +++++++++++++++++++++++++++++++++-------------------------------
+ po/te.po | 55 ++++++++++++++++++++++++++++---------------------------
+ 2 files changed, 61 insertions(+), 58 deletions(-)
+
+commit 52bb7c14fcd8a7d97c77addc5982387695818d0d
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 23 18:55:07 2014 +0100
+
+    Sync translations with transifex
+
+ po/fr.po    |  9 +++++----
+ po/pt_BR.po | 11 ++++++-----
+ po/sk.po    | 15 ++++++++-------
+ po/sl.po    |  4 ++--
+ 4 files changed, 21 insertions(+), 18 deletions(-)
+
+commit 0da1a2ba9abf05443e1549820a45c602858ec56b
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 16 15:33:51 2014 +0100
+
+    Bump version to 1.7.90
+
+ NEWS         | 2 +-
+ configure.ac | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 49e52bdeca0802a463119f9351588130ab0b92a0
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 16 15:33:30 2014 +0100
+
+    Update NEWS
+
+ NEWS | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit d8aca02d055e7721d3eb5da863c33ff568257261
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 16 15:32:16 2014 +0100
+
+    configure: Add check-news
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fbcf788dfb1543a1682d6442a9b67d5afdf3c529
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 16 15:14:26 2014 +0100
+
+    Sync translations with transifex
+
+ po/LINGUAS  |   4 ++
+ po/am.po    |  10 ++--
+ po/cmn.po   | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/es_MX.po | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/ky.po    |  39 +++++++-------
+ po/pt_BR.po |   9 ++--
+ po/ur.po    | 168 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ po/uz.po    | 169 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 709 insertions(+), 28 deletions(-)
+
+commit 00f90b5291ec7eb24a7a144fc4d09c76faee1239
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Feb 11 19:35:25 2014 +0100
+
+    Include autogen.sh in tarball
+
+ Makefile.am | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit fe0c53977d3c1a5dc5c7467e49c4256de2350128
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Jan 19 22:24:06 2014 +0100
+
+    Bump version to 1.7.1
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 998e0385171594a0b12819ab59b82d2e9dd55278
+Merge: 75e2224 af72cd6
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Jan 15 06:25:03 2014 -0800
+
+    Merge pull request #9 from elsupergomez/patch-2
+    
+    Update mate-settings.menu
+
+commit 75e2224d0bb9d9bd53a32b454776ede16487150e
+Merge: 1e72f1b f939339
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Jan 15 06:24:48 2014 -0800
+
+    Merge pull request #8 from elsupergomez/patch-1
+    
+    Update mate-applications.menu
+
+commit 1e72f1b35e92a09749701792ceb0847cbee002f0
+Merge: a599f39 485f6e1
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Jan 6 02:48:59 2014 -0800
+
+    Merge pull request #12 from infirit/master
+    
+    Add  to ACLOCAL_AMFLAGS for user added flags
+
+commit 485f6e18eded3008f1cac49e5cabbefe96fb6a98
+Author: infirit <infirit@gmail.com>
+Date:   Sun Jan 5 14:09:35 2014 +0100
+
+    Add  to ACLOCAL_AMFLAGS for user added flags
+
+ Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a599f393de76439e90ed643f55f0d30b8b4df494
+Merge: 6100d03 6f5c9a2
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Oct 21 13:13:20 2013 -0700
+
+    Merge pull request #11 from infirit/master
+    
+    Remove autogenerated files
+
+commit 6f5c9a26ca23e3adaeda4ff7a781d69191f4d3ab
+Author: infirit <infirit@gmail.com>
+Date:   Mon Oct 21 15:11:25 2013 +0200
+
+    Remove autogenerated files
+
+ install-sh     | 520 ---------------------------------------------------------
+ m4/intltool.m4 | 216 ------------------------
+ m4/ltsugar.m4  | 123 --------------
+ 3 files changed, 859 deletions(-)
+
+commit 6100d03539dd8ed6ac5fe03ba87b3d2fb3ac7353
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Oct 11 17:10:07 2013 +0200
+
+    Bump version to 1.7.0
+
+ configure.ac | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 2bd3ed74c7a1c1695bb8a3850b9c7566677a2c91
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Oct 11 17:09:55 2013 +0200
+
+    Fix Makefile for make dist and make distcheck
+
+ Makefile.am | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+commit 5df7e21297fa89637b5b14a6befba0d4e4795dcb
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Oct 11 17:09:37 2013 +0200
+
+    Fix g_type_init deprecation
+
+ libmenu/menu-monitor.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit e0fc981d66374cbc0a3aacc59d9157b9afae6676
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Oct 11 16:44:08 2013 +0200
+
+    Remove distro folder
+
+ distro/archlinux/PKGBUILD    | 31 -------------------------------
+ distro/archlinux/menus.patch | 25 -------------------------
+ 2 files changed, 56 deletions(-)
+
+commit af72cd61050c413137c6a48684f571e323a41f75
+Author: Claudio Rodrigo Pereyra Diaz <elsupergomez@gmail.com>
+Date:   Fri Oct 11 10:51:42 2013 -0300
+
+    Update mate-settings.menu
+    
+    Add MergeDir to merge menus in preferences-merged
+
+ layout/mate-settings.menu | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit f939339e26e862e72065bcd7316c1ac8b1586763
+Author: Claudio Rodrigo Pereyra Diaz <elsupergomez@gmail.com>
+Date:   Fri Oct 11 10:50:15 2013 -0300
+
+    Update mate-applications.menu
+    
+    Add DefaultMergeDirs to merge other menus in applications-merged
+
+ layout/mate-applications.menu | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 009111b1ce05e1fb3b787254a4fd0d780c6c483c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Oct 11 11:54:05 2013 +0200
+
+    Sync translations with transifex
+
+ po/af.po          |  220 ++---
+ po/an.po          |  160 ++--
+ po/ar.po          |  229 ++----
+ po/as.po          |  228 ++----
+ po/ast.po         |  221 ++---
+ po/be.po          |  271 ++-----
+ po/bg.po          |  229 ++----
+ po/bn.po          |  252 ++----
+ po/bn_IN.po       |  231 ++----
+ po/br.po          |  219 ++---
+ po/ca.po          |  224 ++----
+ po/ca@valencia.po |  224 ++----
+ po/crh.po         |  226 ++----
+ po/cs.po          |  223 ++----
+ po/cy.po          |  272 +++----
+ po/da.po          |  240 ++----
+ po/de.po          |  226 ++----
+ po/dz.po          |  279 ++-----
+ po/el.po          |  206 ++---
+ po/en_CA.po       |  273 +++----
+ po/en_GB.po       |  237 ++----
+ po/eo.po          |  266 ++----
+ po/es.po          |  239 ++----
+ po/et.po          |  173 ++--
+ po/eu.po          |  222 ++---
+ po/fa.po          |  229 ++----
+ po/fi.po          |  233 ++----
+ po/fr.po          |  232 ++----
+ po/fur.po         |  273 ++-----
+ po/fy.po          |  223 ++----
+ po/ga.po          |  219 ++---
+ po/gu.po          |  225 ++----
+ po/ha.po          |  232 ++----
+ po/he.po          |  227 ++----
+ po/hi.po          |  230 ++----
+ po/hu.po          |  222 ++---
+ po/hy.po          |  219 ++---
+ po/id.po          |  168 ++--
+ po/ig.po          |  230 ++----
+ po/is.po          |  222 ++---
+ po/it.po          |  219 ++---
+ po/ja.po          |  214 ++---
+ po/ka.po          |  280 +++----
+ po/kk.po          |  206 ++---
+ po/kn.po          |  203 ++---
+ po/ko.po          |  224 ++----
+ po/ku.po          |  289 ++-----
+ po/lt.po          |  234 ++----
+ po/lv.po          |  211 ++---
+ po/mai.po         |  222 ++---
+ po/mg.po          |  281 +++----
+ po/mk.po          |  284 +++----
+ po/ml.po          |  222 ++---
+ po/mn.po          |  223 ++----
+ po/mr.po          |  230 ++----
+ po/ms.po          | 2313 +++--------------------------------------------------
+ po/nb.po          |  219 ++---
+ po/nds.po         |  221 ++---
+ po/ne.po          |  278 ++-----
+ po/nl.po          |  232 ++----
+ po/nn.po          |  230 ++----
+ po/oc.po          |  219 ++---
+ po/or.po          |  227 ++----
+ po/pa.po          |  225 ++----
+ po/pl.po          |  230 ++----
+ po/ps.po          |  207 ++---
+ po/pt.po          |  267 ++-----
+ po/pt_BR.po       |  272 ++-----
+ po/ro.po          |  224 ++----
+ po/rw.po          |  219 ++---
+ po/si.po          |  268 ++-----
+ po/sk.po          |  166 ++--
+ po/sl.po          |  443 ++++------
+ po/sq.po          |  279 ++-----
+ po/sr.po          |  239 ++----
+ po/sr@latin.po    |  239 ++----
+ po/sv.po          |  264 ++----
+ po/ta.po          |  227 ++----
+ po/te.po          |  225 ++----
+ po/th.po          |  233 ++----
+ po/tr.po          |  235 ++----
+ po/ug.po          |  241 ++----
+ po/uk.po          |  235 ++----
+ po/vi.po          |  280 ++-----
+ po/xh.po          |  188 +++--
+ po/yo.po          |  230 ++----
+ po/zh_CN.po       |  215 ++---
+ po/zh_HK.po       |  229 ++----
+ po/zh_TW.po       |  230 ++----
+ 89 files changed, 6171 insertions(+), 16794 deletions(-)
+
+commit e5734e2b6017c36fca8ab2403ed6cabfa7ef0d23
+Merge: f024861 70cdfb0
+Author: Scott Balneaves <sbalneav@alburg.net>
+Date:   Tue Jun 4 04:49:30 2013 -0700
+
+    Merge pull request #7 from NiceandGently/master
+    
+     add a possibility to enable old gnome-2 preferences menu style with categories
+
+commit 70cdfb076b55c179edd7f5f00797c8bfc7d26699
+Author: raveit <chat-to-me@raveit.de>
+Date:   Wed Apr 17 18:28:18 2013 +0200
+
+    add a possibility to enable old gnome-2 preferences menu style with categories
+
+ layout/mate-settings.menu | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit f02486113c675ddb8d27e2b38396c5713f7a3ac2
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Mar 31 23:02:20 2013 +0200
+
+    Bump version to 1.6.0
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 770f3d66548a9366d5628530ac686ed4b62cc3c9
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Mar 31 23:01:47 2013 +0200
+
+    Sync translations with transifex
+
+ po/LINGUAS  |   2 +
+ po/am.po    | 169 ++++++++++++++++++++++++++++++++++++
+ po/en_AU.po | 170 ++++++++++++++++++++++++++++++++++++
+ po/gl.po    | 223 ++++++++++++++---------------------------------
+ po/hr.po    | 247 ++++++++++++++++------------------------------------
+ po/ky.po    | 283 ++++++++++++++++++++++++------------------------------------
+ po/ru.po    | 224 +++++++++++++----------------------------------
+ 7 files changed, 650 insertions(+), 668 deletions(-)
+
+commit 4e03c3e261591d41be262f489fa798d75dcfb817
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Mar 31 23:01:07 2013 +0200
+
+    Add transifex configuration file
+
+ .tx/config | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 4a45dd01aea7296a14d619ab291eaeb717af84a2
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Mar 31 23:00:37 2013 +0200
+
+    Add empty ChangeLog to allow build from git
+
+ ChangeLog | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 1fe15cdb83409fba3bbabc69ff541379968dfb3f
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sun Mar 24 16:33:18 2013 -0400
+
+    "Removed ChangeLog"
+
+ ChangeLog | 290 --------------------------------------------------------------
+ 1 file changed, 290 deletions(-)
+
+commit 3681e46ff37cade12efaf83aa9b13c5d349f0ad7
+Author: Marcel Dijkstra <marcel.dykstra@gmail.com>
+Date:   Thu Jan 17 19:51:56 2013 +0000
+
+    AC_CONFIG_HEADERS to please automake 1.13
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5bac57d9e00d9a0fd34ee570bb48c47688b052dc
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sun Nov 18 20:37:29 2012 -0500
+
+    fix incorrect fsf addresses.
+
+ libmenu/canonicalize.c      | 4 ++--
+ libmenu/canonicalize.h      | 4 ++--
+ libmenu/desktop-entries.c   | 4 ++--
+ libmenu/desktop-entries.h   | 4 ++--
+ libmenu/entry-directories.c | 4 ++--
+ libmenu/entry-directories.h | 4 ++--
+ libmenu/matemenu-tree.c     | 4 ++--
+ libmenu/matemenu-tree.h     | 4 ++--
+ libmenu/menu-layout.c       | 4 ++--
+ libmenu/menu-layout.h       | 4 ++--
+ libmenu/menu-monitor.c      | 4 ++--
+ libmenu/menu-monitor.h      | 4 ++--
+ libmenu/menu-util.c         | 4 ++--
+ libmenu/menu-util.h         | 4 ++--
+ util/test-menu-spec.c       | 4 ++--
+ 15 files changed, 30 insertions(+), 30 deletions(-)
+
+commit 4667a29317ea9500871a77429b446b08b0170b4f
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Sep 26 15:54:01 2012 +0200
+
+    start development release
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 85574a11629656333332fc6e0d329446ad1dcd1d
+Merge: 0adb1d2 30e92ab
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 26 17:44:47 2012 -0700
+
+    Merge pull request #3 from NiceandGently/master
+    
+    incorrect-fsf-address
+
+commit 30e92ab6ad33034faceccd02ac2a16f7aab398b9
+Author: Nice&Gently <chat-to-me@raveit.de>
+Date:   Thu Jul 26 16:56:40 2012 +0200
+
+    fix incorrect-fsf-address
+
+ python/matemenu.c     | 4 ++--
+ util/mate-menus-ls.py | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+commit 0adb1d27f98947c211155b5e671a8e01debb701e
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 5 14:19:42 2012 -0400
+
+    Preparing for 1.4 release.
+
+ ChangeLog    | 289 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ configure.ac |   2 +-
+ 2 files changed, 290 insertions(+), 1 deletion(-)
+
+commit e3dddb502c0fffdb2735ef5225bb51af508ee8e9
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Jul 4 15:53:19 2012 +0200
+
+    add po gnome copyrights file
+
+ po/POTFILES.in          |    6 -
+ po/gnome-copyrights.txt | 1138 +++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 1138 insertions(+), 6 deletions(-)
+
+commit d63ce8c839a80d2a6f5de9785ae50f494fa3de97
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Feb 23 23:11:53 2012 +0100
+
+    update for 1.2 release
+
+ AUTHORS             |  2 ++
+ HACKING             | 31 -------------------------------
+ MAINTAINERS         | 12 ------------
+ README              | 21 +++++----------------
+ autogen.sh          |  4 ++--
+ configure.ac        |  2 +-
+ distro/ubuntu/build | 27 ---------------------------
+ 7 files changed, 10 insertions(+), 89 deletions(-)
+
+commit c8a25c592c70d4443485b2030f6ce3ff42252acc
+Author: Perberos <perberos@gmail.com>
+Date:   Mon Jan 30 13:18:22 2012 -0300
+
+    set patch on archlinux script
+
+ distro/archlinux/PKGBUILD | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+commit 5aaf2a5118a313849bcb97cd95747e4a7b9494fd
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Tue Jan 10 14:11:57 2012 -0500
+
+    Changed mate.gr.jp to gnome.gr.jp as requested in issue #86
+
+ po/ja.po | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 195649d21a6ac4e8c7a73ea8fb754a794b5683c1
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Dec 14 17:44:57 2011 +0100
+
+    updated version
+
+ AUTHORS                   | 1 +
+ configure.ac              | 2 +-
+ distro/archlinux/PKGBUILD | 2 +-
+ distro/ubuntu/build       | 2 +-
+ 4 files changed, 4 insertions(+), 3 deletions(-)
+
+commit aeba3dba1a0c531e1a01e2630d3f5da5723f60f0
+Author: Perberos <perberos@gmail.com>
+Date:   Tue Dec 13 14:04:09 2011 -0200
+
+    fixing the missing read of /usr/share/mate/directory-menus
+
+ libmenu/matemenu-tree.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 05749d9bac6fec0e4db31dc9c361321a5ecb815f
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Dec 10 14:07:36 2011 +0100
+
+    updated homepage in configure.ac
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1e5ee95f6f00f890eeeda1b40d87f6911e5f9145
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Dec 10 14:06:31 2011 +0100
+
+    remove autogenerated files
+
+ aclocal.m4    | 2177 ---------------------------------------------------------
+ config.h.in   |   83 ---
+ config.sub    | 1705 --------------------------------------------
+ depcomp       |  630 -----------------
+ missing       |  376 ----------
+ mkinstalldirs |  162 -----
+ 6 files changed, 5133 deletions(-)
+
+commit ef24ae862b4a1998425ddfffe7d9ae23b3cf6286
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Fri Dec 9 23:28:15 2011 -0500
+
+    updated version
+
+ configure.ac              | 2 +-
+ distro/archlinux/PKGBUILD | 2 +-
+ distro/ubuntu/build       | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 44eed0eb17f8f3b8e873578358abc44b6aaaebba
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Fri Dec 2 20:26:58 2011 -0500
+
+    Changed version to 2011.12.01
+
+ configure.ac              | 2 +-
+ distro/archlinux/PKGBUILD | 2 +-
+ distro/ubuntu/build       | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 17e291fd05d66fe232e2f409d54331c495b2fbd0
+Author: Perberos <perberos@gmail.com>
+Date:   Thu Dec 1 22:29:22 2011 -0300
+
+    moving from https://github.com/perberos/mate-desktop-environment
+
+ AUTHORS                                            |    3 +
+ COPYING                                            |  339 ++
+ COPYING.LIB                                        |  481 +++
+ ChangeLog                                          |    1 +
+ HACKING                                            |   31 +
+ MAINTAINERS                                        |   12 +
+ Makefile.am                                        |   36 +
+ NEWS                                               |    1 +
+ README                                             |   44 +
+ aclocal.m4                                         | 2177 ++++++++++
+ autogen.sh                                         |   25 +
+ config.h.in                                        |   83 +
+ config.sub                                         | 1705 ++++++++
+ configure.ac                                       |  171 +
+ depcomp                                            |  630 +++
+ desktop-directories/Makefile.am                    |   37 +
+ desktop-directories/mate-audio-video.directory.in  |    5 +
+ desktop-directories/mate-development.directory.in  |    5 +
+ desktop-directories/mate-education.directory.in    |    4 +
+ desktop-directories/mate-game.directory.in         |    5 +
+ desktop-directories/mate-graphics.directory.in     |    5 +
+ desktop-directories/mate-hardware.directory.in     |    5 +
+ .../mate-internet-and-network.directory.in         |    5 +
+ .../mate-look-and-feel.directory.in                |    5 +
+ .../mate-menu-applications.directory.in            |    5 +
+ desktop-directories/mate-menu-system.directory.in  |    5 +
+ desktop-directories/mate-network.directory.in      |    5 +
+ desktop-directories/mate-office.directory.in       |    5 +
+ desktop-directories/mate-other.directory.in        |    5 +
+ desktop-directories/mate-personal.directory.in     |    6 +
+ .../mate-settings-system.directory.in              |    5 +
+ desktop-directories/mate-settings.directory.in     |    5 +
+ desktop-directories/mate-system-tools.directory.in |    5 +
+ desktop-directories/mate-system.directory.in       |    5 +
+ .../mate-utility-accessibility.directory.in        |    5 +
+ desktop-directories/mate-utility.directory.in      |    5 +
+ distro/archlinux/PKGBUILD                          |   29 +
+ distro/archlinux/menus.patch                       |   25 +
+ distro/ubuntu/build                                |   27 +
+ install-sh                                         |  520 +++
+ layout/Makefile.am                                 |    9 +
+ layout/mate-applications.menu                      |  154 +
+ layout/mate-settings.menu                          |   57 +
+ libmenu/Makefile.am                                |   78 +
+ libmenu/canonicalize.c                             |  326 ++
+ libmenu/canonicalize.h                             |   38 +
+ libmenu/desktop-entries.c                          |  816 ++++
+ libmenu/desktop-entries.h                          |   90 +
+ libmenu/entry-directories.c                        | 1105 +++++
+ libmenu/entry-directories.h                        |   67 +
+ libmenu/libmate-menu-uninstalled.pc.in             |   11 +
+ libmenu/libmate-menu.pc.in                         |   11 +
+ libmenu/matemenu-tree.c                            | 4520 ++++++++++++++++++++
+ libmenu/matemenu-tree.h                            |  135 +
+ libmenu/menu-layout.c                              | 2359 ++++++++++
+ libmenu/menu-layout.h                              |  161 +
+ libmenu/menu-monitor.c                             |  440 ++
+ libmenu/menu-monitor.h                             |   70 +
+ libmenu/menu-util.c                                |  436 ++
+ libmenu/menu-util.h                                |   59 +
+ m4/intltool.m4                                     |  216 +
+ m4/ltsugar.m4                                      |  123 +
+ m4/python.m4                                       |   86 +
+ missing                                            |  376 ++
+ mkinstalldirs                                      |  162 +
+ po/LINGUAS                                         |  100 +
+ po/POTFILES.in                                     |   28 +
+ po/POTFILES.skip                                   |    3 +
+ po/af.po                                           |  258 ++
+ po/an.po                                           |  211 +
+ po/ar.po                                           |  270 ++
+ po/as.po                                           |  277 ++
+ po/ast.po                                          |  265 ++
+ po/be.po                                           |  269 ++
+ po/be@latin.po                                     |  275 ++
+ po/bg.po                                           |  272 ++
+ po/bn.po                                           |  301 ++
+ po/bn_IN.po                                        |  280 ++
+ po/br.po                                           |  266 ++
+ po/ca.po                                           |  272 ++
+ po/ca@valencia.po                                  |  272 ++
+ po/crh.po                                          |  271 ++
+ po/cs.po                                           |  269 ++
+ po/cy.po                                           |  231 +
+ po/da.po                                           |  284 ++
+ po/de.po                                           |  273 ++
+ po/dv.po                                           |  260 ++
+ po/dz.po                                           |  275 ++
+ po/el.po                                           |  255 ++
+ po/en@shaw.po                                      |  211 +
+ po/en_CA.po                                        |  232 +
+ po/en_GB.po                                        |  283 ++
+ po/eo.po                                           |  315 ++
+ po/es.po                                           |  281 ++
+ po/et.po                                           |  219 +
+ po/eu.po                                           |  269 ++
+ po/fa.po                                           |  272 ++
+ po/fi.po                                           |  282 ++
+ po/fr.po                                           |  274 ++
+ po/fur.po                                          |  270 ++
+ po/fy.po                                           |  269 ++
+ po/ga.po                                           |  267 ++
+ po/gl.po                                           |  272 ++
+ po/gn.po                                           |  218 +
+ po/gu.po                                           |  270 ++
+ po/gv.po                                           |  279 ++
+ po/ha.po                                           |  272 ++
+ po/he.po                                           |  276 ++
+ po/hi.po                                           |  277 ++
+ po/hr.po                                           |  271 ++
+ po/hu.po                                           |  268 ++
+ po/hy.po                                           |  266 ++
+ po/id.po                                           |  217 +
+ po/ig.po                                           |  270 ++
+ po/io.po                                           |  267 ++
+ po/is.po                                           |  268 ++
+ po/it.po                                           |  267 ++
+ po/ja.po                                           |  263 ++
+ po/ka.po                                           |  238 ++
+ po/kk.po                                           |  255 ++
+ po/kn.po                                           |  256 ++
+ po/ko.po                                           |  268 ++
+ po/ku.po                                           |  285 ++
+ po/ky.po                                           |  227 +
+ po/lt.po                                           |  280 ++
+ po/lv.po                                           |  261 ++
+ po/mai.po                                          |  272 ++
+ po/mg.po                                           |  237 +
+ po/mk.po                                           |  277 ++
+ po/ml.po                                           |  269 ++
+ po/mn.po                                           |  273 ++
+ po/mr.po                                           |  274 ++
+ po/ms.po                                           | 2260 ++++++++++
+ po/nb.po                                           |  266 ++
+ po/nds.po                                          |  268 ++
+ po/ne.po                                           |  275 ++
+ po/nl.po                                           |  281 ++
+ po/nn.po                                           |  275 ++
+ po/oc.po                                           |  266 ++
+ po/or.po                                           |  274 ++
+ po/pa.po                                           |  275 ++
+ po/pl.po                                           |  280 ++
+ po/ps.po                                           |  259 ++
+ po/pt.po                                           |  282 ++
+ po/pt_BR.po                                        |  316 ++
+ po/ro.po                                           |  269 ++
+ po/ru.po                                           |  274 ++
+ po/rw.po                                           |  150 +
+ po/si.po                                           |  271 ++
+ po/sk.po                                           |  213 +
+ po/sl.po                                           |  274 ++
+ po/sq.po                                           |  278 ++
+ po/sr.po                                           |  287 ++
+ po/sr@latin.po                                     |  287 ++
+ po/sv.po                                           |  310 ++
+ po/ta.po                                           |  276 ++
+ po/te.po                                           |  270 ++
+ po/th.po                                           |  281 ++
+ po/tr.po                                           |  276 ++
+ po/ug.po                                           |  297 ++
+ po/uk.po                                           |  281 ++
+ po/uz@cyrillic.po                                  |  270 ++
+ po/vi.po                                           |  279 ++
+ po/xh.po                                           |  127 +
+ po/yo.po                                           |  270 ++
+ po/zh_CN.po                                        |  268 ++
+ po/zh_HK.po                                        |  279 ++
+ po/zh_TW.po                                        |  279 ++
+ py-compile                                         |  146 +
+ python/Makefile.am                                 |   20 +
+ python/matemenu.c                                  | 1948 +++++++++
+ util/Makefile.am                                   |   31 +
+ util/mate-menus-ls.py                              |   94 +
+ util/test-menu-spec.c                              |  225 +
+ 174 files changed, 49563 insertions(+)
