@@ -52,6 +52,18 @@ static PyMateMenuTreeSeparator* pymatemenu_tree_separator_wrap(MateMenuTreeSepar
 static PyMateMenuTreeHeader* pymatemenu_tree_header_wrap(MateMenuTreeHeader* header);
 static PyMateMenuTreeAlias* pymatemenu_tree_alias_wrap(MateMenuTreeAlias* alias);
 
+#if PY_MAJOR_VERSION < 3
+	#ifndef PyUnicode_FromString
+	#define PyUnicode_FromString PyString_FromString
+	#endif
+	#ifndef PyUnicode_Check
+	#define PyUnicode_Check PyString_Check
+	#endif
+	#ifndef PyUnicode_AsUTF8
+	#define PyUnicode_AsUTF8 PyString_AsString
+	#endif
+#endif
+
 static inline PyObject* lookup_item_type_str(const char* item_type_str)
 {
 	PyObject* module;
@@ -152,6 +164,12 @@ static PyObject* pymatemenu_tree_item_get_parent(PyObject* self, PyObject* args)
 	return (PyObject*) retval;
 }
 
+#if PY_MAJOR_VERSION < 3
+  #define PY_TP_RESERVED cmpfunc
+#else
+  #define PY_TP_RESERVED PyAsyncMethods*
+#endif
+
 static struct PyMethodDef pymatemenu_tree_item_methods[] = {
 	{"get_type", pymatemenu_tree_item_get_type,   METH_VARARGS},
 	{"get_parent", pymatemenu_tree_item_get_parent, METH_VARARGS},
@@ -159,8 +177,7 @@ static struct PyMethodDef pymatemenu_tree_item_methods[] = {
 };
 
 static PyTypeObject PyMateMenuTreeItem_Type = {
-	PyObject_HEAD_INIT(NULL)
-	0,                                             /* ob_size */
+	PyVarObject_HEAD_INIT(NULL, 0)
 	"matemenu.Item",                               /* tp_name */
 	sizeof(PyMateMenuTreeItem),                    /* tp_basicsize */
 	0,                                             /* tp_itemsize */
@@ -168,7 +185,7 @@ static PyTypeObject PyMateMenuTreeItem_Type = {
 	(printfunc) 0,                                 /* tp_print */
 	(getattrfunc) 0,                               /* tp_getattr */
 	(setattrfunc) 0,                               /* tp_setattr */
-	(cmpfunc) 0,                                   /* tp_compare */
+	(PY_TP_RESERVED) 0,                            /* tp_reserved */
 	(reprfunc) 0,                                  /* tp_repr */
 	0,                                             /* tp_as_number */
 	0,                                             /* tp_as_sequence */
@@ -294,7 +311,7 @@ static PyObject* pymatemenu_tree_directory_get_name(PyObject* self, PyObject* ar
 		return Py_None;
 	}
 
-	return PyString_FromString(name);
+	return PyUnicode_FromString(name);
 }
 
 static PyObject* pymatemenu_tree_directory_get_comment(PyObject* self, PyObject* args)
@@ -320,7 +337,7 @@ static PyObject* pymatemenu_tree_directory_get_comment(PyObject* self, PyObject*
 		return Py_None;
 	}
 
-	return PyString_FromString(comment);
+	return PyUnicode_FromString(comment);
 }
 
 static PyObject* pymatemenu_tree_directory_get_icon(PyObject* self, PyObject* args)
@@ -346,7 +363,7 @@ static PyObject* pymatemenu_tree_directory_get_icon(PyObject* self, PyObject* ar
 		return Py_None;
     }
 
-	return PyString_FromString(icon);
+	return PyUnicode_FromString(icon);
 }
 
 static PyObject* pymatemenu_tree_directory_get_desktop_file_path(PyObject* self, PyObject* args)
@@ -372,7 +389,7 @@ static PyObject* pymatemenu_tree_directory_get_desktop_file_path(PyObject* self,
 		return Py_None;
 	}
 
-	return PyString_FromString(path);
+	return PyUnicode_FromString(path);
 }
 
 static PyObject* pymatemenu_tree_directory_get_menu_id(PyObject* self, PyObject* args)
@@ -398,7 +415,7 @@ static PyObject* pymatemenu_tree_directory_get_menu_id(PyObject* self, PyObject*
 		return Py_None;
 	}
 
-	return PyString_FromString(menu_id);
+	return PyUnicode_FromString(menu_id);
 }
 
 static PyObject* pymatemenu_tree_directory_get_tree(PyObject* self, PyObject* args)
@@ -454,7 +471,7 @@ static PyObject* pymatemenu_tree_directory_make_path(PyObject* self, PyObject* a
 		return Py_None;
 	}
 
-	retval = PyString_FromString(path);
+	retval = PyUnicode_FromString(path);
 
 	g_free(path);
 
@@ -463,11 +480,11 @@ static PyObject* pymatemenu_tree_directory_make_path(PyObject* self, PyObject* a
 
 static PyObject* pymatemenu_tree_directory_getattro(PyMateMenuTreeDirectory* self, PyObject* py_attr)
 {
-	if (PyString_Check(py_attr))
+	if (PyUnicode_Check(py_attr))
 	{
 		char* attr;
 
-		attr = PyString_AsString(py_attr);
+		attr = PyUnicode_AsUTF8(py_attr);
 
 		if (!strcmp(attr, "__members__"))
 		{
@@ -536,8 +553,7 @@ static struct PyMethodDef pymatemenu_tree_directory_methods[] = {
 };
 
 static PyTypeObject PyMateMenuTreeDirectory_Type = {
-	PyObject_HEAD_INIT(NULL)
-	0,                                              /* ob_size */
+	PyVarObject_HEAD_INIT(NULL, 0)
 	"matemenu.Directory",                           /* tp_name */
 	sizeof(PyMateMenuTreeDirectory),                /* tp_basicsize */
 	0,                                              /* tp_itemsize */
@@ -545,7 +561,7 @@ static PyTypeObject PyMateMenuTreeDirectory_Type = {
 	(printfunc) 0,                                  /* tp_print */
 	(getattrfunc) 0,                                /* tp_getattr */
 	(setattrfunc) 0,                                /* tp_setattr */
-	(cmpfunc) 0,                                    /* tp_compare */
+	(PY_TP_RESERVED) 0,                             /* tp_reserved */
 	(reprfunc) 0,                                   /* tp_repr */
 	0,                                              /* tp_as_number */
 	0,                                              /* tp_as_sequence */
@@ -625,7 +641,7 @@ static PyObject* pymatemenu_tree_entry_get_name(PyObject* self, PyObject* args)
 		return Py_None;
 	}
 
-	return PyString_FromString(name);
+	return PyUnicode_FromString(name);
 }
 
 static PyObject* pymatemenu_tree_entry_get_generic_name(PyObject* self, PyObject* args)
@@ -651,7 +667,7 @@ static PyObject* pymatemenu_tree_entry_get_generic_name(PyObject* self, PyObject
 		return Py_None;
 	}
 
-	return PyString_FromString(generic_name);
+	return PyUnicode_FromString(generic_name);
 }
 
 static PyObject* pymatemenu_tree_entry_get_display_name(PyObject* self, PyObject* args)
@@ -677,7 +693,7 @@ static PyObject* pymatemenu_tree_entry_get_display_name(PyObject* self, PyObject
 		return Py_None;
 	}
 
-	return PyString_FromString(display_name);
+	return PyUnicode_FromString(display_name);
 }
 
 static PyObject* pymatemenu_tree_entry_get_comment(PyObject* self, PyObject* args)
@@ -703,7 +719,7 @@ static PyObject* pymatemenu_tree_entry_get_comment(PyObject* self, PyObject* arg
 		return Py_None;
 	}
 
-	return PyString_FromString(comment);
+	return PyUnicode_FromString(comment);
 }
 
 static PyObject* pymatemenu_tree_entry_get_icon(PyObject* self, PyObject* args)
@@ -729,7 +745,7 @@ static PyObject* pymatemenu_tree_entry_get_icon(PyObject* self, PyObject* args)
 		return Py_None;
 	}
 
-	return PyString_FromString(icon);
+	return PyUnicode_FromString(icon);
 }
 
 static PyObject* pymatemenu_tree_entry_get_exec(PyObject* self, PyObject* args)
@@ -755,7 +771,7 @@ static PyObject* pymatemenu_tree_entry_get_exec(PyObject* self, PyObject* args)
 		return Py_None;
 	}
 
-	return PyString_FromString(exec);
+	return PyUnicode_FromString(exec);
 }
 
 static PyObject* pymatemenu_tree_entry_get_launch_in_terminal(PyObject* self, PyObject* args)
@@ -810,7 +826,7 @@ static PyObject* pymatemenu_tree_entry_get_desktop_file_path(PyObject* self, PyO
 		return Py_None;
 	}
 
-	return PyString_FromString(desktop_file_path);
+	return PyUnicode_FromString(desktop_file_path);
 }
 
 static PyObject* pymatemenu_tree_entry_get_desktop_file_id(PyObject* self, PyObject* args)
@@ -836,7 +852,7 @@ static PyObject* pymatemenu_tree_entry_get_desktop_file_id(PyObject* self, PyObj
 		return Py_None;
 	}
 
-	return PyString_FromString(desktop_file_id);
+	return PyUnicode_FromString(desktop_file_id);
 }
 
 static PyObject* pymatemenu_tree_entry_get_is_excluded(PyObject* self, PyObject* args)
@@ -891,11 +907,11 @@ static PyObject* pymatemenu_tree_entry_get_is_nodisplay(PyObject* self, PyObject
 
 static PyObject* pymatemenu_tree_entry_getattro(PyMateMenuTreeEntry* self, PyObject* py_attr)
 {
-	if (PyString_Check(py_attr))
+	if (PyUnicode_Check(py_attr))
 	{
 		char* attr;
 
-		attr = PyString_AsString(py_attr);
+		attr = PyUnicode_AsUTF8(py_attr);
 
 		if (!strcmp(attr, "__members__"))
 		{
@@ -985,8 +1001,7 @@ static struct PyMethodDef pymatemenu_tree_entry_methods[] = {
 };
 
 static PyTypeObject PyMateMenuTreeEntry_Type = {
-	PyObject_HEAD_INIT(NULL)
-	0,                                             /* ob_size */
+	PyVarObject_HEAD_INIT(NULL, 0)
 	"matemenu.Entry",                              /* tp_name */
 	sizeof(PyMateMenuTreeEntry),                   /* tp_basicsize */
 	0,                                             /* tp_itemsize */
@@ -994,7 +1009,7 @@ static PyTypeObject PyMateMenuTreeEntry_Type = {
 	(printfunc) 0,                                 /* tp_print */
 	(getattrfunc) 0,                               /* tp_getattr */
 	(setattrfunc) 0,                               /* tp_setattr */
-	(cmpfunc) 0,                                   /* tp_compare */
+	(PY_TP_RESERVED) 0,                            /* tp_reserved */
 	(reprfunc) 0,                                  /* tp_repr */
 	0,                                             /* tp_as_number */
 	0,                                             /* tp_as_sequence */
@@ -1052,8 +1067,7 @@ static PyMateMenuTreeEntry* pymatemenu_tree_entry_wrap(MateMenuTreeEntry* entry)
 }
 
 static PyTypeObject PyMateMenuTreeSeparator_Type = {
-	PyObject_HEAD_INIT(NULL)
-	0,                                             /* ob_size */
+	PyVarObject_HEAD_INIT(NULL, 0)
 	"matemenu.Separator",                          /* tp_name */
 	sizeof(PyMateMenuTreeSeparator),               /* tp_basicsize */
 	0,                                             /* tp_itemsize */
@@ -1061,7 +1075,7 @@ static PyTypeObject PyMateMenuTreeSeparator_Type = {
 	(printfunc) 0,                                 /* tp_print */
 	(getattrfunc) 0,                               /* tp_getattr */
 	(setattrfunc) 0,                               /* tp_setattr */
-	(cmpfunc) 0,                                   /* tp_compare */
+	(PY_TP_RESERVED) 0,                            /* tp_reserved */
 	(reprfunc) 0,                                  /* tp_repr */
 	0,                                             /* tp_as_number */
 	0,                                             /* tp_as_sequence */
@@ -1151,11 +1165,11 @@ static PyObject* pymatemenu_tree_header_get_directory(PyObject* self, PyObject* 
 
 static PyObject* pymatemenu_tree_header_getattro(PyMateMenuTreeHeader* self, PyObject* py_attr)
 {
-	if (PyString_Check(py_attr))
+	if (PyUnicode_Check(py_attr))
 	{
 		char* attr;
 
-		attr = PyString_AsString(py_attr);
+		attr = PyUnicode_AsUTF8(py_attr);
 
 		if (!strcmp(attr, "__members__"))
 		{
@@ -1187,8 +1201,7 @@ static struct PyMethodDef pymatemenu_tree_header_methods[] = {
 };
 
 static PyTypeObject PyMateMenuTreeHeader_Type = {
-	PyObject_HEAD_INIT(NULL)
-	0,                                             /* ob_size */
+	PyVarObject_HEAD_INIT(NULL, 0)
 	"matemenu.Header",                             /* tp_name */
 	sizeof(PyMateMenuTreeHeader),                  /* tp_basicsize */
 	0,                                             /* tp_itemsize */
@@ -1196,7 +1209,7 @@ static PyTypeObject PyMateMenuTreeHeader_Type = {
 	(printfunc) 0,                                 /* tp_print */
 	(getattrfunc) 0,                               /* tp_getattr */
 	(setattrfunc) 0,                               /* tp_setattr */
-	(cmpfunc) 0,                                   /* tp_compare */
+	(PY_TP_RESERVED) 0,                            /* tp_reserved */
 	(reprfunc) 0,                                  /* tp_repr */
 	0,                                             /* tp_as_number */
 	0,                                             /* tp_as_sequence */
@@ -1330,11 +1343,11 @@ static PyObject* pymatemenu_tree_alias_get_item(PyObject* self, PyObject* args)
 
 static PyObject* pymatemenu_tree_alias_getattro(PyMateMenuTreeAlias* self, PyObject* py_attr)
 {
-	if (PyString_Check(py_attr))
+	if (PyUnicode_Check(py_attr))
 	{
 		char* attr;
 
-		attr = PyString_AsString(py_attr);
+		attr = PyUnicode_AsUTF8(py_attr);
 
 		if (!strcmp(attr, "__members__"))
 		{
@@ -1372,8 +1385,7 @@ static struct PyMethodDef pymatemenu_tree_alias_methods[] = {
 };
 
 static PyTypeObject PyMateMenuTreeAlias_Type = {
-	PyObject_HEAD_INIT(NULL)
-	0,                                             /* ob_size */
+	PyVarObject_HEAD_INIT(NULL, 0)
 	"matemenu.Alias",                              /* tp_name */
 	sizeof(PyMateMenuTreeAlias),                   /* tp_basicsize */
 	0,                                             /* tp_itemsize */
@@ -1381,7 +1393,7 @@ static PyTypeObject PyMateMenuTreeAlias_Type = {
 	(printfunc) 0,                                 /* tp_print */
 	(getattrfunc) 0,                               /* tp_getattr */
 	(setattrfunc) 0,                               /* tp_setattr */
-	(cmpfunc) 0,                                   /* tp_compare */
+	(PY_TP_RESERVED) 0,                            /* tp_reserved */
 	(reprfunc) 0,                                  /* tp_repr */
 	0,                                             /* tp_as_number */
 	0,                                             /* tp_as_sequence */
@@ -1461,7 +1473,7 @@ static PyObject* pymatemenu_tree_get_menu_file(PyObject* self, PyObject* args)
 		return Py_None;
 	}
 
-	return PyString_FromString(menu_file);
+	return PyUnicode_FromString(menu_file);
 }
 
 static PyObject* pymatemenu_tree_get_root_directory(PyObject* self, PyObject* args)
@@ -1724,11 +1736,11 @@ static void pymatemenu_tree_dealloc(PyMateMenuTree* self)
 
 static PyObject* pymatemenu_tree_getattro(PyMateMenuTree* self, PyObject* py_attr)
 {
-	if (PyString_Check(py_attr))
+	if (PyUnicode_Check(py_attr))
 	{
 		char* attr;
 
-		attr = PyString_AsString(py_attr);
+		attr = PyUnicode_AsUTF8(py_attr);
 
 		if (!strcmp(attr, "__members__"))
 		{
@@ -1751,25 +1763,34 @@ static PyObject* pymatemenu_tree_getattro(PyMateMenuTree* self, PyObject* py_att
 	return PyObject_GenericGetAttr((PyObject*) self, py_attr);
 }
 
+#if PY_MAJOR_VERSION < 3
+	#ifndef PyLong_Check
+	#define PyLong_Check PyInt_Check
+	#endif
+	#ifndef PyLong_AsLong
+	#define PyLong_AsLong PyInt_AsLong
+	#endif
+#endif
+
 static int pymatemenu_tree_setattro(PyMateMenuTree* self, PyObject* py_attr, PyObject* py_value)
 {
 	PyMateMenuTree* tree;
 
 	tree = (PyMateMenuTree*) self;
 
-	if (PyString_Check(py_attr))
+	if (PyUnicode_Check(py_attr))
 	{
 		char* attr;
 
-		attr = PyString_AsString(py_attr);
+		attr = PyUnicode_AsUTF8(py_attr);
 
 		if (!strcmp(attr, "sort_key"))
 		{
-			if (PyInt_Check(py_value))
+			if (PyLong_Check(py_value))
 			{
 				int sort_key;
 
-				sort_key = PyInt_AsLong(py_value);
+				sort_key = PyLong_AsLong(py_value);
 
 				if (sort_key < MATEMENU_TREE_SORT_FIRST || sort_key > MATEMENU_TREE_SORT_LAST)
 				{
@@ -1798,8 +1819,7 @@ static struct PyMethodDef pymatemenu_tree_methods[] = {
 };
 
 static PyTypeObject PyMateMenuTree_Type = {
-	PyObject_HEAD_INIT(NULL)
-	0,                                    /* ob_size */
+	PyVarObject_HEAD_INIT(NULL, 0)
 	"matemenu.Tree",                      /* tp_name */
 	sizeof(PyMateMenuTree),               /* tp_basicsize */
 	0,                                    /* tp_itemsize */
@@ -1807,7 +1827,7 @@ static PyTypeObject PyMateMenuTree_Type = {
 	(printfunc) 0,                        /* tp_print */
 	(getattrfunc) 0,                      /* tp_getattr */
 	(setattrfunc) 0,                      /* tp_setattr */
-	(cmpfunc) 0,                          /* tp_compare */
+	(PY_TP_RESERVED) 0,                            /* tp_reserved */
 	(reprfunc) 0,                         /* tp_repr */
 	0,                                    /* tp_as_number */
 	0,                                    /* tp_as_sequence */
@@ -1898,12 +1918,30 @@ static struct PyMethodDef pymatemenu_methods[] = {
 	{NULL, NULL, 0 }
 };
 
+#if PY_MAJOR_VERSION < 3
 void initmatemenu(void);
 
 DL_EXPORT(void) initmatemenu(void)
+#else
+static struct PyModuleDef moduledef = {
+	PyModuleDef_HEAD_INIT,
+	"matemenu",         /* m_name */
+	0,                  /* m_doc */
+	-1,                 /* m_size */
+	pymatemenu_methods, /* m_methods */
+	NULL,               /* m_reload */
+	NULL,               /* m_traverse */
+	NULL,               /* m_clear */
+	NULL,               /* m_free */
+};
+PyMODINIT_FUNC PyInit_matemenu(void);
+
+PyMODINIT_FUNC PyInit_matemenu(void)
+#endif
 {
 	PyObject* mod;
 
+#if PY_MAJOR_VERSION < 3
 	mod = Py_InitModule4("matemenu", pymatemenu_methods, 0, 0, PYTHON_API_VERSION);
 
 	#define REGISTER_TYPE(t, n) G_STMT_START \
@@ -1913,9 +1951,6 @@ DL_EXPORT(void) initmatemenu(void)
 		PyModule_AddObject(mod, n, (PyObject*) &t); \
 	} G_STMT_END
 
-	REGISTER_TYPE(PyMateMenuTree_Type,     "Tree");
-	REGISTER_TYPE(PyMateMenuTreeItem_Type, "Item");
-
 	#define REGISTER_ITEM_TYPE(t, n) G_STMT_START \
 	{ \
 		t.ob_type = &PyType_Type; \
@@ -1923,6 +1958,27 @@ DL_EXPORT(void) initmatemenu(void)
 		PyType_Ready(&t); \
 		PyModule_AddObject(mod, n, (PyObject*) &t); \
 	} G_STMT_END
+#else
+	mod = PyModule_Create(&moduledef);
+
+	#define REGISTER_TYPE(t, n) G_STMT_START \
+	{ \
+		((PyObject*) &t)->ob_type = &PyType_Type; \
+		PyType_Ready(&t); \
+		PyModule_AddObject(mod, n, (PyObject*) &t); \
+	} G_STMT_END
+
+	#define REGISTER_ITEM_TYPE(t, n) G_STMT_START \
+	{ \
+		((PyObject*) &t)->ob_type = &PyType_Type; \
+		t.tp_base = &PyMateMenuTreeItem_Type; \
+		PyType_Ready(&t); \
+		PyModule_AddObject(mod, n, (PyObject*) &t); \
+	} G_STMT_END
+#endif
+
+	REGISTER_TYPE(PyMateMenuTree_Type,     "Tree");
+	REGISTER_TYPE(PyMateMenuTreeItem_Type, "Item");
 
 	REGISTER_ITEM_TYPE(PyMateMenuTreeDirectory_Type, "Directory");
 	REGISTER_ITEM_TYPE(PyMateMenuTreeEntry_Type,     "Entry");
@@ -1945,4 +2001,10 @@ DL_EXPORT(void) initmatemenu(void)
 
 	PyModule_AddIntConstant(mod, "SORT_NAME",         MATEMENU_TREE_SORT_NAME);
 	PyModule_AddIntConstant(mod, "SORT_DISPLAY_NAME", MATEMENU_TREE_SORT_DISPLAY_NAME);
+
+#if PY_MAJOR_VERSION < 3
+  mod = NULL;
+#else
+  return mod;
+#endif
 }
