@@ -30,59 +30,72 @@
 #include "menu-util.h"
 #include "canonicalize.h"
 
-/*
- * FIXME: it might be useful to be able to construct a menu
- * tree from a traditional directory based menu hierarchy
- * too.
- */
+/* private */
+typedef struct MateMenuTreeItem MateMenuTreeItem;
+#define MATEMENU_TREE_ITEM(i)      ((MateMenuTreeItem *)(i))
+#define MATEMENU_TREE_DIRECTORY(i) ((MateMenuTreeDirectory *)(i))
+#define MATEMENU_TREE_ENTRY(i)     ((MateMenuTreeEntry *)(i))
+#define MATEMENU_TREE_SEPARATOR(i) ((MateMenuTreeSeparator *)(i))
+#define MATEMENU_TREE_HEADER(i)    ((MateMenuTreeHeader *)(i))
+#define MATEMENU_TREE_ALIAS(i)     ((MateMenuTreeAlias *)(i))
 
-typedef enum
-{
-  MATEMENU_TREE_ABSOLUTE = 0,
-  MATEMENU_TREE_BASENAME = 1
-} MateMenuTreeType;
+enum {
+  PROP_0,
 
-struct MateMenuTree
+  PROP_MENU_BASENAME,
+  PROP_MENU_PATH,
+  PROP_FLAGS
+};
+
+/* Signals */
+enum
 {
-  MateMenuTreeType type;
-  guint         refcount;
+  CHANGED,
+  LAST_SIGNAL
+};
+
+static guint matemenu_tree_signals [LAST_SIGNAL] = { 0 };
+
+struct _MateMenuTree
+{
+  GObject       parent_instance;
 
   char *basename;
-  char *absolute_path;
+  char *non_prefixed_basename;
+  char *path;
   char *canonical_path;
 
   MateMenuTreeFlags flags;
-  MateMenuTreeSortKey sort_key;
 
   GSList *menu_file_monitors;
 
   MenuLayoutNode *layout;
   MateMenuTreeDirectory *root;
-
-  GSList *monitors;
-
-  gpointer       user_data;
-  GDestroyNotify dnotify;
+  GHashTable *entries_by_id;
 
   guint canonical : 1;
+  guint loaded    : 1;
 };
 
-typedef struct
-{
-  MateMenuTreeChangedFunc callback;
-  gpointer             user_data;
-} MateMenuTreeMonitor;
+G_DEFINE_TYPE (MateMenuTree, matemenu_tree, G_TYPE_OBJECT)
 
 struct MateMenuTreeItem
 {
+  volatile gint refcount;
+
   MateMenuTreeItemType type;
 
   MateMenuTreeDirectory *parent;
+  MateMenuTree *tree;
+};
 
-  gpointer       user_data;
-  GDestroyNotify dnotify;
+struct MateMenuTreeIter
+{
+  volatile gint refcount;
 
-  guint refcount;
+  MateMenuTreeItem *item;
+  GSList        *contents;
+  GSList        *contents_iter;
 };
 
 struct MateMenuTreeDirectory
@@ -100,22 +113,14 @@ struct MateMenuTreeDirectory
 	GSList           *layout_info;
 	GSList           *contents;
 
-	guint only_unallocated : 1;
-	guint is_root : 1;
-	guint is_nodisplay : 1;
-	guint layout_pending_separator : 1;
-	guint preprocessed : 1;
+  guint only_unallocated : 1;
+  guint is_nodisplay : 1;
+  guint layout_pending_separator : 1;
+  guint preprocessed : 1;
 
 	/* 16 bits should be more than enough; G_MAXUINT16 means no inline header */
 	guint will_inline_header : 16;
 };
-
-typedef struct
-{
-  MateMenuTreeDirectory directory;
-
-  MateMenuTree *tree;
-} MateMenuTreeDirectoryRoot;
 
 struct MateMenuTreeEntry
 {
@@ -125,7 +130,7 @@ struct MateMenuTreeEntry
   char         *desktop_file_id;
 
   guint is_excluded : 1;
-  guint is_nodisplay : 1;
+  guint is_unallocated : 1;
 };
 
 struct MateMenuTreeSeparator
@@ -148,13 +153,11 @@ struct MateMenuTreeAlias
   MateMenuTreeItem      *aliased_item;
 };
 
-static MateMenuTree *matemenu_tree_new                 (MateMenuTreeType    type,
-						  const char      *menu_file,
-						  gboolean         canonical,
-						  MateMenuTreeFlags   flags);
-static void      matemenu_tree_load_layout          (MateMenuTree       *tree);
+static gboolean  matemenu_tree_load_layout          (MateMenuTree       *tree,
+                                                  GError         **error);
 static void      matemenu_tree_force_reload         (MateMenuTree       *tree);
-static void      matemenu_tree_build_from_layout    (MateMenuTree       *tree);
+static gboolean  matemenu_tree_build_from_layout    (MateMenuTree       *tree,
+                                                  GError         **error);
 static void      matemenu_tree_force_rebuild        (MateMenuTree       *tree);
 static void      matemenu_tree_resolve_files        (MateMenuTree       *tree,
 						  GHashTable      *loaded_menu_files,
@@ -163,106 +166,6 @@ static void      matemenu_tree_force_recanonicalize (MateMenuTree       *tree);
 static void      matemenu_tree_invoke_monitors      (MateMenuTree       *tree);
 
 static void matemenu_tree_item_unref_and_unset_parent (gpointer itemp);
-
-/*
- * The idea is that we cache the menu tree for either a given
- * menu basename or an absolute menu path.
- * If no files exist in $XDG_DATA_DIRS for the basename or the
- * absolute path doesn't exist we just return (and cache) the
- * empty menu tree.
- * We also add a file monitor for the basename in each dir in
- * $XDG_DATA_DIRS, or the absolute path to the menu file, and
- * re-compute if there are any changes.
- */
-
-static GHashTable *matemenu_tree_cache = NULL;
-
-static inline char *
-get_cache_key (MateMenuTree      *tree,
-	       MateMenuTreeFlags  flags)
-{
-  const char *tree_name;
-
-  switch (tree->type)
-    {
-    case MATEMENU_TREE_ABSOLUTE:
-      tree_name = tree->canonical ? tree->canonical_path : tree->absolute_path;
-      break;
-
-    case MATEMENU_TREE_BASENAME:
-      tree_name = tree->basename;
-      break;
-
-    default:
-      g_assert_not_reached ();
-      break;
-    }
-
-  return g_strdup_printf ("%s:0x%x", tree_name, flags);
-}
-
-static void
-matemenu_tree_add_to_cache (MateMenuTree      *tree,
-			 MateMenuTreeFlags  flags)
-{
-  char *cache_key;
-
-  if (matemenu_tree_cache == NULL)
-    {
-      matemenu_tree_cache =
-        g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
-    }
-
-  cache_key = get_cache_key (tree, flags);
-
-  menu_verbose ("Adding menu tree to cache: %s\n", cache_key);
-
-  g_hash_table_replace (matemenu_tree_cache, cache_key, tree);
-}
-
-static void
-matemenu_tree_remove_from_cache (MateMenuTree      *tree,
-			      MateMenuTreeFlags  flags)
-{
-  char *cache_key;
-
-  cache_key = get_cache_key (tree, flags);
-
-  menu_verbose ("Removing menu tree from cache: %s\n", cache_key);
-
-  g_hash_table_remove (matemenu_tree_cache, cache_key);
-
-  g_free (cache_key);
-
-  if (g_hash_table_size (matemenu_tree_cache) == 0)
-    {
-      g_hash_table_destroy (matemenu_tree_cache);
-      matemenu_tree_cache = NULL;
-
-      _entry_directory_list_empty_desktop_cache ();
-    }
-}
-
-static MateMenuTree *
-matemenu_tree_lookup_from_cache (const char    *tree_name,
-			      MateMenuTreeFlags  flags)
-{
-  MateMenuTree *retval;
-  char     *cache_key;
-
-  if (matemenu_tree_cache == NULL)
-    return NULL;
-
-  cache_key = g_strdup_printf ("%s:0x%x", tree_name, flags);
-
-  menu_verbose ("Looking up '%s' from menu cache\n", cache_key);
-
-  retval = g_hash_table_lookup (matemenu_tree_cache, cache_key);
-
-  g_free (cache_key);
-
-  return retval ? matemenu_tree_ref (retval) : NULL;
-}
 
 typedef enum
 {
@@ -336,7 +239,7 @@ matemenu_tree_add_menu_file_monitor (MateMenuTree           *tree,
 {
   MenuFileMonitor *monitor;
 
-  monitor = g_new0 (MenuFileMonitor, 1);
+  monitor = g_slice_new0 (MenuFileMonitor);
 
   monitor->type = type;
 
@@ -411,7 +314,7 @@ remove_menu_file_monitor (MenuFileMonitor *monitor,
 
   monitor->type = MENU_FILE_MONITOR_INVALID;
 
-  g_free (monitor);
+  g_slice_free (MenuFileMonitor, monitor);
 }
 
 static void
@@ -426,63 +329,10 @@ matemenu_tree_remove_menu_file_monitors (MateMenuTree *tree)
   tree->menu_file_monitors = NULL;
 }
 
-static MateMenuTree *
-matemenu_tree_lookup_absolute (const char    *absolute,
-			    MateMenuTreeFlags  flags)
-{
-  MateMenuTree  *tree;
-  gboolean    canonical;
-  const char *canonical_path;
-  char       *freeme;
-
-  menu_verbose ("Looking up absolute path in tree cache: \"%s\"\n", absolute);
-
-  if ((tree = matemenu_tree_lookup_from_cache (absolute, flags)) != NULL)
-    return tree;
-
-  canonical = TRUE;
-  canonical_path = freeme = menu_canonicalize_file_name (absolute, FALSE);
-  if (canonical_path == NULL)
-    {
-      menu_verbose ("Failed to canonicalize absolute menu path \"%s\": %s\n",
-                    absolute, g_strerror (errno));
-      canonical = FALSE;
-      canonical_path = absolute;
-    }
-
-  if ((tree = matemenu_tree_lookup_from_cache (canonical_path, flags)) != NULL)
-    return tree;
-
-  tree = matemenu_tree_new (MATEMENU_TREE_ABSOLUTE, canonical_path, canonical, flags);
-
-  g_free (freeme);
-
-  return tree;
-}
-
-static MateMenuTree *
-matemenu_tree_lookup_basename (const char    *basename,
-			    MateMenuTreeFlags  flags)
-{
-  MateMenuTree *tree;
-
-  menu_verbose ("Looking up menu file in tree cache: \"%s\"\n", basename);
-
-  if ((tree = matemenu_tree_lookup_from_cache (basename, flags)) != NULL)
-    return tree;
-
-  return matemenu_tree_new (MATEMENU_TREE_BASENAME, basename, FALSE, flags);
-}
-
 static gboolean
-canonicalize_basename_with_config_dir (MateMenuTree   *tree,
-                                       const char *basename,
-                                       const char *config_dir)
+canonicalize_path (MateMenuTree  *tree,
+                   const char *path)
 {
-  char *path;
-
-  path = g_build_filename (config_dir, "menus",  basename,  NULL);
-
   tree->canonical_path = menu_canonicalize_file_name (path, FALSE);
   if (tree->canonical_path)
     {
@@ -498,9 +348,22 @@ canonicalize_basename_with_config_dir (MateMenuTree   *tree,
 					MENU_FILE_MONITOR_NONEXISTENT_FILE);
     }
 
+  return tree->canonical;
+}
+
+static gboolean
+canonicalize_basename_with_config_dir (MateMenuTree   *tree,
+                                       const char *basename,
+                                       const char *config_dir)
+{
+  gboolean  ret;
+  char     *path;
+
+  path = g_build_filename (config_dir, "menus",  basename,  NULL);
+  ret = canonicalize_path (tree, path);
   g_free (path);
 
-  return tree->canonical;
+  return ret;
 }
 
 static void
@@ -529,60 +392,75 @@ canonicalize_basename (MateMenuTree  *tree,
     }
 }
 
-static gboolean matemenu_tree_canonicalize_path(MateMenuTree* tree)
+static gboolean matemenu_tree_canonicalize_path(MateMenuTree* tree,
+                              GError   **error)
 {
-	if (tree->canonical)
-		return TRUE;
+  const char *menu_file = NULL;
+
+  if (tree->canonical)
+    return TRUE;
 
 	g_assert(tree->canonical_path == NULL);
 
-	if (tree->type == MATEMENU_TREE_BASENAME)
-	{
-		matemenu_tree_remove_menu_file_monitors (tree);
+  matemenu_tree_remove_menu_file_monitors (tree);
 
-		if (strcmp(tree->basename, "mate-applications.menu") == 0 && g_getenv("XDG_MENU_PREFIX"))
-		{
-			char* prefixed_basename;
-			prefixed_basename = g_strdup_printf("%s%s", g_getenv("XDG_MENU_PREFIX"), tree->basename);
-			canonicalize_basename(tree, prefixed_basename);
-			g_free(prefixed_basename);
-		}
+  if (tree->path)
+    {
+      menu_file = tree->path;
+      canonicalize_path (tree, tree->path);
+    }
+  else
+    {
+      const gchar *xdg_menu_prefix;
 
-		if (!tree->canonical)
-			canonicalize_basename(tree, tree->basename);
+      menu_file = tree->basename;
+      xdg_menu_prefix = g_getenv ("XDG_MENU_PREFIX");
 
-		if (tree->canonical)
-			menu_verbose("Successfully looked up menu_file for \"%s\": %s\n", tree->basename, tree->canonical_path);
-		else
-			menu_verbose("Failed to look up menu_file for \"%s\"\n", tree->basename);
-	}
-	else /* if (tree->type == MATEMENU_TREE_ABSOLUTE) */
-	{
-		tree->canonical_path = menu_canonicalize_file_name(tree->absolute_path, FALSE);
+      if (xdg_menu_prefix != NULL)
+        {
+          gchar *prefixed_basename;
 
-		if (tree->canonical_path != NULL)
-		{
-			menu_verbose("Successfully looked up menu_file for \"%s\": %s\n", tree->absolute_path, tree->canonical_path);
+          prefixed_basename = g_strdup_printf ("%sapplications.menu",
+                                               xdg_menu_prefix);
 
-			/*
-			* Replace the cache entry with the canonicalized version
-			*/
-			matemenu_tree_remove_from_cache (tree, tree->flags);
+          /* Some gnome-menus using applications just use "applications.menu"
+           * as the basename and expect gnome-menus to prefix it. Others (e.g.
+           * Alacarte) explicitly use "${XDG_MENU_PREFIX}applications.menu" as
+           * the basename, because they want to save changes to the right files
+           * in ~. In both cases, we want to use "applications-merged" as the
+           * merge directory (as required by the fd.o menu spec), so we save
+           * the non-prefixed basename and use it later when calling
+           * menu_layout_load().
+           */
+          if (!g_strcmp0 (tree->basename, "mate-applications.menu") ||
+              !g_strcmp0 (tree->basename, prefixed_basename))
+            {
+              canonicalize_basename (tree, prefixed_basename);
+              g_free (tree->non_prefixed_basename);
+              tree->non_prefixed_basename = g_strdup ("mate-applications.menu");
+            }
+          g_free (prefixed_basename);
+        }
 
-			matemenu_tree_remove_menu_file_monitors(tree);
-			matemenu_tree_add_menu_file_monitor(tree, tree->canonical_path, MENU_FILE_MONITOR_FILE);
+      if (!tree->canonical)
+        canonicalize_basename (tree, tree->basename);
+    }
 
-			tree->canonical = TRUE;
-
-			matemenu_tree_add_to_cache (tree, tree->flags);
-		}
-		else
-		{
-			menu_verbose("Failed to look up menu_file for \"%s\"\n", tree->absolute_path);
-		}
-	}
-
-	return tree->canonical;
+  if (tree->canonical)
+    {
+      menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
+                    menu_file, tree->canonical_path);
+      return TRUE;
+    }
+  else
+    {
+      g_set_error (error,
+                   G_IO_ERROR,
+                   G_IO_ERROR_FAILED,
+                   "Failed to look up menu_file for \"%s\"\n",
+                   menu_file);
+      return FALSE;
+    }
 }
 
 static void
@@ -601,96 +479,126 @@ matemenu_tree_force_recanonicalize (MateMenuTree *tree)
     }
 }
 
-MateMenuTree* matemenu_tree_lookup(const char* menu_file, MateMenuTreeFlags flags)
-{
-  MateMenuTree *retval;
-
-  g_return_val_if_fail (menu_file != NULL, NULL);
-
-  flags &= MATEMENU_TREE_FLAGS_MASK;
-
-  if (g_path_is_absolute (menu_file))
-    retval = matemenu_tree_lookup_absolute (menu_file, flags);
-  else
-    retval = matemenu_tree_lookup_basename (menu_file, flags);
-
-  g_assert (retval != NULL);
-
-  return retval;
-}
-
-static MateMenuTree *
-matemenu_tree_new (MateMenuTreeType   type,
-		const char     *menu_file,
-		gboolean        canonical,
-		MateMenuTreeFlags  flags)
-{
-  MateMenuTree *tree;
-
-  tree = g_new0 (MateMenuTree, 1);
-
-  tree->type     = type;
-  tree->flags    = flags;
-  tree->refcount = 1;
-
-  tree->sort_key = MATEMENU_TREE_SORT_NAME;
-
-  if (tree->type == MATEMENU_TREE_BASENAME)
-    {
-      g_assert (canonical == FALSE);
-      tree->basename = g_strdup (menu_file);
-    }
-  else
-    {
-      tree->canonical     = canonical != FALSE;
-      tree->absolute_path = g_strdup (menu_file);
-
-      if (tree->canonical)
-	{
-	  tree->canonical_path = g_strdup (menu_file);
-	  matemenu_tree_add_menu_file_monitor (tree,
-					    tree->canonical_path,
-					    MENU_FILE_MONITOR_FILE);
-	}
-      else
-	{
-	  matemenu_tree_add_menu_file_monitor (tree,
-					    tree->absolute_path,
-					    MENU_FILE_MONITOR_NONEXISTENT_FILE);
-	}
-    }
-
-  matemenu_tree_add_to_cache (tree, tree->flags);
-
-  return tree;
-}
-
+/**
+ * matemenu_tree_new:
+ * @menu_basename: Basename of menu file
+ * @flags: Flags controlling menu content
+ *
+ * Returns: (transfer full): A new #MateMenuTree instance
+ */
 MateMenuTree *
-matemenu_tree_ref (MateMenuTree *tree)
+matemenu_tree_new (const char     *menu_basename,
+                MateMenuTreeFlags  flags)
 {
-  g_return_val_if_fail (tree != NULL, NULL);
-  g_return_val_if_fail (tree->refcount > 0, NULL);
+  g_return_val_if_fail (menu_basename != NULL, NULL);
 
-  tree->refcount++;
-
-  return tree;
+  return g_object_new (MATEMENU_TYPE_TREE,
+                       "menu-basename", menu_basename,
+                       "flags", flags,
+                       NULL);
 }
 
-void
-matemenu_tree_unref (MateMenuTree *tree)
+/**
+ * matemenu_tree_new_fo_path:
+ * @menu_path: Path of menu file
+ * @flags: Flags controlling menu content
+ *
+ * Returns: (transfer full): A new #MateMenuTree instance
+ */
+MateMenuTree *
+matemenu_tree_new_for_path (const char     *menu_path,
+                         MateMenuTreeFlags  flags)
 {
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (tree->refcount >= 1);
+  g_return_val_if_fail (menu_path != NULL, NULL);
 
-  if (--tree->refcount > 0)
-    return;
+  return g_object_new (MATEMENU_TYPE_TREE,
+                       "menu-path", menu_path,
+                       "flags", flags,
+                       NULL);
+}
 
-  if (tree->dnotify)
-    tree->dnotify (tree->user_data);
-  tree->user_data = NULL;
-  tree->dnotify   = NULL;
+static GObject *
+matemenu_tree_constructor (GType                  type,
+                        guint                  n_construct_properties,
+                        GObjectConstructParam *construct_properties)
+{
+	GObject   *obj;
+	MateMenuTree *self;
 
-  matemenu_tree_remove_from_cache (tree, tree->flags);
+	obj = G_OBJECT_CLASS (matemenu_tree_parent_class)->constructor (type,
+                                                                     n_construct_properties,
+                                                                     construct_properties);
+
+        /* If MateMenuTree:menu-path is set, then we should make sure that
+         * MateMenuTree:menu-basename is unset (especially as it has a default
+         * value). This has to be done here, in the constructor, since the
+         * properties are construct-only. */
+
+	self = MATEMENU_TREE (obj);
+
+        if (self->path != NULL)
+          g_object_set (self, "menu-basename", NULL, NULL);
+
+	return obj;
+}
+
+static void
+matemenu_tree_set_property (GObject         *object,
+                         guint            prop_id,
+                         const GValue    *value,
+                         GParamSpec      *pspec)
+{
+  MateMenuTree *self = MATEMENU_TREE (object);
+
+  switch (prop_id)
+    {
+    case PROP_MENU_BASENAME:
+      self->basename = g_value_dup_string (value);
+      break;
+
+    case PROP_MENU_PATH:
+      self->path = g_value_dup_string (value);
+      break;
+
+    case PROP_FLAGS:
+      self->flags = g_value_get_flags (value);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
+
+static void
+matemenu_tree_get_property (GObject         *object,
+                         guint            prop_id,
+                         GValue          *value,
+                         GParamSpec      *pspec)
+{
+  MateMenuTree *self = MATEMENU_TREE (object);
+
+  switch (prop_id)
+    {
+    case PROP_MENU_BASENAME:
+      g_value_set_string (value, self->basename);
+      break;
+    case PROP_MENU_PATH:
+      g_value_set_string (value, self->path);
+      break;
+    case PROP_FLAGS:
+      g_value_set_flags (value, self->flags);
+      break;
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
+
+static void
+matemenu_tree_finalize (GObject *object)
+{
+  MateMenuTree *tree = MATEMENU_TREE (object);
 
   matemenu_tree_force_recanonicalize (tree);
 
@@ -698,81 +606,155 @@ matemenu_tree_unref (MateMenuTree *tree)
     g_free (tree->basename);
   tree->basename = NULL;
 
-  if (tree->absolute_path != NULL)
-    g_free (tree->absolute_path);
-  tree->absolute_path = NULL;
+  g_free (tree->non_prefixed_basename);
+  tree->non_prefixed_basename = NULL;
 
-  g_slist_foreach (tree->monitors, (GFunc) g_free, NULL);
-  g_slist_free (tree->monitors);
-  tree->monitors = NULL;
+  if (tree->path != NULL)
+    g_free (tree->path);
+  tree->path = NULL;
 
-  g_free (tree);
+  if (tree->canonical_path != NULL)
+    g_free (tree->canonical_path);
+  tree->canonical_path = NULL;
+
+  g_hash_table_destroy (tree->entries_by_id);
+  tree->entries_by_id = NULL;
+
+  G_OBJECT_CLASS (matemenu_tree_parent_class)->finalize (object);
 }
 
-void
-matemenu_tree_set_user_data (MateMenuTree       *tree,
-			  gpointer        user_data,
-			  GDestroyNotify  dnotify)
+static void
+matemenu_tree_init (MateMenuTree *self)
 {
-  g_return_if_fail (tree != NULL);
-
-  if (tree->dnotify != NULL)
-    tree->dnotify (tree->user_data);
-
-  tree->dnotify   = dnotify;
-  tree->user_data = user_data;
+  self->entries_by_id = g_hash_table_new (g_str_hash, g_str_equal);
 }
 
-gpointer
-matemenu_tree_get_user_data (MateMenuTree *tree)
+static void
+matemenu_tree_class_init (MateMenuTreeClass *klass)
 {
-  g_return_val_if_fail (tree != NULL, NULL);
+  GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-  return tree->user_data;
+  gobject_class->constructor = matemenu_tree_constructor;
+  gobject_class->get_property = matemenu_tree_get_property;
+  gobject_class->set_property = matemenu_tree_set_property;
+  gobject_class->finalize = matemenu_tree_finalize;
+
+  /**
+   * MateMenuTree:menu-basename:
+   *
+   * The name of the menu file; must be a basename or a relative path. The file
+   * will be looked up in $XDG_CONFIG_DIRS/menus/. See the Desktop Menu
+   * specification.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_MENU_BASENAME,
+                                   g_param_spec_string ("menu-basename", "", "",
+                                                        "applications.menu",
+                                                        G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+  /**
+   * MateMenuTree:menu-path:
+   *
+   * The full path of the menu file. If set, MateMenuTree:menu-basename will get
+   * ignored.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_MENU_PATH,
+                                   g_param_spec_string ("menu-path", "", "",
+                                                        NULL,
+                                                        G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+  /**
+   * MateMenuTree:flags:
+   *
+   * Flags controlling the content of the menu.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_FLAGS,
+                                   g_param_spec_flags ("flags", "", "",
+                                                       MATEMENU_TYPE_TREE_FLAGS,
+                                                       MATEMENU_TREE_FLAGS_NONE,
+                                                       G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+
+  /**
+   * MateMenuTree:changed:
+   *
+   * This signal is emitted when applications are added, removed, or
+   * upgraded.  But note the new data will only be visible after
+   * matemenu_tree_load_sync() or a variant thereof is invoked.
+   */
+  matemenu_tree_signals[CHANGED] =
+      g_signal_new ("changed",
+                    G_TYPE_FROM_CLASS (klass),
+                    G_SIGNAL_RUN_LAST,
+                    0,
+                    NULL, NULL,
+                    g_cclosure_marshal_VOID__VOID,
+                    G_TYPE_NONE, 0);
 }
 
+/**
+ * matemenu_tree_get_canonical_menu_path:
+ * @tree: a #MateMenuTree
+ *
+ * This function is only available if the tree has been loaded via
+ * matemenu_tree_load_sync() or a variant thereof.
+ *
+ * Returns: The absolute and canonicalized path to the loaded menu file
+ */
 const char *
-matemenu_tree_get_menu_file (MateMenuTree *tree)
+matemenu_tree_get_canonical_menu_path (MateMenuTree *tree)
 {
-  /* FIXME: this is horribly ugly. But it's done to keep the API. Would be bad
-   * to break the API only for a "const char *" => "char *" change. The other
-   * alternative is to leak the memory, which is bad too. */
-  static char *ugly_result_cache = NULL;
+  g_return_val_if_fail (MATEMENU_IS_TREE (tree), NULL);
+  g_return_val_if_fail (tree->loaded, NULL);
 
-  g_return_val_if_fail (tree != NULL, NULL);
-
-  /* we need to canonicalize the path so we actually find out the real menu
-   * file that is being used -- and take into account XDG_MENU_PREFIX */
-  if (!matemenu_tree_canonicalize_path (tree))
-    return NULL;
-
-  if (ugly_result_cache != NULL)
-    {
-      g_free (ugly_result_cache);
-      ugly_result_cache = NULL;
-    }
-
-  if (tree->type == MATEMENU_TREE_BASENAME)
-    {
-      ugly_result_cache = g_path_get_basename (tree->canonical_path);
-      return ugly_result_cache;
-    }
-  else
-    return tree->absolute_path;
+  return tree->canonical_path;
 }
 
+/**
+ * matemenu_tree_load_sync:
+ * @tree: a #MateMenuTree
+ * @error: a #GError
+ *
+ * Synchronously load the menu contents.  This function
+ * performs a significant amount of blocking I/O if the
+ * tree has not been loaded yet.
+ *
+ * Returns: %TRUE on success, %FALSE on error
+ */
+gboolean
+matemenu_tree_load_sync (MateMenuTree  *tree,
+                      GError    **error)
+{
+  GError *local_error = NULL;
+
+  if (tree->loaded)
+    return TRUE;
+
+  if (!matemenu_tree_build_from_layout (tree, &local_error))
+    {
+      if (local_error)
+        g_propagate_error (error, local_error);
+      return FALSE;
+    }
+
+  tree->loaded = TRUE;
+
+  return TRUE;
+}
+
+/**
+ * matemenu_tree_get_root_directory:
+ * @tree: a #MateMenuTree
+ *
+ * Get the root directory; you must have loaded the tree first (at
+ * least once) via matemenu_tree_load_sync() or a variant thereof.
+ *
+ * Returns: (transfer full): Root of the tree
+ */
 MateMenuTreeDirectory *
 matemenu_tree_get_root_directory (MateMenuTree *tree)
 {
   g_return_val_if_fail (tree != NULL, NULL);
-
-  if (!tree->root)
-    {
-      matemenu_tree_build_from_layout (tree);
-
-      if (!tree->root)
-        return NULL;
-    }
+  g_return_val_if_fail (tree->loaded, NULL);
 
   return matemenu_tree_item_ref (tree->root);
 }
@@ -809,7 +791,7 @@ find_path (MateMenuTreeDirectory *directory,
     {
       MateMenuTreeItem *item = tmp->data;
 
-      if (matemenu_tree_item_get_type (item) != MATEMENU_TREE_ITEM_DIRECTORY)
+      if (item->type != MATEMENU_TREE_ITEM_DIRECTORY)
         {
           tmp = tmp->next;
           continue;
@@ -856,123 +838,101 @@ matemenu_tree_get_directory_from_path (MateMenuTree  *tree,
   return directory ? matemenu_tree_item_ref (directory) : NULL;
 }
 
-MateMenuTreeSortKey
-matemenu_tree_get_sort_key (MateMenuTree *tree)
+/**
+ * matemenu_tree_get_entry_by_id:
+ * @tree: a #MateMenuTree
+ * @id: a desktop file ID
+ * 
+ * Look up the entry corresponding to the given "desktop file id".
+ *
+ * Returns: (transfer full): A newly referenced #MateMenuTreeEntry, or %NULL if none
+ */
+MateMenuTreeEntry     *
+matemenu_tree_get_entry_by_id (MateMenuTree  *tree,
+			    const char *id)
 {
-  g_return_val_if_fail (tree != NULL, MATEMENU_TREE_SORT_NAME);
-  g_return_val_if_fail (tree->refcount > 0, MATEMENU_TREE_SORT_NAME);
+  MateMenuTreeEntry *entry;
 
-  return tree->sort_key;
-}
+  g_return_val_if_fail (tree->loaded, NULL);
 
-void
-matemenu_tree_set_sort_key (MateMenuTree        *tree,
-			 MateMenuTreeSortKey  sort_key)
-{
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (tree->refcount > 0);
-  g_return_if_fail (sort_key >= MATEMENU_TREE_SORT_FIRST);
-  g_return_if_fail (sort_key <= MATEMENU_TREE_SORT_LAST);
+  entry = g_hash_table_lookup (tree->entries_by_id, id);
+  if (entry != NULL)
+    matemenu_tree_item_ref (entry);
 
-  if (sort_key == tree->sort_key)
-    return;
-
-  tree->sort_key = sort_key;
-  matemenu_tree_force_rebuild (tree);
-}
-
-void
-matemenu_tree_add_monitor (MateMenuTree            *tree,
-                       MateMenuTreeChangedFunc   callback,
-                       gpointer               user_data)
-{
-  MateMenuTreeMonitor *monitor;
-  GSList           *tmp;
-
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (callback != NULL);
-
-  tmp = tree->monitors;
-  while (tmp != NULL)
-    {
-      monitor = tmp->data;
-
-      if (monitor->callback  == callback &&
-          monitor->user_data == user_data)
-        break;
-
-      tmp = tmp->next;
-    }
-
-  if (tmp == NULL)
-    {
-      monitor = g_new0 (MateMenuTreeMonitor, 1);
-
-      monitor->callback  = callback;
-      monitor->user_data = user_data;
-
-      tree->monitors = g_slist_append (tree->monitors, monitor);
-    }
-}
-
-void
-matemenu_tree_remove_monitor (MateMenuTree            *tree,
-			   MateMenuTreeChangedFunc  callback,
-			   gpointer              user_data)
-{
-  GSList *tmp;
-
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (callback != NULL);
-
-  tmp = tree->monitors;
-  while (tmp != NULL)
-    {
-      MateMenuTreeMonitor *monitor = tmp->data;
-      GSList          *next = tmp->next;
-
-      if (monitor->callback  == callback &&
-          monitor->user_data == user_data)
-        {
-          tree->monitors = g_slist_delete_link (tree->monitors, tmp);
-          g_free (monitor);
-        }
-
-      tmp = next;
-    }
+  return entry;
 }
 
 static void
 matemenu_tree_invoke_monitors (MateMenuTree *tree)
 {
-  GSList *tmp;
-
-  tmp = tree->monitors;
-  while (tmp != NULL)
-    {
-      MateMenuTreeMonitor *monitor = tmp->data;
-      GSList           *next    = tmp->next;
-
-      monitor->callback (tree, monitor->user_data);
-
-      tmp = next;
-    }
+  g_signal_emit (tree, matemenu_tree_signals[CHANGED], 0);
 }
 
-MateMenuTreeItemType
-matemenu_tree_item_get_type (MateMenuTreeItem *item)
-{
-  g_return_val_if_fail (item != NULL, 0);
-
-  return item->type;
-}
-
-MateMenuTreeDirectory *
-matemenu_tree_item_get_parent (MateMenuTreeItem *item)
+static MateMenuTreeDirectory *
+get_parent (MateMenuTreeItem *item)
 {
   g_return_val_if_fail (item != NULL, NULL);
-
   return item->parent ? matemenu_tree_item_ref (item->parent) : NULL;
+}
+
+/**
+ * matemenu_tree_directory_get_parent:
+ * @directory: a #MateMenuTreeDirectory
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+MateMenuTreeDirectory *
+matemenu_tree_directory_get_parent (MateMenuTreeDirectory *directory)
+{
+  return get_parent ((MateMenuTreeItem *)directory);
+}
+
+/**
+ * matemenu_tree_entry_get_parent:
+ * @entry: a #MateMenuTreeEntry
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+MateMenuTreeDirectory *
+matemenu_tree_entry_get_parent (MateMenuTreeEntry *entry)
+{
+  return get_parent ((MateMenuTreeItem *)entry);
+}
+
+/**
+ * matemenu_tree_alias_get_parent:
+ * @alias: a #MateMenuTreeAlias
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+MateMenuTreeDirectory *
+matemenu_tree_alias_get_parent (MateMenuTreeAlias *alias)
+{
+  return get_parent ((MateMenuTreeItem *)alias);
+}
+
+/**
+ * matemenu_tree_header_get_parent:
+ * @header: a #MateMenuTreeHeader
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+MateMenuTreeDirectory *
+matemenu_tree_header_get_parent (MateMenuTreeHeader *header)
+{
+  return get_parent ((MateMenuTreeItem *)header);
+}
+
+/**
+ * matemenu_tree_separator_get_parent:
+ * @separator: a #MateMenuTreeSeparator
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+MateMenuTreeDirectory *
+matemenu_tree_separator_get_parent (MateMenuTreeSeparator *separator)
+{
+  return get_parent ((MateMenuTreeItem *)separator);
 }
 
 static void
@@ -984,26 +944,177 @@ matemenu_tree_item_set_parent (MateMenuTreeItem      *item,
   item->parent = parent;
 }
 
-GSList *
-matemenu_tree_directory_get_contents (MateMenuTreeDirectory *directory)
+/**
+ * matemenu_tree_iter_ref: (skip)
+ * @iter: iter
+ *
+ * Increment the reference count of @iter
+ */
+MateMenuTreeIter *
+matemenu_tree_iter_ref (MateMenuTreeIter *iter)
 {
-  GSList *retval;
-  GSList *tmp;
+  g_atomic_int_inc (&iter->refcount);
+  return iter;
+}
+
+/**
+ * matemenu_tree_iter_unref: (skip)
+ * @iter: iter
+ *
+ * Decrement the reference count of @iter
+ */
+void
+matemenu_tree_iter_unref (MateMenuTreeIter *iter)
+{
+  if (!g_atomic_int_dec_and_test (&iter->refcount))
+    return;
+
+  g_slist_foreach (iter->contents, (GFunc)matemenu_tree_item_unref, NULL);
+  g_slist_free (iter->contents);
+
+  g_slice_free (MateMenuTreeIter, iter);
+}
+
+/**
+ * matemenu_tree_directory_iter:
+ * @directory: directory
+ *
+ * Returns: (transfer full): A new iterator over the directory contents
+ */
+MateMenuTreeIter *
+matemenu_tree_directory_iter (MateMenuTreeDirectory *directory)
+{
+  MateMenuTreeIter *iter;
 
   g_return_val_if_fail (directory != NULL, NULL);
 
-  retval = NULL;
+  iter = g_slice_new0 (MateMenuTreeIter);
+  iter->refcount = 1;
 
-  tmp = directory->contents;
-  while (tmp != NULL)
+  iter->contents = g_slist_copy (directory->contents);
+  iter->contents_iter = iter->contents;
+  g_slist_foreach (iter->contents, (GFunc) matemenu_tree_item_ref, NULL);
+
+  return iter;
+}
+
+/**
+ * matemenu_tree_iter_next:
+ * @iter: iter
+ *
+ * Change the iterator to the next item, and return its type.  If
+ * there are no more items, %MATEMENU_TREE_ITEM_INVALID is returned.
+ *
+ * Returns: The type of the next item that can be retrived from the iterator
+ */
+MateMenuTreeItemType
+matemenu_tree_iter_next (MateMenuTreeIter *iter)
+{
+  g_return_val_if_fail (iter != NULL, MATEMENU_TREE_ITEM_INVALID);
+
+  if (iter->contents_iter)
     {
-      retval = g_slist_prepend (retval,
-                                matemenu_tree_item_ref (tmp->data));
-
-      tmp = tmp->next;
+      iter->item = iter->contents_iter->data;
+      iter->contents_iter = iter->contents_iter->next;
+      return iter->item->type;
     }
+  else
+    return MATEMENU_TREE_ITEM_INVALID;
+}
 
-  return g_slist_reverse (retval);
+/**
+ * matemenu_tree_iter_get_directory:
+ * @iter: iter
+ *
+ * This method may only be called if matemenu_tree_iter_next()
+ * returned MATEMENU_TREE_ITEM_DIRECTORY.
+ *
+ * Returns: (transfer full): A directory
+ */
+MateMenuTreeDirectory *
+matemenu_tree_iter_get_directory (MateMenuTreeIter *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == MATEMENU_TREE_ITEM_DIRECTORY, NULL);
+
+  return (MateMenuTreeDirectory*)matemenu_tree_item_ref (iter->item);
+}
+
+/**
+ * matemenu_tree_iter_get_entry:
+ * @iter: iter
+ *
+ * This method may only be called if matemenu_tree_iter_next()
+ * returned MATEMENU_TREE_ITEM_ENTRY.
+ *
+ * Returns: (transfer full): An entry
+ */
+MateMenuTreeEntry *
+matemenu_tree_iter_get_entry (MateMenuTreeIter *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == MATEMENU_TREE_ITEM_ENTRY, NULL);
+
+  return (MateMenuTreeEntry*)matemenu_tree_item_ref (iter->item);
+}
+
+/**
+ * matemenu_tree_iter_get_header:
+ * @iter: iter
+ *
+ * This method may only be called if matemenu_tree_iter_next()
+ * returned MATEMENU_TREE_ITEM_HEADER.
+ *
+ * Returns: (transfer full): A header
+ */
+MateMenuTreeHeader *
+matemenu_tree_iter_get_header (MateMenuTreeIter *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == MATEMENU_TREE_ITEM_HEADER, NULL);
+
+  return (MateMenuTreeHeader*)matemenu_tree_item_ref (iter->item);
+}
+
+/**
+ * matemenu_tree_iter_get_alias:
+ * @iter: iter
+ *
+ * This method may only be called if matemenu_tree_iter_next()
+ * returned MATEMENU_TREE_ITEM_ALIAS.
+ *
+ * Returns: (transfer full): An alias
+ */
+MateMenuTreeAlias *
+matemenu_tree_iter_get_alias (MateMenuTreeIter *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == MATEMENU_TREE_ITEM_ALIAS, NULL);
+
+  return (MateMenuTreeAlias*)matemenu_tree_item_ref (iter->item);
+}
+
+/**
+ * matemenu_tree_iter_get_separator:
+ * @iter: iter
+ *
+ * This method may only be called if matemenu_tree_iter_next()
+ * returned #MATEMENU_TREE_ITEM_SEPARATOR.
+ *
+ * Returns: (transfer full): A separator
+ */
+MateMenuTreeSeparator *
+matemenu_tree_iter_get_separator (MateMenuTreeIter *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == MATEMENU_TREE_ITEM_SEPARATOR, NULL);
+
+  return (MateMenuTreeSeparator*)matemenu_tree_item_ref (iter->item);
 }
 
 const char *
@@ -1018,6 +1129,17 @@ matemenu_tree_directory_get_name (MateMenuTreeDirectory *directory)
 }
 
 const char *
+matemenu_tree_directory_get_generic_name (MateMenuTreeDirectory *directory)
+{
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  if (!directory->directory_entry)
+    return NULL;
+
+  return desktop_entry_get_generic_name (directory->directory_entry);
+}
+
+const char *
 matemenu_tree_directory_get_comment (MateMenuTreeDirectory *directory)
 {
   g_return_val_if_fail (directory != NULL, NULL);
@@ -1028,7 +1150,16 @@ matemenu_tree_directory_get_comment (MateMenuTreeDirectory *directory)
   return desktop_entry_get_comment (directory->directory_entry);
 }
 
-const char* matemenu_tree_directory_get_icon(MateMenuTreeDirectory* directory)
+/**
+ * matemenu_tree_directory_get_icon:
+ * @directory: a #MateMenuTreeDirectory
+ *
+ * Gets the icon for the directory.
+ *
+ * Returns: (transfer none): The #GIcon for this directory
+ */
+GIcon *
+matemenu_tree_directory_get_icon (MateMenuTreeDirectory *directory)
 {
 	g_return_val_if_fail(directory != NULL, NULL);
 
@@ -1057,47 +1188,28 @@ matemenu_tree_directory_get_menu_id (MateMenuTreeDirectory *directory)
   return directory->name;
 }
 
-static void
-matemenu_tree_directory_set_tree (MateMenuTreeDirectory *directory,
-			       MateMenuTree          *tree)
-{
-  MateMenuTreeDirectoryRoot *root;
-
-  g_assert (directory != NULL);
-  g_assert (directory->is_root);
-
-  root = (MateMenuTreeDirectoryRoot *) directory;
-
-  root->tree = tree;
-}
-
-MateMenuTree *
-matemenu_tree_directory_get_tree (MateMenuTreeDirectory *directory)
-{
-  MateMenuTreeDirectoryRoot *root;
-
-  g_return_val_if_fail (directory != NULL, NULL);
-
-  while (MATEMENU_TREE_ITEM (directory)->parent != NULL)
-    directory = MATEMENU_TREE_DIRECTORY (MATEMENU_TREE_ITEM (directory)->parent);
-
-  if (!directory->is_root)
-    return NULL;
-
-  root = (MateMenuTreeDirectoryRoot *) directory;
-
-  if (root->tree)
-    matemenu_tree_ref (root->tree);
-
-  return root->tree;
-}
-
 gboolean
 matemenu_tree_directory_get_is_nodisplay (MateMenuTreeDirectory *directory)
 {
   g_return_val_if_fail (directory != NULL, FALSE);
 
   return directory->is_nodisplay;
+}
+
+/**
+ * matemenu_tree_directory_get_tree:
+ * @directory: A #MateMenuTreeDirectory
+ *
+ * Grab the tree associated with a #MateMenuTreeItem.
+ *
+ * Returns: (transfer full): The #MateMenuTree
+ */
+MateMenuTree *
+matemenu_tree_directory_get_tree (MateMenuTreeDirectory *directory)
+{
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  return g_object_ref (directory->item.tree);
 }
 
 static void
@@ -1136,98 +1248,124 @@ matemenu_tree_directory_make_path (MateMenuTreeDirectory *directory,
   return g_string_free (path, FALSE);
 }
 
-const char *
-matemenu_tree_entry_get_name (MateMenuTreeEntry *entry)
+/**
+ * matemenu_tree_entry_get_app_info:
+ * @entry: a #MateMenuTreeEntry
+ *
+ * Returns: (transfer none): The #GDesktopAppInfo for this entry
+ */
+GDesktopAppInfo *
+matemenu_tree_entry_get_app_info (MateMenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);
 
-  return desktop_entry_get_name (entry->desktop_entry);
+  return desktop_entry_get_app_info (entry->desktop_entry);
 }
 
 const char *
-matemenu_tree_entry_get_generic_name (MateMenuTreeEntry *entry)
+matemenu_tree_entry_get_desktop_file_path (MateMenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);
 
-  return desktop_entry_get_generic_name (entry->desktop_entry);
+  return desktop_entry_get_path (entry->desktop_entry);
 }
 
 const char *
-matemenu_tree_entry_get_display_name (MateMenuTreeEntry *entry)
-{
-  const char *display_name;
-
-  g_return_val_if_fail (entry != NULL, NULL);
-
-  display_name = desktop_entry_get_full_name (entry->desktop_entry);
-  if (!display_name || display_name[0] == '\0')
-    display_name = desktop_entry_get_name (entry->desktop_entry);
-
-  return display_name;
-}
-
-const char *
-matemenu_tree_entry_get_comment (MateMenuTreeEntry *entry)
+matemenu_tree_entry_get_desktop_file_id (MateMenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);
 
-  return desktop_entry_get_comment (entry->desktop_entry);
+  return entry->desktop_file_id;
 }
 
-const char* matemenu_tree_entry_get_icon(MateMenuTreeEntry *entry)
+gboolean
+matemenu_tree_entry_get_is_nodisplay_recurse (MateMenuTreeEntry *entry)
 {
-	g_return_val_if_fail (entry != NULL, NULL);
+  MateMenuTreeDirectory *directory;
+  GDesktopAppInfo *app_info;
 
-	return desktop_entry_get_icon(entry->desktop_entry);
+  g_return_val_if_fail (entry != NULL, FALSE);
+
+  app_info = matemenu_tree_entry_get_app_info (entry);
+
+  if (g_desktop_app_info_get_nodisplay (app_info))
+    return TRUE;
+
+  directory = entry->item.parent;
+  while (directory != NULL)
+    {
+      if (directory->is_nodisplay)
+        return TRUE;
+
+      directory = directory->item.parent;
+    }
+
+  return FALSE;
 }
 
-const char* matemenu_tree_entry_get_exec(MateMenuTreeEntry* entry)
-{
-	g_return_val_if_fail(entry != NULL, NULL);
-
-	return desktop_entry_get_exec(entry->desktop_entry);
-}
-
-gboolean matemenu_tree_entry_get_launch_in_terminal(MateMenuTreeEntry* entry)
+gboolean
+matemenu_tree_entry_get_is_excluded (MateMenuTreeEntry *entry)
 {
   g_return_val_if_fail(entry != NULL, FALSE);
 
-  return desktop_entry_get_launch_in_terminal(entry->desktop_entry);
+  return entry->is_excluded;
 }
 
-const char* matemenu_tree_entry_get_desktop_file_path(MateMenuTreeEntry* entry)
+gboolean
+matemenu_tree_entry_get_is_unallocated (MateMenuTreeEntry *entry)
+{
+  g_return_val_if_fail (entry != NULL, FALSE);
+
+  return entry->is_unallocated;
+}
+
+/**
+ * matemenu_tree_entry_get_tree:
+ * @entry: A #MateMenuTreeEntry
+ *
+ * Grab the tree associated with a #MateMenuTreeEntry.
+ *
+ * Returns: (transfer full): The #MateMenuTree
+ */
+MateMenuTree *
+matemenu_tree_entry_get_tree (MateMenuTreeEntry *entry)
 {
 	g_return_val_if_fail(entry != NULL, NULL);
 
-	return desktop_entry_get_path(entry->desktop_entry);
+  return g_object_ref (entry->item.tree);
 }
 
-const char* matemenu_tree_entry_get_desktop_file_id(MateMenuTreeEntry* entry)
+MateMenuTreeDirectory *
+matemenu_tree_header_get_directory (MateMenuTreeHeader *header)
 {
-	g_return_val_if_fail(entry != NULL, NULL);
+  g_return_val_if_fail (header != NULL, NULL);
 
-	return entry->desktop_file_id;
+  return matemenu_tree_item_ref (header->directory);
 }
 
-gboolean matemenu_tree_entry_get_is_excluded(MateMenuTreeEntry* entry)
+/**
+ * matemenu_tree_header_get_tree:
+ * @header: A #MateMenuTreeHeader
+ *
+ * Grab the tree associated with a #MateMenuTreeHeader.
+ *
+ * Returns: (transfer full): The #MateMenuTree
+ */
+MateMenuTree *
+matemenu_tree_header_get_tree (MateMenuTreeHeader *header)
 {
-	g_return_val_if_fail(entry != NULL, FALSE);
+  g_return_val_if_fail (header != NULL, NULL);
 
-	return entry->is_excluded;
+  return g_object_ref (header->item.tree);
 }
 
-gboolean matemenu_tree_entry_get_is_nodisplay(MateMenuTreeEntry* entry)
+MateMenuTreeItemType
+matemenu_tree_alias_get_aliased_item_type (MateMenuTreeAlias *alias)
 {
-	g_return_val_if_fail(entry != NULL, FALSE);
+  g_return_val_if_fail (alias != NULL, MATEMENU_TREE_ITEM_INVALID);
 
-	return entry->is_nodisplay;
-}
-
-MateMenuTreeDirectory* matemenu_tree_header_get_directory(MateMenuTreeHeader* header)
-{
-	g_return_val_if_fail (header != NULL, NULL);
-
-	return matemenu_tree_item_ref(header->directory);
+  g_assert (alias->aliased_item != NULL);
+  return alias->aliased_item->type;
 }
 
 MateMenuTreeDirectory* matemenu_tree_alias_get_directory(MateMenuTreeAlias* alias)
@@ -1237,40 +1375,81 @@ MateMenuTreeDirectory* matemenu_tree_alias_get_directory(MateMenuTreeAlias* alia
 	return matemenu_tree_item_ref(alias->directory);
 }
 
-MateMenuTreeItem *
-matemenu_tree_alias_get_item (MateMenuTreeAlias *alias)
+/**
+ * matemenu_tree_alias_get_tree:
+ * @alias: A #MateMenuTreeAlias
+ *
+ * Grab the tree associated with a #MateMenuTreeAlias.
+ *
+ * Returns: (transfer full): The #MateMenuTree
+ */
+MateMenuTree *
+matemenu_tree_alias_get_tree (MateMenuTreeAlias *alias)
 {
   g_return_val_if_fail (alias != NULL, NULL);
 
-  return matemenu_tree_item_ref (alias->aliased_item);
+  return g_object_ref (alias->item.tree);
+}
+
+/**
+ * matemenu_tree_separator_get_tree:
+ * @separator: A #MateMenuTreeSeparator
+ *
+ * Grab the tree associated with a #MateMenuTreeSeparator.
+ *
+ * Returns: (transfer full): The #MateMenuTree
+ */
+MateMenuTree *
+matemenu_tree_separator_get_tree (MateMenuTreeSeparator *separator)
+{
+  g_return_val_if_fail (separator != NULL, NULL);
+
+  return g_object_ref (separator->item.tree);
+}
+
+/**
+ * matemenu_tree_alias_get_aliased_directory:
+ * @alias: alias
+ *
+ * Returns: (transfer full): The aliased directory entry
+ */
+MateMenuTreeDirectory *
+matemenu_tree_alias_get_aliased_directory (MateMenuTreeAlias *alias)
+{
+  g_return_val_if_fail (alias != NULL, NULL);
+  g_return_val_if_fail (alias->aliased_item->type == MATEMENU_TREE_ITEM_DIRECTORY, NULL);
+
+  return (MateMenuTreeDirectory *) matemenu_tree_item_ref (alias->aliased_item);
+}
+
+/**
+ * matemenu_tree_alias_get_aliased_entry:
+ * @alias: alias
+ *
+ * Returns: (transfer full): The aliased entry
+ */
+MateMenuTreeEntry *
+matemenu_tree_alias_get_aliased_entry (MateMenuTreeAlias *alias)
+{
+  g_return_val_if_fail (alias != NULL, NULL);
+  g_return_val_if_fail (alias->aliased_item->type == MATEMENU_TREE_ITEM_ENTRY, NULL);
+
+  return (MateMenuTreeEntry *) matemenu_tree_item_ref (alias->aliased_item);
 }
 
 static MateMenuTreeDirectory *
-matemenu_tree_directory_new (MateMenuTreeDirectory *parent,
-			  const char         *name,
-			  gboolean            is_root)
+matemenu_tree_directory_new (MateMenuTree          *tree,
+                          MateMenuTreeDirectory *parent,
+			  const char         *name)
 {
   MateMenuTreeDirectory *retval;
 
-  if (!is_root)
-    {
-      retval = g_new0 (MateMenuTreeDirectory, 1);
-    }
-  else
-    {
-      MateMenuTreeDirectoryRoot *root;
-
-      root = g_new0 (MateMenuTreeDirectoryRoot, 1);
-
-      retval = MATEMENU_TREE_DIRECTORY (root);
-
-      retval->is_root = TRUE;
-    }
-
+  retval = g_slice_new0 (MateMenuTreeDirectory);
 
   retval->item.type     = MATEMENU_TREE_ITEM_DIRECTORY;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = tree;
 
   retval->name                = g_strdup (name);
   retval->directory_entry     = NULL;
@@ -1336,6 +1515,8 @@ matemenu_tree_directory_finalize (MateMenuTreeDirectory *directory)
 
   g_free (directory->name);
   directory->name = NULL;
+
+  g_slice_free (MateMenuTreeDirectory, directory);
 }
 
 static MateMenuTreeSeparator *
@@ -1343,13 +1524,22 @@ matemenu_tree_separator_new (MateMenuTreeDirectory *parent)
 {
   MateMenuTreeSeparator *retval;
 
-  retval = g_new0 (MateMenuTreeSeparator, 1);
+  retval = g_slice_new0 (MateMenuTreeSeparator);
 
   retval->item.type     = MATEMENU_TREE_ITEM_SEPARATOR;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   return retval;
+}
+
+static void
+matemenu_tree_separator_finalize (MateMenuTreeSeparator *separator)
+{
+  g_assert (separator->item.refcount == 0);
+
+  g_slice_free (MateMenuTreeSeparator, separator);
 }
 
 static MateMenuTreeHeader *
@@ -1358,11 +1548,12 @@ matemenu_tree_header_new (MateMenuTreeDirectory *parent,
 {
   MateMenuTreeHeader *retval;
 
-  retval = g_new0 (MateMenuTreeHeader, 1);
+  retval = g_slice_new0 (MateMenuTreeHeader);
 
   retval->item.type     = MATEMENU_TREE_ITEM_HEADER;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   retval->directory = matemenu_tree_item_ref (directory);
 
@@ -1379,6 +1570,8 @@ matemenu_tree_header_finalize (MateMenuTreeHeader *header)
   if (header->directory != NULL)
     matemenu_tree_item_unref (header->directory);
   header->directory = NULL;
+
+  g_slice_free (MateMenuTreeHeader, header);
 }
 
 static MateMenuTreeAlias *
@@ -1388,17 +1581,21 @@ matemenu_tree_alias_new (MateMenuTreeDirectory *parent,
 {
   MateMenuTreeAlias *retval;
 
-  retval = g_new0 (MateMenuTreeAlias, 1);
+  retval = g_slice_new0 (MateMenuTreeAlias);
 
   retval->item.type     = MATEMENU_TREE_ITEM_ALIAS;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   retval->directory    = matemenu_tree_item_ref (directory);
   if (item->type != MATEMENU_TREE_ITEM_ALIAS)
     retval->aliased_item = matemenu_tree_item_ref (item);
   else
-    retval->aliased_item = matemenu_tree_item_ref (matemenu_tree_alias_get_item (MATEMENU_TREE_ALIAS (item)));
+    {
+      MateMenuTreeAlias *alias = MATEMENU_TREE_ALIAS (item);
+      retval->aliased_item = matemenu_tree_item_ref (alias->aliased_item);
+    }
 
   matemenu_tree_item_set_parent (MATEMENU_TREE_ITEM (retval->directory), NULL);
   matemenu_tree_item_set_parent (retval->aliased_item, NULL);
@@ -1418,6 +1615,8 @@ matemenu_tree_alias_finalize (MateMenuTreeAlias *alias)
   if (alias->aliased_item != NULL)
     matemenu_tree_item_unref (alias->aliased_item);
   alias->aliased_item = NULL;
+
+  g_slice_free (MateMenuTreeAlias, alias);
 }
 
 static MateMenuTreeEntry *
@@ -1425,20 +1624,21 @@ matemenu_tree_entry_new (MateMenuTreeDirectory *parent,
 		      DesktopEntry       *desktop_entry,
 		      const char         *desktop_file_id,
 		      gboolean            is_excluded,
-                      gboolean            is_nodisplay)
+                      gboolean            is_unallocated)
 {
   MateMenuTreeEntry *retval;
 
-  retval = g_new0 (MateMenuTreeEntry, 1);
+  retval = g_slice_new0 (MateMenuTreeEntry);
 
   retval->item.type     = MATEMENU_TREE_ITEM_ENTRY;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
   retval->desktop_file_id = g_strdup (desktop_file_id);
   retval->is_excluded     = is_excluded != FALSE;
-  retval->is_nodisplay    = is_nodisplay != FALSE;
+  retval->is_unallocated  = is_unallocated != FALSE;
 
   return retval;
 }
@@ -1454,6 +1654,8 @@ matemenu_tree_entry_finalize (MateMenuTreeEntry *entry)
   if (entry->desktop_entry)
     desktop_entry_unref (entry->desktop_entry);
   entry->desktop_entry = NULL;
+
+  g_slice_free (MateMenuTreeEntry, entry);
 }
 
 static int
@@ -1470,14 +1672,21 @@ matemenu_tree_entry_compare_by_id (MateMenuTreeItem *a,
                  MATEMENU_TREE_ENTRY (b)->desktop_file_id);
 }
 
-gpointer matemenu_tree_item_ref(gpointer itemp)
+/**
+ * matemenu_tree_item_ref:
+ * @item: a #MateMenuTreeItem
+ *
+ * Returns: (transfer full): The same @item, or %NULL if @item is not a valid #MateMenuTreeItem
+ */
+gpointer
+matemenu_tree_item_ref (gpointer itemp)
 {
 	MateMenuTreeItem* item = (MateMenuTreeItem*) itemp;
 
 	g_return_val_if_fail(item != NULL, NULL);
 	g_return_val_if_fail(item->refcount > 0, NULL);
 
-	item->refcount++;
+  g_atomic_int_inc (&item->refcount);
 
 	return item;
 }
@@ -1492,7 +1701,7 @@ matemenu_tree_item_unref (gpointer itemp)
   g_return_if_fail (item != NULL);
   g_return_if_fail (item->refcount > 0);
 
-  if (--item->refcount == 0)
+  if (g_atomic_int_dec_and_test (&(item->refcount)))
     {
       switch (item->type)
 	{
@@ -1505,6 +1714,7 @@ matemenu_tree_item_unref (gpointer itemp)
 	  break;
 
 	case MATEMENU_TREE_ITEM_SEPARATOR:
+	  matemenu_tree_separator_finalize (MATEMENU_TREE_SEPARATOR (item));
 	  break;
 
 	case MATEMENU_TREE_ITEM_HEADER:
@@ -1519,15 +1729,6 @@ matemenu_tree_item_unref (gpointer itemp)
 	  g_assert_not_reached ();
 	  break;
 	}
-
-      if (item->dnotify)
-	item->dnotify (item->user_data);
-      item->user_data = NULL;
-      item->dnotify   = NULL;
-
-      item->parent = NULL;
-
-      g_free (item);
     }
 }
 
@@ -1544,31 +1745,9 @@ matemenu_tree_item_unref_and_unset_parent (gpointer itemp)
   matemenu_tree_item_unref (item);
 }
 
-void
-matemenu_tree_item_set_user_data (MateMenuTreeItem  *item,
-			       gpointer        user_data,
-			       GDestroyNotify  dnotify)
-{
-  g_return_if_fail (item != NULL);
-
-  if (item->dnotify != NULL)
-    item->dnotify (item->user_data);
-
-  item->dnotify   = dnotify;
-  item->user_data = user_data;
-}
-
-gpointer
-matemenu_tree_item_get_user_data (MateMenuTreeItem *item)
-{
-  g_return_val_if_fail (item != NULL, NULL);
-
-  return item->user_data;
-}
-
 static inline const char *
 matemenu_tree_item_compare_get_name_helper (MateMenuTreeItem    *item,
-					 MateMenuTreeSortKey  sort_key)
+					 MateMenuTreeFlags    flags)
 {
   const char *name;
 
@@ -1584,25 +1763,17 @@ matemenu_tree_item_compare_get_name_helper (MateMenuTreeItem    *item,
       break;
 
     case MATEMENU_TREE_ITEM_ENTRY:
-      switch (sort_key)
-	{
-	case MATEMENU_TREE_SORT_NAME:
-	  name = desktop_entry_get_name (MATEMENU_TREE_ENTRY (item)->desktop_entry);
-	  break;
-	case MATEMENU_TREE_SORT_DISPLAY_NAME:
-	  name = matemenu_tree_entry_get_display_name (MATEMENU_TREE_ENTRY (item));
-	  break;
-	default:
-	  g_assert_not_reached ();
-	  break;
-	}
+      if (flags & MATEMENU_TREE_FLAGS_SORT_DISPLAY_NAME)
+        name = g_app_info_get_display_name (G_APP_INFO (matemenu_tree_entry_get_app_info (MATEMENU_TREE_ENTRY (item))));
+      else
+        name = desktop_entry_get_name (MATEMENU_TREE_ENTRY (item)->desktop_entry);
       break;
 
     case MATEMENU_TREE_ITEM_ALIAS:
       {
         MateMenuTreeItem *dir;
         dir = MATEMENU_TREE_ITEM (MATEMENU_TREE_ALIAS (item)->directory);
-        name = matemenu_tree_item_compare_get_name_helper (dir, sort_key);
+        name = matemenu_tree_item_compare_get_name_helper (dir, flags);
       }
       break;
 
@@ -1619,16 +1790,16 @@ matemenu_tree_item_compare_get_name_helper (MateMenuTreeItem    *item,
 static int
 matemenu_tree_item_compare (MateMenuTreeItem *a,
 			 MateMenuTreeItem *b,
-			 gpointer       sort_key_p)
+			 gpointer       flags_p)
 {
   const char       *name_a;
   const char       *name_b;
-  MateMenuTreeSortKey  sort_key;
+  MateMenuTreeFlags    flags;
 
-  sort_key = GPOINTER_TO_INT (sort_key_p);
+  flags = GPOINTER_TO_INT (flags_p);
 
-  name_a = matemenu_tree_item_compare_get_name_helper (a, sort_key);
-  name_b = matemenu_tree_item_compare_get_name_helper (b, sort_key);
+  name_a = matemenu_tree_item_compare_get_name_helper (a, flags);
+  name_b = matemenu_tree_item_compare_get_name_helper (b, flags);
 
   return g_utf8_collate (name_a, name_b);
 }
@@ -1744,7 +1915,7 @@ load_merge_file (MateMenuTree      *tree,
 
   menu_verbose ("Merging file \"%s\"\n", canonical);
 
-  to_merge = menu_layout_load (canonical, NULL, NULL);
+  to_merge = menu_layout_load (canonical, tree->non_prefixed_basename, NULL);
   if (to_merge == NULL)
     {
       menu_verbose ("No menu for file \"%s\" found when merging\n",
@@ -2906,33 +3077,26 @@ matemenu_tree_execute_moves (MateMenuTree      *tree,
     matemenu_tree_strip_duplicate_children (tree, layout);
 }
 
-static void
-matemenu_tree_load_layout (MateMenuTree *tree)
+static gboolean
+matemenu_tree_load_layout (MateMenuTree  *tree,
+                        GError    **error)
 {
   GHashTable *loaded_menu_files;
-  GError     *error;
 
   if (tree->layout)
-    return;
+    return TRUE;
 
-  if (!matemenu_tree_canonicalize_path (tree))
-    return;
+  if (!matemenu_tree_canonicalize_path (tree, error))
+    return FALSE;
 
   menu_verbose ("Loading menu layout from \"%s\"\n",
                 tree->canonical_path);
 
-  error = NULL;
   tree->layout = menu_layout_load (tree->canonical_path,
-                                   tree->type == MATEMENU_TREE_BASENAME ?
-                                        tree->basename : NULL,
-                                   &error);
-  if (tree->layout == NULL)
-    {
-      g_warning ("Error loading menu layout from \"%s\": %s",
-                 tree->canonical_path, error->message);
-      g_error_free (error);
-      return;
-    }
+                                   tree->non_prefixed_basename,
+                                   error);
+  if (!tree->layout)
+    return FALSE;
 
   loaded_menu_files = g_hash_table_new (g_str_hash, g_str_equal);
   g_hash_table_insert (loaded_menu_files, tree->canonical_path, GUINT_TO_POINTER (TRUE));
@@ -2941,6 +3105,8 @@ matemenu_tree_load_layout (MateMenuTree *tree)
 
   matemenu_tree_strip_duplicate_children (tree, tree->layout);
   matemenu_tree_execute_moves (tree, tree->layout, NULL);
+
+  return TRUE;
 }
 
 static void
@@ -3192,7 +3358,7 @@ entries_listify_foreach (const char         *desktop_file_id,
                                            desktop_entry,
                                            desktop_file_id,
                                            FALSE,
-                                           desktop_entry_get_no_display (desktop_entry)));
+                                           FALSE));
 }
 
 static void
@@ -3206,7 +3372,21 @@ excluded_entries_listify_foreach (const char         *desktop_file_id,
 					   desktop_entry,
 					   desktop_file_id,
 					   TRUE,
-                                           desktop_entry_get_no_display (desktop_entry)));
+                                           FALSE));
+}
+
+static void
+unallocated_entries_listify_foreach (const char         *desktop_file_id,
+                                     DesktopEntry       *desktop_entry,
+                                     MateMenuTreeDirectory *directory)
+{
+  directory->entries =
+    g_slist_prepend (directory->entries,
+		     matemenu_tree_entry_new (directory,
+                                           desktop_entry,
+                                           desktop_file_id,
+                                           FALSE,
+                                           TRUE));
 }
 
 static void
@@ -3256,9 +3436,8 @@ process_layout (MateMenuTree          *tree,
   g_assert (menu_layout_node_get_type (layout) == MENU_LAYOUT_NODE_MENU);
   g_assert (menu_layout_node_menu_get_name (layout) != NULL);
 
-  directory = matemenu_tree_directory_new (parent,
-					menu_layout_node_menu_get_name (layout),
-					parent == NULL);
+  directory = matemenu_tree_directory_new (tree, parent,
+					menu_layout_node_menu_get_name (layout));
 
   menu_verbose ("=== Menu name = %s ===\n", directory->name);
 
@@ -3462,9 +3641,9 @@ process_layout (MateMenuTree          *tree,
             }
         }
 
-      if (!desktop_entry_get_show_in_mate (directory->directory_entry))
+      if (!desktop_entry_get_show_in (directory->directory_entry))
         {
-          menu_verbose ("Not showing menu %s because OnlyShowIn!=MATE or NotShowIn=MATE\n",
+          menu_verbose ("Not showing menu %s because OnlyShowIn!=$DESKTOP or NotShowIn=$DESKTOP (with $DESKTOP=${XDG_CURRENT_DESKTOP:-GNOME})\n",
                         desktop_entry_get_name (directory->directory_entry));
           deleted = TRUE;
         }
@@ -3509,6 +3688,9 @@ process_layout (MateMenuTree          *tree,
       GSList         *next  = tmp->next;
       gboolean        delete = FALSE;
 
+      /* If adding a new condition to delete here, it has to be added to
+       * get_still_unallocated_foreach() too */
+
       if (desktop_entry_get_hidden (entry->desktop_entry))
         {
           menu_verbose ("Deleting %s because Hidden=true\n",
@@ -3524,19 +3706,15 @@ process_layout (MateMenuTree          *tree,
           delete = TRUE;
         }
 
-      if (!desktop_entry_get_show_in_mate (entry->desktop_entry))
+      if (!desktop_entry_get_show_in (entry->desktop_entry))
         {
-          menu_verbose ("Deleting %s because OnlyShowIn!=MATE or NotShowIn=MATE\n",
+          menu_verbose ("Deleting %s because OnlyShowIn!=$DESKTOP or NotShowIn=$DESKTOP (with $DESKTOP=${XDG_CURRENT_DESKTOP:-GNOME})\n",
                         desktop_entry_get_name (entry->desktop_entry));
           delete = TRUE;
         }
 
-      if (desktop_entry_get_tryexec_failed (entry->desktop_entry))
-        {
-          menu_verbose ("Deleting %s because TryExec failed\n",
-                        desktop_entry_get_name (entry->desktop_entry));
-          delete = TRUE;
-        }
+      /* No need to filter out based on TryExec since GDesktopAppInfo cannot
+       * deal with .desktop files with a failed TryExec. */
 
       if (delete)
         {
@@ -3556,7 +3734,8 @@ process_layout (MateMenuTree          *tree,
 static void
 process_only_unallocated (MateMenuTree          *tree,
 			  MateMenuTreeDirectory *directory,
-			  DesktopEntrySet    *allocated)
+			  DesktopEntrySet    *allocated,
+			  DesktopEntrySet    *unallocated_used)
 {
   GSList *tmp;
 
@@ -3578,6 +3757,10 @@ process_only_unallocated (MateMenuTree          *tree,
                                                         tmp);
               matemenu_tree_item_unref_and_unset_parent (entry);
             }
+          else
+            {
+              desktop_entry_set_add_entry (unallocated_used, entry->desktop_entry, entry->desktop_file_id);
+            }
 
           tmp = next;
         }
@@ -3588,10 +3771,43 @@ process_only_unallocated (MateMenuTree          *tree,
     {
       MateMenuTreeDirectory *subdir = tmp->data;
 
-      process_only_unallocated (tree, subdir, allocated);
+      process_only_unallocated (tree, subdir, allocated, unallocated_used);
 
       tmp = tmp->next;
    }
+}
+
+typedef struct
+{
+  MateMenuTree *tree;
+  DesktopEntrySet *allocated;
+  DesktopEntrySet *unallocated_used;
+  DesktopEntrySet *still_unallocated;
+} GetStillUnallocatedForeachData;
+
+static void
+get_still_unallocated_foreach (const char                     *file_id,
+                               DesktopEntry                   *entry,
+                               GetStillUnallocatedForeachData *data)
+{
+  if (desktop_entry_set_lookup (data->allocated, file_id))
+    return;
+
+  if (desktop_entry_set_lookup (data->unallocated_used, file_id))
+    return;
+
+  /* Same rules than at the end of process_layout() */
+  if (desktop_entry_get_hidden (entry))
+    return;
+
+  if (!(data->tree->flags & MATEMENU_TREE_FLAGS_INCLUDE_NODISPLAY) &&
+      desktop_entry_get_no_display (entry))
+    return;
+
+  if (!desktop_entry_get_show_in (entry))
+    return;
+
+  desktop_entry_set_add_entry (data->still_unallocated, entry, file_id);
 }
 
 static void preprocess_layout_info (MateMenuTree          *tree,
@@ -3729,7 +3945,7 @@ preprocess_layout_info_subdir_helper (MateMenuTree          *tree,
 
           menu_verbose ("Inline aliasing '%s' to '%s'\n",
                         item->type == MATEMENU_TREE_ITEM_ENTRY ?
-                          matemenu_tree_entry_get_name (MATEMENU_TREE_ENTRY (item)) :
+                          g_app_info_get_name (G_APP_INFO (matemenu_tree_entry_get_app_info (MATEMENU_TREE_ENTRY (item)))) :
                           (item->type == MATEMENU_TREE_ITEM_DIRECTORY ?
                              matemenu_tree_directory_get_name (MATEMENU_TREE_DIRECTORY (item)) :
                              matemenu_tree_directory_get_name (MATEMENU_TREE_ALIAS (item)->directory)),
@@ -4148,7 +4364,7 @@ merge_subdirs (MateMenuTree          *tree,
 
   subdirs = g_slist_sort_with_data (subdirs,
 				    (GCompareDataFunc) matemenu_tree_item_compare,
-				     GINT_TO_POINTER (MATEMENU_TREE_SORT_NAME));
+                                    GINT_TO_POINTER (MATEMENU_TREE_FLAGS_NONE));
 
   tmp = subdirs;
   while (tmp != NULL)
@@ -4193,7 +4409,7 @@ merge_entries (MateMenuTree          *tree,
 
   entries = g_slist_sort_with_data (entries,
 				    (GCompareDataFunc) matemenu_tree_item_compare,
-				    GINT_TO_POINTER (tree->sort_key));
+                                    GINT_TO_POINTER (tree->flags));
 
   tmp = entries;
   while (tmp != NULL)
@@ -4242,7 +4458,7 @@ merge_subdirs_and_entries (MateMenuTree          *tree,
 
   items = g_slist_sort_with_data (items,
 				  (GCompareDataFunc) matemenu_tree_item_compare,
-				  GINT_TO_POINTER (tree->sort_key));
+                                  GINT_TO_POINTER (tree->flags));
 
   tmp = items;
   while (tmp != NULL)
@@ -4250,7 +4466,7 @@ merge_subdirs_and_entries (MateMenuTree          *tree,
       MateMenuTreeItem     *item = tmp->data;
       MateMenuTreeItemType  type;
 
-      type = matemenu_tree_item_get_type (item);
+      type = item->type;
 
       if (type == MATEMENU_TREE_ITEM_ALIAS)
         {
@@ -4497,16 +4713,55 @@ handle_entries_changed (MenuLayoutNode *layout,
 }
 
 static void
-matemenu_tree_build_from_layout (MateMenuTree *tree)
+update_entry_index (MateMenuTree           *tree,
+		    MateMenuTreeDirectory  *dir)
+{
+  MateMenuTreeIter *iter = matemenu_tree_directory_iter (dir);
+  MateMenuTreeItemType next_type;
+
+  while ((next_type = matemenu_tree_iter_next (iter)) != MATEMENU_TREE_ITEM_INVALID)
+    {
+      gpointer item = NULL;
+
+      switch (next_type)
+        {
+        case MATEMENU_TREE_ITEM_ENTRY:
+          {
+	    const char *id;
+
+            item = matemenu_tree_iter_get_entry (iter);
+            id = matemenu_tree_entry_get_desktop_file_id (item);
+            if (id != NULL)
+              g_hash_table_insert (tree->entries_by_id, (char*)id, item);
+          }
+          break;
+        case MATEMENU_TREE_ITEM_DIRECTORY:
+          {
+            item = matemenu_tree_iter_get_directory (iter);
+            update_entry_index (tree, (MateMenuTreeDirectory*)item);
+          }
+          break;
+        default:
+          break;
+        }
+      if (item != NULL)
+        matemenu_tree_item_unref (item);
+    }
+
+  matemenu_tree_iter_unref (iter);
+}
+
+static gboolean
+matemenu_tree_build_from_layout (MateMenuTree  *tree,
+                              GError    **error)
 {
   DesktopEntrySet *allocated;
 
   if (tree->root)
-    return;
+    return TRUE;
 
-  matemenu_tree_load_layout (tree);
-  if (!tree->layout)
-    return;
+  if (!matemenu_tree_load_layout (tree, error))
+    return FALSE;
 
   menu_verbose ("Building menu tree from layout\n");
 
@@ -4519,9 +4774,39 @@ matemenu_tree_build_from_layout (MateMenuTree *tree)
                                allocated);
   if (tree->root)
     {
-      matemenu_tree_directory_set_tree (tree->root, tree);
+      DesktopEntrySet *unallocated_used;
 
-      process_only_unallocated (tree, tree->root, allocated);
+      unallocated_used = desktop_entry_set_new ();
+
+      process_only_unallocated (tree, tree->root, allocated, unallocated_used);
+      if (tree->flags & MATEMENU_TREE_FLAGS_INCLUDE_UNALLOCATED)
+        {
+          DesktopEntrySet *entry_pool;
+          DesktopEntrySet *still_unallocated;
+          GetStillUnallocatedForeachData data;
+
+          entry_pool = _entry_directory_list_get_all_desktops (menu_layout_node_menu_get_app_dirs (find_menu_child (tree->layout)));
+          still_unallocated = desktop_entry_set_new ();
+
+          data.tree = tree;
+          data.allocated = allocated;
+          data.unallocated_used = unallocated_used;
+          data.still_unallocated = still_unallocated;
+
+          desktop_entry_set_foreach (entry_pool,
+                                     (DesktopEntrySetForeachFunc) get_still_unallocated_foreach,
+                                     &data);
+
+          desktop_entry_set_unref (entry_pool);
+
+          desktop_entry_set_foreach (still_unallocated,
+                                     (DesktopEntrySetForeachFunc) unallocated_entries_listify_foreach,
+                                     tree->root);
+
+          desktop_entry_set_unref (still_unallocated);
+        }
+
+      desktop_entry_set_unref (unallocated_used);
 
       /* process the layout info part that can move/remove items:
        * inline, show_empty, etc. */
@@ -4530,12 +4815,16 @@ matemenu_tree_build_from_layout (MateMenuTree *tree)
        * according to the layout info */
       process_layout_info (tree, tree->root);
 
+      update_entry_index (tree, tree->root);
+
       menu_layout_node_root_add_entries_monitor (tree->layout,
                                                  (MenuLayoutNodeEntriesChangedFunc) handle_entries_changed,
                                                  tree);
     }
 
   desktop_entry_set_unref (allocated);
+
+  return TRUE;
 }
 
 static void
@@ -4543,9 +4832,10 @@ matemenu_tree_force_rebuild (MateMenuTree *tree)
 {
   if (tree->root)
     {
-      matemenu_tree_directory_set_tree (tree->root, NULL);
+      g_hash_table_remove_all (tree->entries_by_id);
       matemenu_tree_item_unref (tree->root);
       tree->root = NULL;
+      tree->loaded = FALSE;
 
       g_assert (tree->layout != NULL);
 
@@ -4553,4 +4843,103 @@ matemenu_tree_force_rebuild (MateMenuTree *tree)
                                                     (MenuLayoutNodeEntriesChangedFunc) handle_entries_changed,
                                                     tree);
     }
+}
+
+GType
+matemenu_tree_iter_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("MateMenuTreeIter",
+          (GBoxedCopyFunc)matemenu_tree_iter_ref,
+          (GBoxedFreeFunc)matemenu_tree_iter_unref);
+    }
+  return gtype;
+}
+
+GType
+matemenu_tree_directory_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("MateMenuTreeDirectory",
+          (GBoxedCopyFunc)matemenu_tree_item_ref,
+          (GBoxedFreeFunc)matemenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+matemenu_tree_entry_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("MateMenuTreeEntry",
+          (GBoxedCopyFunc)matemenu_tree_item_ref,
+          (GBoxedFreeFunc)matemenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+matemenu_tree_separator_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("MateMenuTreeSeparator",
+          (GBoxedCopyFunc)matemenu_tree_item_ref,
+          (GBoxedFreeFunc)matemenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+matemenu_tree_header_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("MateMenuTreeHeader",
+          (GBoxedCopyFunc)matemenu_tree_item_ref,
+          (GBoxedFreeFunc)matemenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+matemenu_tree_alias_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("MateMenuTreeAlias",
+          (GBoxedCopyFunc)matemenu_tree_item_ref,
+          (GBoxedFreeFunc)matemenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+matemenu_tree_flags_get_type (void)
+{
+  static GType enum_type_id = 0;
+  if (G_UNLIKELY (!enum_type_id))
+    {
+      static const GFlagsValue values[] = {
+        { MATEMENU_TREE_FLAGS_NONE, "MATEMENU_TREE_FLAGS_NONE", "none" },
+        { MATEMENU_TREE_FLAGS_INCLUDE_EXCLUDED, "MATEMENU_TREE_FLAGS_INCLUDE_EXCLUDED", "include-excluded" },
+        { MATEMENU_TREE_FLAGS_SHOW_EMPTY, "MATEMENU_TREE_FLAGS_SHOW_EMPTY", "show-empty" },
+        { MATEMENU_TREE_FLAGS_INCLUDE_NODISPLAY, "MATEMENU_TREE_FLAGS_INCLUDE_NODISPLAY", "include-nodisplay" },
+        { MATEMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS, "MATEMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS", "show-all-separators" },
+        { MATEMENU_TREE_FLAGS_SORT_DISPLAY_NAME, "MATEMENU_TREE_FLAGS_SORT_DISPLAY_NAME", "sort-display-name" },
+        { MATEMENU_TREE_FLAGS_INCLUDE_UNALLOCATED, "MATEMENU_TREE_FLAGS_INCLUDE_UNALLOCATED,", "include-unallocated" },
+        { 0, NULL, NULL }
+      };
+      enum_type_id = g_flags_register_static ("MateMenuTreeFlags", values);
+    }
+  return enum_type_id;
 }

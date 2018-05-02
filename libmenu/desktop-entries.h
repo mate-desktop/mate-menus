@@ -20,11 +20,9 @@
 #ifndef __DESKTOP_ENTRIES_H__
 #define __DESKTOP_ENTRIES_H__
 
-#include <glib.h>
+#include <gio/gdesktopappinfo.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 typedef enum {
 	DESKTOP_ENTRY_INVALID = 0,
@@ -41,28 +39,24 @@ DesktopEntry* desktop_entry_copy(DesktopEntry* entry);
 DesktopEntry* desktop_entry_reload(DesktopEntry* entry);
 void desktop_entry_unref(DesktopEntry* entry);
 
-DesktopEntryType desktop_entry_get_type(DesktopEntry* entry);
-const char* desktop_entry_get_path(DesktopEntry* entry);
-const char* desktop_entry_get_basename(DesktopEntry* entry);
+DesktopEntryType  desktop_entry_get_type     (DesktopEntry *entry);
+const char       *desktop_entry_get_path     (DesktopEntry *entry);
+const char       *desktop_entry_get_basename (DesktopEntry *entry);
+const char       *desktop_entry_get_name     (DesktopEntry *entry);
+const char       *desktop_entry_get_generic_name (DesktopEntry *entry);
+const char       *desktop_entry_get_comment  (DesktopEntry *entry);
+GIcon            *desktop_entry_get_icon     (DesktopEntry *entry);
+gboolean          desktop_entry_get_hidden   (DesktopEntry *entry);
+gboolean          desktop_entry_get_no_display (DesktopEntry *entry);
+gboolean          desktop_entry_get_show_in  (DesktopEntry *entry);
 
-const char* desktop_entry_get_name(DesktopEntry* entry);
-const char* desktop_entry_get_generic_name(DesktopEntry* entry);
-const char* desktop_entry_get_full_name(DesktopEntry* entry);
-const char* desktop_entry_get_comment(DesktopEntry* entry);
-const char* desktop_entry_get_icon(DesktopEntry* entry);
-const char* desktop_entry_get_exec(DesktopEntry* entry);
-gboolean desktop_entry_get_launch_in_terminal(DesktopEntry* entry);
-
-gboolean desktop_entry_get_hidden(DesktopEntry* entry);
-gboolean desktop_entry_get_no_display(DesktopEntry* entry);
-gboolean desktop_entry_get_show_in_mate(DesktopEntry* entry);
-gboolean desktop_entry_get_tryexec_failed(DesktopEntry* entry);
-
-gboolean desktop_entry_has_categories(DesktopEntry* entry);
-gboolean desktop_entry_has_category(DesktopEntry* entry, const char* category);
+/* Only valid for DESKTOP_ENTRY_DESKTOP */
+GDesktopAppInfo  *desktop_entry_get_app_info (DesktopEntry *entry);
+gboolean desktop_entry_has_categories (DesktopEntry *entry);
+gboolean desktop_entry_has_category   (DesktopEntry *entry,
+                                       const char   *category);
 
 void desktop_entry_add_legacy_category(DesktopEntry* src);
-
 
 typedef struct DesktopEntrySet DesktopEntrySet;
 
@@ -83,8 +77,6 @@ typedef void (*DesktopEntrySetForeachFunc) (const char* file_id, DesktopEntry* e
 
 void desktop_entry_set_foreach(DesktopEntrySet* set, DesktopEntrySetForeachFunc func, gpointer user_data);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __DESKTOP_ENTRIES_H__ */
