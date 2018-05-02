@@ -18,7 +18,7 @@ mate_menu_spec_test_LDADD = \
 	../libmenu/libmate-menu.la
 
 exampledir = $(pkgdatadir)/examples
-example_DATA = mate-menus-ls.py mate-menus-ls.js
+example_DATA = mate-menus-ls.py
 
 EXTRA_DIST = $(example_DATA)
 

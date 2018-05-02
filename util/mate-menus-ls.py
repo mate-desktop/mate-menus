@@ -23,16 +23,9 @@
 
 import optparse
 import sys
-
-import matemenu
-
-def print_entry(entry, path):
-    if entry.get_is_excluded():
-        excluded = ' <excluded>'
-    else:
-        excluded = ''
-
-    print '%s\t%s\t%s%s' % (path, entry.get_desktop_file_id(), entry.get_desktop_file_path(), excluded)
+import gi
+gi.require_version('MateMenu', '2.0')
+from gi.repository import MateMenu
 
 def print_directory(dir, parent_path = None):
     if not parent_path:
@@ -40,20 +33,15 @@ def print_directory(dir, parent_path = None):
     else:
         path = '%s%s/' % (parent_path, dir.get_name())
 
-    for item in dir.get_contents():
-        type = item.get_type()
-        if type == matemenu.TYPE_ENTRY:
-            print_entry(item, path)
-        elif type == matemenu.TYPE_DIRECTORY:
-            print_directory(item, path)
-        elif type == matemenu.TYPE_ALIAS:
-            aliased = item.get_item()
-            if aliased.get_type() == matemenu.TYPE_ENTRY:
-                print_entry(aliased, path)
-        elif type in [ matemenu.TYPE_HEADER, matemenu.TYPE_SEPARATOR ]:
-            pass
-        else:
-            print >> sys.stderr, 'Unsupported item type: %s' % type
+    iter = dir.iter()
+    nextType = iter.next()
+    while(nextType != MateMenu.TreeItemType.INVALID):
+        if (nextType == MateMenu.TreeItemType.ENTRY):
+            entry = iter.get_entry()
+            print(path + "\t" + entry.get_app_info().get_name() + "\t" + entry.get_desktop_file_path())
+        elif (nextType == MateMenu.TreeItemType.DIRECTORY):
+            print_directory(iter.get_directory(), path);
+        nextType = iter.next()
 
 def main(args):
     parser = optparse.OptionParser()
@@ -74,17 +62,17 @@ def main(args):
     else:
         menu_file = 'mate-applications.menu'
 
-    flags = matemenu.FLAGS_NONE
+    flags = MateMenu.TreeFlags.NONE
     if options.exclude:
-        flags |= matemenu.FLAGS_INCLUDE_EXCLUDED
+        flags |= MateMenu.TreeFlags.INCLUDE_EXCLUDED
     if options.nodisplay:
-        flags |= matemenu.FLAGS_INCLUDE_NODISPLAY
-
-    tree = matemenu.lookup_tree(menu_file, flags)
+        flags |= MateMenu.TreeFlags.INCLUDE_NODISPLAY
+    tree = MateMenu.Tree(menu_basename = "mate-applications.menu", flags = flags)
+    tree.load_sync();
     root = tree.get_root_directory()
 
     if not root:
-        print 'Menu tree is empty'
+        print('Menu tree is empty')
     else:
         print_directory(root)
 
