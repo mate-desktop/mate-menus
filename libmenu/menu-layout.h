@@ -26,9 +26,7 @@
 
 #include "entry-directories.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 typedef struct MenuLayoutNode MenuLayoutNode;
 
@@ -154,8 +152,6 @@ typedef void (*MenuLayoutNodeEntriesChangedFunc) (MenuLayoutNode* node, gpointer
 void menu_layout_node_root_add_entries_monitor    (MenuLayoutNode* node, MenuLayoutNodeEntriesChangedFunc callback, gpointer user_data);
 void menu_layout_node_root_remove_entries_monitor (MenuLayoutNode* node, MenuLayoutNodeEntriesChangedFunc callback, gpointer user_data);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MENU_LAYOUT_H__ */
