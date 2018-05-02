@@ -1,7 +1,7 @@
 lib_LTLIBRARIES = libmate-menu.la
 
 AM_CPPFLAGS = \
-	$(GLIB_CFLAGS) \
+	$(GIO_UNIX_CFLAGS)		\
 	-DMATEMENU_I_KNOW_THIS_IS_UNSTABLE	\
 	$(DISABLE_DEPRECATED_CFLAGS) \
 	$(DEBUG_CFLAGS)
@@ -32,7 +32,7 @@ libmate_menu_la_SOURCES = \
 	menu-util.h
 
 libmate_menu_la_LIBADD = \
-	$(GLIB_LIBS)
+	$(GIO_UNIX_LIBS)
 
 libmate_menu_la_LDFLAGS = \
 	-version-info $(LIB_MENU_LT_VERSION) \
@@ -56,13 +56,13 @@ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 
 if HAVE_INTROSPECTION
 # Note: we only include the headers here so far because there's no gtk-doc at all anyway
-introspection_sources = $(libmate_menu_include_HEADERS)
+introspection_sources = $(libmate_menu_include_HEADERS) matemenu-tree.c
 
 MateMenu-2.0.gir: libmate-menu.la
-MateMenu_2_0_gir_INCLUDES = GObject-2.0
+MateMenu_2_0_gir_INCLUDES = Gio-2.0
 MateMenu_2_0_gir_CFLAGS = $(AM_CPPFLAGS)
 MateMenu_2_0_gir_LIBS = libmate-menu.la
-MateMenu_2_0_gir_SCANNERFLAGS = --pkg-export=libmate-menu
+MateMenu_2_0_gir_SCANNERFLAGS = --identifier-prefix=MateMenu --symbol-prefix=matemenu --pkg-export=libmate-menu --c-include=matemenu-tree.h
 MateMenu_2_0_gir_FILES = $(addprefix $(srcdir)/,$(introspection_sources))
 INTROSPECTION_GIRS += MateMenu-2.0.gir
 
