@@ -69,25 +69,6 @@ else
 fi
 AC_SUBST(DEBUG_CFLAGS)
 
-AC_ARG_ENABLE(python,
-              [AC_HELP_STRING([--enable-python],
-                              [build python bindings])],
-              [enable_python=$enableval],
-              [enable_python=yes])
-
-# Detect if we can build Python bindings (need python and python headers)
-if test "x$enable_python" = "xyes" ; then
-	AM_PATH_PYTHON(2.7)
-	PKG_CHECK_MODULES([PYTHON], [python-${PYTHON_VERSION}], [have_python=yes], [have_python=no])
-else
-	have_python=no
-fi
-AC_SUBST(PYTHON_LIBS)
-AC_SUBST(PYTHON_CFLAGS)
-
-AM_CONDITIONAL(HAVE_PYTHON, test x$have_python = xyes)
-
-
 GOBJECT_INTROSPECTION_CHECK([0.6.7])
 
 AC_OUTPUT([
@@ -98,7 +79,6 @@ libmenu/libmate-menu-uninstalled.pc
 layout/Makefile
 desktop-directories/Makefile
 util/Makefile
-python/Makefile
 po/Makefile.in
 ])
 
@@ -125,7 +105,6 @@ echo "
         Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
         Turn on debugging:            ${enable_debug}
-        Build python bindings:        ${have_python}
         Build introspection support:  ${found_introspection}
 
 "

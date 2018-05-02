@@ -1,9 +1,5 @@
 SUBDIRS = libmenu desktop-directories layout util po
 
-if HAVE_PYTHON
-SUBDIRS += python
-endif
-
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 EXTRA_DIST = autogen.sh
