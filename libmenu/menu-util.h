@@ -26,10 +26,7 @@
 
 #include "menu-layout.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
+G_BEGIN_DECLS
 
 
 #ifdef G_ENABLE_DEBUG
@@ -52,8 +49,6 @@ extern "C" {
 
 #endif /* G_ENABLE_DEBUG */
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MENU_UTIL_H__ */

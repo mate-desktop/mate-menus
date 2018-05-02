@@ -20,19 +20,15 @@
  * 02110-1301 USA.
  */
 
-#ifndef G_CANONICALIZE_H
-#define G_CANONICALIZE_H
+#ifndef MATE_CANONICALIZE_H
+#define MATE_CANONICALIZE_H
 
 #include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 char* menu_canonicalize_file_name(const char* name, gboolean allow_missing_basename);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
-#endif /* G_CANONICALIZE_H */
+#endif /* MATE_CANONICALIZE_H */
