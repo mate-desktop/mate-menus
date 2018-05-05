@@ -32,7 +32,7 @@ def print_entry(entry, path):
     else:
         excluded = ''
 
-    print '%s\t%s\t%s%s' % (path, entry.get_desktop_file_id(), entry.get_desktop_file_path(), excluded)
+    print ('%s\t%s\t%s%s' % (path, entry.get_desktop_file_id(), entry.get_desktop_file_path(), excluded))
 
 def print_directory(dir, parent_path = None):
     if not parent_path:
@@ -84,7 +84,7 @@ def main(args):
     root = tree.get_root_directory()
 
     if not root:
-        print 'Menu tree is empty'
+        print ('Menu tree is empty')
     else:
         print_directory(root)
 
