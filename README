@@ -22,7 +22,6 @@ Installation
 If you are not using a released version of mate-menus (for example, if
 you checked out the code from git), you first need to run './autogen.sh'.
 
-To build it yourself, you will need the `gobject-introspection` library
 
 How to report bugs
 ==================
