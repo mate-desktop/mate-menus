@@ -1,3 +1,12 @@
+### mate-menus 1.21.0
+
+    udpate examples
+    backports from gnome-menus
+    use G_BEGIN/END_DECLS
+    require gio-unix, drop python example
+    require gio-unix
+    drop python2 support
+
 ### mate-menus 1.20.0
 
   * Translations update
