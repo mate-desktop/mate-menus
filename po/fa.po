@@ -1,26 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Arash Mousavi <mousavi.arash@gmail.com>, 2008
-# Elnaz Sarbar <elnaz.s@gmail.com>, 2008
-# Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2005
-# Meelad Zakaria <meelad@farsiweb.info>, 2005
-# Roozbeh Pournader <roozbeh@gmail.com>, 2005, 2008
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: Persian (http://www.transifex.com/mate/MATE/language/fa/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Mahdi Pourghasem <mahdipourghasem@gmail.com>, 2018\n"
+"Language-Team: Persian (https://www.transifex.com/mate/teams/13566/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fa\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
@@ -60,7 +56,7 @@ msgstr "برنامه‌های گرافیکی"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "سخت‌افزار"
+msgstr "سخت افزار"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
@@ -117,7 +113,7 @@ msgstr "تغییر تنظیمات کل سیستم (همه‌ی کاربران م
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "ترجیحات"
+msgstr "تنظیمات"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"

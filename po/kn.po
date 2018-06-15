@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# shankar <svenkate@redhat.com>, 2007, 2008, 2009, 2010
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: Kannada (http://www.transifex.com/mate/MATE/language/kn/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: karthik holla <karthikholla87@gmail.com>, 2018\n"
+"Language-Team: Kannada (https://www.transifex.com/mate/teams/13566/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kn\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
@@ -109,7 +109,9 @@ msgstr "ನಿರ್ವಹಣೆ"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
+msgstr ""
+"ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ "
+"ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"

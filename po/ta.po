@@ -1,19 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Dr.T.Vasudevan <agnihot3@gmail.com>, 2007, 2009
-# Jayaradha N <jayaradhaa@gmail.com>, 2006
-# Shakthi Kannan <shaks@shakthimaan.com>, 2006
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: Tamil (http://www.transifex.com/mate/MATE/language/ta/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Mooglie <mooglietech@gmail.com>, 2018\n"
+"Language-Team: Tamil (https://www.transifex.com/mate/teams/13566/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -111,11 +109,13 @@ msgstr "நிர்வாகம்"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "கணிப்பொறியின் அனைத்து அமைப்புகளை மாற்றுக (பயன்படுத்துவோர் அனைவரையும் பாதிக்கும்)"
+msgstr ""
+"கணிப்பொறியின் அனைத்து அமைப்புகளை மாற்றுக (பயன்படுத்துவோர் அனைவரையும் "
+"பாதிக்கும்)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "விருப்பங்கள்"
+msgstr "விருப்ப தேர்வுகள் "
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
@@ -124,7 +124,7 @@ msgstr "தனிப்பயன் விருப்பங்கள்"
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr "கணிப்பொறி"
+msgstr "அமைப்பு"
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"

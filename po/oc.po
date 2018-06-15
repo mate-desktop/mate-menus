@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Cédric Valmary <cvalmary@yahoo.fr>, 2015
-# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Cédric Valmary <cvalmary@yahoo.fr>\n"
-"Language-Team: Occitan (post 1500) (http://www.transifex.com/mate/MATE/language/oc/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018\n"
+"Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -85,7 +84,8 @@ msgstr "Internet"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Logicials per accedir a internet, coma lo web o los messatges electronics"
+msgstr ""
+"Logicials per accedir a internet, coma lo web o los messatges electronics"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"

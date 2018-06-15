@@ -1,20 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Claudio Saavedra <csaavedra@alumnos.utalca.cl>, 2007
-# Copyright (C) 2005 Mate Foundation, 2005
-# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005, 2006
-# Jorge González <jorgegonz@svn.gnome.org>, 200, 2009
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/mate/MATE/language/es/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Emiliano Fascetti, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -79,7 +76,8 @@ msgstr "Visualización y comportamiento"
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Propiedades que controlan la apariencia y el comportamiento del escritorio"
+msgstr ""
+"Propiedades que controlan la apariencia y el comportamiento del escritorio"
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
@@ -112,7 +110,8 @@ msgstr "Administración"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Cambia las preferencias globales del sistema (afecta a todos los usuarios)"
+msgstr ""
+"Cambia las preferencias globales del sistema (afecta a todos los usuarios)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"

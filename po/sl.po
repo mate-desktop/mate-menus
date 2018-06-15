@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Damir Jerovšek <jierro@windowslive.com>, 2013
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-23 18:17+0000\n"
-"Last-Translator: Damir Jerovšek <jierro@windowslive.com>\n"
-"Language-Team: Slovenian (http://www.transifex.com/mate/MATE/language/sl/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: jetomit <timotej.lazar@araneo.si>, 2018\n"
+"Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -122,7 +122,7 @@ msgstr "Osebne možnosti"
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr "Sistem"
+msgstr "Sistem:"
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
@@ -154,7 +154,7 @@ msgstr "Namizni pripomočki"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "Programi"
+msgstr "Aplikacije"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"

@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# samson <sambelet@yahoo.com>, 2013,2017
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 15:12+0000\n"
-"Last-Translator: samson <sambelet@yahoo.com>\n"
-"Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: samson <sambelet@yahoo.com>, 2018\n"
+"Language-Team: Amharic (https://www.transifex.com/mate/teams/13566/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,7 +32,7 @@ msgstr "ፕሮግራም"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "የሶፍትዌር ማሳደጊያ መሳሪያዎች "
+msgstr "የ ሶፍትዌር ማሳደጊያ መሳሪያዎች "
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
@@ -80,7 +80,7 @@ msgstr "የዴስክቶፕ አቀራረብ እና ባህሪ መቆጣጠሪያ �
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
-msgstr "ኢንተርኔት"
+msgstr "ኢንተርኔት "
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
@@ -154,7 +154,7 @@ msgstr "የዴስክቶፕ ተጨማሪዎች"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "መተግበሪያዎች"
+msgstr "መተግበሪያዎች "
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
@@ -162,7 +162,7 @@ msgstr "የግል ምርጫዎች እና የአስተዳዳሪ ማሰናጃዎ�
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
-msgstr "ሌሎች"
+msgstr "ሌላ "
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"

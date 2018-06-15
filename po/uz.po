@@ -1,19 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# muzaffar habibullayev <muzaffarlearner@gmail.com>, 2016
-# muzaffar habibullayev <muzaffarlearner@gmail.com>, 2016
-# Umidjon Almasov <u.almasov@gmail.com>, 2013
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 21:49+0000\n"
-"Last-Translator: muzaffar habibullayev <muzaffarlearner@gmail.com>\n"
-"Language-Team: Uzbek (http://www.transifex.com/mate/MATE/language/uz/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: muzaffar habibullayev <muzaffarlearner@gmail.com>, 2018\n"
+"Language-Team: Uzbek (https://www.transifex.com/mate/teams/13566/uz/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -86,7 +84,8 @@ msgstr "Internet"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Veb va elektron pochta kabi internetda erkin foydalanish uchun dasturlar"
+msgstr ""
+"Veb va elektron pochta kabi internetda erkin foydalanish uchun dasturlar"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
@@ -111,11 +110,12 @@ msgstr "Boshqaruv"
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Tizim moslamalarini o'zgartirish (barcha foydalanuvchilarga ta'sir qiladi)"
+msgstr ""
+"Tizim moslamalarini o'zgartirish (barcha foydalanuvchilarga ta'sir qiladi)"
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "Afzalliklar"
+msgstr "Parametrlar"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"

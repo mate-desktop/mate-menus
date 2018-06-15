@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Neverest <happytoast27@gmail.com>, 2018\n"
+"Language-Team: Spanish (Puerto Rico) (https://www.transifex.com/mate/teams/13566/es_PR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_PR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../desktop-directories/mate-audio-video.directory.in.h:1
+msgid "Sound & Video"
+msgstr ""
+
+#: ../desktop-directories/mate-audio-video.directory.in.h:2
+msgid "Multimedia menu"
+msgstr ""
+
+#: ../desktop-directories/mate-development.directory.in.h:1
+msgid "Programming"
+msgstr ""
+
+#: ../desktop-directories/mate-development.directory.in.h:2
+msgid "Tools for software development"
+msgstr ""
+
+#: ../desktop-directories/mate-education.directory.in.h:1
+msgid "Education"
+msgstr ""
+
+#: ../desktop-directories/mate-game.directory.in.h:1
+msgid "Games"
+msgstr ""
+
+#: ../desktop-directories/mate-game.directory.in.h:2
+msgid "Games and amusements"
+msgstr ""
+
+#: ../desktop-directories/mate-graphics.directory.in.h:1
+msgid "Graphics"
+msgstr ""
+
+#: ../desktop-directories/mate-graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr ""
+
+#: ../desktop-directories/mate-hardware.directory.in.h:1
+msgid "Hardware"
+msgstr ""
+
+#: ../desktop-directories/mate-hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr ""
+
+#: ../desktop-directories/mate-internet-and-network.directory.in.h:1
+msgid "Internet and Network"
+msgstr ""
+
+#: ../desktop-directories/mate-internet-and-network.directory.in.h:2
+msgid "Network-related settings"
+msgstr ""
+
+#: ../desktop-directories/mate-look-and-feel.directory.in.h:1
+msgid "Look and Feel"
+msgstr ""
+
+#: ../desktop-directories/mate-look-and-feel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr ""
+
+#: ../desktop-directories/mate-network.directory.in.h:1
+msgid "Internet"
+msgstr ""
+
+#: ../desktop-directories/mate-network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr ""
+
+#: ../desktop-directories/mate-office.directory.in.h:1
+msgid "Office"
+msgstr ""
+
+#: ../desktop-directories/mate-office.directory.in.h:2
+msgid "Office Applications"
+msgstr ""
+
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/mate-personal.directory.in.h:2
+msgid "Personal"
+msgstr ""
+
+#: ../desktop-directories/mate-personal.directory.in.h:3
+msgid "Personal settings"
+msgstr ""
+
+#: ../desktop-directories/mate-settings-system.directory.in.h:1
+msgid "Administration"
+msgstr ""
+
+#: ../desktop-directories/mate-settings-system.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr ""
+
+#: ../desktop-directories/mate-settings.directory.in.h:1
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: ../desktop-directories/mate-settings.directory.in.h:2
+msgid "Personal preferences"
+msgstr ""
+
+#: ../desktop-directories/mate-system.directory.in.h:1
+#: ../desktop-directories/mate-menu-system.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
+
+#: ../desktop-directories/mate-system.directory.in.h:2
+msgid "System settings"
+msgstr ""
+
+#: ../desktop-directories/mate-system-tools.directory.in.h:1
+msgid "System Tools"
+msgstr ""
+
+#: ../desktop-directories/mate-system-tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr ""
+
+#: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr ""
+
+#: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr ""
+
+#: ../desktop-directories/mate-utility.directory.in.h:1
+msgid "Accessories"
+msgstr ""
+
+#: ../desktop-directories/mate-utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr ""
+
+#: ../desktop-directories/mate-menu-applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplicaciones"
+
+#: ../desktop-directories/mate-menu-system.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr ""
+
+#: ../desktop-directories/mate-other.directory.in.h:1
+msgid "Other"
+msgstr ""
+
+#: ../desktop-directories/mate-other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr ""

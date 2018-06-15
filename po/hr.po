@@ -1,19 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Elvis M. Lukšić <meluksic@yahoo.com>, 2013
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2005
-# Elvis M. Lukšić <meluksic@yahoo.com>, 2014
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Elvis M. Lukšić <meluksic@yahoo.com>\n"
-"Language-Team: Croatian (http://www.transifex.com/mate/MATE/language/hr/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Elvis M. Lukšić <meluksic@yahoo.com>, 2018\n"
+"Language-Team: Croatian (https://www.transifex.com/mate/teams/13566/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,7 +56,7 @@ msgstr "Grafički programi"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "Hardver"
+msgstr "Sklopovlje"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
@@ -86,7 +84,8 @@ msgstr "Internet"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programi za pristup internetu poput preglednika mreže ili elektroničke pošte"
+msgstr ""
+"Programi za pristup internetu poput preglednika mreže ili elektroničke pošte"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
@@ -156,7 +155,7 @@ msgstr "Pomagala radne površine"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "Programi"
+msgstr "Aplikacije"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"

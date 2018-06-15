@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Trinh Minh Thanh <tmthanh@yahoo.com>, 2004
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 16:24+0300\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: Vietnamese (http://www.transifex.com/mate/MATE/language/vi/)\n"
+"POT-Creation-Date: 2018-03-17 10:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Horazone Detex <thmmt2017d@gmail.com>, 2018\n"
+"Language-Team: Vietnamese (https://www.transifex.com/mate/teams/13566/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -84,7 +84,8 @@ msgstr "Mạng"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Chương trình truy cập Mạng như trình duyệt và trình nhận/gửi thư điện tử"
+msgstr ""
+"Chương trình truy cập Mạng như trình duyệt và trình nhận/gửi thư điện tử"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
@@ -113,7 +114,7 @@ msgstr "Thay đổi thiết lập cho toàn hệ thống (cho mọi người dù
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "Tùy thích"
+msgstr "Tùy chỉnh"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
