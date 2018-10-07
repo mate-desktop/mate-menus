@@ -4,7 +4,7 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 EXTRA_DIST = autogen.sh
 
-DISTCHECK_CONFIGURE_FLAGS = --disable-introspection --disable-python
+DISTCHECK_CONFIGURE_FLAGS = --disable-introspection
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
@@ -17,7 +17,6 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/ltmain.sh \
 	$(srcdir)/missing \
 	$(srcdir)/mkinstalldirs \
-	$(srcdir)/py-compile \
 	`find "$(srcdir)" -type f -name Makefile.in -print` \
 	$(srcdir)/configure \
 	$(srcdir)/m4/intltool.m4 \
