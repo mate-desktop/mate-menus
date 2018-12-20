@@ -4,7 +4,9 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 EXTRA_DIST = autogen.sh
 
-DISTCHECK_CONFIGURE_FLAGS = --disable-introspection
+DISTCHECK_CONFIGURE_FLAGS = \
+	--disable-introspection \
+	CFLAGS='-Wno-deprecated-declarations'
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
