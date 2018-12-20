@@ -3,13 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Микола Ткач <znadibnyk@gmail.com>, 2018
+# Evolve32 <evolve32@yandex.ru>, 2018
+# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 10:00+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-03-11 19:01+0000\n"
 "Last-Translator: Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +26,7 @@ msgstr ""
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "Звук та видиво"
+msgstr "Звук та відео"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
@@ -28,11 +34,11 @@ msgstr "Мультимедія"
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr "Проґрамування"
+msgstr "Програмування"
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Знаряддя розробки проґрам"
+msgstr "Знаряддя розробки програм"
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
@@ -52,7 +58,7 @@ msgstr "Графіка"
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Графічні проґрами"
+msgstr "Графічні програми"
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
@@ -64,7 +70,7 @@ msgstr "Параметри деяких апаратних пристроїв"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Тенета й мережа"
+msgstr "Інтернет і мережа"
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
@@ -80,11 +86,11 @@ msgstr "Параметри, що впливають на зовнішній ви
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
-msgstr "Тенета"
+msgstr "Інтернет"
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Проґрами для роботи з Тенетами (пошта, оглядач тенет, тощо)"
+msgstr "Програми для роботи з Інтернет (пошта, оглядач тенет, тощо)"
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
@@ -92,7 +98,7 @@ msgstr "Офіс"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Офісні проґрами"
+msgstr "Офісні програми"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
@@ -150,11 +156,11 @@ msgstr "Стандартні"
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Стандартні проґрами"
+msgstr "Стандартні програми"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "Проґрами"
+msgstr "Програми"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
@@ -162,8 +168,8 @@ msgstr "Особисті параметри та адміністративні 
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
-msgstr "Інше"
+msgstr "Инше"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Проґрами, що не належать до жодної категорії"
+msgstr "Програми, що не належать до жодної категорії"

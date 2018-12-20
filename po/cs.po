@@ -3,13 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# huskyviking <husky.viking@seznam.cz>, 2018
+# Radek kohout <radekpv@seznam.cz>, 2018
+# LiberteCzech <liberte.czech@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 10:00+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-03-11 19:01+0000\n"
 "Last-Translator: LiberteCzech <liberte.czech@gmail.com>, 2018\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
