@@ -29,7 +29,6 @@
 #include <unistd.h>
 #include <errno.h>
 
-#include "canonicalize.h"
 #include "entry-directories.h"
 #include "menu-util.h"
 
