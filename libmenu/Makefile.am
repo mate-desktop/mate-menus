@@ -13,7 +13,6 @@ libmate_menu_include_HEADERS = \
 	matemenu-tree.h
 
 libmate_menu_sources = \
-	canonicalize.c \
 	desktop-entries.c \
 	entry-directories.c \
 	matemenu-tree.c \
@@ -23,7 +22,6 @@ libmate_menu_sources = \
 
 libmate_menu_la_SOURCES = \
 	$(libmate_menu_sources) \
-	canonicalize.h \
 	desktop-entries.h \
 	entry-directories.h \
 	matemenu-tree.h \
