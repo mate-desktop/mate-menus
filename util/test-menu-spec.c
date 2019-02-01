@@ -18,6 +18,7 @@
  */
 
 #include <config.h>
+#include <locale.h>
 
 #include "matemenu-tree.h"
 
