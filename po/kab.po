@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Slimane AMIRI, 2018
 # 
 #, fuzzy
 msgid ""
@@ -13,160 +13,160 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-20 14:55+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
-"Language-Team: Bengali (https://www.transifex.com/mate/teams/13566/bn/)\n"
+"Last-Translator: Slimane AMIRI, 2018\n"
+"Language-Team: Kabyle (https://www.transifex.com/mate/teams/13566/kab/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bn\n"
+"Language: kab\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "শব্দ ও ভিডিও"
+msgstr "Imesli & Avidyu"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "মাল্টিমিডিয়া মেনু"
+msgstr ""
 
 #: ../desktop-directories/mate-development.directory.in.h:1
 msgid "Programming"
-msgstr "প্রোগ্রামিং"
+msgstr ""
 
 #: ../desktop-directories/mate-development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "সফটওয়্যার ডেভেলপমেন্টের যন্ত্রপাতি"
+msgstr ""
 
 #: ../desktop-directories/mate-education.directory.in.h:1
 msgid "Education"
-msgstr "শিক্ষা"
+msgstr ""
 
 #: ../desktop-directories/mate-game.directory.in.h:1
 msgid "Games"
-msgstr "খেলা"
+msgstr "Uraren"
 
 #: ../desktop-directories/mate-game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "খেলা ও বিনোদন"
+msgstr ""
 
 #: ../desktop-directories/mate-graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "গ্রাফিক্স"
+msgstr ""
 
 #: ../desktop-directories/mate-graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "গ্রাফিক্স অ্যাপ্লিকেশন"
+msgstr ""
 
 #: ../desktop-directories/mate-hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "হার্ডওয়্যার"
+msgstr ""
 
 #: ../desktop-directories/mate-hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "কয়েকটি হার্ডওয়্যার ডিভাইসের সেটিংস "
+msgstr ""
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:1
 msgid "Internet and Network"
-msgstr "ইন্টারনেট ও নেটওয়ার্ক"
+msgstr ""
 
 #: ../desktop-directories/mate-internet-and-network.directory.in.h:2
 msgid "Network-related settings"
-msgstr "নেটওয়ার্ক সম্পর্কিত সেটিংস "
+msgstr ""
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "দেখুন ও উপভোগ করুন"
+msgstr ""
 
 #: ../desktop-directories/mate-look-and-feel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ডেক্সটপের অবয়ব ও আচরণ নিয়ন্ত্রণের সেটিংস"
+msgstr ""
 
 #: ../desktop-directories/mate-network.directory.in.h:1
 msgid "Internet"
-msgstr "ইন্টারনেট"
+msgstr ""
 
 #: ../desktop-directories/mate-network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ইন্টারনেট ব্যবহারের প্রোগ্রাম, যেমন ওয়েব বা ইমেইল"
+msgstr ""
 
 #: ../desktop-directories/mate-office.directory.in.h:1
 msgid "Office"
-msgstr "অফিস"
+msgstr ""
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "অফিস অ্যাপলিকেশন"
+msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
 msgid "Personal"
-msgstr "ব্যক্তিগত"
+msgstr ""
 
 #: ../desktop-directories/mate-personal.directory.in.h:3
 msgid "Personal settings"
-msgstr "ব্যক্তিগত সেটিংস"
+msgstr ""
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:1
 msgid "Administration"
-msgstr "অ্যাডমিনস্ট্রেশন"
+msgstr ""
 
 #: ../desktop-directories/mate-settings-system.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "সিস্টেমব্যাপী সেটিংস পরিবর্তন করা হবে (সব ব্যবহারকারীর জন্য প্রযোজ্য)"
+msgstr ""
 
 #: ../desktop-directories/mate-settings.directory.in.h:1
 msgid "Preferences"
-msgstr "পছন্দতালিকা"
+msgstr "Ismenyifen"
 
 #: ../desktop-directories/mate-settings.directory.in.h:2
 msgid "Personal preferences"
-msgstr "ব্যক্তিগত পছন্দতালিকা"
+msgstr ""
 
 #: ../desktop-directories/mate-system.directory.in.h:1
 #: ../desktop-directories/mate-menu-system.directory.in.h:1
 msgid "System"
-msgstr "সিস্টেম"
+msgstr ""
 
 #: ../desktop-directories/mate-system.directory.in.h:2
 msgid "System settings"
-msgstr "সিস্টেম সেটিংস "
+msgstr ""
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:1
 msgid "System Tools"
-msgstr "সিস্টেম টুল"
+msgstr "Ifecka n unagraw"
 
 #: ../desktop-directories/mate-system-tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "সিস্টেম কনফিগারেশন এবং মনিটরিং"
+msgstr ""
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "সর্বজনীন প্রবেশাধিকার"
+msgstr ""
 
 #: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "সর্বজনীন প্রবেশাধিকার সেটিংস"
+msgstr ""
 
 #: ../desktop-directories/mate-utility.directory.in.h:1
 msgid "Accessories"
-msgstr "আনুসাঙ্গিক"
+msgstr ""
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "ডেস্কটপের আনুসাঙ্গিক অ্যাপ্লিকেশন"
+msgstr ""
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
-msgstr "অ্যাপলিকেশন"
+msgstr "Isnasen"
 
 #: ../desktop-directories/mate-menu-system.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "ব্যক্তিগত পছন্দতালিকা এবং অ্যাডমিনস্ট্রেশন বৈশিষ্ট্যাবলী"
+msgstr ""
 
 #: ../desktop-directories/mate-other.directory.in.h:1
 msgid "Other"
-msgstr "অন্যান্য"
+msgstr "Wiyaḍ"
 
 #: ../desktop-directories/mate-other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "অ্যাপ্লিকেশন যেগুলো অন্য কোন শ্রেণীভূক্ত নয়"
+msgstr ""

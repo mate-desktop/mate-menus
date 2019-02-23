@@ -3,13 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Iñigo Varela <ivarela@softastur.org>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Ḷḷumex03 <tornes@opmbx.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 09:57+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-12-20 14:55+0100\n"
+"PO-Revision-Date: 2018-03-11 19:02+0000\n"
 "Last-Translator: Ḷḷumex03 <tornes@opmbx.org>, 2018\n"
 "Language-Team: Asturian (https://www.transifex.com/mate/teams/13566/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +25,7 @@ msgstr ""
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:1
 msgid "Sound & Video"
-msgstr "Soníu y Vídeu"
+msgstr "Soníu y vídeu"
 
 #: ../desktop-directories/mate-audio-video.directory.in.h:2
 msgid "Multimedia menu"
@@ -92,7 +97,7 @@ msgstr "Oficina"
 
 #: ../desktop-directories/mate-office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Aplicaciones d'Oficina"
+msgstr "Aplicaciones d'oficina"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/mate-personal.directory.in.h:2
@@ -151,7 +156,7 @@ msgstr "Accesorios"
 
 #: ../desktop-directories/mate-utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Accesorios d'Escritoriu"
+msgstr "Accesorios d'escritoriu"
 
 #: ../desktop-directories/mate-menu-applications.directory.in.h:1
 msgid "Applications"
