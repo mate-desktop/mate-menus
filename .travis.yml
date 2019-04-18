@@ -132,6 +132,10 @@ variables:
     -enable-checker security.insecureAPI.strcpy"'
 
 build_scripts:
+  - if [ ${DISTRO_NAME} == "fedora" ];then
+  -     curl -Ls -o fedora.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/fedora.sh
+  -     bash ./fedora.sh
+  - fi
   - ./autogen.sh
   - scan-build $CHECKERS ./configure
   - if [ $CPU_COUNT -gt 1 ]; then
