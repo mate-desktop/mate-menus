@@ -64,10 +64,10 @@ MateMenu_2_0_gir_SCANNERFLAGS = --identifier-prefix=MateMenu --symbol-prefix=mat
 MateMenu_2_0_gir_FILES = $(addprefix $(srcdir)/,$(introspection_sources))
 INTROSPECTION_GIRS += MateMenu-2.0.gir
 
-girdir = $(INTROSPECTION_GIRDIR)
+girdir = $(datadir)/gir-1.0/
 gir_DATA = $(INTROSPECTION_GIRS)
 
-typelibdir = $(INTROSPECTION_TYPELIBDIR)
+typelibdir = $(libdir)/girepository-1.0/
 typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
 
 CLEANFILES += $(gir_DATA) $(typelib_DATA)
