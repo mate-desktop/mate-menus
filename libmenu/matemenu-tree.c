@@ -842,7 +842,7 @@ matemenu_tree_get_directory_from_path (MateMenuTree  *tree,
  * matemenu_tree_get_entry_by_id:
  * @tree: a #MateMenuTree
  * @id: a desktop file ID
- * 
+ *
  * Look up the entry corresponding to the given "desktop file id".
  *
  * Returns: (transfer full): A newly referenced #MateMenuTreeEntry, or %NULL if none
