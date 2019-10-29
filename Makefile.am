@@ -1,4 +1,4 @@
-SUBDIRS = libmenu desktop-directories layout util po
+SUBDIRS = po libmenu desktop-directories layout util
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
@@ -21,7 +21,6 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/mkinstalldirs \
 	`find "$(srcdir)" -type f -name Makefile.in -print` \
 	$(srcdir)/configure \
-	$(srcdir)/m4/intltool.m4 \
 	$(srcdir)/m4/libtool.m4 \
 	$(srcdir)/m4/ltoptions.m4 \
 	$(srcdir)/m4/ltsugar.m4 \

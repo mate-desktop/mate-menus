@@ -28,7 +28,8 @@ directory_in_files = \
 
 directory_DATA = $(directory_in_files:.directory.in=.directory)
 
-@INTLTOOL_DIRECTORY_RULE@
+%.directory: %.directory.in
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST= $(directory_in_files)
 
