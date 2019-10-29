@@ -69,7 +69,6 @@ requires:
     - git
     - glib2
     - gobject-introspection
-    - intltool
     - make
     - mate-common
     - python2
@@ -78,13 +77,13 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/mate-menus
+    - autopoint
     - clang
     - clang-tools
     - cppcheck
     - gcc
     - git
     - gobject-introspection
-    - intltool
     - libgirepository1.0-dev
     - libglib2.0-dev
     - make
@@ -105,11 +104,11 @@ requires:
     - redhat-rpm-config
 
   ubuntu:
+    - autopoint
     - clang
     - clang-tools
     - git
     - gobject-introspection
-    - intltool
     - libgirepository1.0-dev
     - libglib2.0-dev
     - make
