@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-menus package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Evolve32 <evolve32@yandex.ru>, 2018
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
-# Микола Ткач <chistomov@gmail.com>, 2018
+# Микола Ткач <chistomov@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-20 14:55+0100\n"
+"Project-Id-Version: mate-menus 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2019-11-04 23:17+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2018\n"
+"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,152 +23,224 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
 msgstr "Звук та відео"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:2
+#: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
 msgstr "Мультимедія"
 
-#: ../desktop-directories/mate-development.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:5
+msgid "applications-multimedia"
+msgstr "applications-multimedia"
+
+#: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
 msgstr "Програмування"
 
-#: ../desktop-directories/mate-development.directory.in.h:2
+#: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
 msgstr "Знаряддя розробки програм"
 
-#: ../desktop-directories/mate-education.directory.in.h:1
+#: desktop-directories/mate-development.directory.in:5
+msgid "applications-development"
+msgstr "applications-development"
+
+#: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Навчання"
 
-#: ../desktop-directories/mate-game.directory.in.h:1
+#: desktop-directories/mate-education.directory.in:4
+msgid "applications-science"
+msgstr "applications-science"
+
+#: desktop-directories/mate-game.directory.in:3
 msgid "Games"
 msgstr "Забавки"
 
-#: ../desktop-directories/mate-game.directory.in.h:2
+#: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
 msgstr "Ігри й розваги"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:1
+#: desktop-directories/mate-game.directory.in:5
+msgid "applications-games"
+msgstr "applications-games"
+
+#: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Графіка"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:2
+#: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Графічні програми"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:1
+#: desktop-directories/mate-graphics.directory.in:5
+msgid "applications-graphics"
+msgstr "applications-graphics"
+
+#: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
 msgstr "Пристрої"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:2
+#: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
 msgstr "Параметри деяких апаратних пристроїв"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:1
+#: desktop-directories/mate-hardware.directory.in:5
+msgid "preferences-desktop-peripherals"
+msgstr "preferences-desktop-peripherals"
+
+#: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Інтернет і мережа"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:2
+#: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "Параметри, що відносяться до налаштовування мережі"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:1
+#: desktop-directories/mate-internet-and-network.directory.in:5
+msgid "preferences-system-network"
+msgstr "preferences-system-network"
+
+#: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
 msgstr "Оздоблення"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:2
+#: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Параметри, що впливають на зовнішній вигляд та поведінку стільниці"
 
-#: ../desktop-directories/mate-network.directory.in.h:1
+#: desktop-directories/mate-look-and-feel.directory.in:5
+#: desktop-directories/mate-settings.directory.in:5
+msgid "preferences-desktop"
+msgstr "preferences-desktop"
+
+#: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "Тенета"
 
-#: ../desktop-directories/mate-network.directory.in.h:2
+#: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "Програми для роботи з Інтернет (пошта, оглядач тенет, тощо)"
 
-#: ../desktop-directories/mate-office.directory.in.h:1
+#: desktop-directories/mate-network.directory.in:5
+msgid "applications-internet"
+msgstr "applications-internet"
+
+#: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Офіс"
 
-#: ../desktop-directories/mate-office.directory.in.h:2
+#: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Офісні програми"
 
+#: desktop-directories/mate-office.directory.in:5
+msgid "applications-office"
+msgstr "applications-office"
+
 #. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/mate-personal.directory.in.h:2
+#: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
 msgstr "Особисті"
 
-#: ../desktop-directories/mate-personal.directory.in.h:3
+#: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
 msgstr "Особисті параметри"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:1
-msgid "Administration"
-msgstr "Адміністрування"
+#: desktop-directories/mate-personal.directory.in:6
+msgid "preferences-desktop-personal"
+msgstr "preferences-desktop-personal"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:2
+#: desktop-directories/mate-settings-system.directory.in:4
+msgid "Administration"
+msgstr "Розпорядництво"
+
+#: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Зміна системних параметрів (впливає на усіх користувачів)"
 
-#: ../desktop-directories/mate-settings.directory.in.h:1
+#: desktop-directories/mate-settings-system.directory.in:6
+#: desktop-directories/mate-system.directory.in:5
+msgid "preferences-system"
+msgstr "preferences-system"
+
+#: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
 msgstr "Налаштування"
 
-#: ../desktop-directories/mate-settings.directory.in.h:2
+#: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
 msgstr "Особисті уподобання"
 
-#: ../desktop-directories/mate-system.directory.in.h:1
-#: ../desktop-directories/mate-menu-system.directory.in.h:1
+#: desktop-directories/mate-system.directory.in:3
+#: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
 msgstr "Система"
 
-#: ../desktop-directories/mate-system.directory.in.h:2
+#: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
 msgstr "Системні параметри"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
 msgstr "Системні засоби"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:2
+#: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
 msgstr "Засоби налаштовування і контролю системи"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:5
+msgid "applications-system"
+msgstr "applications-system"
+
+#: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
-msgstr "Універсальний доступ"
+msgstr "Усезагальний доступ"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
+#: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
-msgstr "Параметри універсального доступу"
+msgstr "Параметри усезагального доступу"
 
-#: ../desktop-directories/mate-utility.directory.in.h:1
+#: desktop-directories/mate-utility-accessibility.directory.in:6
+msgid "preferences-desktop-accessibility"
+msgstr "preferences-desktop-accessibility"
+
+#: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
 msgstr "Стандартні"
 
-#: ../desktop-directories/mate-utility.directory.in.h:2
+#: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
 msgstr "Стандартні програми"
 
-#: ../desktop-directories/mate-menu-applications.directory.in.h:1
+#: desktop-directories/mate-utility.directory.in:5
+msgid "applications-accessories"
+msgstr "applications-accessories"
+
+#: desktop-directories/mate-menu-applications.directory.in:3
+#: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Програми"
 
-#: ../desktop-directories/mate-menu-system.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr "Особисті параметри та адміністративні параметри"
+#: desktop-directories/mate-menu-applications.directory.in:5
+#: desktop-directories/mate-other.directory.in:5
+msgid "applications-other"
+msgstr "applications-other"
 
-#: ../desktop-directories/mate-other.directory.in.h:1
+#: desktop-directories/mate-menu-system.directory.in:4
+msgid "Personal preferences and administration settings"
+msgstr "Особисті параметри та розпорядницькі параметри"
+
+#: desktop-directories/mate-menu-system.directory.in:5
+msgid "preferences-other"
+msgstr "preferences-other"
+
+#: desktop-directories/mate-other.directory.in:3
 msgid "Other"
 msgstr "Инше"
 
-#: ../desktop-directories/mate-other.directory.in.h:2
+#: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Програми, що не належать до жодної категорії"

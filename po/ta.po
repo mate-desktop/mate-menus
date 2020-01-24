@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-menus package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Mooglie <mooglietech@gmail.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-20 14:55+0100\n"
+"Project-Id-Version: mate-menus 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2019-11-04 23:17+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
 "Last-Translator: Mooglie <mooglietech@gmail.com>, 2018\n"
 "Language-Team: Tamil (https://www.transifex.com/mate/teams/13566/ta/)\n"
@@ -22,154 +21,226 @@ msgstr ""
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
 msgstr "ஒலி மற்றும் படக்காட்சி"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:2
+#: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
 msgstr "பல்முனை ஊடகப் பட்டியல்"
 
-#: ../desktop-directories/mate-development.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:5
+msgid "applications-multimedia"
+msgstr ""
+
+#: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
 msgstr "நிரலாக்கம்"
 
-#: ../desktop-directories/mate-development.directory.in.h:2
+#: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
 msgstr "மென்பொருள் உற்பத்திக்கான கருவிகள்"
 
-#: ../desktop-directories/mate-education.directory.in.h:1
+#: desktop-directories/mate-development.directory.in:5
+msgid "applications-development"
+msgstr ""
+
+#: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "கல்வி"
 
-#: ../desktop-directories/mate-game.directory.in.h:1
+#: desktop-directories/mate-education.directory.in:4
+msgid "applications-science"
+msgstr ""
+
+#: desktop-directories/mate-game.directory.in:3
 msgid "Games"
 msgstr "விளையாட்டுகள்"
 
-#: ../desktop-directories/mate-game.directory.in.h:2
+#: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
 msgstr "விளையாட்டுகள் மற்றும் பொழுதுப்போக்குகள்"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:1
+#: desktop-directories/mate-game.directory.in:5
+msgid "applications-games"
+msgstr ""
+
+#: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "வரைகலை"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:2
+#: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "வரைகலை பயன்பாடுகள்"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:1
+#: desktop-directories/mate-graphics.directory.in:5
+msgid "applications-graphics"
+msgstr ""
+
+#: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
 msgstr "வண் பொருட்கள்"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:2
+#: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
 msgstr "பல வண் பொருட்களுக்கான அமைப்புகள்"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:1
+#: desktop-directories/mate-hardware.directory.in:5
+msgid "preferences-desktop-peripherals"
+msgstr ""
+
+#: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "இணையம் மற்றும் வலையமைப்பு"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:2
+#: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "வலையமைப்பு சார்ந்த வடிவமைப்புகள்"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:1
+#: desktop-directories/mate-internet-and-network.directory.in:5
+msgid "preferences-system-network"
+msgstr ""
+
+#: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
 msgstr "பார்வையும் உணர்வும்"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:2
+#: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "மேல்மேசையின் தோற்றம் மற்றும் நடத்தைகளை கட்டுப்படுத்தும் வடிவமைப்பு"
 
-#: ../desktop-directories/mate-network.directory.in.h:1
+#: desktop-directories/mate-look-and-feel.directory.in:5
+#: desktop-directories/mate-settings.directory.in:5
+msgid "preferences-desktop"
+msgstr ""
+
+#: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "இணையம்"
 
-#: ../desktop-directories/mate-network.directory.in.h:2
+#: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "வலைப்பின்னல் மற்றும் மின்னஞ்சல் போன்ற இணைய அணுகலுக்கான நிரல்கள் "
 
-#: ../desktop-directories/mate-office.directory.in.h:1
+#: desktop-directories/mate-network.directory.in:5
+msgid "applications-internet"
+msgstr ""
+
+#: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "அலுவலகம்"
 
-#: ../desktop-directories/mate-office.directory.in.h:2
+#: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "அலுவலகப் பயன்பாடுகள்"
 
+#: desktop-directories/mate-office.directory.in:5
+msgid "applications-office"
+msgstr ""
+
 #. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/mate-personal.directory.in.h:2
+#: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
 msgstr "தனிப்பயன்"
 
-#: ../desktop-directories/mate-personal.directory.in.h:3
+#: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
 msgstr "தனிப்பயன் அமைப்புகள்"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:1
+#: desktop-directories/mate-personal.directory.in:6
+msgid "preferences-desktop-personal"
+msgstr ""
+
+#: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "நிர்வாகம்"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:2
+#: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr ""
 "கணிப்பொறியின் அனைத்து அமைப்புகளை மாற்றுக (பயன்படுத்துவோர் அனைவரையும் "
 "பாதிக்கும்)"
 
-#: ../desktop-directories/mate-settings.directory.in.h:1
+#: desktop-directories/mate-settings-system.directory.in:6
+#: desktop-directories/mate-system.directory.in:5
+msgid "preferences-system"
+msgstr ""
+
+#: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
 msgstr "விருப்ப தேர்வுகள் "
 
-#: ../desktop-directories/mate-settings.directory.in.h:2
+#: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
 msgstr "தனிப்பயன் விருப்பங்கள்"
 
-#: ../desktop-directories/mate-system.directory.in.h:1
-#: ../desktop-directories/mate-menu-system.directory.in.h:1
+#: desktop-directories/mate-system.directory.in:3
+#: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
 msgstr "அமைப்பு"
 
-#: ../desktop-directories/mate-system.directory.in.h:2
+#: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
 msgstr "கணினி அமைப்புகள்"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
 msgstr "கணிப்பொறிக் கருவிகள்"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:2
+#: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
 msgstr "கணிப்பொறி அமைப்பு மற்றும் கண்காணித்தல்"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:5
+msgid "applications-system"
+msgstr ""
+
+#: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "உலகளாவிய அணுகல்"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
+#: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "உலகளாவிய அணுகல் அமைப்புகள்"
 
-#: ../desktop-directories/mate-utility.directory.in.h:1
+#: desktop-directories/mate-utility-accessibility.directory.in:6
+msgid "preferences-desktop-accessibility"
+msgstr ""
+
+#: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
 msgstr "துணைப்பொருள்கள்"
 
-#: ../desktop-directories/mate-utility.directory.in.h:2
+#: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
 msgstr "மேஜை துணைப்பொருள்கள்"
 
-#: ../desktop-directories/mate-menu-applications.directory.in.h:1
+#: desktop-directories/mate-utility.directory.in:5
+msgid "applications-accessories"
+msgstr ""
+
+#: desktop-directories/mate-menu-applications.directory.in:3
+#: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "பயன்பாடுகள்"
 
-#: ../desktop-directories/mate-menu-system.directory.in.h:2
+#: desktop-directories/mate-menu-applications.directory.in:5
+#: desktop-directories/mate-other.directory.in:5
+msgid "applications-other"
+msgstr ""
+
+#: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "தனிநபர் விருப்பங்கள் மற்றும் நிர்வாக அமைப்புகள்"
 
-#: ../desktop-directories/mate-other.directory.in.h:1
+#: desktop-directories/mate-menu-system.directory.in:5
+msgid "preferences-other"
+msgstr ""
+
+#: desktop-directories/mate-other.directory.in:3
 msgid "Other"
 msgstr "மற்றவை"
 
-#: ../desktop-directories/mate-other.directory.in.h:2
+#: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "இதர இனங்களில் பொருந்தாத பயன்பாடுகள்"

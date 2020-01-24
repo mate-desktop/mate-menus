@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-menus package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-20 14:55+0100\n"
+"Project-Id-Version: mate-menus 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2019-11-04 23:17+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Icelandic (https://www.transifex.com/mate/teams/13566/is/)\n"
@@ -22,152 +21,224 @@ msgstr ""
 "Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
 msgstr "Hljóð og mynd"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:2
+#: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
 msgstr "Margmiðlun"
 
-#: ../desktop-directories/mate-development.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:5
+msgid "applications-multimedia"
+msgstr ""
+
+#: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
 msgstr "Forritun"
 
-#: ../desktop-directories/mate-development.directory.in.h:2
+#: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
 msgstr "Þróunarverkfæri"
 
-#: ../desktop-directories/mate-education.directory.in.h:1
+#: desktop-directories/mate-development.directory.in:5
+msgid "applications-development"
+msgstr ""
+
+#: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Menntun"
 
-#: ../desktop-directories/mate-game.directory.in.h:1
+#: desktop-directories/mate-education.directory.in:4
+msgid "applications-science"
+msgstr ""
+
+#: desktop-directories/mate-game.directory.in:3
 msgid "Games"
 msgstr "Leikir"
 
-#: ../desktop-directories/mate-game.directory.in.h:2
+#: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
 msgstr "Leikir og skemmtun"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:1
+#: desktop-directories/mate-game.directory.in:5
+msgid "applications-games"
+msgstr ""
+
+#: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Myndefni"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:2
+#: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Myndefnisforrit"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:1
+#: desktop-directories/mate-graphics.directory.in:5
+msgid "applications-graphics"
+msgstr ""
+
+#: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
 msgstr "Vélbúnaður"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:2
+#: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
 msgstr "Uppsetning á ýmsum vélbúnaði"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:1
+#: desktop-directories/mate-hardware.directory.in:5
+msgid "preferences-desktop-peripherals"
+msgstr ""
+
+#: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Internet og netkerfi"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:2
+#: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "Netkerfistengdar stillingar"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:1
+#: desktop-directories/mate-internet-and-network.directory.in:5
+msgid "preferences-system-network"
+msgstr ""
+
+#: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
 msgstr "Útlit og viðmót"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:2
+#: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Stillingar sem stjórna útliti og hegðun skjáborðsins"
 
-#: ../desktop-directories/mate-network.directory.in.h:1
+#: desktop-directories/mate-look-and-feel.directory.in:5
+#: desktop-directories/mate-settings.directory.in:5
+msgid "preferences-desktop"
+msgstr ""
+
+#: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "Internetið"
 
-#: ../desktop-directories/mate-network.directory.in.h:2
+#: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "Forrit til að nálgast netið eins og vefinn og tölvupóst"
 
-#: ../desktop-directories/mate-office.directory.in.h:1
+#: desktop-directories/mate-network.directory.in:5
+msgid "applications-internet"
+msgstr ""
+
+#: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Skrifstofa"
 
-#: ../desktop-directories/mate-office.directory.in.h:2
+#: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Skrifstofuforrit"
 
+#: desktop-directories/mate-office.directory.in:5
+msgid "applications-office"
+msgstr ""
+
 #. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/mate-personal.directory.in.h:2
+#: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
 msgstr "Persónulegt"
 
-#: ../desktop-directories/mate-personal.directory.in.h:3
+#: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
 msgstr "Persónulegar stillingar"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:1
+#: desktop-directories/mate-personal.directory.in:6
+msgid "preferences-desktop-personal"
+msgstr ""
+
+#: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "Stjórnun"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:2
+#: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Breyta stillingum fyrir allt kerfið (hefur áhrif á alla notendur)"
 
-#: ../desktop-directories/mate-settings.directory.in.h:1
+#: desktop-directories/mate-settings-system.directory.in:6
+#: desktop-directories/mate-system.directory.in:5
+msgid "preferences-system"
+msgstr ""
+
+#: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
 msgstr "Kjörstillingar"
 
-#: ../desktop-directories/mate-settings.directory.in.h:2
+#: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
 msgstr "Persónulegir valmöguleikar"
 
-#: ../desktop-directories/mate-system.directory.in.h:1
-#: ../desktop-directories/mate-menu-system.directory.in.h:1
+#: desktop-directories/mate-system.directory.in:3
+#: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
 msgstr "Kerfið"
 
-#: ../desktop-directories/mate-system.directory.in.h:2
+#: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
 msgstr "Kerfisstillingar"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
 msgstr "Kerfistól"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:2
+#: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
 msgstr "Kerfisstillingar og vöktun"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:5
+msgid "applications-system"
+msgstr ""
+
+#: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "Altækur aðgangur"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
+#: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "Stillingar fyrir altækan aðgang"
 
-#: ../desktop-directories/mate-utility.directory.in.h:1
+#: desktop-directories/mate-utility-accessibility.directory.in:6
+msgid "preferences-desktop-accessibility"
+msgstr ""
+
+#: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
 msgstr "Aukahlutir"
 
-#: ../desktop-directories/mate-utility.directory.in.h:2
+#: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
 msgstr "Aukahlutir fyrir skjáborð"
 
-#: ../desktop-directories/mate-menu-applications.directory.in.h:1
+#: desktop-directories/mate-utility.directory.in:5
+msgid "applications-accessories"
+msgstr ""
+
+#: desktop-directories/mate-menu-applications.directory.in:3
+#: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Forrit"
 
-#: ../desktop-directories/mate-menu-system.directory.in.h:2
+#: desktop-directories/mate-menu-applications.directory.in:5
+#: desktop-directories/mate-other.directory.in:5
+msgid "applications-other"
+msgstr ""
+
+#: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "Persónulegir valmöguleikar og stjórnunar stillingar"
 
-#: ../desktop-directories/mate-other.directory.in.h:1
+#: desktop-directories/mate-menu-system.directory.in:5
+msgid "preferences-other"
+msgstr ""
+
+#: desktop-directories/mate-other.directory.in:3
 msgid "Other"
 msgstr "Annað"
 
-#: ../desktop-directories/mate-other.directory.in.h:2
+#: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Forrit sem passa ekki í aðra flokka"

@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-menus package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,12 +9,11 @@
 # مهدي السطيفي <chinoune.mehdi@gmail.com>, 2018
 # alibacha19 <alibacha19@gmail.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-20 14:55+0100\n"
+"Project-Id-Version: mate-menus 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2019-11-04 23:17+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
 "Last-Translator: alibacha19 <alibacha19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/mate/teams/13566/ar/)\n"
@@ -24,152 +23,224 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
 msgstr "المرئيّات و الصوتيّات"
 
-#: ../desktop-directories/mate-audio-video.directory.in.h:2
+#: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
 msgstr "قائمة الوسائط المتعدّدة"
 
-#: ../desktop-directories/mate-development.directory.in.h:1
+#: desktop-directories/mate-audio-video.directory.in:5
+msgid "applications-multimedia"
+msgstr ""
+
+#: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
 msgstr "برمجة"
 
-#: ../desktop-directories/mate-development.directory.in.h:2
+#: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
 msgstr "أدوات لتطوير البرامج"
 
-#: ../desktop-directories/mate-education.directory.in.h:1
+#: desktop-directories/mate-development.directory.in:5
+msgid "applications-development"
+msgstr ""
+
+#: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "تعليمي"
 
-#: ../desktop-directories/mate-game.directory.in.h:1
+#: desktop-directories/mate-education.directory.in:4
+msgid "applications-science"
+msgstr ""
+
+#: desktop-directories/mate-game.directory.in:3
 msgid "Games"
 msgstr "ألعاب"
 
-#: ../desktop-directories/mate-game.directory.in.h:2
+#: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
 msgstr "الألعاب و التسلية"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:1
+#: desktop-directories/mate-game.directory.in:5
+msgid "applications-games"
+msgstr ""
+
+#: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "رسوميات"
 
-#: ../desktop-directories/mate-graphics.directory.in.h:2
+#: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "تطبيقات الرّسوميات"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:1
+#: desktop-directories/mate-graphics.directory.in:5
+msgid "applications-graphics"
+msgstr ""
+
+#: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
 msgstr "العتاد"
 
-#: ../desktop-directories/mate-hardware.directory.in.h:2
+#: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
 msgstr "إعدادات للعديد من أجهزة العتاد"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:1
+#: desktop-directories/mate-hardware.directory.in:5
+msgid "preferences-desktop-peripherals"
+msgstr ""
+
+#: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "الإنترنت والشبكة"
 
-#: ../desktop-directories/mate-internet-and-network.directory.in.h:2
+#: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "الإعدادات المتعلّقة بالشبكة"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:1
+#: desktop-directories/mate-internet-and-network.directory.in:5
+msgid "preferences-system-network"
+msgstr ""
+
+#: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
 msgstr "الشكل و المظهر"
 
-#: ../desktop-directories/mate-look-and-feel.directory.in.h:2
+#: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "إعدادات تتحكّم في مظهر وسلوك سطح المكتب"
 
-#: ../desktop-directories/mate-network.directory.in.h:1
+#: desktop-directories/mate-look-and-feel.directory.in:5
+#: desktop-directories/mate-settings.directory.in:5
+msgid "preferences-desktop"
+msgstr ""
+
+#: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "أنترنت"
 
-#: ../desktop-directories/mate-network.directory.in.h:2
+#: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "برامج للنّفاذ إلى الشّابكة مثل الوب و البريد الإلكتروني"
 
-#: ../desktop-directories/mate-office.directory.in.h:1
+#: desktop-directories/mate-network.directory.in:5
+msgid "applications-internet"
+msgstr ""
+
+#: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "مكتب"
 
-#: ../desktop-directories/mate-office.directory.in.h:2
+#: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "التطبيقات المكتبيّة"
 
+#: desktop-directories/mate-office.directory.in:5
+msgid "applications-office"
+msgstr ""
+
 #. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/mate-personal.directory.in.h:2
+#: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
 msgstr "شخصي"
 
-#: ../desktop-directories/mate-personal.directory.in.h:3
+#: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
 msgstr "الإعدادات الشخصيّة"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:1
+#: desktop-directories/mate-personal.directory.in:6
+msgid "preferences-desktop-personal"
+msgstr ""
+
+#: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "إدارة"
 
-#: ../desktop-directories/mate-settings-system.directory.in.h:2
+#: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "غيّر إعدادات النظام العامة (يؤثّر على جميع المستخدمين)"
 
-#: ../desktop-directories/mate-settings.directory.in.h:1
+#: desktop-directories/mate-settings-system.directory.in:6
+#: desktop-directories/mate-system.directory.in:5
+msgid "preferences-system"
+msgstr ""
+
+#: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
 msgstr "تفضيلات"
 
-#: ../desktop-directories/mate-settings.directory.in.h:2
+#: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
 msgstr "التفضيلات الشخصيّة"
 
-#: ../desktop-directories/mate-system.directory.in.h:1
-#: ../desktop-directories/mate-menu-system.directory.in.h:1
+#: desktop-directories/mate-system.directory.in:3
+#: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
 msgstr "النّظام"
 
-#: ../desktop-directories/mate-system.directory.in.h:2
+#: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
 msgstr "إعدادات النظام"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
 msgstr "أدوات النّظام"
 
-#: ../desktop-directories/mate-system-tools.directory.in.h:2
+#: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
 msgstr "إعداد و مراقبة النّظام"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:1
+#: desktop-directories/mate-system-tools.directory.in:5
+msgid "applications-system"
+msgstr ""
+
+#: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "الإتاحة"
 
-#: ../desktop-directories/mate-utility-accessibility.directory.in.h:2
+#: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "إعدادات الإتاحة"
 
-#: ../desktop-directories/mate-utility.directory.in.h:1
+#: desktop-directories/mate-utility-accessibility.directory.in:6
+msgid "preferences-desktop-accessibility"
+msgstr ""
+
+#: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
 msgstr "ملحقات"
 
-#: ../desktop-directories/mate-utility.directory.in.h:2
+#: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
 msgstr "ملحقات سطح المكتب"
 
-#: ../desktop-directories/mate-menu-applications.directory.in.h:1
+#: desktop-directories/mate-utility.directory.in:5
+msgid "applications-accessories"
+msgstr ""
+
+#: desktop-directories/mate-menu-applications.directory.in:3
+#: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "التطبيقات"
 
-#: ../desktop-directories/mate-menu-system.directory.in.h:2
+#: desktop-directories/mate-menu-applications.directory.in:5
+#: desktop-directories/mate-other.directory.in:5
+msgid "applications-other"
+msgstr ""
+
+#: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "التفضيلات الشخصيّة و إعدادات الإدارة"
 
-#: ../desktop-directories/mate-other.directory.in.h:1
+#: desktop-directories/mate-menu-system.directory.in:5
+msgid "preferences-other"
+msgstr ""
+
+#: desktop-directories/mate-other.directory.in:3
 msgid "Other"
 msgstr "أخرى"
 
-#: ../desktop-directories/mate-other.directory.in.h:2
+#: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "تطبيقات لا تندرج تحت الفئات الأخرى"
