@@ -101,6 +101,7 @@ echo "
         source code location:         ${srcdir}
         compiler:                     ${CC}
         cflags:                       ${CFLAGS}
+        Warning flags:                ${WARN_CFLAGS}
         Maintainer mode:              ${USE_MAINTAINER_MODE}
         Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
