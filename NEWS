@@ -1,10 +1,16 @@
+### mate-menus 1.24.0
+
+  * build: show warning flags on configuration summary
+  * Translations update
+  * migrate from intltools to gettext
+
 ### mate-menus 1.23.0
 
-    tx: sync with transifex
-    Use datadir and libdir when install gir files
-    Change url project's website
-    [ci] Add cppcheck html report
-    [ci] Enable Clang Static Analyzer
+  * Translations update
+  * Use datadir and libdir when install gir files
+  * Change url project's website
+  * [ci] Add cppcheck html report
+  * [ci] Enable Clang Static Analyzer
 
 ### mate-menus 1.22.0
 
