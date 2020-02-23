@@ -1,0 +1,66 @@
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-menus
+    - gcc
+    - git
+    - glib2
+    - gobject-introspection
+    - intltool
+    - make
+    - mate-common
+    - python2
+    - which
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-menus
+    - git
+    - gobject-introspection
+    - intltool
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - make
+    - mate-common
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-menus.git
+    - chrpath
+    - gcc
+    - git
+    - gobject-introspection-devel
+    - make
+    - mate-common
+    - python2-devel
+    - redhat-rpm-config
+
+  ubuntu:
+    - git
+    - gobject-introspection
+    - intltool
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - make
+    - mate-common
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security"
+
+after_scripts:
+  - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: mate-menus-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
+    notify_servers:
+      - https://release.mate-desktop.org/release
+
