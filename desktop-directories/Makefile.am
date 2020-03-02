@@ -29,7 +29,7 @@ directory_in_files = \
 directory_DATA = $(directory_in_files:.directory.in=.directory)
 
 %.directory: %.directory.in
-	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
+	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST= $(directory_in_files)
 
