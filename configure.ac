@@ -10,6 +10,7 @@ AC_CONFIG_HEADERS(config.h)
 
 AM_MAINTAINER_MODE
 MATE_MAINTAINER_MODE_DEFINES
+MATE_COMPILE_WARNINGS
 
 # Before making a release, the LT_VERSION string should be modified.
 # The string is of the form C:R:A.
@@ -38,8 +39,6 @@ AM_PROG_LIBTOOL
 PKG_CHECK_MODULES(GIO_UNIX, gio-unix-2.0 >= 2.50.0)
 AC_SUBST(GIO_UNIX_CFLAGS)
 AC_SUBST(GIO_UNIX_LIBS)
-
-MATE_COMPILE_WARNINGS(yes)
 
 AC_ARG_ENABLE(deprecation_flags,
               [AC_HELP_STRING([--enable-deprecation-flags],
