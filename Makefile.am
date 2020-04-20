@@ -6,6 +6,7 @@ EXTRA_DIST = autogen.sh
 
 DISTCHECK_CONFIGURE_FLAGS = \
 	--disable-introspection \
+	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'
 
 MAINTAINERCLEANFILES = \
