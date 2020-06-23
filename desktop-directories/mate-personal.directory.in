@@ -2,5 +2,6 @@
 # Translators: this is Personal as in "Personal settings"
 Name=Personal
 Comment=Personal settings
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=preferences-desktop-personal
 Type=Directory

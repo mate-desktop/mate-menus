@@ -2,4 +2,5 @@
 Name=Universal Access
 Comment=Universal Access Settings
 Type=Directory
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=preferences-desktop-accessibility

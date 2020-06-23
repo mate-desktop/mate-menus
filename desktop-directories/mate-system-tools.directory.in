@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=System Tools
 Comment=System configuration and monitoring
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=applications-system
 Type=Directory

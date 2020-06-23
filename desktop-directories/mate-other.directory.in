@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Other
 Comment=Applications that did not fit in other categories
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=applications-other
 Type=Directory

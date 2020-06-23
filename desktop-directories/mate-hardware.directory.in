@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Hardware
 Comment=Settings for several hardware devices
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=preferences-desktop-peripherals
 Type=Directory

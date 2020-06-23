@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Internet and Network
 Comment=Network-related settings
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=preferences-system-network
 Type=Directory
