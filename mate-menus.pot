@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.24.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2020-08-13 10:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,10 +24,6 @@ msgstr ""
 msgid "Multimedia menu"
 msgstr ""
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
-msgstr ""
-
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
 msgstr ""
@@ -36,16 +32,8 @@ msgstr ""
 msgid "Tools for software development"
 msgstr ""
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
-msgstr ""
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
 msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
@@ -56,20 +44,12 @@ msgstr ""
 msgid "Games and amusements"
 msgstr ""
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr ""
 
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
-msgstr ""
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
 msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
@@ -80,20 +60,12 @@ msgstr ""
 msgid "Settings for several hardware devices"
 msgstr ""
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
-msgstr ""
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
 msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
@@ -104,11 +76,6 @@ msgstr ""
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr ""
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr ""
@@ -117,20 +84,12 @@ msgstr ""
 msgid "Programs for Internet access such as web and email"
 msgstr ""
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr ""
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
-msgstr ""
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
 msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
@@ -142,21 +101,12 @@ msgstr ""
 msgid "Personal settings"
 msgstr ""
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr ""
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
-msgstr ""
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
 msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
@@ -184,20 +134,12 @@ msgstr ""
 msgid "System configuration and monitoring"
 msgstr ""
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr ""
 
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
-msgstr ""
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
 msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
@@ -208,26 +150,13 @@ msgstr ""
 msgid "Desktop accessories"
 msgstr ""
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr ""
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
-msgstr ""
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
 msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
