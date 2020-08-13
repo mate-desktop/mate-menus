@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-menus 1.23.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2019-11-04 23:17+0100\n"
-"PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
+"PO-Revision-Date: 2020-02-15 14:17+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,7 +93,7 @@ msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "인터넷과 네트워크"
+msgstr "인터넷 및 네트워크"
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
@@ -104,7 +105,7 @@ msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
-msgstr "모양새"
+msgstr "룩앤필"
 
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
@@ -221,7 +222,7 @@ msgstr ""
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
-msgstr "프로그램"
+msgstr "응용 프로그램"
 
 #: desktop-directories/mate-menu-applications.directory.in:5
 #: desktop-directories/mate-other.directory.in:5

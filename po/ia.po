@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# SoftInterlingua <>, 2020
 # 
 msgid ""
 msgstr ""
@@ -12,21 +12,21 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2019-11-04 23:17+0100\n"
 "PO-Revision-Date: 2020-02-15 14:17+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
-"Language-Team: Oriya (https://www.transifex.com/mate/teams/13566/or/)\n"
+"Last-Translator: SoftInterlingua <>, 2020\n"
+"Language-Team: Interlingua (https://www.transifex.com/mate/teams/13566/ia/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: or\n"
+"Language: ia\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
-msgstr "ଧ୍ବନି ଏବଂ ଭିଡିଓ"
+msgstr "Sono e video"
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
-msgstr "ବହୁମାଧ୍ଯମ ତାଲିକା"
+msgstr "Menu de multimedio"
 
 #: desktop-directories/mate-audio-video.directory.in:5
 msgid "applications-multimedia"
@@ -34,11 +34,11 @@ msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
-msgstr "ପ୍ରୋଗ୍ରାମିଙ୍ଗ"
+msgstr "Programmatura"
 
 #: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
-msgstr "ସଫ୍ଟୱେର ବିକାଶ ପାଇଁ ଉପକରଣ"
+msgstr "Instrumentos pro disveloppar software"
 
 #: desktop-directories/mate-development.directory.in:5
 msgid "applications-development"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
-msgstr "ଶିକ୍ଷା"
+msgstr "Education"
 
 #: desktop-directories/mate-education.directory.in:4
 msgid "applications-science"
@@ -54,11 +54,11 @@ msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
-msgstr "ଖେଳ"
+msgstr "Jocos"
 
 #: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
-msgstr "ଖେଳ ଏବଂ ମନୋରଞ୍ଜନ"
+msgstr "Jocos e amusamentos"
 
 #: desktop-directories/mate-game.directory.in:5
 msgid "applications-games"
@@ -66,11 +66,11 @@ msgstr ""
 
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
-msgstr "ଆଲେଖୀ"
+msgstr "Graphica"
 
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
-msgstr "ଆଲେଖୀ ପ୍ରୟୋଗ"
+msgstr "Applicationes graphic"
 
 #: desktop-directories/mate-graphics.directory.in:5
 msgid "applications-graphics"
@@ -78,11 +78,11 @@ msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
-msgstr "ହାର୍ଡୱେର"
+msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
-msgstr "କେତେକ ହାର୍ଡୱେର ଯନ୍ତ୍ରଗୁଡିକ ପାଇଁ ବିନ୍ୟାସ"
+msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:5
 msgid "preferences-desktop-peripherals"
@@ -90,11 +90,11 @@ msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "ଇନ୍ଟରନେଟ ଏବଂ ନେଟୱର୍କ"
+msgstr "Internet e rete"
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
-msgstr "ନେଟୱର୍କ ସମ୍ପର୍କୀୟ ବିନ୍ୟାସ"
+msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:5
 msgid "preferences-system-network"
@@ -102,11 +102,11 @@ msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
-msgstr "ଦେଖନ୍ତୁ ଏବଂ ଅନୁଭବ କରନ୍ତୁ"
+msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ଡେସ୍କଟପ ପରିଦୃଶ୍ୟ ଏବଂ ଆଚରଣକୁ ନିୟନ୍ତ୍ରଣ କରୁଥିବା ବିନ୍ୟାସ"
+msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:5
 #: desktop-directories/mate-settings.directory.in:5
@@ -115,11 +115,11 @@ msgstr ""
 
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
-msgstr "ଇଣ୍ଟରନେଟ"
+msgstr ""
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "ଇଣ୍ଟରନେଟ ଅଭିଗମ୍ୟତା ପାଇଁ ୱେବ ଏବଂ ଇ-ମେଲ ଭଳି ପ୍ରୋଗ୍ରାମଗୁଡ଼ିକ"
+msgstr ""
 
 #: desktop-directories/mate-network.directory.in:5
 msgid "applications-internet"
@@ -127,11 +127,11 @@ msgstr ""
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
-msgstr "କାର୍ଯ୍ଯାଳୟ"
+msgstr "Officio"
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
-msgstr "କାର୍ଯ୍ଯାଳୟ ପ୍ରୟୋଗ"
+msgstr "Applicationes de officio"
 
 #: desktop-directories/mate-office.directory.in:5
 msgid "applications-office"
@@ -140,11 +140,11 @@ msgstr ""
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
-msgstr "ବ୍ୟକ୍ତିଗତ"
+msgstr "Personal"
 
 #: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
-msgstr "ବ୍ଯକ୍ତିଗତ ବିନ୍ଯାସ"
+msgstr "Configurationes personal"
 
 #: desktop-directories/mate-personal.directory.in:6
 msgid "preferences-desktop-personal"
@@ -152,13 +152,11 @@ msgstr ""
 
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
-msgstr "ପ୍ରଶାସନ"
+msgstr ""
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr ""
-"ତନ୍ତ୍ର ବ୍ଯାପି ବିନ୍ଯାସକୁ ପରିବର୍ତ୍ତନ କରନ୍ତୁ (ସମସ୍ତ ଉପଭୋକ୍ତା ମାନଙ୍କୁ ପ୍ରଭାବିତ "
-"କରିଥାଏ)"
 
 #: desktop-directories/mate-settings-system.directory.in:6
 #: desktop-directories/mate-system.directory.in:5
@@ -167,28 +165,28 @@ msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
-msgstr "ପସନ୍ଦ"
+msgstr "Preferentias"
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
-msgstr "ବ୍ଯକ୍ତିଗତ ପସନ୍ଦ"
+msgstr "Preferentias personal"
 
 #: desktop-directories/mate-system.directory.in:3
 #: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
-msgstr "ତନ୍ତ୍ର"
+msgstr "Systema"
 
 #: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
-msgstr "ତନ୍ତ୍ର ବିନ୍ୟାସ"
+msgstr "Configurationes de systema"
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
-msgstr "ତନ୍ତ୍ର ଉପକରଣ"
+msgstr "Instrumentos de systema"
 
 #: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
-msgstr "ତନ୍ତ୍ର ବିନ୍ଯାସ ଏବଂ ନିରୀକ୍ଷଣ"
+msgstr "Instrumentos pro configurar e surveliar le systema"
 
 #: desktop-directories/mate-system-tools.directory.in:5
 msgid "applications-system"
@@ -196,11 +194,11 @@ msgstr ""
 
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
-msgstr "ସାର୍ବଜନିକ ଅଭିଗମ୍ୟତା"
+msgstr "Accesso universal"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
-msgstr "ସାର୍ବଜନିକ ଅଭିଗମ୍ୟତା ବିନ୍ଯାସ"
+msgstr "Configurationes del accesso universal"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:6
 msgid "preferences-desktop-accessibility"
@@ -208,11 +206,11 @@ msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
-msgstr "ସହାୟକ ବସ୍ତୁ"
+msgstr "Accessorios"
 
 #: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
-msgstr "ଡେସ୍କଟପ୍ ସହାୟକ ବସ୍ତୁ"
+msgstr "Accessorios de scriptorio"
 
 #: desktop-directories/mate-utility.directory.in:5
 msgid "applications-accessories"
@@ -221,7 +219,7 @@ msgstr ""
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
-msgstr "ପ୍ରୟୋଗ"
+msgstr "Applicationes"
 
 #: desktop-directories/mate-menu-applications.directory.in:5
 #: desktop-directories/mate-other.directory.in:5
@@ -230,7 +228,7 @@ msgstr ""
 
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
-msgstr "ବ୍ଯକ୍ତିଗତ ପସନ୍ଦ ଏବଂ ପ୍ରଶାସନିକ ବିନ୍ଯାସ"
+msgstr "Preferentias personal e configurationes de administration"
 
 #: desktop-directories/mate-menu-system.directory.in:5
 msgid "preferences-other"
@@ -238,8 +236,8 @@ msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"
-msgstr "ଅନ୍ଯାନ୍ଯ"
+msgstr "Alteres"
 
 #: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "ପ୍ରୟୋଗ ଯାହାକି ଅନ୍ଯ କୌଣସି ଶ୍ରେଣୀ ସହିତ ଖାପ ଖାଇଲା ନାହିଁ"
+msgstr "Applicationes que non vade ben a altere categorias"
