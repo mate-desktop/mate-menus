@@ -1,3 +1,9 @@
+### mate-menus 1.24.1
+
+  * Translations update
+  * build: silent build warnings for distcheck
+  * Do not collect the translation for Icon
+
 ### mate-menus 1.24.0
 
   * build: show warning flags on configuration summary
