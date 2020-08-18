@@ -1,5 +1,11 @@
 ### mate-menus 1.25.0
 
+  * Translations update
+  * add git.mk to generate .gitignore
+  * build: silent build warnings for distcheck
+  * build: do not override the default value for MATE_COMPILE_WARNINGS
+  * Do not collect the translation for Icon
+
 ### mate-menus 1.24.0
 
   * build: show warning flags on configuration summary
