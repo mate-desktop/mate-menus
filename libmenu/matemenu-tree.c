@@ -46,7 +46,16 @@ enum {
   PROP_MENU_PATH,
   PROP_FLAGS
 };
-
+typedef enum
+{
+  OBJECT_DRAWER,
+  OBJECT_MENU,
+  OBJECT_LAUNCHER,
+  OBJECT_APPLET,
+  OBJECT_ACTION,
+  OBJECT_MENU_BAR,
+  OBJECT_SEPARATOR,
+} ObjectType;
 /* Signals */
 enum
 {
@@ -64,7 +73,7 @@ struct _MateMenuTree
   char *non_prefixed_basename;
   char *path;
   char *canonical_path;
-
+ GPtrArray *collection_applet;
   MateMenuTreeFlags flags;
 
   GSList *menu_file_monitors;
@@ -594,6 +603,11 @@ matemenu_tree_get_property (GObject         *object,
       break;
     }
 }
+static void
+collection_applet_free (char *desktop_name)
+{
+  g_free (desktop_name);
+}
 
 static void
 matemenu_tree_finalize (GObject *object)
@@ -619,14 +633,98 @@ matemenu_tree_finalize (GObject *object)
 
   g_hash_table_destroy (tree->entries_by_id);
   tree->entries_by_id = NULL;
-
+  if (tree->collection_applet != NULL)
+  {
+    g_ptr_array_foreach (tree->collection_applet,(GFunc) collection_applet_free, NULL);
+    g_ptr_array_free (tree->collection_applet, TRUE);
+    tree->collection_applet = NULL;
+  }
   G_OBJECT_CLASS (matemenu_tree_parent_class)->finalize (object);
+}
+static void load_object (char *id,MateMenuTree *self)
+{
+  ObjectType  object_type;
+  char            *object_path;
+  GSettings   *settings;
+  char            *location;
+  char          **str;
+  char            *desktop_name;
+
+  object_path = g_strdup_printf ("/org/mate/panel/objects/%s/", id);
+  settings = g_settings_new_with_path ("org.mate.panel.object", object_path);
+
+  object_type = g_settings_get_enum (settings, "object-type");
+  location    = g_settings_get_string (settings, "launcher-location");
+  if (object_type == OBJECT_LAUNCHER)
+  {
+    const char *basename = g_path_get_basename (location);
+    if (strstr (basename,"-1.") != NULL )
+    {
+      str = g_strsplit (basename, "-1.", -1);
+      desktop_name = g_strdup_printf ("%s.%s", str[0], str[1]);
+      g_ptr_array_add (self->collection_applet, desktop_name);
+      g_strfreev (str);
+    }
+    else
+    {
+      g_ptr_array_add (self->collection_applet, g_strdup(basename));
+    }
+  }
+  g_free (object_path);
+  g_object_unref (settings);
+}
+static gboolean emit_changed_signal (gpointer data)
+{
+  MateMenuTree *self = data;
+  matemenu_tree_force_rebuild (self);
+  matemenu_tree_invoke_monitors (self);
+
+  return FALSE;
+}
+static void
+collection_applet_changed (GSettings    *settings,
+                           gchar        *key,
+                           MateMenuTree *self)
+{
+  gchar **list;
+  gint    i;
+
+  list = g_settings_get_strv (settings, key);
+  self->collection_applet = NULL;
+  self->collection_applet = g_ptr_array_new ();
+  for (i = 0; list[i]; i++)
+  {
+    load_object (list[i], self);
+  }
+  if (list)
+    g_strfreev (list);
+  if(self->loaded)
+    g_idle_add (emit_changed_signal, (gpointer)self);
+}
+static void get_panel_collection_applet (MateMenuTree *self)
+{
+  GSettings  *settings;
+  gchar     **list;
+  gint        i;
+
+  settings = g_settings_new ("org.mate.panel");
+  list = g_settings_get_strv (settings, "object-id-list");
+  g_signal_connect (settings, "changed::object-id-list", G_CALLBACK (collection_applet_changed), self);
+  for (i = 0; list[i]; i++)
+  {
+    load_object (list[i], self);
+  }
+
+  if (list)
+    g_strfreev (list);
 }
 
 static void
 matemenu_tree_init (MateMenuTree *self)
 {
   self->entries_by_id = g_hash_table_new (g_str_hash, g_str_equal);
+ self->collection_applet = g_ptr_array_new ();
+ get_panel_collection_applet (self);
 }
 
 static void
@@ -3133,7 +3231,14 @@ get_by_category_foreach (const char               *file_id,
   if (desktop_entry_has_category (entry, data->category))
     desktop_entry_set_add_entry (data->set, entry, file_id);
 }
-
+static void
+get_by_desktop_foreach (const char               *file_id,
+                        DesktopEntry             *entry,
+                        GetByCategoryForeachData *data)
+{
+  if (g_strcmp0 (file_id, data->category) == 0)
+    desktop_entry_set_add_entry (data->set, entry, file_id);
+}
 static void
 get_by_category (DesktopEntrySet *entry_pool,
 		 DesktopEntrySet *set,
@@ -3148,7 +3253,20 @@ get_by_category (DesktopEntrySet *entry_pool,
 			     (DesktopEntrySetForeachFunc) get_by_category_foreach,
 			     &data);
 }
+static void
+get_by_desktop (DesktopEntrySet *entry_pool,
+                DesktopEntrySet *set,
+                const char      *desktop_name)
+{
+  GetByCategoryForeachData data;
 
+  data.set      = set;
+  data.category = desktop_name;
+
+  desktop_entry_set_foreach (entry_pool,
+			     (DesktopEntrySetForeachFunc) get_by_desktop_foreach,
+			     &data);
+}
 static DesktopEntrySet *
 process_include_rules (MenuLayoutNode  *layout,
 		       DesktopEntrySet *entry_pool)
@@ -3657,6 +3775,14 @@ process_layout (MateMenuTree          *tree,
       matemenu_tree_item_unref (directory);
       return NULL;
     }
+  if (g_strcmp0 (directory->name, "Collection") == 0)
+  {
+    for (int i = 0; i < tree->collection_applet->len; i++)
+    {
+      const char *desktop_name = g_ptr_array_index (tree->collection_applet, i);
+      get_by_desktop (entry_pool, entries, desktop_name);
+    }
+  }
 
   desktop_entry_set_foreach (entries,
                              (DesktopEntrySetForeachFunc) entries_listify_foreach,
