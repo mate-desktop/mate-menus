@@ -138,6 +138,17 @@
     </Include>
   </Menu>   <!-- End System Tools -->
 
+  <!-- Collection-->
+  <Menu>
+    <Name>Collection</Name>
+    <Directory>mate-collection.directory</Directory>
+    <Include>
+      <And>
+        <Category>Collection</Category>
+        <Not><Category>Settings</Category></Not>
+      </And>
+    </Include>
+  </Menu>   <!-- End Collection Tools -->
   <!-- Other -->
   <Menu>
     <Name>Other</Name>

@@ -24,6 +24,7 @@ directory_in_files = \
 	mate-other.directory.in \
 	mate-menu-applications.directory.in \
 	mate-menu-system.directory.in \
+	mate-collection.directory.in \
 	$(directory_in_controlcenterfiles)
 
 directory_DATA = $(directory_in_files:.directory.in=.directory)
