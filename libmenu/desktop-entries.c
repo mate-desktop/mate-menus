@@ -310,7 +310,9 @@ desktop_entry_load (DesktopEntry *entry)
               g_error_free (error);
             }
           else
-            menu_verbose ("Failed to load \"%s\"\n", entry->path);
+            {
+              menu_verbose ("Failed to load \"%s\"\n", entry->path);
+            }
         }
 
       return retval;
