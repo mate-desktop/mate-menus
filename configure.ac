@@ -10,6 +10,7 @@ AC_CONFIG_HEADERS(config.h)
 
 AM_MAINTAINER_MODE
 MATE_MAINTAINER_MODE_DEFINES
+MATE_DEBUG_CHECK([no])
 MATE_COMPILE_WARNINGS
 
 # Before making a release, the LT_VERSION string should be modified.
@@ -50,22 +51,17 @@ if test "x$enable_deprecation_flags" = "xyes"; then
    AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
 
-dnl --enable-debug=(yes|minimum|no)
-AC_ARG_ENABLE(debug,
-              [AC_HELP_STRING([--enable-debug],
-                              [turn on debugging @<:@default=minimum@:>@])],,
-              [enable_debug=minimum])
-if test "$enable_debug" = "yes"; then
-  DEBUG_CFLAGS="-DG_ENABLE_DEBUG"
-else
-  if test "x$enable_debug" = "xno"; then
+dnl --enable-debug=(yes/info/profile/no)
+AS_CASE([$ax_enable_debug],
+  [yes|info], [
+    DEBUG_CFLAGS="-DG_ENABLE_DEBUG"
+  ],
+  [no], [
     DEBUG_CFLAGS="-DG_DISABLE_ASSERT -DG_DISABLE_CHECKS"
-  else
+  ],
+  [
     DEBUG_CFLAGS=""
-    # make sure we have the right string for the configure summary
-    enable_debug="minimum"
-  fi
-fi
+  ])
 AC_SUBST(DEBUG_CFLAGS)
 
 GOBJECT_INTROSPECTION_CHECK([0.6.7])
