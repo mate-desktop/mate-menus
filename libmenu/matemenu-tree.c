@@ -86,6 +86,7 @@ struct _MateMenuTree
 
   guint canonical : 1;
   guint loaded    : 1;
+  GSettings  *settings;
 };
 
 G_DEFINE_TYPE (MateMenuTree, matemenu_tree, G_TYPE_OBJECT)
@@ -177,6 +178,10 @@ static void      matemenu_tree_force_recanonicalize (MateMenuTree       *tree);
 static void      matemenu_tree_invoke_monitors      (MateMenuTree       *tree);
 
 static void matemenu_tree_item_unref_and_unset_parent (gpointer itemp);
+
+static void collection_applet_changed (GSettings    *settings,
+                                       gchar        *key,
+                                       MateMenuTree *self);
 
 typedef enum
 {
@@ -636,6 +641,11 @@ matemenu_tree_finalize (GObject *object)
     g_ptr_array_free (tree->collection_applet, TRUE);
     tree->collection_applet = NULL;
   }
+  g_signal_handlers_disconnect_by_func (tree->settings,
+                                        G_CALLBACK (collection_applet_changed),
+                                        tree);
+
+  g_object_unref (tree->settings);
   G_OBJECT_CLASS (matemenu_tree_parent_class)->finalize (object);
 }
 
@@ -655,24 +665,24 @@ load_object (char         *id,
   location    = g_settings_get_string (settings, "launcher-location");
   if (object_type == OBJECT_LAUNCHER)
   {
-    const char *basename;
+    char *desktop_name;
 
-    basename = g_path_get_basename (location);
-    if (strstr (basename, "-1.") != NULL )
+    if (self->collection_applet == NULL)
+      self->collection_applet = g_ptr_array_new ();
+
+    desktop_name = g_path_get_basename (location);
+    if (strstr (desktop_name, "-1.") != NULL )
     {
       char **str;
-      char  *desktop_name;
 
-      str = g_strsplit (basename, "-1.", -1);
+      str = g_strsplit (desktop_name, "-1.", -1);
+      g_free (desktop_name);
       desktop_name = g_strdup_printf ("%s.%s", str[0], str[1]);
-      g_ptr_array_add (self->collection_applet, desktop_name);
       g_strfreev (str);
     }
-    else
-    {
-      g_ptr_array_add (self->collection_applet, g_strdup (basename));
-    }
+    g_ptr_array_add (self->collection_applet, desktop_name);
   }
+  g_free (location);
   g_free (object_path);
   g_object_unref (settings);
 }
@@ -688,51 +698,44 @@ emit_changed_signal (gpointer data)
 }
 
 static void
+get_panel_collection_applet (MateMenuTree *self)
+{
+  gchar **list;
+  guint   i;
+
+  list = g_settings_get_strv (self->settings, "object-id-list");
+  for (i = 0; list[i]; i++)
+  {
+    load_object (list[i], self);
+  }
+  g_strfreev (list);
+}
+
+static void
 collection_applet_changed (GSettings    *settings,
                            gchar        *key,
                            MateMenuTree *self)
 {
-  gchar **list;
-  gint    i;
-
-  list = g_settings_get_strv (settings, key);
-  self->collection_applet = NULL;
-  self->collection_applet = g_ptr_array_new ();
-  for (i = 0; list[i]; i++)
+  if (self->collection_applet != NULL)
   {
-    load_object (list[i], self);
+    g_ptr_array_foreach (self->collection_applet, (GFunc) g_free, NULL);
+    g_ptr_array_free (self->collection_applet, TRUE);
+    self->collection_applet = NULL;
   }
-  if (list)
-    g_strfreev (list);
-  if (self->loaded)
-    g_idle_add (emit_changed_signal, (gpointer)self);
-}
-
-static void
-get_panel_collection_applet (MateMenuTree *self)
-{
-  GSettings  *settings;
-  gchar     **list;
-  gint        i;
-
-  settings = g_settings_new ("org.mate.panel");
-  list = g_settings_get_strv (settings, "object-id-list");
-  g_signal_connect (settings, "changed::object-id-list", G_CALLBACK (collection_applet_changed), self);
-  for (i = 0; list[i]; i++)
-  {
-    load_object (list[i], self);
-  }
-
-  if (list)
-    g_strfreev (list);
+  get_panel_collection_applet (self);
+  g_idle_add (emit_changed_signal, (gpointer)self);
 }
 
 static void
 matemenu_tree_init (MateMenuTree *self)
 {
   self->entries_by_id = g_hash_table_new (g_str_hash, g_str_equal);
-  self->collection_applet = g_ptr_array_new ();
+  self->collection_applet = NULL;
+  self->settings = g_settings_new ("org.mate.panel");
   get_panel_collection_applet (self);
+  g_signal_connect (self->settings, "changed::object-id-list",
+                    G_CALLBACK (collection_applet_changed),
+                    self);
 }
 
 static void
@@ -3787,7 +3790,7 @@ process_layout (MateMenuTree          *tree,
       matemenu_tree_item_unref (directory);
       return NULL;
     }
-  if (g_strcmp0 (directory->name, "Collection") == 0)
+  if (tree->collection_applet && !g_strcmp0 (directory->name, "Collection"))
     {
       guint i;
       for (i = 0; i < tree->collection_applet->len; i++)
