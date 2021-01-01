@@ -607,12 +607,6 @@ matemenu_tree_get_property (GObject         *object,
 }
 
 static void
-collection_applet_free (char *desktop_name)
-{
-  g_free (desktop_name);
-}
-
-static void
 matemenu_tree_finalize (GObject *object)
 {
   MateMenuTree *tree = MATEMENU_TREE (object);
@@ -638,7 +632,7 @@ matemenu_tree_finalize (GObject *object)
   tree->entries_by_id = NULL;
   if (tree->collection_applet != NULL)
   {
-    g_ptr_array_foreach (tree->collection_applet,(GFunc) collection_applet_free, NULL);
+    g_ptr_array_foreach (tree->collection_applet, (GFunc) g_free, NULL);
     g_ptr_array_free (tree->collection_applet, TRUE);
     tree->collection_applet = NULL;
   }
