@@ -653,8 +653,6 @@ load_object (char         *id,
   char        *object_path;
   GSettings   *settings;
   char        *location;
-  char          **str;
-  char            *desktop_name;
 
   object_path = g_strdup_printf ("/org/mate/panel/objects/%s/", id);
   settings = g_settings_new_with_path ("org.mate.panel.object", object_path);
@@ -668,6 +666,9 @@ load_object (char         *id,
     basename = g_path_get_basename (location);
     if (strstr (basename, "-1.") != NULL )
     {
+      char **str;
+      char  *desktop_name;
+
       str = g_strsplit (basename, "-1.", -1);
       desktop_name = g_strdup_printf ("%s.%s", str[0], str[1]);
       g_ptr_array_add (self->collection_applet, desktop_name);
