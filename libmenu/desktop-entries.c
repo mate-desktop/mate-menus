@@ -55,13 +55,13 @@ typedef struct
   char     *generic_name;
   char     *comment;
   GIcon    *icon;
-	char* full_name;
-	char* exec;
+  char     *full_name;
+  char     *exec;
 
-  guint     nodisplay   : 1;
-  guint     hidden      : 1;
-  guint     showin      : 1;
-	guint terminal:1;
+  guint     nodisplay : 1;
+  guint     hidden    : 1;
+  guint     showin    : 1;
+  guint     terminal  : 1;
 } DesktopEntryDirectory;
 
 struct DesktopEntrySet {
@@ -236,15 +236,9 @@ desktop_entry_load_directory (DesktopEntry  *entry,
   entry_directory->generic_name = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "GenericName", NULL, NULL);
   entry_directory->comment      = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Comment", NULL, NULL);
   entry_directory->icon         = key_file_get_icon (key_file);
-  entry_directory->nodisplay    = g_key_file_get_boolean (key_file,
-                                                          DESKTOP_ENTRY_GROUP,
-                                                          "NoDisplay",
-                                                          NULL);
-  entry_directory->hidden       = g_key_file_get_boolean (key_file,
-                                                          DESKTOP_ENTRY_GROUP,
-                                                          "Hidden",
-                                                          NULL);
-  entry_directory->showin       = key_file_get_show_in (key_file);
+  entry_directory->nodisplay    = g_key_file_get_boolean (key_file, DESKTOP_ENTRY_GROUP, "NoDisplay", NULL) != FALSE;
+  entry_directory->hidden       = g_key_file_get_boolean (key_file, DESKTOP_ENTRY_GROUP, "Hidden", NULL) != FALSE;
+  entry_directory->showin       = key_file_get_show_in (key_file) != FALSE;
 
   return TRUE;
 }
@@ -435,12 +429,13 @@ DesktopEntry* desktop_entry_copy(DesktopEntry* entry)
     {
       DesktopEntryDesktop *desktop_entry = (DesktopEntryDesktop*) entry;
       DesktopEntryDesktop *retval_desktop_entry = (DesktopEntryDesktop*) retval;
-      int i;
 
       retval_desktop_entry->appinfo = g_object_ref (desktop_entry->appinfo);
 
       if (desktop_entry->categories != NULL)
         {
+          gsize i;
+
           i = 0;
           for (; desktop_entry->categories[i]; i++);
 
@@ -630,7 +625,7 @@ gboolean desktop_entry_has_category(DesktopEntry* entry, const char* category)
 void desktop_entry_add_legacy_category(DesktopEntry* entry)
 {
   GQuark *categories;
-  int     i;
+  gsize   i;
   DesktopEntryDesktop *desktop_entry;
 
   g_return_if_fail (entry->type == DESKTOP_ENTRY_DESKTOP);
@@ -771,7 +766,8 @@ static void desktop_entry_set_clear(DesktopEntrySet* set)
     }
 }
 
-int desktop_entry_set_get_count(DesktopEntrySet* set)
+guint
+desktop_entry_set_get_count (DesktopEntrySet *set)
 {
   if (set->hash == NULL)
     return 0;

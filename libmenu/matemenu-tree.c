@@ -109,37 +109,37 @@ struct MateMenuTreeIter
 
 struct MateMenuTreeDirectory
 {
-	MateMenuTreeItem item;
+  MateMenuTreeItem  item;
 
-	DesktopEntry *directory_entry;
-	char         *name;
+  DesktopEntry     *directory_entry;
+  char             *name;
 
-	GSList *entries;
-	GSList *subdirs;
+  GSList           *entries;
+  GSList           *subdirs;
 
-	MenuLayoutValues  default_layout_values;
-	GSList           *default_layout_info;
-	GSList           *layout_info;
-	GSList           *contents;
+  MenuLayoutValues  default_layout_values;
+  GSList           *default_layout_info;
+  GSList           *layout_info;
+  GSList           *contents;
 
-  guint only_unallocated : 1;
-  guint is_nodisplay : 1;
-  guint layout_pending_separator : 1;
-  guint preprocessed : 1;
+  guint             only_unallocated         : 1;
+  guint             is_nodisplay             : 1;
+  guint             layout_pending_separator : 1;
+  guint             preprocessed             : 1;
 
-	/* 16 bits should be more than enough; G_MAXUINT16 means no inline header */
-	guint will_inline_header : 16;
+  /* 16 bits should be more than enough; G_MAXUINT16 means no inline header */
+  guint             will_inline_header       : 16;
 };
 
 struct MateMenuTreeEntry
 {
-  MateMenuTreeItem item;
+  MateMenuTreeItem  item;
 
-  DesktopEntry *desktop_entry;
-  char         *desktop_file_id;
+  DesktopEntry     *desktop_entry;
+  char             *desktop_file_id;
 
-  guint is_excluded : 1;
-  guint is_unallocated : 1;
+  guint             is_excluded    : 1;
+  guint             is_unallocated : 1;
 };
 
 struct MateMenuTreeSeparator
@@ -875,7 +875,7 @@ find_path (MateMenuTreeDirectory *directory,
   slash = strchr (path, G_DIR_SEPARATOR);
   if (slash)
     {
-      name = freeme = g_strndup (path, slash - path);
+      name = freeme = g_strndup (path, (gsize)(slash - path));
       path = slash + 1;
     }
   else
@@ -2529,8 +2529,8 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
       GString        *subdir_path;
       GString        *subdir_relative;
       GSList         *tmp;
-      int             legacy_dir_len;
-      int             relative_path_len;
+      size_t          legacy_dir_len;
+      size_t          relative_path_len;
 
       menu = menu_layout_node_new (MENU_LAYOUT_NODE_MENU);
       menu_layout_node_append_child (parent, menu);
@@ -3003,7 +3003,7 @@ find_submenu (MenuLayoutNode *layout,
   slash = strchr (path, G_DIR_SEPARATOR);
   if (slash != NULL)
     {
-      name = g_strndup (path, slash - path);
+      name = g_strndup (path, (gsize)(slash - path));
       next_path = slash + 1;
       if (*next_path == '\0')
         next_path = NULL;
@@ -3425,7 +3425,7 @@ process_include_rules (MenuLayoutNode  *layout,
   if (set == NULL)
     set = desktop_entry_set_new (); /* create an empty set */
 
-  menu_verbose ("Matched %d entries\n", desktop_entry_set_get_count (set));
+  menu_verbose ("Matched %u entries\n", desktop_entry_set_get_count (set));
 
   return set;
 }
@@ -3605,7 +3605,7 @@ process_layout (MateMenuTree          *tree,
              */
             MenuLayoutNode *rule;
 
-	    menu_verbose ("Processing <Include> (%d entries)\n",
+	    menu_verbose ("Processing <Include> (%u entries)\n",
 			  desktop_entry_set_get_count (entries));
 
             rule = menu_layout_node_get_children (layout_iter);
@@ -3626,7 +3626,7 @@ process_layout (MateMenuTree          *tree,
                 rule = menu_layout_node_get_next (rule);
               }
 
-	    menu_verbose ("Processed <Include> (%d entries)\n",
+	    menu_verbose ("Processed <Include> (%u entries)\n",
 			  desktop_entry_set_get_count (entries));
           }
           break;
@@ -3639,7 +3639,7 @@ process_layout (MateMenuTree          *tree,
              */
             MenuLayoutNode *rule;
 
-	    menu_verbose ("Processing <Exclude> (%d entries)\n",
+	    menu_verbose ("Processing <Exclude> (%u entries)\n",
 			  desktop_entry_set_get_count (entries));
 
             rule = menu_layout_node_get_children (layout_iter);
@@ -3659,7 +3659,7 @@ process_layout (MateMenuTree          *tree,
                 rule = menu_layout_node_get_next (rule);
               }
 
-	    menu_verbose ("Processed <Exclude> (%d entries)\n",
+	    menu_verbose ("Processed <Exclude> (%u entries)\n",
 			  desktop_entry_set_get_count (entries));
           }
           break;
@@ -3738,7 +3738,7 @@ process_layout (MateMenuTree          *tree,
 
   desktop_entry_set_unref (entry_pool);
 
-  directory->only_unallocated = only_unallocated;
+  directory->only_unallocated = only_unallocated != FALSE;
 
   if (!directory->only_unallocated)
     desktop_entry_set_union (allocated, allocated_set);
@@ -4105,7 +4105,7 @@ preprocess_layout_info_subdir_helper (MateMenuTree          *tree,
                * higher than that (would be crazy), we just consider it's
                * unlimited */
               if (layout_values->inline_limit < G_MAXUINT16)
-                subdir->will_inline_header = layout_values->inline_limit;
+                subdir->will_inline_header = (guint16) layout_values->inline_limit;
               else
                 subdir->will_inline_header = 0;
             }

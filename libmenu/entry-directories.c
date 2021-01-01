@@ -863,7 +863,7 @@ typedef gboolean (*EntryDirectoryForeachFunc) (EntryDirectory* ed, DesktopEntry*
 static gboolean entry_directory_foreach_recursive(EntryDirectory* ed, CachedDir* cd, GString* relative_path, EntryDirectoryForeachFunc func, DesktopEntrySet* set, gpointer user_data)
 {
   GSList *tmp;
-  int     relative_path_len;
+  gsize   relative_path_len;
 
   if (cd->deleted)
     return TRUE;
