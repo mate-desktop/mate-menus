@@ -398,8 +398,8 @@ static gboolean cached_dir_remove_subdir(CachedDir* dir, const char* basename)
     {
       subdir->deleted = TRUE;
 
-      cached_dir_unref (subdir);
       dir->subdirs = g_slist_remove (dir->subdirs, subdir);
+      cached_dir_unref (subdir);
 
       return TRUE;
     }
