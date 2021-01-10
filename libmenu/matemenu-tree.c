@@ -656,20 +656,20 @@ load_object (char         *id,
   ObjectType   object_type;
   char        *object_path;
   GSettings   *settings;
-  char        *location;
 
   object_path = g_strdup_printf ("/org/mate/panel/objects/%s/", id);
   settings = g_settings_new_with_path ("org.mate.panel.object", object_path);
 
   object_type = g_settings_get_enum (settings, "object-type");
-  location    = g_settings_get_string (settings, "launcher-location");
   if (object_type == OBJECT_LAUNCHER)
   {
+    char *location;
     char *desktop_name;
 
     if (self->collection_applet == NULL)
       self->collection_applet = g_ptr_array_new ();
 
+    location = g_settings_get_string (settings, "launcher-location");
     desktop_name = g_path_get_basename (location);
     if (strstr (desktop_name, "-1.") != NULL )
     {
@@ -681,8 +681,8 @@ load_object (char         *id,
       g_strfreev (str);
     }
     g_ptr_array_add (self->collection_applet, desktop_name);
+    g_free (location);
   }
-  g_free (location);
   g_free (object_path);
   g_object_unref (settings);
 }
