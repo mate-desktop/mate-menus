@@ -1,6 +1,7 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 desktop-directories/mate-audio-video.directory.in
+desktop-directories/mate-collection.directory.in
 desktop-directories/mate-development.directory.in
 desktop-directories/mate-education.directory.in
 desktop-directories/mate-game.directory.in
