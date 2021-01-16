@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2020-08-18 21:35+0200\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,14 @@ msgstr ""
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
+msgstr ""
+
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr ""
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
