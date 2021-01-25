@@ -19,7 +19,9 @@
 
 #include <config.h>
 #include <glib/gi18n.h>
+#ifdef ENABLE_NLS
 #include <locale.h>
+#endif
 
 #include "matemenu-tree.h"
 
@@ -202,7 +204,13 @@ main (int argc, char **argv)
 	MateMenuTreeFlags      flags;
 	GError             *error = NULL;
 
+#ifdef ENABLE_NLS
 	setlocale(LC_ALL, "");
+	bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
+	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+	textdomain (GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
+
 	options_context = g_option_context_new(_("- test MATE's implementation of the Desktop Menu Specification"));
 	g_option_context_add_main_entries(options_context, options, GETTEXT_PACKAGE);
 	g_option_context_parse(options_context, &argc, &argv, NULL);

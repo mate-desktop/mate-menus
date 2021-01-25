@@ -24,9 +24,9 @@ MATE_COMPILE_WARNINGS
 LIB_MENU_LT_VERSION=6:9:4
 AC_SUBST(LIB_MENU_LT_VERSION)
 
-AM_GNU_GETTEXT_VERSION([0.19.8])
-AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_CONDITIONAL([USE_NLS], [test "x${USE_NLS}" = "xyes"])
 
 GETTEXT_PACKAGE=AC_PACKAGE_NAME
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Name of default gettext domain])
@@ -103,5 +103,6 @@ echo "
 
         Turn on debugging:            ${ax_enable_debug}
         Build introspection support:  ${found_introspection}
+        Native Language support:      ${USE_NLS}
 
 "
