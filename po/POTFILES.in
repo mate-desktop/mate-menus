@@ -21,3 +21,4 @@ desktop-directories/mate-utility.directory.in
 desktop-directories/mate-menu-applications.directory.in
 desktop-directories/mate-menu-system.directory.in
 desktop-directories/mate-other.directory.in
+util/test-menu-spec.c

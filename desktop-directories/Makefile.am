@@ -30,7 +30,11 @@ directory_in_files = \
 directory_DATA = $(directory_in_files:.directory.in=.directory)
 
 %.directory: %.directory.in
+if USE_NLS
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp $< $@
+endif
 
 EXTRA_DIST= $(directory_in_files)
 
