@@ -38,6 +38,6 @@ endif
 
 EXTRA_DIST= $(directory_in_files)
 
-DISTCLEANFILES = $(directory_DATA)
+CLEANFILES = $(directory_DATA)
 
 -include $(top_srcdir)/git.mk
