@@ -51,17 +51,18 @@ if test "x$enable_deprecation_flags" = "xyes"; then
    AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
 
-dnl --enable-debug=(yes/info/profile/no)
-AS_CASE([$ax_enable_debug],
-  [yes|info], [
-    DEBUG_CFLAGS="-DG_ENABLE_DEBUG"
-  ],
-  [no], [
+dnl ---------------------------------------------------------------------------
+dnl - logging
+dnl ---------------------------------------------------------------------------
+if test "$ax_enable_debug" = "yes"; then
+  DEBUG_CFLAGS="-DG_ENABLE_DEBUG"
+else
+  if test "x$ax_enable_debug" = "xno"; then
     DEBUG_CFLAGS="-DG_DISABLE_ASSERT -DG_DISABLE_CHECKS"
-  ],
-  [
+  else
     DEBUG_CFLAGS=""
-  ])
+  fi
+fi
 AC_SUBST(DEBUG_CFLAGS)
 
 GOBJECT_INTROSPECTION_CHECK([0.6.7])
@@ -100,7 +101,7 @@ echo "
         Maintainer mode:              ${USE_MAINTAINER_MODE}
         Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
-        Turn on debugging:            ${enable_debug}
+        Turn on debugging:            ${ax_enable_debug}
         Build introspection support:  ${found_introspection}
 
 "
