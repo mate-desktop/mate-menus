@@ -5,15 +5,15 @@
 # 
 # Translators:
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Kazakh (https://www.transifex.com/mate/teams/13566/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,8 +29,12 @@ msgstr "Аудио және видео"
 msgid "Multimedia menu"
 msgstr "Мультимедиа"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "Жинақ"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -41,17 +45,9 @@ msgstr "Бағдарламалау"
 msgid "Tools for software development"
 msgstr "Бағдарламалауға арналған құралдар"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Оқыту"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -61,10 +57,6 @@ msgstr "Ойындар"
 msgid "Games and amusements"
 msgstr "Ойын-сауық"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Графика"
@@ -72,10 +64,6 @@ msgstr "Графика"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Графикалық қолданбалар"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -85,10 +73,6 @@ msgstr "Құрылғылар"
 msgid "Settings for several hardware devices"
 msgstr "Құрылғылардың баптаулары"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Интернет пен желі"
@@ -96,10 +80,6 @@ msgstr "Интернет пен желі"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "Желілік баптаулар"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -109,11 +89,6 @@ msgstr "Сыртқы түрі"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Жұмыс үстелін көркейтетін баптаулар"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "Интернет"
@@ -122,10 +97,6 @@ msgstr "Интернет"
 msgid "Programs for Internet access such as web and email"
 msgstr "Интернетті қолдануға арналған бағдарламалар (пошта, браузер, т.б.)"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Кеңселік"
@@ -133,10 +104,6 @@ msgstr "Кеңселік"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Кеңселік қолданбалар"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -147,10 +114,6 @@ msgstr "Жеке"
 msgid "Personal settings"
 msgstr "Жеке баптаулар"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "Әкімшілік"
@@ -158,11 +121,6 @@ msgstr "Әкімшілік"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Жүйелік баптауларды өзгерту (барлық пайдаланушылар үшін)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -189,10 +147,6 @@ msgstr "Жүйелік саймандар"
 msgid "System configuration and monitoring"
 msgstr "Жүйені баптау мен бақылау"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "Арнайы мүмкіндіктер"
@@ -200,10 +154,6 @@ msgstr "Арнайы мүмкіндіктер"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "Арнайы мүмкіндіктер баптаулары"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -213,27 +163,14 @@ msgstr "Қалыпты"
 msgid "Desktop accessories"
 msgstr "Қалыпты қолданбалар"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Қолданбалар"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "Жеке мен әкімшілік баптаулар"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

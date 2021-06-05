@@ -5,15 +5,15 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2021\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,9 +29,13 @@ msgstr "Звук и снимци"
 msgid "Multimedia menu"
 msgstr "Мултимедијални изборник"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
-msgstr "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "Збирка"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
+msgstr "Најчешће коришћене пречице"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
@@ -41,17 +45,9 @@ msgstr "Програмирање"
 msgid "Tools for software development"
 msgstr "Алати за развој софтвера"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr "applications-development"
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Образовање"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr "applications-science"
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -61,10 +57,6 @@ msgstr "Игре"
 msgid "Games and amusements"
 msgstr "Игре и забава"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr "applications-games"
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Графика"
@@ -72,10 +64,6 @@ msgstr "Графика"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Графички програми"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr "applications-graphics"
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -85,10 +73,6 @@ msgstr "Хардвер"
 msgid "Settings for several hardware devices"
 msgstr "Подешавања за неке уређаје"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr "preferences-desktop-peripherals"
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Интернет и мрежа"
@@ -96,10 +80,6 @@ msgstr "Интернет и мрежа"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "Мрежна подешавања"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr "preferences-system-network"
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -109,11 +89,6 @@ msgstr "Изглед и понашање"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Подешавање изгледа и понашања радног окружења"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr "preferences-desktop"
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "Интернет"
@@ -122,10 +97,6 @@ msgstr "Интернет"
 msgid "Programs for Internet access such as web and email"
 msgstr "Програми за приступ Интернету као што је веб и ел. пошта"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr "applications-internet"
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Канцеларија"
@@ -133,10 +104,6 @@ msgstr "Канцеларија"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Канцеларијски програми"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr "applications-office"
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -147,10 +114,6 @@ msgstr "Лично"
 msgid "Personal settings"
 msgstr "Лична подешавања"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr "preferences-desktop-personal"
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "Администрација"
@@ -158,11 +121,6 @@ msgstr "Администрација"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Промените системска подешавања (утиче на све кориснике)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr "preferences-system"
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -189,10 +147,6 @@ msgstr "Системске алатке"
 msgid "System configuration and monitoring"
 msgstr "Подешавање и праћење система"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr "applications-system"
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "Универзални приступ"
@@ -200,10 +154,6 @@ msgstr "Универзални приступ"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "Подешавања универзалног приступа"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -213,27 +163,14 @@ msgstr "Алатке"
 msgid "Desktop accessories"
 msgstr "Алатке окружења"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr "applications-accessories"
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Програми"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr "applications-other"
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "Личне поставке и администраторска подешавања"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr "preferences-other"
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

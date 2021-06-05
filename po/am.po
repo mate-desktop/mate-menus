@@ -5,14 +5,15 @@
 # 
 # Translators:
 # samson <sambelet@yahoo.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: samson <sambelet@yahoo.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Amharic (https://www.transifex.com/mate/teams/13566/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,8 +29,12 @@ msgstr "ድምፅ & ቪዲዮ"
 msgid "Multimedia menu"
 msgstr "ብዙሀን መገናኛ ዝርዝር "
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "ስብስብ"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -40,17 +45,9 @@ msgstr "ፕሮግራም"
 msgid "Tools for software development"
 msgstr "የ ሶፍትዌር ማሳደጊያ መሳሪያዎች "
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "ትምህርት"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -60,10 +57,6 @@ msgstr "ጨዋታዎች"
 msgid "Games and amusements"
 msgstr "ጨዋታዎች እና መዝናኛዎች"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "ንድፎች"
@@ -71,10 +64,6 @@ msgstr "ንድፎች"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "የንድፍ መተግበሪያ"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -84,10 +73,6 @@ msgstr "ጠንካራ አካል "
 msgid "Settings for several hardware devices"
 msgstr "ለበርካታ ጠንካራ አካሎች ማሰጃዎች "
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "ኢንተርኔት እና ኔትዎርክ"
@@ -95,10 +80,6 @@ msgstr "ኢንተርኔት እና ኔትዎርክ"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "ኔትዎርክን-የሚዛመዱ ማሰናጃዎች"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -108,11 +89,6 @@ msgstr "ይመልከቱ እና ይዳብሱ"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "የዴስክቶፕ አቀራረብ እና ባህሪ መቆጣጠሪያ ማሰናጃዎች "
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "ኢንተርኔት "
@@ -121,10 +97,6 @@ msgstr "ኢንተርኔት "
 msgid "Programs for Internet access such as web and email"
 msgstr "ለኢንተርኔት መድረሻ ፕሮግራሞች እንደ ድህረ ገጽ እና ኢሜይል "
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "ቢሮ "
@@ -132,10 +104,6 @@ msgstr "ቢሮ "
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "የ ቢሮ መተግበሪያዎች "
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -146,10 +114,6 @@ msgstr "የግል "
 msgid "Personal settings"
 msgstr "የግል ማሰናጃዎች"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "አስተዳዳሪ"
@@ -157,11 +121,6 @@ msgstr "አስተዳዳሪ"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "ስርአቱን - ሙሉ መቀየሪያ ማሰናጃዎች (ተጽእኖው በሁሉም ተጠቃሚ ላይ ነው)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -188,10 +147,6 @@ msgstr "የስርአቱ መሳሪያዎች"
 msgid "System configuration and monitoring"
 msgstr "ስርአት ማዋቀሪያ እና መቆጣጠሪያ "
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "አለም አቀፍ መድረሻ "
@@ -199,10 +154,6 @@ msgstr "አለም አቀፍ መድረሻ "
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "አለም አቀፍ መድረሻ ማሰናጃዎች "
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -212,27 +163,14 @@ msgstr "ተጨማሪዎች"
 msgid "Desktop accessories"
 msgstr "የዴስክቶፕ ተጨማሪዎች"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "መተግበሪያዎች "
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "የግል ምርጫዎች እና የአስተዳዳሪ ማሰናጃዎች "
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

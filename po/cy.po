@@ -9,9 +9,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
 "Last-Translator: ciaran, 2018\n"
 "Language-Team: Welsh (https://www.transifex.com/mate/teams/13566/cy/)\n"
@@ -29,8 +29,12 @@ msgstr "Sain a fideo"
 msgid "Multimedia menu"
 msgstr "Dewislen amlgyfrwng"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr ""
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -41,17 +45,9 @@ msgstr "Rhaglennu"
 msgid "Tools for software development"
 msgstr "Offer datblygu meddalwedd"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Addysg"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -61,10 +57,6 @@ msgstr "Gemau"
 msgid "Games and amusements"
 msgstr "Gemau a difyrrwch"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Graffeg"
@@ -72,10 +64,6 @@ msgstr "Graffeg"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Rhaglenni graffeg"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -85,10 +73,6 @@ msgstr "Caledwedd"
 msgid "Settings for several hardware devices"
 msgstr "Gosodiadau dyfeisiau caledwedd"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Y we a rhwydweithiau"
@@ -96,10 +80,6 @@ msgstr "Y we a rhwydweithiau"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "Gosodiadau rhwydweithiau"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -109,11 +89,6 @@ msgstr "Golwg a naws"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Gosodiadau i reoli golwg ac ymddygiad y bwrdd gwaith"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "Rhyngrwyd"
@@ -122,10 +97,6 @@ msgstr "Rhyngrwyd"
 msgid "Programs for Internet access such as web and email"
 msgstr "Rhaglenni ar gyfer mynediad i'r rhyngrwyd megis y we ac e-bost"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Swyddfa"
@@ -133,10 +104,6 @@ msgstr "Swyddfa"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Rhaglenni'r swyddfa"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -147,10 +114,6 @@ msgstr "Personol"
 msgid "Personal settings"
 msgstr "Gosodiadau personol"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "Gweinyddiaeth"
@@ -158,11 +121,6 @@ msgstr "Gweinyddiaeth"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Newid gosodiadau'r system gyfan (yn effeithio ar bob defnyddiwr)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -189,10 +147,6 @@ msgstr "Offer system"
 msgid "System configuration and monitoring"
 msgstr "Ffurfweddu a monitro'r system"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "Hygyrchedd"
@@ -200,10 +154,6 @@ msgstr "Hygyrchedd"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "Gosodiadau hygyrchedd"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -213,27 +163,14 @@ msgstr "Ategolion"
 msgid "Desktop accessories"
 msgstr "Ategolion i'r bwrdd gwaith"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Rhaglenni"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "Hoffterau personol a gosodiadau gweinyddol"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

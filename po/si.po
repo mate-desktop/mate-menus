@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Sinhala (https://www.transifex.com/mate/teams/13566/si/)\n"
@@ -28,8 +28,12 @@ msgstr "ශබ්ද සහ දෘශ්‍ය"
 msgid "Multimedia menu"
 msgstr "බහුමාද්‍ය මෙනුව"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr ""
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -40,17 +44,9 @@ msgstr "කේතරචනය"
 msgid "Tools for software development"
 msgstr "මෘදුකාංග සංවර්ධන මෙවලම්"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "අධ්‍යාපනිකපනික"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -60,10 +56,6 @@ msgstr "ක්‍රිඩා"
 msgid "Games and amusements"
 msgstr "ක්‍රිඩා සහ විනොදාශ්වාද"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "චිත්‍ර"
@@ -71,10 +63,6 @@ msgstr "චිත්‍ර"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "චිත්‍රක යෙදුම්"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -84,10 +72,6 @@ msgstr "දෘඩාංග"
 msgid "Settings for several hardware devices"
 msgstr "විවිධ දෘඩාංග උපාංග සදහා සැකසුම්"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "අන්තර්ජාලය සහ ජාලය"
@@ -95,10 +79,6 @@ msgstr "අන්තර්ජාලය සහ ජාලය"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "ජාලය සම්බන්ද සැකසුම්"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -108,11 +88,6 @@ msgstr "පෙනුම සහ දැනිම"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "මුලිකතිතයෙ පෙනුම සහ ක්‍රියාකාරිත්වය පාලනය කරන්නාවු සැකසුම්්"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "අන්තර්ජාලය"
@@ -121,10 +96,6 @@ msgstr "අන්තර්ජාලය"
 msgid "Programs for Internet access such as web and email"
 msgstr "අන්තර්ජාලය පිවිසුමට වියුණු සහ ඉලෙක්ට්‍රොනික තැපෑල වැනි කේතයන්"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "කාර්‍යයාලීය"
@@ -132,10 +103,6 @@ msgstr "කාර්‍යයාලීය"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "කාර්‍යාලිය යෙදුම්"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -146,10 +113,6 @@ msgstr "පුද්ගලික"
 msgid "Personal settings"
 msgstr "පුද්ගලික සැකසුම්"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "පරිපාලනය"
@@ -157,11 +120,6 @@ msgstr "පරිපාලනය"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "පද්ධති පුරා සැකසුම් වෙනස් කරන්න (සියළුම පරිශීලකයන්ට බලපානු ඇත)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -188,10 +146,6 @@ msgstr "පද්දති මෙවලම්"
 msgid "System configuration and monitoring"
 msgstr "පද්දති සුසර කිරිම සහ නිරික්ෂණය"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "විශ්ව පිවිසුම"
@@ -199,10 +153,6 @@ msgstr "විශ්ව පිවිසුම"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "විශ්ව පිවිසුම් සැකසුම්"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -212,27 +162,14 @@ msgstr "උපාංග"
 msgid "Desktop accessories"
 msgstr "මූලික තිරය උපාංග"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "යෙදුම්"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "පුත්ගලික අභිප්‍රේත සහ පාලන සැකසුම්"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

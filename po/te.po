@@ -5,15 +5,15 @@
 # 
 # Translators:
 # ప్రవీణ్ ఇళ్ళ <mail2ipn@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Telugu (https://www.transifex.com/mate/teams/13566/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,8 +29,12 @@ msgstr "ధ్వని మరియు దృశ్యం"
 msgid "Multimedia menu"
 msgstr "బహుళమాధ్యమాల జాబితా"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "సంపుటము"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -41,17 +45,9 @@ msgstr "కార్యలేఖనం"
 msgid "Tools for software development"
 msgstr "కార్యరూపకాలని తయారు చేయుటకు పనిముట్లు"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "విద్య"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -61,10 +57,6 @@ msgstr "ఆటలు"
 msgid "Games and amusements"
 msgstr "ఆటలు మరియు వినోదకాలు"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "రేఖాచిత్రాలు"
@@ -72,10 +64,6 @@ msgstr "రేఖాచిత్రాలు"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "రేఖాచిత్ర అనువర్తనాలు"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -85,10 +73,6 @@ msgstr "హార్డ్‌వేర్"
 msgid "Settings for several hardware devices"
 msgstr "పలు హార్డ్‌వేర్ పరికరాల కోసం అమరికలు"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "అంతర్జాలం మరియు జాలం"
@@ -96,10 +80,6 @@ msgstr "అంతర్జాలం మరియు జాలం"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "నెట్వర్క్ సంబంధిత అమరికలు"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -109,11 +89,6 @@ msgstr "రూపురేఖలు"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "రంగస్థల రూపం మరియు ప్రవర్తనను నియంత్రణ చేయు అమరికలు"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "అంతర్జాలం"
@@ -122,10 +97,6 @@ msgstr "అంతర్జాలం"
 msgid "Programs for Internet access such as web and email"
 msgstr "అంతర్జాల సాంగత్యం ఏర్పరుచు కార్యక్రమాలు"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "కార్యాలయం"
@@ -133,10 +104,6 @@ msgstr "కార్యాలయం"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "కార్యాలయ అనువర్తనాలు"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -147,10 +114,6 @@ msgstr "వ్యక్తిగతం"
 msgid "Personal settings"
 msgstr "వ్యక్తిగత అమరికలు"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "నిర్వహణ"
@@ -160,11 +123,6 @@ msgid "Change system-wide settings (affects all users)"
 msgstr ""
 "వ్యవస్థకు సంబందించిన అన్ని అమరికలను మార్చు (ఈ మార్పులు అందరు వినియోగ దారులకు"
 " వమర్చబడతయి)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -191,10 +149,6 @@ msgstr "వ్యవస్థ పనిముట్లు"
 msgid "System configuration and monitoring"
 msgstr "వ్యవస్థ స్వరూపణం మరియు పర్యవేక్షణ"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "సార్వత్రిక ప్రాప్తి"
@@ -202,10 +156,6 @@ msgstr "సార్వత్రిక ప్రాప్తి"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "సార్వత్రిక ప్రాప్తి అమరికలు"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -215,27 +165,14 @@ msgstr "సహాయకాలు"
 msgid "Desktop accessories"
 msgstr "రంగస్థల సహాయకాలు"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "అనువర్తనాలు"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "వ్యక్తిగత అభిరుచులు మరియు నిర్వహణ అమరికలు"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

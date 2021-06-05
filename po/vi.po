@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Duy Truong Nguyen <truongap.ars@gmail.com>, 2018
 # Meongu Ng. <meongu@gmail.com>, 2018
 # Horazone Detex <thmmt2017d@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Horazone Detex <thmmt2017d@gmail.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Vietnamese (https://www.transifex.com/mate/teams/13566/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,8 +31,12 @@ msgstr "Âm thanh và Ảnh động"
 msgid "Multimedia menu"
 msgstr "Trình đơn Đa phương tiện"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "Tập hợp"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -43,17 +47,9 @@ msgstr "Lập trình"
 msgid "Tools for software development"
 msgstr "Công cụ phát triển phần mềm"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Giáo dục"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -63,10 +59,6 @@ msgstr "Trò chơi"
 msgid "Games and amusements"
 msgstr "Trò chơi và giải trí"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Đồ họa"
@@ -74,10 +66,6 @@ msgstr "Đồ họa"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Ứng dụng đồ họa"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -87,10 +75,6 @@ msgstr "Phần cứng"
 msgid "Settings for several hardware devices"
 msgstr "Thiết lập cho các thiết bị phần cứng"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Internet và mạng"
@@ -99,10 +83,6 @@ msgstr "Internet và mạng"
 msgid "Network-related settings"
 msgstr "Thiết lập mạng"
 
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
-
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
 msgstr "Sắc thái"
@@ -110,11 +90,6 @@ msgstr "Sắc thái"
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Thiết lập điều khiển diện mạo và cách ứng xử của hệ thống"
-
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
 
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
@@ -125,10 +100,6 @@ msgid "Programs for Internet access such as web and email"
 msgstr ""
 "Chương trình truy cập Mạng như trình duyệt và trình nhận/gửi thư điện tử"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Văn phòng"
@@ -136,10 +107,6 @@ msgstr "Văn phòng"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Ứng dụng văn phòng"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -150,10 +117,6 @@ msgstr "Cá nhân"
 msgid "Personal settings"
 msgstr "Thiết lập cá nhân"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "Quản lý"
@@ -161,11 +124,6 @@ msgstr "Quản lý"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Thay đổi thiết lập cho toàn hệ thống (cho mọi người dùng)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -192,10 +150,6 @@ msgstr "Công cụ hệ thống"
 msgid "System configuration and monitoring"
 msgstr "Cấu hình và theo dõi hệ thống"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "Truy cập hoàn toàn"
@@ -203,10 +157,6 @@ msgstr "Truy cập hoàn toàn"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "Thiết lập Truy cập Hoàn toàn"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -216,27 +166,14 @@ msgstr "Bổ trợ"
 msgid "Desktop accessories"
 msgstr "Bổ trợ môi trường"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Ứng dụng"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "Thiết lập quản lý và Tùy thích cá nhân"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

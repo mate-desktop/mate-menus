@@ -4,17 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Yogesh K S <yogesh@karnatakaeducation.org.in>, 2018
-# karthik holla <karthikholla87@gmail.com>, 2018
+# Sai Vinoba <saivinoba@sumati.net>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: karthik holla <karthikholla87@gmail.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Kannada (https://www.transifex.com/mate/teams/13566/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,14 +23,18 @@ msgstr ""
 
 #: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
-msgstr "ಧ್ವನಿ ಹಾಗು ದೃಶ್ಯ"
+msgstr "ಉಲಿಪು ಹಾಗು ವಿಡಿಯೋ"
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
-msgstr "ಮಲ್ಟಿಮೀಡಿಯಾ ಅಂಶಪಟ್ಟಿ"
+msgstr "ಹಲವೊಯ್ಯುಗೆ ಪಟ್ಟಿ"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "ಸಂಗ್ರಹ"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -40,19 +43,11 @@ msgstr "ಪ್ರೊಗ್ರಾಮಿಂಗ್"
 
 #: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
-msgstr "ತಂತ್ರಾಂಶ ವಿಕಸನೆಗಾಗಿನ ಉಪಕರಣಗಳು"
-
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
+msgstr "ಸಾಫ್ಟ್ವೇರ್ ಬೆಳವಣಿಗೆಗಾಗಿನ ಮುಟ್ಟುಗಳು"
 
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
-msgstr "ಶಿಕ್ಷಣ"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
+msgstr "ಕಲಿಕೆ"
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -60,47 +55,31 @@ msgstr "ಆಟಗಳು"
 
 #: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
-msgstr "ಆಟಗಳು ಹಾಗು ರಂಜನೆಗಳು"
-
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
+msgstr "ಆಟಗಳು ಹಾಗು ಚೆಲ್ಲಗಳು"
 
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
-msgstr "ಗ್ರಾಫಿಕ್ಸ್"
+msgstr "ಎಣ್ತಿಟ್ಟ"
 
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
-msgstr "ಗ್ರಾಫಿಕ್ಸ್ ಅನ್ವಯಗಳು"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
+msgstr "ಎಣ್ತಿಟ್ಟ ಬಳಕಗಳು"
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
-msgstr "ಯಂತ್ರಾಂಶ"
+msgstr "ಹಾರ್ಡ್ವೇರ್"
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
-msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಿದ್ಧತೆಗಳು"
-
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
+msgstr "ಹಲವಾರು ಹಾರ್ಡ್ವೇರ್ ಸಾಧನಗಳಿಗಾಗಿನ ಅಳವಡಿಕೆಗಳು"
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "ಅಂತರಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
+msgstr "ಮಿಂಬಲೆ ಹಾಗು ತಡಿಕೆ"
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
-msgstr "ಜಾಲಬಂಧ-ಸಂಬಂಧಿತ ಸಿದ್ಧತೆಗಳು"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
+msgstr "ತಡಿಕೆಯ ಅಳವಡಿಕೆಗಳು"
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -108,140 +87,95 @@ msgstr "ನೋಟ ಹಾಗು ಮಾಟ"
 
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ಗಣಕತೆರೆಯ ಸ್ವರೂಪ ಹಾಗು ವರ್ತನೆಯನ್ನು ನಿಯಂತ್ರಿಸುವ ಸಿದ್ಧತೆಗಳು"
-
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
+msgstr "ಎಣಿಕತೆರೆಯ ತೋರಿಕೆ ಹಾಗು ನಡವಳಿಕೆಯನ್ನು ಹತೋಟಿಸುವ ಅಳವಡಿಕೆಗಳು"
 
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
-msgstr "ಅಂತರಜಾಲ"
+msgstr "ಮಿಂಬಲೆ"
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "ಜಾಲ ಹಾಗು ಇಮೈಲಿನಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
-
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
+msgstr "ಬಲೆ ಹಾಗು ಮಿಂಚೆಯಂತ ಮಿಂಬಲೆಯನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
-msgstr "ಆಫೀಸ್"
+msgstr "ಕೆಲಸದೆಡೆ"
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
-msgstr "ಆಫೀಸ್ ಅನ್ವಯಗಳು"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
+msgstr "ಕೆಲಸದೆಡೆ ಬಳಕಗಳು"
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
-msgstr "ವೈಯಕ್ತಿಕ"
+msgstr "ತನ್ನ"
 
 #: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
-msgstr "ವೈಯಕ್ತಿಕ ಸಿದ್ಧತೆಗಳು"
-
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
+msgstr "ತನ್ನ ಅಳವಡಿಕೆಗಳು"
 
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
-msgstr "ನಿರ್ವಹಣೆ"
+msgstr "ಆಡಳಿತ"
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
-msgstr ""
-"ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ "
-"ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
+msgstr "ಏರ್ಪಾಟಿನೆಲ್ಲೆಡೆ ಅಳವಡಿಕೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಸುಗರನ್ನೂ ನಾಟುತ್ತದೆ)"
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
-msgstr "ಆದ್ಯತೆಗಳು"
+msgstr "ಒಲವುಗಳು"
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
-msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು"
+msgstr "ತನ್ನ ಒಲವುಗಳು"
 
 #: desktop-directories/mate-system.directory.in:3
 #: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
-msgstr "ವ್ಯವಸ್ಥೆ"
+msgstr "ಏರ್ಪಾಡು"
 
 #: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
-msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
+msgstr "ಏರ್ಪಾಡಿನ ಅಳವಡಿಕೆಗಳು"
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
-msgstr "ವ್ಯವಸ್ಥೆಯ ಉಪಕರಣಗಳು"
+msgstr "ಏರ್ಪಾಡಿನ ಮುಟ್ಟುಗಳು"
 
 #: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
-msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂರಚನೆ ಹಾಗು ಪರಿವೀಕ್ಷಣೆ"
-
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
+msgstr "ಏರ್ಪಾಡಿನ ಅಣಿ ಹಾಗು ಮೇಲ್ನೋಟ"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
-msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ"
+msgstr "ಎಲ್ಲೆಡೆಯ ನಿಲುಕಣೆ"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
-msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ ಸಿದ್ಧತೆಗಳು"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
+msgstr "ಎಲ್ಲೆಡೆಯ ನಿಲುಕಣೆ ಅಳವಡಿಕೆಗಳು"
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
-msgstr "ಸಲಕರಣೆಗಳು"
+msgstr "ನೆರಬಿಡಿಗಳು"
 
 #: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
-msgstr "ಗಣಕತೆರೆಯ ಸಲಕರಣೆಗಳು"
-
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
+msgstr "ಎಣಿಕತೆರೆಯ ನೆರಬಿಡಿಗಳು"
 
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
-msgstr "ಅನ್ವಯಗಳು"
-
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
+msgstr "ಬಳಕಗಳು"
 
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
-msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು ಹಾಗು ನಿರ್ವಹಣಾ ಸಿದ್ಧತೆಗಳು"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
+msgstr "ತನ್ನ ಒಲವುಗಳು ಹಾಗು ಆಡಳಿತದ ಅಳವಡಿಕೆಗಳು"
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"
-msgstr "ಇತರೆ"
+msgstr "ಬೇರೆ"
 
 #: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "ಬೇರೆ ವರ್ಗಗಳಿಗೆ ಸೇರದೇ ಇರುವಂತಹ ಅನ್ವಯಗಳು"
+msgstr "ಬೇರೆ ಗುಂಪುಗಳಿಗೆ ಸೇರದೇ ಇರುವಂತಹ ಬಳಕಗಳು"

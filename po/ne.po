@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Sven Keeter <sven.keeter@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Sven Keeter <sven.keeter@gmail.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Nepali (https://www.transifex.com/mate/teams/13566/ne/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,8 +29,12 @@ msgstr "ध्वनि र भिडियो"
 msgid "Multimedia menu"
 msgstr "मल्टिमिडिया मेनु"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "संङ्कलन"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -41,17 +45,9 @@ msgstr "प्रोग्रामिङ"
 msgid "Tools for software development"
 msgstr "सफ्टवेर विकासका लागि उपकरण"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "शिक्षा"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -61,10 +57,6 @@ msgstr "खेल"
 msgid "Games and amusements"
 msgstr "खेल र मनोरञ्जन"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "ग्राफिक्स"
@@ -72,10 +64,6 @@ msgstr "ग्राफिक्स"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "ग्राफिक्स अनुप्रयोग"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -85,10 +73,6 @@ msgstr "हार्डवेयर"
 msgid "Settings for several hardware devices"
 msgstr "विभिन्न हार्डवेयर यन्त्रका लागि सेटिङ"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "इन्टरनेट र सञ्जाल"
@@ -96,10 +80,6 @@ msgstr "इन्टरनेट र सञ्जाल"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "सञ्जाल सम्बन्धि सेटिङ"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -109,11 +89,6 @@ msgstr "हेर्नुहोस् अनुभव गर्नुहोस�
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "डेस्कटप देखावट र व्यवहार नियन्त्रण गर्ने सेटिङ"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "इन्टरनेट"
@@ -122,10 +97,6 @@ msgstr "इन्टरनेट"
 msgid "Programs for Internet access such as web and email"
 msgstr "वेब र इमेल जस्तो इन्टरनेट पहुँचका लागि कार्यक्रम"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "कार्यालय"
@@ -133,10 +104,6 @@ msgstr "कार्यालय"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "कार्यालय अनुप्रयोग"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -147,10 +114,6 @@ msgstr "व्यक्तिगत"
 msgid "Personal settings"
 msgstr "व्यक्तिगत सेटिङ"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "प्रशासन"
@@ -160,11 +123,6 @@ msgid "Change system-wide settings (affects all users)"
 msgstr ""
 "सम्पूर्ण प्रणालीका सेटिङ परिवर्तन गर्नुहोस् ( सबै प्रयोगकर्तालाई प्रभाव "
 "पार्छ)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -191,10 +149,6 @@ msgstr "प्रणाली उपकरण"
 msgid "System configuration and monitoring"
 msgstr "प्रणाली कन्फिगरेसन र अनुगमन"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "विश्वब्यापी पहुँच"
@@ -202,10 +156,6 @@ msgstr "विश्वब्यापी पहुँच"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "विश्वब्यापी पहुँच सेटिङ"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -215,27 +165,14 @@ msgstr "सहायक उपकरण"
 msgid "Desktop accessories"
 msgstr "डेस्कटप सहायक उपकरण"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "व्यक्तिगत प्राथमिकता र प्रशासकिय सेटिङ"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

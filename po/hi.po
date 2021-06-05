@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Sadgamaya <g.raghavan.g@gmail.com>, 2018
+# Panwar108 <caspian7pena@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Sadgamaya <g.raghavan.g@gmail.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Hindi (https://www.transifex.com/mate/teams/13566/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,10 +27,14 @@ msgstr "ध्वनि व वीडियो"
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
-msgstr "मल्टीमीडिया मेनू"
+msgstr "मल्टीमीडिया मेन्यू"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "संग्रह"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
 msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
@@ -39,19 +43,11 @@ msgstr "प्रोग्रामिंग"
 
 #: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
-msgstr "सॉफ्टवेयर विकास के औज़ार"
-
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
+msgstr "सॉफ्टवेयर विकास साधन"
 
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "शिक्षा"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -61,21 +57,13 @@ msgstr "खेल"
 msgid "Games and amusements"
 msgstr "खेल व मनोरंजन"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
-msgstr "चित्रादि"
+msgstr "ग्राफ़िक्स"
 
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
-msgstr "चित्रादि अनुप्रयोग"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
+msgstr "ग्राफ़िक्स अनुप्रयोग"
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -83,36 +71,23 @@ msgstr "हार्डवेयर"
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
-msgstr "कई हार्डवेयर युक्तियों के लिए सेटिंग"
-
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
+msgstr "हार्डवेयर उपकरणों हेतु सेटिंग्स"
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "इंटरनेट व संजाल"
+msgstr "इंटरनेट व नेटवर्क"
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
-msgstr "संजाल संबंधित सेटिंग"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
+msgstr "नेटवर्क सेटिंग्स"
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
-msgstr "रूप-रंग"
+msgstr "रंगरूप"
 
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "डेस्कटॉप रूपाकार व व्यवहार का नियंत्रण करने वाले सेटिंग"
-
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr ""
+msgstr "डेस्कटॉप स्वरुप व व्यवहार हेतु सेटिंग्स"
 
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
@@ -120,23 +95,15 @@ msgstr "इंटरनेट"
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "इंटरनेट पहुँच के लिए वेब व ईमेल जैसे प्रोग्राम"
-
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
+msgstr "इंटरनेट अभिगम हेतु वेब व ईमेल प्रोग्राम"
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
-msgstr "कार्यालय"
+msgstr "ऑफिस"
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
-msgstr "कार्यालय अनुप्रयोग"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
+msgstr "ऑफिस अनुप्रयोग"
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -147,63 +114,46 @@ msgstr "निजी"
 msgid "Personal settings"
 msgstr "निजी सेटिंग"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "प्रशासन"
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
-msgstr "तंत्र स्तरीय सेटिंग बदलें (सभी उपयोक्ता प्रभावित होते हैं)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
+msgstr "सिस्टम स्तरीय सेटिंग्स (सभी उपयोक्ताओं पर लागू)"
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
-msgstr "वरीयताएँ"
+msgstr "सेटिंग्स"
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
-msgstr "निजी वरीयता"
+msgstr "निजी सेटिंग्स"
 
 #: desktop-directories/mate-system.directory.in:3
 #: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
-msgstr "तंत्र"
+msgstr "सिस्टम"
 
 #: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
-msgstr "तंत्र सेटिंग"
+msgstr "सिस्टम सेटिंग्स"
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
-msgstr "तंत्र औज़ार"
+msgstr "सिस्टम साधन"
 
 #: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
-msgstr "तंत्र विन्यास व निरीक्षण"
-
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
+msgstr "सिस्टम विन्यास व निरीक्षण"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
-msgstr "सार्वभौमिक पहुँच"
+msgstr "सर्वत्र अभिगम"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
-msgstr "सार्वभौमिक पहुँच सेटिंग"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr ""
+msgstr "सर्वत्र अभिगम सेटिंग्स"
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -213,27 +163,14 @@ msgstr "उपसाधन"
 msgid "Desktop accessories"
 msgstr "डेस्कटॉप उपसाधन"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
-msgstr "निजी वरीयता व प्रशासन सेटिंग"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
+msgstr "निजी व प्रशासक सेटिंग्स"
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"
@@ -241,4 +178,4 @@ msgstr "अन्य"
 
 #: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "अनुप्रयोग जो अन्य श्रेणी में सटीक नहीं बैठा"
+msgstr "श्रेणी विहीन अनुप्रयोग"

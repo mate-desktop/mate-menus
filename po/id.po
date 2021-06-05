@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Arif Budiman <arifpedia@gmail.com>, 2018
 # Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
 # La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
-# Andika Triwidada <andika@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Andika Triwidada <andika@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2021\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +32,13 @@ msgstr "Suara & Video"
 msgid "Multimedia menu"
 msgstr "Menu multimedia"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
-msgstr "applications-multimedia"
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "Koleksi"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
+msgstr "Pintasan yang paling sering dipakai"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
@@ -44,17 +48,9 @@ msgstr "Pemrograman"
 msgid "Tools for software development"
 msgstr "Perkakas untuk pengembangan perangkat lunak"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr "applications-development"
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Pendidikan"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr "applications-science"
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -64,10 +60,6 @@ msgstr "Permainan"
 msgid "Games and amusements"
 msgstr "Permainan dan hiburan"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr "applications-games"
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Grafik"
@@ -75,10 +67,6 @@ msgstr "Grafik"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Aplikasi grafik"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr "applications-graphics"
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -88,10 +76,6 @@ msgstr "Perangkat keras"
 msgid "Settings for several hardware devices"
 msgstr "Pengaturan untuk sejumlah perangkat keras"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr "preferences-desktop-peripherals"
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Internet dan Jaringan"
@@ -99,10 +83,6 @@ msgstr "Internet dan Jaringan"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "Pengaturan jaringan"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr "preferences-system-network"
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -112,11 +92,6 @@ msgstr "Tampilan dan Rasa"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Mengelola tampilan dan perilaku desktop"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr "preferences-desktop"
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "Internet"
@@ -125,10 +100,6 @@ msgstr "Internet"
 msgid "Programs for Internet access such as web and email"
 msgstr "Program untuk mengakses internet, seperti web dan surel"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr "applications-internet"
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Kantor"
@@ -136,10 +107,6 @@ msgstr "Kantor"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Aplikasi Perkantoran"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr "applications-office"
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -150,10 +117,6 @@ msgstr "Pribadi"
 msgid "Personal settings"
 msgstr "Pengaturan pribadi"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr "preferences-desktop-personal"
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "Administrasi"
@@ -161,11 +124,6 @@ msgstr "Administrasi"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Pengaturan sistem secara luas (mempengaruhi seluruh pengguna)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr "preferences-system"
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -192,10 +150,6 @@ msgstr "Perkakas Sistem"
 msgid "System configuration and monitoring"
 msgstr "Konfigurasi serta pengawasan sistem"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr "applications-system"
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "Akses Universal"
@@ -203,10 +157,6 @@ msgstr "Akses Universal"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "Pengaturan Akses Universal"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -216,27 +166,14 @@ msgstr "Aksesoris"
 msgid "Desktop accessories"
 msgstr "Aksesoris desktop"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr "applications-accessories"
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr "applications-other"
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "Preferensi pribadi dan pengaturan administrasi"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr "preferences-other"
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"

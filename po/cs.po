@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # huskyviking <husky.viking@seznam.cz>, 2018
 # Radek kohout <radekpv@seznam.cz>, 2018
 # LiberteCzech <liberte.czech@gmail.com>, 2018
-# ToMáš Marný, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Roman Horník <roman.hornik@debian-linux.cz>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.23.0\n"
+"Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:17+0100\n"
+"POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: ToMáš Marný, 2019\n"
+"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2021\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +32,13 @@ msgstr "Zvuk a video"
 msgid "Multimedia menu"
 msgstr "Nabídka multimédií"
 
-#: desktop-directories/mate-audio-video.directory.in:5
-msgid "applications-multimedia"
-msgstr ""
+#: desktop-directories/mate-collection.directory.in:3
+msgid "Collection"
+msgstr "Sbírka"
+
+#: desktop-directories/mate-collection.directory.in:4
+msgid "The most frequently used shortcuts"
+msgstr "Nejčastěji používané zkratky"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
@@ -44,17 +48,9 @@ msgstr "Programování"
 msgid "Tools for software development"
 msgstr "Nástroje na vývoj softwaru"
 
-#: desktop-directories/mate-development.directory.in:5
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
 msgstr "Vzdělávání"
-
-#: desktop-directories/mate-education.directory.in:4
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -64,10 +60,6 @@ msgstr "Hry"
 msgid "Games and amusements"
 msgstr "Hry a zábava"
 
-#: desktop-directories/mate-game.directory.in:5
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
 msgstr "Grafika"
@@ -75,10 +67,6 @@ msgstr "Grafika"
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
 msgstr "Aplikace pro grafiku"
-
-#: desktop-directories/mate-graphics.directory.in:5
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
@@ -88,10 +76,6 @@ msgstr "Hardware"
 msgid "Settings for several hardware devices"
 msgstr "Nastavení různých hardwarových zařízení"
 
-#: desktop-directories/mate-hardware.directory.in:5
-msgid "preferences-desktop-peripherals"
-msgstr ""
-
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
 msgstr "Internet a síť"
@@ -99,10 +83,6 @@ msgstr "Internet a síť"
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
 msgstr "Nastavení související se sítí"
-
-#: desktop-directories/mate-internet-and-network.directory.in:5
-msgid "preferences-system-network"
-msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -112,11 +92,6 @@ msgstr "Vzhled a chování"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Nastavení ovládající vzhled a chování pracovního prostředí"
 
-#: desktop-directories/mate-look-and-feel.directory.in:5
-#: desktop-directories/mate-settings.directory.in:5
-msgid "preferences-desktop"
-msgstr "preferences-desktop"
-
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
 msgstr "Internet"
@@ -125,10 +100,6 @@ msgstr "Internet"
 msgid "Programs for Internet access such as web and email"
 msgstr "Programy pro přístup k Internetu, například WWW a e-mail"
 
-#: desktop-directories/mate-network.directory.in:5
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
 msgstr "Kancelář"
@@ -136,10 +107,6 @@ msgstr "Kancelář"
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
 msgstr "Kancelářské aplikace"
-
-#: desktop-directories/mate-office.directory.in:5
-msgid "applications-office"
-msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -150,10 +117,6 @@ msgstr "Osobní"
 msgid "Personal settings"
 msgstr "Osobní nastavení"
 
-#: desktop-directories/mate-personal.directory.in:6
-msgid "preferences-desktop-personal"
-msgstr ""
-
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
 msgstr "Správa"
@@ -161,11 +124,6 @@ msgstr "Správa"
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
 msgstr "Změnit nastavení pro celý systém (ovlivní všechny uživatele)"
-
-#: desktop-directories/mate-settings-system.directory.in:6
-#: desktop-directories/mate-system.directory.in:5
-msgid "preferences-system"
-msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -192,10 +150,6 @@ msgstr "Systémové nástroje"
 msgid "System configuration and monitoring"
 msgstr "Nastavení a sledování systému"
 
-#: desktop-directories/mate-system-tools.directory.in:5
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
 msgstr "Zpřístupnění"
@@ -203,10 +157,6 @@ msgstr "Zpřístupnění"
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
 msgstr "Nastavení zpřístupnění"
-
-#: desktop-directories/mate-utility-accessibility.directory.in:6
-msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
@@ -216,27 +166,14 @@ msgstr "Příslušenství"
 msgid "Desktop accessories"
 msgstr "Příslušenství prostředí pracovní plochy"
 
-#: desktop-directories/mate-utility.directory.in:5
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
 msgstr "Aplikace"
 
-#: desktop-directories/mate-menu-applications.directory.in:5
-#: desktop-directories/mate-other.directory.in:5
-msgid "applications-other"
-msgstr ""
-
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
 msgstr "Osobní volby a nastavení správy"
-
-#: desktop-directories/mate-menu-system.directory.in:5
-msgid "preferences-other"
-msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"
