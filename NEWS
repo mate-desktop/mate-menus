@@ -1,3 +1,24 @@
+### mate-menus 1.25.1
+
+  * Translations update
+  * build: remove .directory files using clean target
+  * build: allow users to disable gettext support (--disable-nls)
+  * Set compiler debug flags / logging with MATE_DEBUG_CHECK
+  * build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
+  * Remove -Wconversion -Wsign-compare -Wsign-conversion warnings
+  * matemenu-tree: do not call g_settings_get_string unless necessary
+  * Improve the description of the collection directory
+  * i18n: Add mate-collection.directory.in in POTFILES.in
+  * build: Set debug symbols and logging using --enable-debug
+  * entry-directories: Use of memory after it is freed (scan-build)
+  * matemenu-tree: Fix memory leak
+  * matemenu-tree: Remove collection_applet_free
+  * Remove the cppcheck warning about the variable scope can be reduced
+  * matemenu-tree: minor code format
+  * desktop-entries: warning -Wempty-body
+  * Remove USE_MATE2_MACROS from autogen.sh (legacy)
+  * Add collection menu item
+
 ### mate-menus 1.25.0
 
   * Translations update
