@@ -2,6 +2,7 @@
 
 #
 # Copyright (C) 2008 Novell, Inc.
+# Copyright (C) 2012-2021 MATE Developers
 #
 # Authors: Vincent Untz <vuntz@gnome.org>
 #

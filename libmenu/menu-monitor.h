@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2005 Red Hat, Inc.
  * Copyright (C) 2011 Perberos
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
