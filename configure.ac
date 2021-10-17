@@ -41,6 +41,15 @@ PKG_CHECK_MODULES(GIO_UNIX, gio-unix-2.0 >= 2.50.0)
 AC_SUBST(GIO_UNIX_CFLAGS)
 AC_SUBST(GIO_UNIX_LIBS)
 
+AC_ARG_ENABLE(collection,
+  AC_HELP_STRING([--enable-collection],
+                 [enable collection menu entry]),,
+  enable_collection=yes)
+
+if test x$enable_collection = xyes; then
+    AC_DEFINE(WITH_COLLECTION,1,[Build with collection menu entry support])
+fi
+
 AC_ARG_ENABLE(deprecation_flags,
               [AC_HELP_STRING([--enable-deprecation-flags],
                               [use *_DISABLE_DEPRECATED flags @<:@default=no@:>@])],,
@@ -102,6 +111,7 @@ echo "
         Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
         Turn on debugging:            ${ax_enable_debug}
+        Collection menu entry:        ${enable_collection}
         Build introspection support:  ${found_introspection}
         Native Language support:      ${USE_NLS}
 
