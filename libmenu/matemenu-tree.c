@@ -48,6 +48,7 @@ enum {
   PROP_FLAGS
 };
 
+#ifdef WITH_COLLECTION
 typedef enum
 {
   OBJECT_DRAWER,
@@ -58,6 +59,7 @@ typedef enum
   OBJECT_MENU_BAR,
   OBJECT_SEPARATOR,
 } ObjectType;
+#endif /* WITH_COLLECTION */
 
 /* Signals */
 enum
@@ -76,7 +78,12 @@ struct _MateMenuTree
   char *non_prefixed_basename;
   char *path;
   char *canonical_path;
+
+#ifdef WITH_COLLECTION
   GPtrArray *collection_applet;
+  GSettings *settings;
+#endif /* WITH_COLLECTION */
+
   MateMenuTreeFlags flags;
 
   GSList *menu_file_monitors;
@@ -87,7 +94,6 @@ struct _MateMenuTree
 
   guint canonical : 1;
   guint loaded    : 1;
-  GSettings  *settings;
 };
 
 G_DEFINE_TYPE (MateMenuTree, matemenu_tree, G_TYPE_OBJECT)
@@ -180,9 +186,11 @@ static void      matemenu_tree_invoke_monitors      (MateMenuTree       *tree);
 
 static void matemenu_tree_item_unref_and_unset_parent (gpointer itemp);
 
+#ifdef WITH_COLLECTION
 static void collection_applet_changed (GSettings    *settings,
                                        gchar        *key,
                                        MateMenuTree *self);
+#endif /* WITH_COLLECTION */
 
 typedef enum
 {
@@ -636,20 +644,26 @@ matemenu_tree_finalize (GObject *object)
 
   g_hash_table_destroy (tree->entries_by_id);
   tree->entries_by_id = NULL;
+
+#ifdef WITH_COLLECTION
   if (tree->collection_applet != NULL)
   {
     g_ptr_array_foreach (tree->collection_applet, (GFunc) g_free, NULL);
     g_ptr_array_free (tree->collection_applet, TRUE);
     tree->collection_applet = NULL;
   }
+
   g_signal_handlers_disconnect_by_func (tree->settings,
                                         G_CALLBACK (collection_applet_changed),
                                         tree);
 
   g_object_unref (tree->settings);
+# endif /* WITH_COLLECTION */
+
   G_OBJECT_CLASS (matemenu_tree_parent_class)->finalize (object);
 }
 
+#ifdef WITH_COLLECTION
 static void
 load_object (char         *id,
              MateMenuTree *self)
@@ -726,17 +740,20 @@ collection_applet_changed (GSettings    *settings,
   get_panel_collection_applet (self);
   g_idle_add (emit_changed_signal, (gpointer)self);
 }
+# endif /* WITH_COLLECTION */
 
 static void
 matemenu_tree_init (MateMenuTree *self)
 {
   self->entries_by_id = g_hash_table_new (g_str_hash, g_str_equal);
+#ifdef WITH_COLLECTION
   self->collection_applet = NULL;
   self->settings = g_settings_new ("org.mate.panel");
   get_panel_collection_applet (self);
   g_signal_connect (self->settings, "changed::object-id-list",
                     G_CALLBACK (collection_applet_changed),
                     self);
+# endif /* WITH_COLLECTION */
 }
 
 static void
@@ -1791,14 +1808,13 @@ matemenu_tree_entry_compare_by_id (MateMenuTreeItem *a,
 gpointer
 matemenu_tree_item_ref (gpointer itemp)
 {
-	MateMenuTreeItem* item = (MateMenuTreeItem*) itemp;
-
-	g_return_val_if_fail(item != NULL, NULL);
-	g_return_val_if_fail(item->refcount > 0, NULL);
+  MateMenuTreeItem* item = (MateMenuTreeItem*) itemp;
+  g_return_val_if_fail(item != NULL || *item != NULL, NULL);
+  g_return_val_if_fail(item->refcount > 0, NULL);
 
   g_atomic_int_inc (&item->refcount);
 
-	return item;
+  return item;
 }
 
 void
@@ -3244,6 +3260,7 @@ get_by_category_foreach (const char               *file_id,
     desktop_entry_set_add_entry (data->set, entry, file_id);
 }
 
+#ifdef WITH_COLLECTION
 static void
 get_by_desktop_foreach (const char               *file_id,
                         DesktopEntry             *entry,
@@ -3252,6 +3269,7 @@ get_by_desktop_foreach (const char               *file_id,
   if (g_strcmp0 (file_id, data->category) == 0)
     desktop_entry_set_add_entry (data->set, entry, file_id);
 }
+#endif /* WITH_COLLECTION */
 
 static void
 get_by_category (DesktopEntrySet *entry_pool,
@@ -3268,6 +3286,7 @@ get_by_category (DesktopEntrySet *entry_pool,
                              &data);
 }
 
+#ifdef WITH_COLLECTION
 static void
 get_by_desktop (DesktopEntrySet *entry_pool,
                 DesktopEntrySet *set,
@@ -3282,6 +3301,7 @@ get_by_desktop (DesktopEntrySet *entry_pool,
                              (DesktopEntrySetForeachFunc) get_by_desktop_foreach,
                              &data);
 }
+#endif /* WITH_COLLECTION */
 
 static DesktopEntrySet *
 process_include_rules (MenuLayoutNode  *layout,
@@ -3791,6 +3811,8 @@ process_layout (MateMenuTree          *tree,
       matemenu_tree_item_unref (directory);
       return NULL;
     }
+
+#ifdef WITH_COLLECTION
   if (tree->collection_applet && !g_strcmp0 (directory->name, "Collection"))
     {
       guint i;
@@ -3800,6 +3822,7 @@ process_layout (MateMenuTree          *tree,
         get_by_desktop (entry_pool, entries, desktop_name);
       }
     }
+#endif /* WITH_COLLECTION */
 
   desktop_entry_set_foreach (entries,
                              (DesktopEntrySetForeachFunc) entries_listify_foreach,
