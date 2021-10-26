@@ -658,7 +658,7 @@ matemenu_tree_finalize (GObject *object)
                                         tree);
 
   g_object_unref (tree->settings);
-# endif /* WITH_COLLECTION */
+#endif /* WITH_COLLECTION */
 
   G_OBJECT_CLASS (matemenu_tree_parent_class)->finalize (object);
 }
@@ -740,7 +740,7 @@ collection_applet_changed (GSettings    *settings,
   get_panel_collection_applet (self);
   g_idle_add (emit_changed_signal, (gpointer)self);
 }
-# endif /* WITH_COLLECTION */
+#endif /* WITH_COLLECTION */
 
 static void
 matemenu_tree_init (MateMenuTree *self)
@@ -753,7 +753,7 @@ matemenu_tree_init (MateMenuTree *self)
   g_signal_connect (self->settings, "changed::object-id-list",
                     G_CALLBACK (collection_applet_changed),
                     self);
-# endif /* WITH_COLLECTION */
+#endif /* WITH_COLLECTION */
 }
 
 static void
