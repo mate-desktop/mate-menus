@@ -27,7 +27,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-
 #ifdef G_ENABLE_DEBUG
 
 static gboolean verbose = FALSE;

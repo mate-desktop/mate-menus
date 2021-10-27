@@ -121,7 +121,6 @@ typedef struct
   gpointer                         user_data;
 } MenuLayoutNodeEntriesMonitor;
 
-
 static inline MenuLayoutNode *
 node_next (MenuLayoutNode *node)
 {
@@ -1130,7 +1129,6 @@ menu_layout_node_root_remove_entries_monitor (MenuLayoutNode                   *
     }
 }
 
-
 /*
  * Menu file parsing
  */
@@ -1171,7 +1169,6 @@ static void passthrough_handler   (GMarkupParseContext  *context,
                                    gsize                 text_len,
                                    gpointer              user_data,
                                    GError              **error);
-
 
 static GMarkupParser menu_funcs = {
   start_element_handler,
@@ -1582,7 +1579,6 @@ start_matching_rule_element (MenuParser           *parser,
                             attribute_names, attribute_values,
                             error))
     return;
-
 
   if (ELEMENT_IS ("Filename"))
     {
