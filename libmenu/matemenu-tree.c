@@ -3595,7 +3595,6 @@ process_layout (MateMenuTree          *tree,
 
   menu_verbose ("=== Menu name = %s ===\n", directory->name);
 
-
   deleted = FALSE;
   only_unallocated = FALSE;
 
