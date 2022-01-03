@@ -1904,15 +1904,12 @@ matemenu_tree_item_compare_get_name_helper (MateMenuTreeItem    *item,
 }
 
 static int
-matemenu_tree_item_compare (MateMenuTreeItem *a,
-			 MateMenuTreeItem *b,
-			 gpointer       flags_p)
+matemenu_tree_item_compare (MateMenuTreeItem  *a,
+                            MateMenuTreeItem  *b,
+                            MateMenuTreeFlags  flags)
 {
   const char       *name_a;
   const char       *name_b;
-  MateMenuTreeFlags    flags;
-
-  flags = GPOINTER_TO_INT (flags_p);
 
   name_a = matemenu_tree_item_compare_get_name_helper (a, flags);
   name_b = matemenu_tree_item_compare_get_name_helper (b, flags);
@@ -4515,8 +4512,8 @@ merge_subdirs (MateMenuTree          *tree,
   directory->subdirs = NULL;
 
   subdirs = g_slist_sort_with_data (subdirs,
-				    (GCompareDataFunc) matemenu_tree_item_compare,
-                                    GINT_TO_POINTER (MATEMENU_TREE_FLAGS_NONE));
+                                    (GCompareDataFunc) matemenu_tree_item_compare,
+                                    (void *) MATEMENU_TREE_FLAGS_NONE);
 
   tmp = subdirs;
   while (tmp != NULL)
@@ -4561,7 +4558,7 @@ merge_entries (MateMenuTree          *tree,
 
   entries = g_slist_sort_with_data (entries,
 				    (GCompareDataFunc) matemenu_tree_item_compare,
-                                    GINT_TO_POINTER (tree->flags));
+                                    (void *) tree->flags);
 
   tmp = entries;
   while (tmp != NULL)
@@ -4609,8 +4606,8 @@ merge_subdirs_and_entries (MateMenuTree          *tree,
   directory->entries = NULL;
 
   items = g_slist_sort_with_data (items,
-				  (GCompareDataFunc) matemenu_tree_item_compare,
-                                  GINT_TO_POINTER (tree->flags));
+                                  (GCompareDataFunc) matemenu_tree_item_compare,
+                                  (void *) tree->flags);
 
   tmp = items;
   while (tmp != NULL)
