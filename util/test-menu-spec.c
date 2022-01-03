@@ -39,8 +39,8 @@ static GOptionEntry options[] = {
 	{ "monitor",             'm', 0, G_OPTION_ARG_NONE,   &monitor,             N_("Monitor for menu changes"),       NULL },
 	{ "include-excluded",    'i', 0, G_OPTION_ARG_NONE,   &include_excluded,    N_("Include <Exclude>d entries"),     NULL },
 	{ "include-nodisplay",   'n', 0, G_OPTION_ARG_NONE,   &include_nodisplay,   N_("Include NoDisplay=true entries"), NULL },
-	{ "include-unallocated", 'u', 0, G_OPTION_ARG_NONE,   &include_unallocated, N_("Include unallocated entries"), NULL },
-	{ NULL }
+	{ "include-unallocated", 'u', 0, G_OPTION_ARG_NONE,   &include_unallocated, N_("Include unallocated entries"),    NULL },
+	{ NULL,                    0, 0, G_OPTION_ARG_NONE,   NULL,                 NULL,                                 NULL }
 };
 
 static void
