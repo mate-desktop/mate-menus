@@ -802,7 +802,7 @@ static DesktopEntry* entry_directory_get_directory(EntryDirectory* ed, const cha
   return desktop_entry_ref (entry);
 }
 
-static char* get_desktop_file_id_from_path(EntryDirectory* ed, DesktopEntryType  entry_type, const char* relative_path)
+static char* get_desktop_file_id_from_path(G_GNUC_UNUSED EntryDirectory* ed, DesktopEntryType  entry_type, const char* relative_path)
 {
   char *retval;
 
@@ -1081,7 +1081,7 @@ gboolean _entry_directory_list_compare(const EntryDirectoryList* a, const EntryD
   return (al == NULL && bl == NULL);
 }
 
-static gboolean get_all_func(EntryDirectory* ed, DesktopEntry* entry, const char* file_id, DesktopEntrySet* set, gpointer user_data)
+static gboolean get_all_func(G_GNUC_UNUSED EntryDirectory* ed, DesktopEntry* entry, const char* file_id, DesktopEntrySet* set, gpointer user_data)
 {
   entry = desktop_entry_ref (entry);
 
