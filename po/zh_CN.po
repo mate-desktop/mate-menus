@@ -9,14 +9,15 @@
 # shuyu liu <liushuyu011@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # OkayPJ <1535253694@qq.com>, 2021
+# Wenbin Lv <wenbin816@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.25.0\n"
+"Project-Id-Version: mate-menus 1.26.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2021-01-16 16:31+0100\n"
+"POT-Creation-Date: 2022-10-29 15:26+0200\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: OkayPJ <1535253694@qq.com>, 2021\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,7 +75,7 @@ msgstr "硬件"
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
-msgstr "硬件设置"
+msgstr "几种硬件设备的设置"
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
@@ -98,7 +99,7 @@ msgstr "互联网"
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "网络相关应用软件，如网络浏览和电子邮件管理"
+msgstr "访问互联网的程序，如网络浏览和电子邮件"
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
@@ -181,4 +182,4 @@ msgstr "其它"
 
 #: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "无法分入其它类别的应用程序"
+msgstr "无法归类到其它类别的应用程序"

@@ -6,18 +6,19 @@
 # Translators:
 # Damir Jerovšek <jierro@windowslive.com>, 2018
 # worm <thewormhole@gmail.com>, 2018
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
+# Damir Mevkić 52K <damir.mevkic@gmail.com>, 2018
 # jetomit <timotej.lazar@araneo.si>, 2018
 # Helena S <ele@tutamail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-menus 1.25.0\n"
+"Project-Id-Version: mate-menus 1.26.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2021-01-16 16:31+0100\n"
+"POT-Creation-Date: 2022-10-29 15:26+0200\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,7 +40,7 @@ msgstr "Zbirka"
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
-msgstr ""
+msgstr "Najpogosteje uporabljene tipke za bližnjice"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
