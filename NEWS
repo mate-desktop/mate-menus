@@ -1,3 +1,16 @@
+### mate-menus 1.27.0
+
+  * tx: sync with transifex
+  * configure.ac: The macro 'AC_HELP_STRING' is obsolete
+  * tx: update resource
+  * tx: migrate config file
+  * build warning: AC_OUTPUT should be used without arguments
+  * fix build error: invalid operands to binary expression
+  * ci: drop -Wunused-parameter compiler cflag from debian build
+  * Use a blank line at most
+  * Remove extra whitespaces on #ifdef..#endif code block
+  * Let user disable collection menu entry [--disable-collection]
+
 ### mate-menus 1.26.0
 
   * Translations update
