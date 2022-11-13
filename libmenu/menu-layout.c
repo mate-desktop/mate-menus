@@ -731,40 +731,6 @@ ensure_dir_lists (MenuLayoutNodeMenu *nm)
           g_free (path);
         }
 
-      if (iter->type == MENU_LAYOUT_NODE_LEGACY_DIR)
-        {
-          MenuLayoutNodeLegacyDir *legacy = (MenuLayoutNodeLegacyDir *) iter;
-          char                    *path;
-
-          path = menu_layout_node_get_content_as_path (iter);
-
-          if (app_dirs != NULL) /* we're loading app dirs */
-            {
-              ed = entry_directory_new_legacy (DESKTOP_ENTRY_DESKTOP,
-                                               path,
-                                               legacy->prefix);
-              if (ed != NULL)
-                {
-                  entry_directory_list_prepend (app_dirs, ed);
-                  entry_directory_unref (ed);
-                }
-            }
-
-          if (dir_dirs != NULL) /* we're loading dir dirs */
-            {
-              ed = entry_directory_new_legacy (DESKTOP_ENTRY_DIRECTORY,
-                                               path,
-                                               legacy->prefix);
-              if (ed != NULL)
-                {
-                  entry_directory_list_prepend (dir_dirs, ed);
-                  entry_directory_unref (ed);
-                }
-            }
-
-          g_free (path);
-        }
-
       iter = node_next (iter);
     }
 

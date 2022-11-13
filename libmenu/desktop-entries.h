@@ -57,8 +57,6 @@ gboolean desktop_entry_has_categories (DesktopEntry *entry);
 gboolean desktop_entry_has_category   (DesktopEntry *entry,
                                        const char   *category);
 
-void desktop_entry_add_legacy_category(DesktopEntry* src);
-
 typedef struct DesktopEntrySet DesktopEntrySet;
 
 DesktopEntrySet* desktop_entry_set_new(void);
