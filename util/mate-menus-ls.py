@@ -68,7 +68,7 @@ def main(args):
         flags |= MateMenu.TreeFlags.INCLUDE_EXCLUDED
     if options.nodisplay:
         flags |= MateMenu.TreeFlags.INCLUDE_NODISPLAY
-    tree = MateMenu.Tree(menu_basename = "mate-applications.menu", flags = flags)
+    tree = MateMenu.Tree(menu_basename = menu_file, flags = flags)
     tree.load_sync();
     root = tree.get_root_directory()
 
