@@ -1,0 +1,25 @@
+option('introspection',
+  type: 'boolean',
+  value : true,
+  description: 'Build with GObject Introspection support')
+
+option('vapi',
+  type: 'boolean',
+  value: false,
+  description: 'Build to generation vala vapi file')
+
+option('collection',
+  type : 'boolean',
+  value : true,
+  description : 'Build with collection menu entry support')
+
+option('tests',
+  type : 'boolean',
+  value : false,
+  description : 'Enable test programs (default: no)')
+
+# For subproject usage
+option('package_subdir',
+  type: 'string',
+  description: 'Private sub-directory used when built as a subproject'
+)
