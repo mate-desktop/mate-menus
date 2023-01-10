@@ -18,6 +18,9 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/* used for realpath() */
+#define _XOPEN_SOURCE 500
+
 #include <config.h>
 
 #include "entry-directories.h"

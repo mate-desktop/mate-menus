@@ -177,7 +177,7 @@ static void append_layout(MenuLayoutNode* node, int depth, const char* node_name
 			layout_values->inline_menus  ? "true" : "false",
 			layout_values->inline_header ? "true" : "false",
 			layout_values->inline_alias  ? "true" : "false",
-			layout_values->inline_limit,
+			(gint) layout_values->inline_limit,
 			escaped,
 			node_name);
 
@@ -193,7 +193,7 @@ static void append_layout(MenuLayoutNode* node, int depth, const char* node_name
 		layout_values->inline_menus  ? "true" : "false",
 		layout_values->inline_header ? "true" : "false",
 		layout_values->inline_alias  ? "true" : "false",
-		layout_values->inline_limit);
+		(gint) layout_values->inline_limit);
 	}
 }
 
