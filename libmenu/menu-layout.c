@@ -2163,6 +2163,8 @@ end_element_handler (GMarkupParseContext  *context,
       if (!fixup_move_node (context, parser, parser->stack_top, error))
         goto out;
       break;
+    default:
+      g_assert_not_reached();
     }
 
  out:
@@ -2248,6 +2250,8 @@ text_handler (GMarkupParseContext  *context,
                      g_markup_parse_context_get_element (context));
         }
       break;
+    default:
+      g_assert_not_reached();
     }
 
   add_context_to_error (error, context);

@@ -378,12 +378,13 @@ static void mate_menu_monitor_notify_unref(MenuMonitorNotify* notify)
 
 void menu_monitor_add_notify(MenuMonitor* monitor, MenuMonitorNotifyFunc notify_func, gpointer user_data)
 {
+	GSList* tmp;
 	MenuMonitorNotify* notify;
 
 	g_return_if_fail(monitor != NULL);
 	g_return_if_fail(notify_func != NULL);
 
-	GSList* tmp = monitor->notifies;
+	tmp = monitor->notifies;
 
 	while (tmp != NULL)
 	{
