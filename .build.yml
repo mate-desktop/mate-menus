@@ -12,6 +12,7 @@ requires:
     - gobject-introspection
     - make
     - mate-common
+    - meson
     - python2
     - which
 
@@ -29,6 +30,7 @@ requires:
     - libglib2.0-dev
     - make
     - mate-common
+    - meson
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-menus.git
@@ -42,6 +44,7 @@ requires:
     - gobject-introspection-devel
     - make
     - mate-common
+    - meson
     - python2-devel
     - redhat-rpm-config
 
@@ -55,6 +58,7 @@ requires:
     - libglib2.0-dev
     - make
     - mate-common
+    - meson
 
 variables:
   - 'CHECKERS="
