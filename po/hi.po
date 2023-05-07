@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Panwar108 <caspian7pena@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Panwar108 <caspian7pena@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2021-01-16 16:31+0100\n"
-"PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
-"Language-Team: Hindi (https://www.transifex.com/mate/teams/13566/hi/)\n"
+"PO-Revision-Date: 2021-09-19 13:27+0000\n"
+"Last-Translator: Panwar108 <caspian7pena@gmail.com>, 2021\n"
+"Language-Team: Hindi (https://app.transifex.com/mate/teams/13566/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -112,7 +112,7 @@ msgstr "निजी"
 
 #: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
-msgstr "निजी सेटिंग"
+msgstr "निजी सेटिंग्स"
 
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"

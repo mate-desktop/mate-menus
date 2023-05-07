@@ -4,21 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Damir Jerovšek <jierro@windowslive.com>, 2018
-# worm <thewormhole@gmail.com>, 2018
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
-# jetomit <timotej.lazar@araneo.si>, 2018
-# Helena S <ele@tutamail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Damir Jerovšek <jierro@windowslive.com>, 2021
+# worm <thewormhole@gmail.com>, 2021
+# Helena S <ele@tutamail.com>, 2021
+# jetomit <timotej.lazar@araneo.si>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2021-01-16 16:31+0100\n"
-"PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
-"Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
+"PO-Revision-Date: 2021-09-19 13:27+0000\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
+"Language-Team: Slovenian (https://app.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +39,7 @@ msgstr "Zbirka"
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
-msgstr ""
+msgstr "Najpogosteje uporabljene tipke za bližnjice"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
@@ -170,7 +170,7 @@ msgstr "Namizni pripomočki"
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
-msgstr "Aplikacije"
+msgstr "Programi"
 
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"

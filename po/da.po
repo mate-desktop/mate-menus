@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Ole Holm Frandsen <froksen@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Joe Hansen <joedalton2@yahoo.dk>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Ole Holm Frandsen <froksen@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2021-01-16 16:31+0100\n"
-"PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2021\n"
-"Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
+"PO-Revision-Date: 2021-09-19 13:27+0000\n"
+"Last-Translator: Ole Holm Frandsen <froksen@gmail.com>, 2021\n"
+"Language-Team: Danish (https://app.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,7 +68,7 @@ msgstr "Grafikprogrammer"
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
-msgstr "Udstyr"
+msgstr "Hardware"
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
@@ -125,7 +125,7 @@ msgstr "Ændr systemindstillinger (påvirker alle brugere)"
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
-msgstr "Præferencer"
+msgstr "Indstillinger"
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"

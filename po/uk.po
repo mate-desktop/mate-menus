@@ -4,19 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Evolve32 <evolve32@yandex.ru>, 2018
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Микола Ткач <chistomov@gmail.com>, 2021
+# Evolve32 <evolve32@yandex.ru>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Taras Panchenko <top39@ukr.net>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-menus 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2021-01-16 16:31+0100\n"
-"PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2021\n"
-"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
+"PO-Revision-Date: 2021-09-19 13:27+0000\n"
+"Last-Translator: Taras Panchenko <top39@ukr.net>, 2022\n"
+"Language-Team: Ukrainian (https://app.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +26,7 @@ msgstr ""
 
 #: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
-msgstr "Звук і відео"
+msgstr "Звук та відео"
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
@@ -37,7 +38,7 @@ msgstr "Колекція зображень"
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
-msgstr "Найчастіше використовувані лейби"
+msgstr "Найчастіше використовувані посилання"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
@@ -53,7 +54,7 @@ msgstr "Навчання"
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
-msgstr "Забавки"
+msgstr "Ігри"
 
 #: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
@@ -69,7 +70,7 @@ msgstr "Графічні програми"
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
-msgstr "Пристрої"
+msgstr "Апаратне забезпечення"
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
@@ -77,7 +78,7 @@ msgstr "Параметри деяких апаратних пристроїв"
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "Інтернет і мережа"
+msgstr "Інтернет та мережа"
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
@@ -85,7 +86,7 @@ msgstr "Параметри, що відносяться до налаштову�
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
-msgstr "Оздоблення"
+msgstr "Зовнішній вигляд"
 
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
@@ -97,7 +98,7 @@ msgstr "Тенета"
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "Програми для роботи з Інтернет (пошта, оглядач тенет, тощо)"
+msgstr "Програми для роботи з Інтернет на кшталт Е-пошта, Оглядач тенет"
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
@@ -110,7 +111,7 @@ msgstr "Офісні програми"
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
-msgstr "Особисті"
+msgstr "Особисті параметри"
 
 #: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
@@ -126,7 +127,7 @@ msgstr "Зміна системних параметрів (впливає на 
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
-msgstr "Налаштування"
+msgstr "Параметри"
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
@@ -176,7 +177,7 @@ msgstr "Особисті параметри та розпорядницькі п
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"
-msgstr "Инше"
+msgstr "Інше"
 
 #: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"

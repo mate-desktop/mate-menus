@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Christopher Patrick <cpatrick08@rocketmail.com>, 2021
 # 
 msgid ""
 msgstr ""
@@ -12,25 +12,25 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2021-01-16 16:31+0100\n"
 "PO-Revision-Date: 2021-09-19 13:27+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
-"Language-Team: Kurdish (https://app.transifex.com/mate/teams/13566/ku/)\n"
+"Last-Translator: Christopher Patrick <cpatrick08@rocketmail.com>, 2021\n"
+"Language-Team: English (United States) (https://app.transifex.com/mate/teams/13566/en_US/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ku\n"
+"Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
-msgstr "Deng & Vîdeo"
+msgstr ""
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
-msgstr "Pêşeka multîmedya"
+msgstr ""
 
 #: desktop-directories/mate-collection.directory.in:3
 msgid "Collection"
-msgstr "Koleksiyon"
+msgstr "Collection"
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
@@ -38,143 +38,143 @@ msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
-msgstr "Bernamekirin"
+msgstr ""
 
 #: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
-msgstr "Amûrên ji bo pêşdebirina nivîsbariyê"
+msgstr ""
 
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
-msgstr "Perwerdehî"
+msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
-msgstr "Lîstik"
+msgstr ""
 
 #: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
-msgstr "Lîstik û demxweşî"
+msgstr ""
 
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
-msgstr "Grafîk"
+msgstr ""
 
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
-msgstr "Sepanên grafîkê"
+msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
-msgstr "Hişkalav"
+msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
-msgstr "Mîhengên çend cîhazên hişkalavê"
+msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "Înternet û Tor"
+msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
-msgstr "Mîhengên têkildarî torê"
+msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
-msgstr "Dîtin û Hestkirin"
+msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Mîhengên xuyabûn û tevgerînên sermasê"
+msgstr ""
 
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
-msgstr "Înternet"
+msgstr ""
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "Bernameyên wekî epeyam û gerokan yên ji bo pêwendiya înternetê"
+msgstr ""
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
-msgstr "Nivîsgeh"
+msgstr ""
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
-msgstr "Sepandinên Ofîsê"
+msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
-msgstr "Takekesî"
+msgstr ""
 
 #: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
-msgstr "Mîhengên takekesî"
+msgstr ""
 
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
-msgstr "Rêveberî"
+msgstr ""
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
-msgstr "Eyarên hemû pergalê biguherîne (ji bo hemû bikarhêneran derbas dibe)"
+msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
-msgstr "Vebijêrk"
+msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
-msgstr "Vebijêrkên takekesî"
+msgstr ""
 
 #: desktop-directories/mate-system.directory.in:3
 #: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
-msgstr "Pergal"
+msgstr ""
 
 #: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
-msgstr "Mîhengên pergalê"
+msgstr ""
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
-msgstr "Amûrên Pergalê"
+msgstr ""
 
 #: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
-msgstr "Avakirin û şopandina pergalê"
+msgstr ""
 
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
-msgstr "Gihîştina Gerdûnî"
+msgstr ""
 
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
-msgstr "Mîhengên Gihîştina Gerdûnî"
+msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
-msgstr "Bernameyên Alîkar"
+msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
-msgstr "Bernameyên alîkar ên sermaseyê"
+msgstr ""
 
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
-msgstr "Sepan"
+msgstr ""
 
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
-msgstr "Vebijêrkên takekesî û mîhengên rêveberiyê"
+msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"
-msgstr "Yên din"
+msgstr "Other"
 
 #: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "Sepanên ku nakevin kategoriyên din"
+msgstr ""
