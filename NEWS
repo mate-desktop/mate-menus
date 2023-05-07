@@ -1,3 +1,9 @@
+### mate-menus 1.26.1
+
+  * Translations update
+  * fix build error: invalid operands to binary expression
+  * Let user disable collection menu entry [--disable-collection]
+
 ### mate-menus 1.26.0
 
   * Translations update
