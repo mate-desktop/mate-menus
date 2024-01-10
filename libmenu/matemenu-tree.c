@@ -85,6 +85,7 @@ struct _MateMenuTree
 #ifdef WITH_COLLECTION
   GPtrArray *collection_applet;
   GSettings *settings;
+  guint emit_changed_signal;
 #endif /* WITH_COLLECTION */
 
   MateMenuTreeFlags flags;
@@ -660,6 +661,9 @@ matemenu_tree_finalize (GObject *object)
                                         tree);
 
   g_object_unref (tree->settings);
+  if (tree->emit_changed_signal != 0)
+    g_source_remove (tree->emit_changed_signal);
+  tree->emit_changed_signal = 0;
 #endif /* WITH_COLLECTION */
 
   G_OBJECT_CLASS (matemenu_tree_parent_class)->finalize (object);
@@ -708,6 +712,8 @@ static gboolean
 emit_changed_signal (gpointer data)
 {
   MateMenuTree *self = data;
+  self->emit_changed_signal = 0;
+
   matemenu_tree_force_rebuild (self);
   matemenu_tree_invoke_monitors (self);
 
@@ -739,7 +745,8 @@ collection_applet_changed (GSettings    *settings,
     self->collection_applet = NULL;
   }
   get_panel_collection_applet (self);
-  g_idle_add (emit_changed_signal, (gpointer)self);
+  if (self->emit_changed_signal == 0)
+    self->emit_changed_signal = g_idle_add (emit_changed_signal, (gpointer)self);
 }
 #endif /* WITH_COLLECTION */
 
@@ -754,6 +761,7 @@ matemenu_tree_init (MateMenuTree *self)
   g_signal_connect (self->settings, "changed::object-id-list",
                     G_CALLBACK (collection_applet_changed),
                     self);
+  self->emit_changed_signal = 0;
 #endif /* WITH_COLLECTION */
 }
 
