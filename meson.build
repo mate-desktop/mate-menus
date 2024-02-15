@@ -1,6 +1,6 @@
 project(
   'mate-menus', 'c',
-  version: '1.27.0',
+  version: '1.28.0',
   meson_version: '>=0.56.0',
   license: 'GPL2',
   default_options : [ 'warning_level=1', 'buildtype=debugoptimized', 'c_std=gnu11'],
