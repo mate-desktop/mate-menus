@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Benedikt Straub <benedikt-straub@web.de>, 2023
 # 
 msgid ""
 msgstr ""
@@ -12,8 +13,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2022-10-29 15:26+0200\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
-"Language-Team: Low German (https://www.transifex.com/mate/teams/13566/nds/)\n"
+"Last-Translator: Benedikt Straub <benedikt-straub@web.de>, 2023\n"
+"Language-Team: Low German (https://app.transifex.com/mate/teams/13566/nds/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,11 +31,11 @@ msgstr "Multimedia"
 
 #: desktop-directories/mate-collection.directory.in:3
 msgid "Collection"
-msgstr ""
+msgstr "Sammeln"
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
-msgstr ""
+msgstr "De meest bruukt Kortsnieds"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
