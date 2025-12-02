@@ -58,6 +58,11 @@ introspection_sources = $(libmate_menu_include_HEADERS) matemenu-tree.c
 
 MateMenu-2.0.gir: libmate-menu.la
 MateMenu_2_0_gir_INCLUDES = Gio-2.0
+# Under GIO >= 2.80 we need to include the dependency, see
+# https://gitlab.gnome.org/GNOME/gnome-menus/-/commit/fe1eca74e1b6d75941d56088ea2aeca97b639926
+if HAVE_GIO_UNIX_280
+MateMenu_2_0_gir_INCLUDES += GioUnix-2.0
+endif HAVE_GIO_UNIX_280
 MateMenu_2_0_gir_CFLAGS = $(AM_CPPFLAGS)
 MateMenu_2_0_gir_LIBS = libmate-menu.la
 MateMenu_2_0_gir_SCANNERFLAGS = --identifier-prefix=MateMenu --symbol-prefix=matemenu --pkg-export=libmate-menu --c-include=matemenu-tree.h

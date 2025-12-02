@@ -41,6 +41,11 @@ PKG_CHECK_MODULES(GIO_UNIX, gio-unix-2.0 >= 2.50.0)
 AC_SUBST(GIO_UNIX_CFLAGS)
 AC_SUBST(GIO_UNIX_LIBS)
 
+dnl Conditional for GioUnix inclusion in Gir scanning
+PKG_CHECK_MODULES(GIO_UNIX_280, [gio-unix-2.0 >= 2.80.0],
+                  [have_gio_unix_280=yes], [have_gio_unix_280=no])
+AM_CONDITIONAL([HAVE_GIO_UNIX_280], [test "x$have_gio_unix_280" = xyes])
+
 AC_ARG_ENABLE(collection,
   AS_HELP_STRING([--enable-collection],
                  [enable collection menu entry]),,
