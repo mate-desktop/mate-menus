@@ -1,3 +1,7 @@
+### mate-menus 1.28.1
+
+  *libmenu: Use GioUnix-2.0 to introspect the header
+
 ### mate-menus 1.28.0
 
   * Translations update
