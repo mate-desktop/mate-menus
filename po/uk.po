@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Evolve32 <evolve32@yandex.ru>, 2018
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
+# Анатолій Романович Шаповалов <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Микола Ткач <chistomov@gmail.com>, 2021
 # 

@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Benedikt Straub <benedikt-straub@web.de>, 2023
+# Benedikt Straub <benedikt-straub@web.de>, 2025
 # 
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2022-10-29 15:26+0200\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Benedikt Straub <benedikt-straub@web.de>, 2023\n"
+"Last-Translator: Benedikt Straub <benedikt-straub@web.de>, 2025\n"
 "Language-Team: Low German (https://app.transifex.com/mate/teams/13566/nds/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +43,7 @@ msgstr "Programmeeren"
 
 #: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
-msgstr "Hölpprogrammen to'r Programmkonstruktschoon"
+msgstr "Hülpprogrammen för’t Software-Entwickeln"
 
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
@@ -75,11 +75,11 @@ msgstr "Instellens för unnerscheedliche Hardware"
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "Innernet un Netwark"
+msgstr "Innernet un Nettwark"
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
-msgstr "Netwarksinstellens"
+msgstr "Nettwarksinstellens"
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
@@ -120,7 +120,7 @@ msgstr "Verwaltens"
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
-msgstr "Systemwiete Instellens ännern (Geiht all Bruker wat an)"
+msgstr "Systeemwiete Instellens ännern (Geiht all Bruker wat an)"
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
@@ -133,19 +133,19 @@ msgstr "Persönliche Instellens"
 #: desktop-directories/mate-system.directory.in:3
 #: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
-msgstr "System"
+msgstr "Systeem"
 
 #: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
-msgstr "Systeminstellens"
+msgstr "Systeeminstellens"
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
-msgstr "Systemprogramme"
+msgstr "Systeemprogramme"
 
 #: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
-msgstr "Systemkonfiguratschoon un Oppassens"
+msgstr "Systeem-Inrichten un -Oppassens"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"

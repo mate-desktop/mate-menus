@@ -4,11 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mosaab Alzoubi <moceap@hotmail.com>, 2018
-# مهدي السطيفي <chinoune.mehdi@gmail.com>, 2018
-# alibacha19 <alibacha19@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Sod Emin, 2024
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -16,169 +12,169 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2022-10-29 15:26+0200\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Sod Emin, 2024\n"
-"Language-Team: Arabic (https://app.transifex.com/mate/teams/13566/ar/)\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
+"Language-Team: Gaelic, Scottish (https://app.transifex.com/mate/teams/13566/gd/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Language: gd\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : (n > 2 && n < 20) ? 2 : 3;\n"
 
 #: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
-msgstr "المرئيّات و الصوتيّات"
+msgstr ""
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
-msgstr "قائمة الوسائط المتعدّدة"
+msgstr ""
 
 #: desktop-directories/mate-collection.directory.in:3
 msgid "Collection"
-msgstr "مجموعة"
+msgstr ""
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
-msgstr "أكثر الاختصارات استخدامًا"
+msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
-msgstr "برمجة"
+msgstr ""
 
 #: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
-msgstr "أدوات لتطوير البرامج"
+msgstr ""
 
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
-msgstr "تعليمي"
+msgstr ""
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
-msgstr "ألعاب"
+msgstr ""
 
 #: desktop-directories/mate-game.directory.in:4
 msgid "Games and amusements"
-msgstr "الألعاب و التسلية"
+msgstr ""
 
 #: desktop-directories/mate-graphics.directory.in:3
 msgid "Graphics"
-msgstr "رسوميات"
+msgstr ""
 
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
-msgstr "تطبيقات الرّسوميات"
+msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
-msgstr "العتاد"
+msgstr ""
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
-msgstr "إعدادات للعديد من أجهزة العتاد"
+msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr "الإنترنت والشبكة"
+msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
-msgstr "الإعدادات المتعلّقة بالشبكة"
+msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:3
 msgid "Look and Feel"
-msgstr "الشكل و المظهر"
+msgstr ""
 
 #: desktop-directories/mate-look-and-feel.directory.in:4
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "إعدادات تتحكّم في مظهر وسلوك سطح المكتب"
+msgstr ""
 
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
-msgstr "أنترنت"
+msgstr ""
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "برامج للنّفاذ إلى الشّابكة مثل الوب و البريد الإلكتروني"
+msgstr ""
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
-msgstr "مكتب"
+msgstr ""
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
-msgstr "التطبيقات المكتبيّة"
+msgstr ""
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
 msgid "Personal"
-msgstr "شخصي"
+msgstr ""
 
 #: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
-msgstr "الإعدادات الشخصيّة"
+msgstr ""
 
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
-msgstr "إدارة"
+msgstr ""
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
-msgstr "غيّر إعدادات النظام العامة (يؤثّر على جميع المستخدمين)"
+msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:3
 msgid "Preferences"
-msgstr "تفضيلات"
+msgstr ""
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
-msgstr "التفضيلات الشخصيّة"
+msgstr ""
 
 #: desktop-directories/mate-system.directory.in:3
 #: desktop-directories/mate-menu-system.directory.in:3
 msgid "System"
-msgstr "النّظام"
+msgstr ""
 
 #: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
-msgstr "إعدادات النظام"
+msgstr ""
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
-msgstr "أدوات النّظام"
+msgstr ""
 
 #: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
-msgstr "إعداد و مراقبة النّظام"
+msgstr ""
 
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
-msgstr "الإتاحة"
+msgstr ""
 
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
-msgstr "إعدادات الإتاحة"
+msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
-msgstr "ملحقات"
+msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
-msgstr "ملحقات سطح المكتب"
+msgstr ""
 
 #: desktop-directories/mate-menu-applications.directory.in:3
 #: desktop-directories/mate-menu-applications.directory.in:4
 msgid "Applications"
-msgstr "التطبيقات"
+msgstr ""
 
 #: desktop-directories/mate-menu-system.directory.in:4
 msgid "Personal preferences and administration settings"
-msgstr "التفضيلات الشخصيّة و إعدادات الإدارة"
+msgstr ""
 
 #: desktop-directories/mate-other.directory.in:3
 msgid "Other"
-msgstr "أخرى"
+msgstr ""
 
 #: desktop-directories/mate-other.directory.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "تطبيقات لا تندرج تحت الفئات الأخرى"
+msgstr ""
