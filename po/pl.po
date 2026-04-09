@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Piotr Drąg <piotrdrag@gmail.com>, 2018
-# Piotr Strębski <strebski@gmail.com>, 2018
+# Piotr Strebski <strebski@gmail.com>, 2018
 # Paweł Bandura <gawelx@gmail.com>, 2018
 # Jan Bońkowski <bonkowskijan@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021

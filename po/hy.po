@@ -7,6 +7,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Aram Palyan <ararat.info@gmail.com>, 2018
 # Siranush <ss.m.95@mail.ru>, 2021
+# Tigran Khachatryan, 2024
 # 
 msgid ""
 msgstr ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2022-10-29 15:26+0200\n"
 "PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Siranush <ss.m.95@mail.ru>, 2021\n"
+"Last-Translator: Tigran Khachatryan, 2024\n"
 "Language-Team: Armenian (https://app.transifex.com/mate/teams/13566/hy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,11 +25,11 @@ msgstr ""
 
 #: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
-msgstr "Ձայն և Վիդեո"
+msgstr "Տեսաձայնային"
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
-msgstr "Համասփյուռ ծրագրերի ցանկ"
+msgstr "Տեսաձայնային մենյու"
 
 #: desktop-directories/mate-collection.directory.in:3
 msgid "Collection"
@@ -36,7 +37,7 @@ msgstr "Հավաքածու"
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
-msgstr ""
+msgstr "Ամենահաճախ օգտագործվող դյուրանցումները"
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
@@ -100,7 +101,7 @@ msgstr "Համացանցում աշխատելու ծրագրեր, ինչպես �
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
-msgstr "Գրասենյակ"
+msgstr "Օֆիսային"
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
@@ -142,7 +143,7 @@ msgstr "Համակարգի հատկություններ"
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
-msgstr "Համակարգի գործիքներ"
+msgstr "Համակարգային Պիտույքներ"
 
 #: desktop-directories/mate-system-tools.directory.in:4
 msgid "System configuration and monitoring"
@@ -150,7 +151,7 @@ msgstr "Համակարգի կարգավորում և վերահսկում"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:3
 msgid "Universal Access"
-msgstr "Ընդհանուր Մատչելիություն"
+msgstr "Մատչելիություն"
 
 #: desktop-directories/mate-utility-accessibility.directory.in:4
 msgid "Universal Access Settings"
