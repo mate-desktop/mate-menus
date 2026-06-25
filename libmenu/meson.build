@@ -55,7 +55,7 @@ if get_option('introspection')
     export_packages: 'libmatemenu',
     identifier_prefix : 'MateMenu',
     link_with: libmate_menu,
-    includes : ['Gio-2.0'],
+    includes : ['Gio-2.0'] + (gio_unix_280_dep.found() ? ['GioUnix-2.0'] : []),
     install : true,
     install_dir_gir: girdir,
     install_dir_typelib: typelibdir,
