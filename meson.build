@@ -152,6 +152,10 @@ endif
 gio_req = '>= 2.50.0'
 gio_unix_dep = dependency('gio-unix-2.0', version: gio_req)
 
+# Under GIO >= 2.80 we need to include GioUnix-2.0 in GIR scanning, see
+# https://gitlab.gnome.org/GNOME/gnome-menus/-/commit/fe1eca74e1b6d75941d56088ea2aeca97b639926
+gio_unix_280_dep = dependency('gio-unix-2.0', version: '>= 2.80.0', required: false)
+
 configure_file(
   output: 'config.h',
   configuration: config_h
