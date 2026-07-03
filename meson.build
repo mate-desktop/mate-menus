@@ -142,10 +142,6 @@ endif
 
 if get_option('debug')
   add_project_arguments('-DG_ENABLE_DEBUG', language : 'c')
-else
-  add_project_arguments('-DG_DISABLE_ASSERT',
-                        '-DG_DISABLE_CHECKS',
-                        language : 'c')
 endif
 
 # Dependencies

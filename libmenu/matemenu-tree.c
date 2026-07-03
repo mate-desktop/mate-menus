@@ -1807,7 +1807,10 @@ gpointer
 matemenu_tree_item_ref (gpointer itemp)
 {
   MateMenuTreeItem* item = (MateMenuTreeItem*) itemp;
-  g_return_val_if_fail(item != NULL, NULL);
+
+  if (item == NULL)
+    return NULL;
+
   g_return_val_if_fail(item->refcount > 0, NULL);
 
   g_atomic_int_inc (&item->refcount);
@@ -1822,7 +1825,9 @@ matemenu_tree_item_unref (gpointer itemp)
 
   item = (MateMenuTreeItem *) itemp;
 
-  g_return_if_fail (item != NULL);
+  if (item == NULL)
+    return;
+
   g_return_if_fail (item->refcount > 0);
 
   if (g_atomic_int_dec_and_test (&(item->refcount)))
