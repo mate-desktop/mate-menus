@@ -6,7 +6,15 @@ SUBDIRS = $(PO_SUBDIR) libmenu desktop-directories layout util
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-EXTRA_DIST = autogen.sh
+EXTRA_DIST = \
+	autogen.sh \
+	meson.build \
+	meson_options.txt \
+	desktop-directories/meson.build \
+	layout/meson.build \
+	libmenu/meson.build \
+	po/meson.build \
+	util/meson.build
 
 DISTCHECK_CONFIGURE_FLAGS = \
 	--disable-introspection \
