@@ -1,26 +1,29 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-menus package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Azwaw <azwaw10@proton.me>, 2018
 # ButterflyOfFire, 2025
 # Transifex Bot <>, 2026
-# 
+# ButterflyOfFire <butterflyoffire@users.noreply.translate.fedoraproject.org>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-menus 1.26.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2022-10-29 15:26+0200\n"
-"PO-Revision-Date: 2018-03-11 19:02+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Kabyle (https://app.transifex.com/mate/teams/13566/kab/)\n"
+"PO-Revision-Date: 2026-07-05 12:17+0000\n"
+"Last-Translator: ButterflyOfFire "
+"<butterflyoffire@users.noreply.translate.fedoraproject.org>\n"
+"Language-Team: Kabyle <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-menus/kab/>\n"
+"Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: kab\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 #: desktop-directories/mate-audio-video.directory.in:3
 msgid "Sound & Video"
@@ -28,11 +31,11 @@ msgstr "Imesli & Avidyu"
 
 #: desktop-directories/mate-audio-video.directory.in:4
 msgid "Multimedia menu"
-msgstr ""
+msgstr "Umuɣ n ugetmidya"
 
 #: desktop-directories/mate-collection.directory.in:3
 msgid "Collection"
-msgstr ""
+msgstr "Tagrumma"
 
 #: desktop-directories/mate-collection.directory.in:4
 msgid "The most frequently used shortcuts"
@@ -40,7 +43,7 @@ msgstr ""
 
 #: desktop-directories/mate-development.directory.in:3
 msgid "Programming"
-msgstr ""
+msgstr "Asihel"
 
 #: desktop-directories/mate-development.directory.in:4
 msgid "Tools for software development"
@@ -48,7 +51,7 @@ msgstr ""
 
 #: desktop-directories/mate-education.directory.in:3
 msgid "Education"
-msgstr ""
+msgstr "Asegmi"
 
 #: desktop-directories/mate-game.directory.in:3
 msgid "Games"
@@ -64,11 +67,11 @@ msgstr ""
 
 #: desktop-directories/mate-graphics.directory.in:4
 msgid "Graphics applications"
-msgstr ""
+msgstr "Isnasen udlifen"
 
 #: desktop-directories/mate-hardware.directory.in:3
 msgid "Hardware"
-msgstr ""
+msgstr "Arrum"
 
 #: desktop-directories/mate-hardware.directory.in:4
 msgid "Settings for several hardware devices"
@@ -76,7 +79,7 @@ msgstr ""
 
 #: desktop-directories/mate-internet-and-network.directory.in:3
 msgid "Internet and Network"
-msgstr ""
+msgstr "Internet akked uẓeṭṭa"
 
 #: desktop-directories/mate-internet-and-network.directory.in:4
 msgid "Network-related settings"
@@ -92,7 +95,7 @@ msgstr ""
 
 #: desktop-directories/mate-network.directory.in:3
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: desktop-directories/mate-network.directory.in:4
 msgid "Programs for Internet access such as web and email"
@@ -100,11 +103,11 @@ msgstr ""
 
 #: desktop-directories/mate-office.directory.in:3
 msgid "Office"
-msgstr ""
+msgstr "Tanarit"
 
 #: desktop-directories/mate-office.directory.in:4
 msgid "Office Applications"
-msgstr ""
+msgstr "Isnasen n tnarit"
 
 #. Translators: this is Personal as in "Personal settings"
 #: desktop-directories/mate-personal.directory.in:4
@@ -113,11 +116,11 @@ msgstr ""
 
 #: desktop-directories/mate-personal.directory.in:5
 msgid "Personal settings"
-msgstr ""
+msgstr "Iɣewwaren udmawanen"
 
 #: desktop-directories/mate-settings-system.directory.in:4
 msgid "Administration"
-msgstr ""
+msgstr "Tadbelt"
 
 #: desktop-directories/mate-settings-system.directory.in:5
 msgid "Change system-wide settings (affects all users)"
@@ -129,7 +132,7 @@ msgstr "Ismenyifen"
 
 #: desktop-directories/mate-settings.directory.in:4
 msgid "Personal preferences"
-msgstr ""
+msgstr "Imenyafen udmawanen"
 
 #: desktop-directories/mate-system.directory.in:3
 #: desktop-directories/mate-menu-system.directory.in:3
@@ -138,7 +141,7 @@ msgstr "Anagraw"
 
 #: desktop-directories/mate-system.directory.in:4
 msgid "System settings"
-msgstr "Iγewwaren n unagraw"
+msgstr "Iɣewwaren n unagraw"
 
 #: desktop-directories/mate-system-tools.directory.in:3
 msgid "System Tools"
@@ -158,7 +161,7 @@ msgstr ""
 
 #: desktop-directories/mate-utility.directory.in:3
 msgid "Accessories"
-msgstr ""
+msgstr "Ifecka"
 
 #: desktop-directories/mate-utility.directory.in:4
 msgid "Desktop accessories"
